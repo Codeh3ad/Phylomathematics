@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 concurrency:
   group: sync-lean
@@ -23,6 +24,7 @@ jobs:
       - run: python3 tools/sync_lean.py
       - run: python3 tools/validate.py
       - name: Commit if changed
+        id: commit
         run: |
           if git diff --quiet -- data/lean.json; then
             echo "No changes."
@@ -33,3 +35,10 @@ jobs:
           git add data/lean.json
           git commit -m "Sync Lean data"
           git push
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+      # Pushes made with GITHUB_TOKEN may not start a Pages build, so ask for one.
+      - name: Rebuild GitHub Pages
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || echo "::warning::Could not request a Pages build"
