@@ -410,9 +410,11 @@
       proofTargets.push(c);
       return `<button type="button" class="view-proof" data-proof="${proofTargets.length - 1}">What it proves</button>`;
     };
+    // Titles mention Lean names in backticks; show them as ordinary words.
+    const plainTitle = (t) => t.replace(/`+([^`]*)`+/g, "$1");
     const changeItem = (c, withFields) =>
-      `<li><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.title)}</a>${viewButton(c)}` +
-      `<span class="paper-meta">${fmtDate(c.date)}${c.scope ? ` · <code>${esc(c.scope)}</code>` : ""}${c.ai ? " · " + aiBadge : ""}</span>` +
+      `<li><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(plainTitle(c.title))}</a>${viewButton(c)}` +
+      `<span class="paper-meta">${fmtDate(c.date)}${c.ai ? " · " + aiBadge : ""}</span>` +
       (withFields ? `<div class="links">${c.fields.slice(0, 6).map((id) => chip(byId.get(id))).join("")}` +
         `${c.fields.length > 6 ? `<span class="more">+${c.fields.length - 6} more</span>` : ""}</div>` : "") + "</li>";
     const projectItem = (p) =>
@@ -420,11 +422,6 @@
       `<span class="badge ${p.kind}">${KIND_LABEL[p.kind] || esc(p.kind)}</span>` +
       (p.overview && window.ProofViewer ? `<button type="button" class="view-proof" data-project="${esc(p.repo)}">Explore the project</button>` : "") +
       `<span class="paper-meta">${esc(p.description)}${p.updated ? ` Updated ${fmtDate(p.updated)}.` : ""}</span></li>`;
-    const prefixLink = (prefix) => {
-      const name = prefix.replace(/^Mathlib\//, "");
-      // A prefix is either a folder or a single .lean file; GitHub redirects /tree/ to /blob/ for files.
-      return `<a href="${MATHLIB_URL}/tree/master/${esc(prefix)}" target="_blank" rel="noopener"><code>${esc(name)}</code></a>`;
-    };
 
     function leanSection(n) {
       proofTargets = [];
@@ -434,7 +431,7 @@
       if (!(f && f.files) && !projects.length) return "";
       let html = `<h3>Formalized in Lean</h3>`;
       if (f && f.files) {
-        html += `<p class="lean-summary">${f.files.toLocaleString()} files in mathlib under ${f.prefixes.map(prefixLink).join(", ")}. ` +
+        html += `<p class="lean-summary">Formalized across ${f.files.toLocaleString()} file${f.files === 1 ? "" : "s"} of Lean's main library, mathlib. ` +
           `${f.additions} new result${f.additions === 1 ? "" : "s"} in the last ${lean.window_days} days` +
           `${f.ai_additions ? `, ${f.ai_additions} crediting AI tools` : ""}.</p>`;
         if (window.ProofViewer && f.overview) html += `<button type="button" class="browse-proofs" data-browse="${n.id}"><span aria-hidden="true">⊢</span> See how mathlib builds this field</button>`;
