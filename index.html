@@ -17,7 +17,10 @@
       <p class="tagline">Mathematical Evolution: How ideas descend, hybridize and reappear</p>
     </div>
     <div class="controls">
-      <input id="search" type="search" placeholder="Find a field…" list="node-list" aria-label="Find a field" autocomplete="off">
+      <div class="search-wrap">
+        <input id="search" type="search" placeholder="Search fields, results, papers…" aria-label="Search fields, results and papers" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="search-results" aria-autocomplete="list">
+        <ul id="search-results" class="search-results" role="listbox" hidden></ul>
+      </div>
       <datalist id="node-list"></datalist>
       <label class="toggle"><input id="show-convergent" type="checkbox" checked> Convergences</label>
       <button id="reset" type="button">Reset view</button>
@@ -30,6 +33,7 @@
     <div id="chart" aria-label="Phylogenetic network of mathematics"></div>
 
     <aside class="legend" aria-label="Legend">
+      <button id="legend-toggle" class="legend-toggle" type="button" aria-expanded="true">Hide</button>
       <div class="legend-row"><svg width="34" height="10"><line x1="2" y1="5" x2="32" y2="5" class="lg-inherits"/></svg> Inherits (one parent)</div>
       <div class="legend-row"><svg width="34" height="10"><line x1="2" y1="5" x2="32" y2="5" class="lg-merges"/></svg> Merges (hybrid of parents)</div>
       <div class="legend-row"><svg width="34" height="10"><line x1="2" y1="5" x2="32" y2="5" class="lg-convergent"/></svg> Independent rediscovery</div>
@@ -53,7 +57,7 @@
       <h2>Why a network, not a tree</h2>
       <p>Mathematics does not branch like a strict tree. Fields <strong>hybridize</strong>: algebraic geometry, analytic number theory and algebraic topology each have several parents. Ideas <strong>converge</strong>: Newton and Leibniz both found calculus; Bolyai and Lobachevsky both found non-Euclidean geometry. And lineages go <strong>dormant and revive</strong>: invariant theory went quiet after Hilbert and returned as geometric invariant theory.</p>
       <p>So each node is a field or idea placed at the date it took recognizable form, and each edge says “descends from”. Time runs left to right; the axis is compressed for the ancient world. Rows group fields into broad clades, which are a convenience, not a claim of ancestry.</p>
-      <p>Click a field to see its description, key results, and its full ancestry highlighted. The data lives in <code>data/nodes.json</code>; corrections and additions are welcome.</p>
+      <p>Click a field to see its description, key results, and its full ancestry highlighted. Its <strong>learning roadmap</strong> lists everything it builds on, oldest first, and <strong>Trace a path</strong> shows how it connects to any other field. Search also looks inside key results and paper titles, so “Riemann” or “primes” finds every field that mentions them. The data lives in <code>data/nodes.json</code>; corrections and additions are welcome.</p>
     </section>
   </main>
 

@@ -73,7 +73,7 @@ body {
   border-radius: 6px;
   padding: 6px 10px;
 }
-.controls input[type="search"] { width: 200px; }
+.controls input[type="search"] { width: 240px; }
 .controls button { cursor: pointer; }
 .controls button:hover { border-color: var(--edge); }
 .toggle { display: flex; align-items: center; gap: 6px; color: var(--muted); cursor: pointer; user-select: none; }
@@ -128,10 +128,81 @@ body {
 .node.selected text { font-weight: 600; }
 .hide-convergent .edge.convergent { display: none; }
 
+/* Trace a path */
+.tracing .node { opacity: 0.12; }
+.tracing .node.on-path { opacity: 1; }
+.tracing .edge { stroke-opacity: 0.04; }
+.tracing .edge.on-path { stroke-opacity: 1; stroke-width: 3.2; stroke-dasharray: none; }
+.tracing .node.on-path text { font-weight: 600; }
+.trace-box { display: grid; gap: 10px; }
+.trace-box input {
+  font: inherit; color: var(--ink); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 6px; padding: 7px 10px; width: 100%;
+}
+.trace-say { font-family: var(--sans) !important; font-size: 13.5px !important; margin: 0 0 6px !important; }
+.chain { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin-bottom: 8px; }
+.chain .arrow { color: var(--muted); font-size: 12px; }
+.chain button {
+  font: inherit; font-size: 12.5px; color: var(--ink); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px 3px 8px; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.chain .sw { width: 8px; height: 8px; border-radius: 50%; }
+.trace-clear {
+  justify-self: start; font: inherit; font-size: 12px; color: var(--muted);
+  background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline;
+}
+
+/* Learning roadmap: same folding bundle as Key papers */
+.paper-tree.road .road-step { display: grid; grid-template-columns: 56px 1fr; align-items: center; position: relative; min-width: 0; }
+.paper-tree.road .road-step::before {
+  content: ""; position: absolute; left: 0; top: 50%; width: 12px;
+  border-top: 2px solid var(--clade, var(--edge)); opacity: 0.5;
+}
+.paper-tree.road .paper-year { margin-top: 0; }
+.paper-tree.road .links { margin: 0; align-items: center; }
+.paper-tree.road[data-showing="near"] .road-step.far { display: none; }
+.road-step.far .links button { opacity: 0.8; }
+.hops { font-size: 11px; color: var(--muted); }
+.road-more {
+  margin: 0 12px 12px 70px; font: inherit; font-size: 12px; color: var(--muted);
+  background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline;
+}
+
+/* Search results */
+.search-wrap { position: relative; }
+.search-results {
+  position: absolute; top: calc(100% + 6px); left: 0; z-index: 10;
+  width: min(420px, calc(100vw - 32px));
+  margin: 0; padding: 6px; list-style: none;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow);
+  max-height: 60vh; overflow-y: auto;
+}
+.search-results li {
+  display: grid; grid-template-columns: 10px 1fr auto; gap: 10px; align-items: start;
+  padding: 7px 8px; border-radius: 6px; cursor: pointer;
+}
+.search-results li[aria-selected="true"], .search-results li:hover { background: var(--bg); }
+.search-results li.empty { display: block; color: var(--muted); cursor: default; }
+.search-results .sw { width: 9px; height: 9px; border-radius: 50%; margin-top: 5px; }
+.search-results .hit-text { min-width: 0; display: grid; gap: 2px; }
+.search-results b { font-weight: 600; }
+.search-results small { color: var(--muted); font-size: 12px; line-height: 1.35; overflow-wrap: anywhere; }
+.search-results .hit-kind { font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+.search-results mark { background: none; color: var(--ink); font-weight: 600; text-decoration: underline; text-decoration-color: var(--accent); }
+.search-results .hit-year { font-size: 11.5px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
 /* Legend */
+.legend-toggle {
+  justify-self: end; font: inherit; font-size: 11.5px; color: var(--muted);
+  background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline;
+}
+.legend.collapsed { padding: 6px 10px; }
+.legend.collapsed > :not(.legend-toggle) { display: none; }
+.legend.collapsed .legend-toggle { text-decoration: none; font-weight: 600; color: var(--ink); }
 .legend {
   position: absolute;
-  right: 16px;
+  left: 16px;
   bottom: 16px;
   background: var(--surface);
   border: 1px solid var(--line);

@@ -261,9 +261,53 @@
       return seen;
     };
 
+    // Shortest descent distance from `start` to every reachable node, with back-pointers.
+    const bfs = (start, dir) => {
+      const dist = new Map([[start, 0]]);
+      const prev = new Map();
+      const queue = [start];
+      while (queue.length) {
+        const id = queue.shift();
+        const list = dir === "up" ? parents.get(id).map((e) => e.source) : children.get(id).map((e) => e.target);
+        for (const next of list) {
+          if (!dist.has(next)) { dist.set(next, dist.get(id) + 1); prev.set(next, id); queue.push(next); }
+        }
+      }
+      return { dist, prev };
+    };
+    const chainTo = ({ prev }, start, end) => {
+      const out = [end];
+      while (out[0] !== start) out.unshift(prev.get(out[0]));
+      return out;
+    };
+
+    // How two fields are related: one descends from the other, or both share an ancestor.
+    function relate(a, b) {
+      const down = bfs(a, "down");
+      if (down.dist.has(b)) return { kind: "descends", chains: [chainTo(down, a, b)] };
+      const up = bfs(a, "up");
+      if (up.dist.has(b)) return { kind: "ancestor", chains: [chainTo(up, a, b).reverse()] };
+      const upB = bfs(b, "up");
+      let best = null;
+      for (const [id, da] of up.dist) {
+        if (!upB.dist.has(id)) continue;
+        const score = da + upB.dist.get(id);
+        // Prefer the closest shared ancestor; on ties, the most recent one.
+        if (!best || score < best.score || (score === best.score && byId.get(id).year > byId.get(best.id).year)) best = { id, score };
+      }
+      if (!best) return { kind: "unrelated", chains: [] };
+      return { kind: "common", via: best.id,
+        chains: [chainTo(up, a, best.id).reverse(), chainTo(upB, b, best.id).reverse()] };
+    }
+
     let selected = null;
+    let traced = null;
     function select(id, { center = true, updateHash = true } = {}) {
       selected = id && byId.has(id) ? id : null;
+      traced = null;
+      svg.classed("tracing", false);
+      nodeSel.classed("on-path", false);
+      edgeSel.classed("on-path", false);
       if (updateHash) {
         history.replaceState(null, "", selected ? `#${selected}` : location.pathname + location.search);
       }
@@ -287,6 +331,36 @@
       renderPanel(byId.get(selected), anc.size, desc.size);
       closeOverlays();
       if (center) centerOn(byId.get(selected));
+    }
+
+    function trace(target, { updateHash = true } = {}) {
+      const out = panelBody.querySelector("#trace-result");
+      if (!selected || !byId.has(target) || target === selected) {
+        traced = null;
+        svg.classed("tracing", false);
+        nodeSel.classed("on-path", false);
+        edgeSel.classed("on-path", false);
+        if (out) out.innerHTML = "";
+        if (updateHash && selected) history.replaceState(null, "", `#${selected}`);
+        return;
+      }
+      traced = target;
+      const r = relate(selected, target);
+      const onPath = new Set(r.chains.flat());
+      const pairs = new Set(r.chains.flatMap((c) => c.slice(1).map((id, i) => `${c[i]}>${id}`)));
+      svg.classed("tracing", r.chains.length > 0);
+      nodeSel.classed("on-path", (n) => onPath.has(n.id));
+      edgeSel.classed("on-path", (e) => pairs.has(`${e.source}>${e.target}`));
+      const a = byId.get(selected), b = byId.get(target);
+      const steps = (c) => `${c.length - 1} step${c.length === 2 ? "" : "s"}`;
+      const chainHtml = (c) => `<div class="chain">${c.map((id) => chip(byId.get(id))).join('<span class="arrow" aria-hidden="true">→</span>')}</div>`;
+      let html;
+      if (r.kind === "descends") html = `<p class="trace-say"><b>${esc(b.name)}</b> descends from <b>${esc(a.name)}</b> in ${steps(r.chains[0])}:</p>${chainHtml(r.chains[0])}`;
+      else if (r.kind === "ancestor") html = `<p class="trace-say"><b>${esc(a.name)}</b> descends from <b>${esc(b.name)}</b> in ${steps(r.chains[0])}:</p>${chainHtml(r.chains[0])}`;
+      else if (r.kind === "common") html = `<p class="trace-say">Neither descends from the other. Their closest shared ancestor is <b>${esc(byId.get(r.via).name)}</b>:</p>${r.chains.map(chainHtml).join("")}`;
+      else html = `<p class="trace-say">No line of descent connects these two fields in this dataset.</p>`;
+      if (out) out.innerHTML = html + `<button type="button" class="trace-clear">Clear path</button>`;
+      if (updateHash) history.replaceState(null, "", `#${selected}~${target}`);
     }
 
     function chip(n, kind) {
@@ -405,10 +479,43 @@
     let papersOpen = false;
     try { papersOpen = localStorage.getItem("papersOpen") === "1"; } catch {}
     panelBody.addEventListener("toggle", (ev) => {
-      if (ev.target.id !== "papers-nest") return;
-      papersOpen = ev.target.open;
-      try { localStorage.setItem("papersOpen", papersOpen ? "1" : "0"); } catch {}
+      if (ev.target.id === "papers-nest") {
+        papersOpen = ev.target.open;
+        try { localStorage.setItem("papersOpen", papersOpen ? "1" : "0"); } catch {}
+      } else if (ev.target.id === "roadmap-nest") {
+        roadmapOpen = ev.target.open;
+        try { localStorage.setItem("roadmapOpen", roadmapOpen ? "1" : "0"); } catch {}
+      }
     }, true);
+
+    let roadmapOpen = false;
+    try { roadmapOpen = localStorage.getItem("roadmapOpen") === "1"; } catch {}
+
+    // Everything a field builds on, oldest first. Parents precede children in time,
+    // so chronological order is also a valid order to learn them in.
+    function roadmapSection(n) {
+      const { dist } = bfs(n.id, "up");
+      dist.delete(n.id);
+      if (!dist.size) return "";
+      const all = [...dist].map(([id, d]) => ({ n: byId.get(id), d })).sort((x, y) => x.n.year - y.n.year);
+      const near = all.filter((x) => x.d <= 2);
+      const item = (x) => `<li class="road-step${x.d <= 2 ? "" : " far"}"><span class="paper-year">${x.n.year < 0 ? `${-x.n.year}<small>BCE</small>` : x.n.year}</span>` +
+        `<div class="links">${chip(x.n)}<span class="hops" title="Steps back along the lineage">${x.d === 1 ? "direct parent" : `${x.d} steps back`}</span></div></li>`;
+      return `<details class="nest" id="roadmap-nest" style="--clade:${cladeColor(n.clade)}"${roadmapOpen ? " open" : ""}>` +
+        `<summary><span class="nest-icon" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M3 16.5c3-1 4-4 7-4s4 3 7 2"/><circle cx="3.5" cy="16.5" r="1.5"/><circle cx="16.5" cy="14.5" r="1.5"/><path d="M10 12.5V4m0 0 3 3m-3-3-3 3"/></svg></span>` +
+        `<span class="nest-text"><span class="nest-label">Learning roadmap</span><span class="nest-sub">${near.length} close prerequisite${near.length === 1 ? "" : "s"} · ${all.length} in all</span></span>` +
+        `<span class="nest-chev" aria-hidden="true"></span></summary>` +
+        `<ol class="paper-tree road" data-showing="near">${all.map(item).join("")}</ol>` +
+        (all.length > near.length ? `<button type="button" class="road-more">Show all ${all.length} ancestors</button>` : "") +
+        `</details>`;
+    }
+
+    const traceSection = () => `
+        <h3>Trace a path</h3>
+        <div class="trace-box">
+          <input id="trace-input" type="search" list="node-list" placeholder="Compare with another field…" aria-label="Trace a path to another field" autocomplete="off">
+          <div id="trace-result" aria-live="polite"></div>
+        </div>`;
 
     function renderPanel(n, ancCount, descCount) {
       const clade = cladeById.get(n.clade);
@@ -432,10 +539,12 @@
           `<span class="nest-spines" aria-hidden="true">${paperSpines(n.papers)}</span>` +
           `<span class="nest-chev" aria-hidden="true"></span></summary>` +
           `<ol class="paper-tree">${n.papers.map(paperItem).join("")}</ol></details>` : ""}
+        ${roadmapSection(n)}
         ${leanSection(n)}
         ${ps.length ? `<h3>${ps.length > 1 ? "Hybrid of" : "Descends from"}</h3><div class="links">${ps.map((e) => chip(e.s)).join("")}</div>` : ""}
         ${cv.length ? `<h3>Independently found alongside</h3><div class="links">${cv.map((m) => chip(m)).join("")}</div>` : ""}
         ${cs.length ? `<h3>Gave rise to</h3><div class="links">${cs.map((e) => chip(e.t, e.type === "merges" ? "hybrid" : "")).join("")}</div>` : ""}
+        ${traceSection()}
         <div class="counts">${ancCount} ancestor${ancCount === 1 ? "" : "s"} · ${descCount} descendant${descCount === 1 ? "" : "s"}</div>`;
       panel.hidden = false;
       panel.scrollTop = 0;
@@ -447,6 +556,27 @@
         if (b) select(b.dataset.id);
       });
     }
+    panelBody.addEventListener("click", (ev) => {
+      if (ev.target.closest(".trace-clear")) {
+        trace(null);
+        const input = panelBody.querySelector("#trace-input");
+        if (input) input.value = "";
+      } else if (ev.target.closest(".road-more")) {
+        const list = panelBody.querySelector(".paper-tree.road");
+        const showAll = list.dataset.showing === "near";
+        list.dataset.showing = showAll ? "all" : "near";
+        ev.target.textContent = showAll ? "Show close prerequisites only" : `Show all ${list.children.length} ancestors`;
+      }
+    });
+    const runTrace = () => {
+      const input = panelBody.querySelector("#trace-input");
+      const n = input && findNode(input.value);
+      if (n) { input.value = n.name; trace(n.id); }
+    };
+    panelBody.addEventListener("change", (ev) => { if (ev.target.id === "trace-input") runTrace(); });
+    panelBody.addEventListener("keydown", (ev) => {
+      if (ev.target.id === "trace-input" && ev.key === "Enter") { ev.preventDefault(); runTrace(); }
+    });
     leanBody.addEventListener("change", (ev) => { if (ev.target.id === "lean-ai-only") renderLeanPanel(); });
 
     // ---- Controls ---------------------------------------------------------
@@ -461,10 +591,77 @@
         nodes.find((n) => n.name.toLowerCase().startsWith(q)) ||
         nodes.find((n) => n.name.toLowerCase().includes(q) || n.description.toLowerCase().includes(q));
     };
-    search.addEventListener("change", () => { const n = findNode(search.value); if (n) select(n.id); });
+    // Search names first, then key results, papers and descriptions, and say what matched.
+    const searchBox = document.getElementById("search-results");
+    const index = nodes.flatMap((n) => [
+      { n, kind: "name", text: n.name, weight: 3 },
+      ...n.results.map((r) => ({ n, kind: "Result", text: r, weight: 2 })),
+      ...n.papers.map((p) => ({ n, kind: "Paper", text: `${p.title} (${p.authors})`, weight: 1.5 })),
+      { n, kind: "About", text: n.description, weight: 1 },
+    ]);
+    const snippet = (text, q) => {
+      const i = text.toLowerCase().indexOf(q);
+      const from = Math.max(0, i - 30), to = Math.min(text.length, i + q.length + 40);
+      return (from ? "…" : "") + esc(text.slice(from, i)) + `<mark>${esc(text.slice(i, i + q.length))}</mark>` +
+        esc(text.slice(i + q.length, to)) + (to < text.length ? "…" : "");
+    };
+    let hits = [], active = -1;
+    function runSearch() {
+      const q = search.value.trim().toLowerCase();
+      if (q.length < 2) { searchBox.hidden = true; hits = []; return; }
+      const best = new Map();
+      for (const e of index) {
+        const t = e.text.toLowerCase();
+        const at = t.indexOf(q);
+        if (at < 0) continue;
+        const score = e.weight * (at === 0 ? 2 : 1) + (e.kind === "name" && t === q ? 10 : 0);
+        const cur = best.get(e.n.id);
+        if (!cur || score > cur.score) best.set(e.n.id, { ...e, score });
+      }
+      hits = [...best.values()].sort((a, b) => b.score - a.score || a.n.year - b.n.year).slice(0, 8);
+      active = hits.length ? 0 : -1;
+      searchBox.innerHTML = hits.length ? hits.map((h, i) =>
+        `<li role="option" id="hit-${i}" data-id="${h.n.id}"${i === active ? ' aria-selected="true"' : ""}>` +
+        `<span class="sw" style="background:${cladeColor(h.n.clade)}"></span><span class="hit-text"><b>${h.kind === "name" ? snippet(h.n.name, q) : esc(h.n.name)}</b>` +
+        `${h.kind === "name" ? "" : `<small><span class="hit-kind">${h.kind}</span> ${snippet(h.text, q)}</small>`}</span>` +
+        `<span class="hit-year">${fmtYear(h.n.year)}</span></li>`).join("")
+        : `<li class="empty">No field, result or paper matches “${esc(search.value.trim())}”.</li>`;
+      searchBox.hidden = false;
+      search.setAttribute("aria-expanded", "true");
+    }
+    const pick = (id) => { searchBox.hidden = true; search.setAttribute("aria-expanded", "false"); search.value = byId.get(id).name; select(id); };
+    search.addEventListener("input", runSearch);
+    search.addEventListener("focus", runSearch);
     search.addEventListener("keydown", (ev) => {
-      if (ev.key === "Enter") { const n = findNode(search.value); if (n) select(n.id); }
+      if (searchBox.hidden || !hits.length) return;
+      if (ev.key === "ArrowDown" || ev.key === "ArrowUp") {
+        ev.preventDefault();
+        active = (active + (ev.key === "ArrowDown" ? 1 : hits.length - 1)) % hits.length;
+        searchBox.querySelectorAll("li").forEach((li, i) => li.toggleAttribute("aria-selected", i === active));
+        search.setAttribute("aria-activedescendant", `hit-${active}`);
+      } else if (ev.key === "Enter") {
+        ev.preventDefault();
+        pick(hits[Math.max(active, 0)].n.id);
+      }
     });
+    searchBox.addEventListener("mousedown", (ev) => {
+      const li = ev.target.closest("li[data-id]");
+      if (li) { ev.preventDefault(); pick(li.dataset.id); }
+    });
+    search.addEventListener("blur", () => { searchBox.hidden = true; search.setAttribute("aria-expanded", "false"); });
+
+    const legend = document.querySelector(".legend");
+    const legendBtn = document.getElementById("legend-toggle");
+    const setLegend = (open) => {
+      legend.classList.toggle("collapsed", !open);
+      legendBtn.setAttribute("aria-expanded", String(open));
+      legendBtn.textContent = open ? "Hide" : "Legend";
+      try { localStorage.setItem("legendOpen", open ? "1" : "0"); } catch {}
+    };
+    let legendOpen = true;
+    try { legendOpen = localStorage.getItem("legendOpen") !== "0"; } catch {}
+    setLegend(legendOpen);
+    legendBtn.addEventListener("click", () => setLegend(legend.classList.contains("collapsed")));
 
     showConv.addEventListener("change", () => svg.classed("hide-convergent", !showConv.checked));
     document.getElementById("reset").addEventListener("click", () => { select(null); search.value = ""; fit(500); });
@@ -475,15 +672,28 @@
     aboutBtn.addEventListener("click", () => toggleOverlay(about, aboutBtn));
     leanBtn.addEventListener("click", () => toggleOverlay(leanPanel, leanBtn));
     document.addEventListener("keydown", (ev) => {
-      if (ev.key === "Escape") { select(null); closeOverlays(); }
+      if (ev.key === "Escape") {
+        if (!searchBox.hidden) { searchBox.hidden = true; return; }
+        select(null); closeOverlays();
+      }
     });
-    window.addEventListener("hashchange", () => select(decodeURIComponent(location.hash.slice(1)), { updateHash: false }));
+    // Links look like #field or #field~other (a traced path).
+    const openHash = () => {
+      const [a, b] = decodeURIComponent(location.hash.slice(1)).split("~");
+      if (a === selected && b === traced) return;
+      select(a, { updateHash: false });
+      if (selected && b) {
+        trace(b, { updateHash: false });
+        const input = panelBody.querySelector("#trace-input");
+        if (input && byId.has(b)) input.value = byId.get(b).name;
+      }
+    };
+    window.addEventListener("hashchange", openHash);
     window.addEventListener("resize", drawOverlay);
     darkQuery.addEventListener("change", applyColors);
 
     fit();
-    const initial = decodeURIComponent(location.hash.slice(1));
-    if (byId.has(initial)) select(initial, { updateHash: false });
+    if (location.hash.length > 1) openHash();
   }
 
   function esc(s) {
