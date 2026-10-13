@@ -54,7 +54,7 @@
   function init(data) {
     const clades = data.clades;
     const cladeById = new Map(clades.map((c) => [c.id, c]));
-    const nodes = data.nodes.map((n) => ({ status: "active", results: [], ...n }));
+    const nodes = data.nodes.map((n) => ({ status: "active", results: [], papers: [], ...n }));
     const byId = new Map(nodes.map((n) => [n.id, n]));
 
     const edges = data.edges.map((e) => ({ ...e, s: byId.get(e.source), t: byId.get(e.target) }));
@@ -279,6 +279,19 @@
         `${esc(n.name)}${kind ? ` <span class="kind">${kind}</span>` : ""}</button>`;
     }
 
+    // Name the kind of link so a search page is never mistaken for the paper itself.
+    const linkKind = (url) => {
+      const host = new URL(url).hostname;
+      if (host.endsWith("wikipedia.org")) return "Wikipedia";
+      if (host === "arxiv.org") return "arXiv";
+      if (host === "doi.org") return "DOI";
+      if (host === "scholar.google.com") return "Scholar search";
+      return host.replace(/^www\./, "");
+    };
+    const paperItem = (p) =>
+      `<li><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a>` +
+      `<span class="paper-meta">${esc(p.authors)} · ${fmtYear(p.year)} · <span class="kind">${linkKind(p.url)}</span></span></li>`;
+
     function renderPanel(n, ancCount, descCount) {
       const clade = cladeById.get(n.clade);
       const ps = parents.get(n.id);
@@ -295,6 +308,7 @@
         </div>
         <p>${esc(n.description)}</p>
         ${n.results.length ? `<h3>Key results</h3><ul>${n.results.map((r) => `<li>${esc(r)}</li>`).join("")}</ul>` : ""}
+        ${n.papers.length ? `<h3>Key papers</h3><ul class="papers">${n.papers.map(paperItem).join("")}</ul>` : ""}
         ${ps.length ? `<h3>${ps.length > 1 ? "Hybrid of" : "Descends from"}</h3><div class="links">${ps.map((e) => chip(e.s)).join("")}</div>` : ""}
         ${cv.length ? `<h3>Independently found alongside</h3><div class="links">${cv.map((m) => chip(m)).join("")}</div>` : ""}
         ${cs.length ? `<h3>Gave rise to</h3><div class="links">${cs.map((e) => chip(e.t, e.type === "merges" ? "hybrid" : "")).join("")}</div>` : ""}

@@ -13,325 +13,685 @@
   "nodes": [
     { "id": "babylonian", "name": "Babylonian arithmetic", "year": -1800, "clade": "number", "msc": "01A17",
       "description": "Sexagesimal place-value arithmetic on clay tablets, with tables of reciprocals, squares and Pythagorean triples.",
-      "results": ["Plimpton 322 table of Pythagorean triples", "√2 to six decimal places (YBC 7289)"] },
+      "results": ["Plimpton 322 table of Pythagorean triples", "√2 to six decimal places (YBC 7289)"],
+      "papers": [
+        { "title": "Plimpton 322", "authors": "Old Babylonian scribe", "year": -1800, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Plimpton+322&go=Go" },
+        { "title": "YBC 7289", "authors": "Old Babylonian scribe", "year": -1800, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=YBC+7289&go=Go" }
+      ] },
     { "id": "egyptian_geometry", "name": "Egyptian surveying", "year": -1650, "clade": "geometry", "msc": "01A16",
       "description": "Practical rules for areas and volumes, used for land measurement after Nile floods.",
-      "results": ["Volume of a truncated pyramid (Moscow papyrus)", "Area of a circle ≈ (8d/9)² (Rhind papyrus)"] },
+      "results": ["Volume of a truncated pyramid (Moscow papyrus)", "Area of a circle ≈ (8d/9)² (Rhind papyrus)"],
+      "papers": [
+        { "title": "Rhind Mathematical Papyrus", "authors": "Ahmes", "year": -1550, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Rhind+Mathematical+Papyrus&go=Go" },
+        { "title": "Moscow Mathematical Papyrus", "authors": "Unknown scribe", "year": -1850, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Moscow+Mathematical+Papyrus&go=Go" }
+      ] },
     { "id": "pythagorean", "name": "Pythagorean number theory", "year": -530, "clade": "number", "msc": "11A",
       "description": "Numbers studied for their own sake: parity, figurate numbers, ratios, and the shock of incommensurability.",
-      "results": ["Irrationality of √2", "Perfect and amicable numbers"] },
+      "results": ["Irrationality of √2", "Perfect and amicable numbers"],
+      "papers": [
+        { "title": "Introduction to Arithmetic", "authors": "Nicomachus of Gerasa", "year": 100, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Introduction+to+Arithmetic&go=Go" }
+      ] },
     { "id": "syllogistic", "name": "Syllogistic logic", "year": -350, "clade": "foundations", "msc": "03A05",
       "description": "Aristotle's formal theory of valid inference from premises. The ancestor of all later logic.",
-      "results": ["Classification of valid syllogisms", "Law of the excluded middle stated explicitly"] },
+      "results": ["Classification of valid syllogisms", "Law of the excluded middle stated explicitly"],
+      "papers": [
+        { "title": "Prior Analytics", "authors": "Aristotle", "year": -350, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Prior+Analytics&go=Go" }
+      ] },
     { "id": "euclid", "name": "Euclidean geometry", "year": -300, "clade": "geometry", "msc": "51M",
       "description": "The Elements organize geometry and arithmetic as deductions from a few axioms. The template for proof for two millennia.",
-      "results": ["Pythagorean theorem (I.47)", "Infinitude of primes (IX.20)", "Euclidean algorithm"] },
+      "results": ["Pythagorean theorem (I.47)", "Infinitude of primes (IX.20)", "Euclidean algorithm"],
+      "papers": [
+        { "title": "Elements", "authors": "Euclid", "year": -300, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Euclid%27s+Elements&go=Go" }
+      ] },
     { "id": "exhaustion", "name": "Method of exhaustion", "year": -250, "clade": "analysis", "msc": "01A20",
       "description": "Eudoxus and Archimedes bound areas and volumes between inscribed and circumscribed figures. Integration without limits.",
-      "results": ["Area of a parabolic segment", "Volume of the sphere", "3 10/71 < π < 3 1/7"] },
+      "results": ["Area of a parabolic segment", "Volume of the sphere", "3 10/71 < π < 3 1/7"],
+      "papers": [
+        { "title": "On the Sphere and Cylinder", "authors": "Archimedes", "year": -225, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=On+the+Sphere+and+Cylinder&go=Go" },
+        { "title": "The Method of Mechanical Theorems", "authors": "Archimedes", "year": -250, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=The+Method+of+Mechanical+Theorems&go=Go" }
+      ] },
     { "id": "conics", "name": "Conic sections", "year": -200, "clade": "geometry", "msc": "51N",
       "description": "Apollonius's synthetic study of ellipses, parabolas and hyperbolas as sections of a cone.",
-      "results": ["Names and classification of the conics", "Normals and focal properties"] },
+      "results": ["Names and classification of the conics", "Normals and focal properties"],
+      "papers": [
+        { "title": "Conics", "authors": "Apollonius of Perga", "year": -200, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Conics+%28Apollonius%29&go=Go" }
+      ] },
     { "id": "nine_chapters", "name": "The Nine Chapters", "year": -200, "clade": "number", "msc": "01A25",
       "description": "China's Nine Chapters on the Mathematical Art: a handbook of 246 problems on surveying, taxation and engineering, with general algorithms.",
-      "results": ["Fangcheng: elimination on rectangular arrays (Gaussian elimination)", "Negative numbers with sign rules", "Square and cube root extraction"] },
+      "results": ["Fangcheng: elimination on rectangular arrays (Gaussian elimination)", "Negative numbers with sign rules", "Square and cube root extraction"],
+      "papers": [
+        { "title": "The Nine Chapters on the Mathematical Art", "authors": "Liu Hui (commentary)", "year": -200, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=The+Nine+Chapters+on+the+Mathematical+Art&go=Go" }
+      ] },
     { "id": "indian_combinatorics", "name": "Indian combinatorics", "year": -200, "clade": "discrete", "msc": "05A10",
       "description": "Pingala counts the possible patterns of long and short syllables in Sanskrit verse, and later scholars extend his rules.",
-      "results": ["Binary enumeration of meters", "Meru-prastara (Pascal's triangle)", "Fibonacci numbers (Virahanka, c. 700)"] },
+      "results": ["Binary enumeration of meters", "Meru-prastara (Pascal's triangle)", "Fibonacci numbers (Virahanka, c. 700)"],
+      "papers": [
+        { "title": "Chandaḥśāstra", "authors": "Pingala", "year": -200, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Chanda%E1%B8%A5%C5%9B%C4%81stra&go=Go" }
+      ] },
     { "id": "trigonometry", "name": "Trigonometry", "year": -150, "clade": "geometry", "msc": "51M",
       "description": "Hipparchus's chord tables, Ptolemy's Almagest, then the Indian sine. Geometry made computable for astronomy.",
-      "results": ["Chord tables", "Ptolemy's theorem", "Sine and cosine (Aryabhata)"] },
+      "results": ["Chord tables", "Ptolemy's theorem", "Sine and cosine (Aryabhata)"],
+      "papers": [
+        { "title": "Almagest", "authors": "Ptolemy", "year": 150, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Almagest&go=Go" },
+        { "title": "Aryabhatiya", "authors": "Aryabhata", "year": 499, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Aryabhatiya&go=Go" }
+      ] },
     { "id": "diophantine", "name": "Diophantine analysis", "year": 250, "clade": "number", "msc": "11D",
       "description": "Diophantus's Arithmetica seeks rational solutions to polynomial equations, using an early syncopated notation.",
-      "results": ["Rational points on conics and cubics", "The margin in which Fermat later wrote"] },
+      "results": ["Rational points on conics and cubics", "The margin in which Fermat later wrote"],
+      "papers": [
+        { "title": "Arithmetica", "authors": "Diophantus", "year": 250, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Arithmetica&go=Go" }
+      ] },
     { "id": "maya_zero", "name": "Maya zero", "year": 350, "clade": "number", "msc": "01A12",
       "description": "The Maya Long Count calendar uses a true positional zero in a base-20 system, found entirely apart from the Old World.",
-      "results": ["Positional base-20 notation", "Zero as a placeholder glyph", "Venus tables in the Dresden Codex"] },
+      "results": ["Positional base-20 notation", "Zero as a placeholder glyph", "Venus tables in the Dresden Codex"],
+      "papers": [
+        { "title": "Dresden Codex", "authors": "Maya scribes", "year": 1200, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Dresden+Codex&go=Go" }
+      ] },
     { "id": "zero", "name": "Place value & zero", "year": 628, "clade": "number", "msc": "01A32",
       "description": "Brahmagupta treats zero and negatives as numbers with arithmetic rules. Decimal place value spreads west.",
-      "results": ["Rules for arithmetic with zero and negatives", "Brahmagupta's identity"] },
+      "results": ["Rules for arithmetic with zero and negatives", "Brahmagupta's identity"],
+      "papers": [
+        { "title": "Brāhmasphuṭasiddhānta", "authors": "Brahmagupta", "year": 628, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Br%C4%81hmasphu%E1%B9%ADasiddh%C4%81nta&go=Go" }
+      ] },
     { "id": "al_jabr", "name": "Al-jabr", "year": 820, "clade": "algebra", "msc": "01A30",
       "description": "Al-Khwarizmi's systematic solution of linear and quadratic equations by completion and balancing.",
-      "results": ["General solution of the quadratic", "The words 'algebra' and 'algorithm'"] },
+      "results": ["General solution of the quadratic", "The words 'algebra' and 'algorithm'"],
+      "papers": [
+        { "title": "The Compendious Book on Calculation by Completion and Balancing", "authors": "al-Khwarizmi", "year": 820, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=The+Compendious+Book+on+Calculation+by+Completion+and+Balancing&go=Go" }
+      ] },
     { "id": "kerala", "name": "Kerala series", "year": 1400, "clade": "analysis", "msc": "01A32",
       "description": "Madhava's school finds infinite series for π, sine and arctangent, centuries before Europe.",
-      "results": ["π/4 = 1 − 1/3 + 1/5 − …", "Power series for sin and cos"] },
+      "results": ["π/4 = 1 − 1/3 + 1/5 − …", "Power series for sin and cos"],
+      "papers": [
+        { "title": "Tantrasamgraha", "authors": "Nilakantha Somayaji", "year": 1500, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Tantrasamgraha&go=Go" },
+        { "title": "Yuktibhāṣā", "authors": "Jyeṣṭhadeva", "year": 1530, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Yuktibh%C4%81%E1%B9%A3%C4%81&go=Go" }
+      ] },
     { "id": "cubic", "name": "Cubic & quartic", "year": 1545, "clade": "algebra", "msc": "12E12",
       "description": "Del Ferro, Tartaglia, Cardano and Ferrari solve degree 3 and 4 by radicals.",
-      "results": ["Cardano's formula", "Ferrari's quartic method"] },
+      "results": ["Cardano's formula", "Ferrari's quartic method"],
+      "papers": [
+        { "title": "Ars Magna", "authors": "Gerolamo Cardano", "year": 1545, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Ars+Magna+%28Cardano+book%29&go=Go" }
+      ] },
     { "id": "complex_numbers", "name": "Complex numbers", "year": 1572, "clade": "algebra", "msc": "12D99",
       "description": "Bombelli takes √−1 seriously because Cardano's formula needs it to reach real roots.",
-      "results": ["Rules of complex arithmetic", "Resolution of the casus irreducibilis"] },
+      "results": ["Rules of complex arithmetic", "Resolution of the casus irreducibilis"],
+      "papers": [
+        { "title": "L'Algebra", "authors": "Rafael Bombelli", "year": 1572, "url": "https://scholar.google.com/scholar?q=%22L%27Algebra%22" }
+      ] },
     { "id": "symbolic_algebra", "name": "Symbolic algebra", "year": 1591, "clade": "algebra", "msc": "01A40",
       "description": "Viète uses letters for knowns and unknowns alike, making equations objects that can be manipulated.",
-      "results": ["Viète's formulas for roots", "Letters for parameters"] },
+      "results": ["Viète's formulas for roots", "Letters for parameters"],
+      "papers": [
+        { "title": "In artem analyticem isagoge", "authors": "François Viète", "year": 1591, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=In+artem+analyticem+isagoge&go=Go" }
+      ] },
     { "id": "logarithms", "name": "Logarithms", "year": 1614, "clade": "analysis", "msc": "26A09",
       "description": "Napier and Bürgi turn multiplication into addition. Bürgi's version was found independently.",
-      "results": ["Napier's tables", "The slide rule"] },
+      "results": ["Napier's tables", "The slide rule"],
+      "papers": [
+        { "title": "Mirifici Logarithmorum Canonis Descriptio", "authors": "John Napier", "year": 1614, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Mirifici+Logarithmorum+Canonis+Descriptio&go=Go" }
+      ] },
     { "id": "analytic_geometry", "name": "Analytic geometry", "year": 1637, "clade": "geometry", "msc": "51N",
       "description": "Descartes and Fermat, independently, put coordinates on the plane: curves become equations.",
-      "results": ["Equations of conics", "Descartes' rule of signs"] },
+      "results": ["Equations of conics", "Descartes' rule of signs"],
+      "papers": [
+        { "title": "La Géométrie", "authors": "René Descartes", "year": 1637, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=La+G%C3%A9om%C3%A9trie&go=Go" }
+      ] },
     { "id": "projective", "name": "Projective geometry", "year": 1639, "clade": "geometry", "msc": "51A", "status": "revived",
       "description": "Desargues studies what survives perspective projection. Ignored for nearly two centuries, then revived by Poncelet in 1822.",
-      "results": ["Desargues' theorem", "Pascal's hexagon theorem", "Duality (Poncelet, Gergonne)"] },
+      "results": ["Desargues' theorem", "Pascal's hexagon theorem", "Duality (Poncelet, Gergonne)"],
+      "papers": [
+        { "title": "Brouillon project d'une atteinte aux evenemens des rencontres du cone avec un plan", "authors": "Girard Desargues", "year": 1639, "url": "https://scholar.google.com/scholar?q=%22Brouillon%20project%20d%27une%20atteinte%20aux%20evenemens%20des%20rencontres%20du%20cone%20avec%20un%20plan%22" },
+        { "title": "Traité des propriétés projectives des figures", "authors": "Jean-Victor Poncelet", "year": 1822, "url": "https://scholar.google.com/scholar?q=%22Trait%C3%A9%20des%20propri%C3%A9t%C3%A9s%20projectives%20des%20figures%22" }
+      ] },
     { "id": "probability", "name": "Probability", "year": 1654, "clade": "chance", "msc": "60-03",
       "description": "Pascal and Fermat's letters on the problem of points turn games of chance into mathematics.",
-      "results": ["Expected value", "Law of large numbers (Bernoulli, 1713)"] },
+      "results": ["Expected value", "Law of large numbers (Bernoulli, 1713)"],
+      "papers": [
+        { "title": "De ratiociniis in ludo aleae", "authors": "Christiaan Huygens", "year": 1657, "url": "https://scholar.google.com/scholar?q=%22De%20ratiociniis%20in%20ludo%20aleae%22" },
+        { "title": "Ars Conjectandi", "authors": "Jacob Bernoulli", "year": 1713, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Ars+Conjectandi&go=Go" }
+      ] },
     { "id": "fluxions", "name": "Newton's fluxions", "year": 1666, "clade": "analysis", "msc": "01A45",
       "description": "Newton's calculus of flowing quantities, built for mechanics and kept mostly unpublished for decades.",
-      "results": ["Generalized binomial series", "Fundamental theorem of calculus"] },
+      "results": ["Generalized binomial series", "Fundamental theorem of calculus"],
+      "papers": [
+        { "title": "Method of Fluxions", "authors": "Isaac Newton", "year": 1671, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Method+of+Fluxions&go=Go" }
+      ] },
     { "id": "combinatorics", "name": "Combinatorics", "year": 1666, "clade": "discrete", "msc": "05A",
       "description": "Leibniz's Dissertatio de arte combinatoria and Bernoulli's work on permutations make counting a European subject.",
-      "results": ["Binomial coefficients", "Permutations and combinations", "Generating functions (Euler)"] },
+      "results": ["Binomial coefficients", "Permutations and combinations", "Generating functions (Euler)"],
+      "papers": [
+        { "title": "Dissertatio de arte combinatoria", "authors": "G. W. Leibniz", "year": 1666, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=De+Arte+Combinatoria&go=Go" }
+      ] },
     { "id": "leibniz_calculus", "name": "Leibniz's calculus", "year": 1675, "clade": "analysis", "msc": "01A45",
       "description": "Leibniz's independent calculus, with the d and ∫ notation that won.",
-      "results": ["Product rule", "Leibniz series for π/4 (rediscovering Madhava)"] },
+      "results": ["Product rule", "Leibniz series for π/4 (rediscovering Madhava)"],
+      "papers": [
+        { "title": "Nova Methodus pro Maximis et Minimis", "authors": "G. W. Leibniz", "year": 1684, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Nova+Methodus+pro+Maximis+et+Minimis&go=Go" }
+      ] },
     { "id": "celestial_mechanics", "name": "Celestial mechanics", "year": 1687, "clade": "applied", "msc": "70F15",
       "description": "Newton's Principia derives Kepler's elliptical orbits from an inverse-square law. Apollonius's conics turn out to be the shapes of orbits.",
-      "results": ["Kepler's laws derived", "Perturbation theory", "Prediction of Neptune (1846)"] },
+      "results": ["Kepler's laws derived", "Perturbation theory", "Prediction of Neptune (1846)"],
+      "papers": [
+        { "title": "Philosophiæ Naturalis Principia Mathematica", "authors": "Isaac Newton", "year": 1687, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Philosophi%C3%A6+Naturalis+Principia+Mathematica&go=Go" }
+      ] },
     { "id": "differential_equations", "name": "Differential equations", "year": 1690, "clade": "analysis", "msc": "34",
       "description": "The Bernoullis, Euler and Lagrange turn physical laws into equations for unknown functions.",
-      "results": ["Bernoulli equation", "Linear ODEs with constant coefficients"] },
+      "results": ["Bernoulli equation", "Linear ODEs with constant coefficients"],
+      "papers": [
+        { "title": "Institutiones calculi integralis", "authors": "Leonhard Euler", "year": 1768, "url": "https://scholar.google.com/scholar?q=%22Institutiones%20calculi%20integralis%22" }
+      ] },
     { "id": "numerical_analysis", "name": "Numerical analysis", "year": 1690, "clade": "applied", "msc": "65",
       "description": "Approximation as a discipline: methods to compute answers you cannot write down, with control of the error.",
-      "results": ["Newton–Raphson method", "Interpolation formulas", "Gaussian elimination"] },
+      "results": ["Newton–Raphson method", "Interpolation formulas", "Gaussian elimination"],
+      "papers": [
+        { "title": "Analysis aequationum universalis", "authors": "Joseph Raphson", "year": 1690, "url": "https://scholar.google.com/scholar?q=%22Analysis%20aequationum%20universalis%22" }
+      ] },
     { "id": "variations", "name": "Calculus of variations", "year": 1696, "clade": "analysis", "msc": "49",
       "description": "Born from Johann Bernoulli's brachistochrone challenge: find the curve, not the point, that optimizes.",
-      "results": ["Euler–Lagrange equation", "Principle of least action"] },
+      "results": ["Euler–Lagrange equation", "Principle of least action"],
+      "papers": [
+        { "title": "Methodus inveniendi lineas curvas maximi minimive proprietate gaudentes", "authors": "Leonhard Euler", "year": 1744, "url": "https://scholar.google.com/scholar?q=%22Methodus%20inveniendi%20lineas%20curvas%20maximi%20minimive%20proprietate%20gaudentes%22" },
+        { "title": "Mécanique analytique", "authors": "Joseph-Louis Lagrange", "year": 1788, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=M%C3%A9canique+analytique&go=Go" }
+      ] },
     { "id": "graph_theory", "name": "Graph theory", "year": 1736, "clade": "topology", "msc": "05C",
       "description": "Euler's Königsberg bridges: a problem where only connections matter, not distances.",
-      "results": ["Eulerian paths", "V − E + F = 2 (1758)"] },
+      "results": ["Eulerian paths", "V − E + F = 2 (1758)"],
+      "papers": [
+        { "title": "Solutio problematis ad geometriam situs pertinentis", "authors": "Leonhard Euler", "year": 1736, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Seven+Bridges+of+K%C3%B6nigsberg&go=Go" }
+      ] },
     { "id": "pde", "name": "Partial differential equations", "year": 1747, "clade": "analysis", "msc": "35",
       "description": "D'Alembert writes the wave equation for a vibrating string; physics becomes a matter of fields governed by PDEs.",
-      "results": ["Wave equation", "Laplace's equation", "Navier–Stokes equations (1845)"] },
+      "results": ["Wave equation", "Laplace's equation", "Navier–Stokes equations (1845)"],
+      "papers": [
+        { "title": "Recherches sur la courbe que forme une corde tendue mise en vibration", "authors": "Jean le Rond d'Alembert", "year": 1747, "url": "https://scholar.google.com/scholar?q=%22Recherches%20sur%20la%20courbe%20que%20forme%20une%20corde%20tendue%20mise%20en%20vibration%22" }
+      ] },
     { "id": "euler_analysis", "name": "Analysis of functions", "year": 1748, "clade": "analysis", "msc": "26",
       "description": "Euler's Introductio makes the function, not the curve, the central object, and handles infinite series with abandon.",
-      "results": ["e^{ix} = cos x + i sin x", "Basel problem: Σ1/n² = π²/6"] },
+      "results": ["e^{ix} = cos x + i sin x", "Basel problem: Σ1/n² = π²/6"],
+      "papers": [
+        { "title": "Introductio in analysin infinitorum", "authors": "Leonhard Euler", "year": 1748, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Introductio+in+analysin+infinitorum&go=Go" }
+      ] },
     { "id": "bayesian", "name": "Bayesian inference", "year": 1763, "clade": "chance", "msc": "62F15",
       "description": "Bayes's posthumous essay reverses probability: from effects back to causes. Laplace found the rule again independently in 1774.",
-      "results": ["Bayes' theorem", "Rule of succession", "Inverse probability"] },
+      "results": ["Bayes' theorem", "Rule of succession", "Inverse probability"],
+      "papers": [
+        { "title": "An Essay Towards Solving a Problem in the Doctrine of Chances", "authors": "Thomas Bayes", "year": 1763, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=An+Essay+Towards+Solving+a+Problem+in+the+Doctrine+of+Chances&go=Go" }
+      ] },
     { "id": "modern_number_theory", "name": "Modern number theory", "year": 1801, "clade": "number", "msc": "11A",
       "description": "From Fermat's marginalia through Euler to Gauss's Disquisitiones Arithmeticae: congruences and quadratic forms.",
-      "results": ["Quadratic reciprocity", "Fermat's little theorem", "Modular arithmetic"] },
+      "results": ["Quadratic reciprocity", "Fermat's little theorem", "Modular arithmetic"],
+      "papers": [
+        { "title": "Disquisitiones Arithmeticae", "authors": "Carl Friedrich Gauss", "year": 1801, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Disquisitiones+Arithmeticae&go=Go" }
+      ] },
     { "id": "fourier", "name": "Fourier analysis", "year": 1807, "clade": "analysis", "msc": "42",
       "description": "Fourier claims any function is a sum of sines, to solve the heat equation. The claim forced analysis to become rigorous.",
-      "results": ["Fourier series", "Heat equation solved"] },
+      "results": ["Fourier series", "Heat equation solved"],
+      "papers": [
+        { "title": "Théorie analytique de la chaleur", "authors": "Joseph Fourier", "year": 1822, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Th%C3%A9orie+analytique+de+la+chaleur&go=Go" }
+      ] },
     { "id": "statistics", "name": "Mathematical statistics", "year": 1809, "clade": "chance", "msc": "62",
       "description": "Gauss and Laplace fit models to noisy observations: least squares and the normal law of errors.",
-      "results": ["Method of least squares", "Central limit theorem (Laplace)"] },
+      "results": ["Method of least squares", "Central limit theorem (Laplace)"],
+      "papers": [
+        { "title": "Nouvelles méthodes pour la détermination des orbites des comètes", "authors": "Adrien-Marie Legendre", "year": 1805, "url": "https://scholar.google.com/scholar?q=%22Nouvelles%20m%C3%A9thodes%20pour%20la%20d%C3%A9termination%20des%20orbites%20des%20com%C3%A8tes%22" },
+        { "title": "Theoria motus corporum coelestium", "authors": "Carl Friedrich Gauss", "year": 1809, "url": "https://scholar.google.com/scholar?q=%22Theoria%20motus%20corporum%20coelestium%22" }
+      ] },
     { "id": "rigorous_analysis", "name": "Rigorous analysis", "year": 1821, "clade": "analysis", "msc": "26A",
       "description": "Cauchy, Bolzano and Weierstrass rebuild calculus on limits and ε–δ, purging infinitesimals.",
-      "results": ["ε–δ definition of continuity", "Intermediate value theorem proved", "Bolzano–Weierstrass theorem"] },
+      "results": ["ε–δ definition of continuity", "Intermediate value theorem proved", "Bolzano–Weierstrass theorem"],
+      "papers": [
+        { "title": "Cours d'Analyse", "authors": "Augustin-Louis Cauchy", "year": 1821, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Cours+d%27Analyse&go=Go" }
+      ] },
     { "id": "complex_analysis", "name": "Complex analysis", "year": 1825, "clade": "analysis", "msc": "30",
       "description": "Cauchy's contour integrals and Riemann's geometric view: calculus over the complex plane is unexpectedly rigid and beautiful.",
-      "results": ["Cauchy integral theorem", "Riemann surfaces", "Residue theorem"] },
+      "results": ["Cauchy integral theorem", "Riemann surfaces", "Residue theorem"],
+      "papers": [
+        { "title": "Mémoire sur les intégrales définies prises entre des limites imaginaires", "authors": "Augustin-Louis Cauchy", "year": 1825, "url": "https://scholar.google.com/scholar?q=%22M%C3%A9moire%20sur%20les%20int%C3%A9grales%20d%C3%A9finies%20prises%20entre%20des%20limites%20imaginaires%22" },
+        { "title": "Grundlagen für eine allgemeine Theorie der Functionen einer veränderlichen complexen Grösse", "authors": "Bernhard Riemann", "year": 1851, "url": "https://scholar.google.com/scholar?q=%22Grundlagen%20f%C3%BCr%20eine%20allgemeine%20Theorie%20der%20Functionen%20einer%20ver%C3%A4nderlichen%20complexen%20Gr%C3%B6sse%22" }
+      ] },
     { "id": "differential_geometry", "name": "Differential geometry", "year": 1827, "clade": "geometry", "msc": "53",
       "description": "Gauss studies curved surfaces from the inside, discovering curvature is intrinsic.",
-      "results": ["Theorema Egregium", "Gauss–Bonnet (local form)"] },
+      "results": ["Theorema Egregium", "Gauss–Bonnet (local form)"],
+      "papers": [
+        { "title": "Disquisitiones generales circa superficies curvas", "authors": "Carl Friedrich Gauss", "year": 1827, "url": "https://scholar.google.com/scholar?q=%22Disquisitiones%20generales%20circa%20superficies%20curvas%22" }
+      ] },
     { "id": "lobachevsky", "name": "Lobachevsky's geometry", "year": 1829, "clade": "geometry", "msc": "51M10",
       "description": "Lobachevsky publishes a consistent geometry in which the parallel postulate fails.",
-      "results": ["Angle sum of a triangle < 180°", "Hyperbolic trigonometry"] },
+      "results": ["Angle sum of a triangle < 180°", "Hyperbolic trigonometry"],
+      "papers": [
+        { "title": "Geometrical Researches on the Theory of Parallels", "authors": "Nikolai Lobachevsky", "year": 1840, "url": "https://scholar.google.com/scholar?q=%22Geometrical%20Researches%20on%20the%20Theory%20of%20Parallels%22" }
+      ] },
     { "id": "bolyai", "name": "Bolyai's geometry", "year": 1832, "clade": "geometry", "msc": "51M10",
       "description": "János Bolyai independently reaches the same non-Euclidean geometry. Gauss had found it privately and never published.",
-      "results": ["Absolute geometry", "Hyperbolic plane constructions"] },
+      "results": ["Absolute geometry", "Hyperbolic plane constructions"],
+      "papers": [
+        { "title": "Appendix scientiam spatii absolute veram exhibens", "authors": "János Bolyai", "year": 1832, "url": "https://scholar.google.com/scholar?q=%22Appendix%20scientiam%20spatii%20absolute%20veram%20exhibens%22" }
+      ] },
     { "id": "group_theory", "name": "Group theory", "year": 1832, "clade": "algebra", "msc": "20",
       "description": "Galois explains which polynomials are solvable by radicals by studying symmetries of their roots.",
-      "results": ["Galois correspondence", "Insolvability of the quintic (with Abel)"] },
+      "results": ["Galois correspondence", "Insolvability of the quintic (with Abel)"],
+      "papers": [
+        { "title": "Mémoire sur les conditions de résolubilité des équations par radicaux", "authors": "Évariste Galois", "year": 1846, "url": "https://scholar.google.com/scholar?q=%22M%C3%A9moire%20sur%20les%20conditions%20de%20r%C3%A9solubilit%C3%A9%20des%20%C3%A9quations%20par%20radicaux%22" }
+      ] },
     { "id": "hamiltonian_mechanics", "name": "Hamiltonian mechanics", "year": 1833, "clade": "applied", "msc": "70H",
       "description": "Hamilton restates mechanics as a flow on phase space, a form that later carries over to quantum theory.",
-      "results": ["Hamilton's equations", "Liouville's theorem", "Hamilton–Jacobi equation"] },
+      "results": ["Hamilton's equations", "Liouville's theorem", "Hamilton–Jacobi equation"],
+      "papers": [
+        { "title": "On a General Method in Dynamics", "authors": "William Rowan Hamilton", "year": 1834, "url": "https://scholar.google.com/scholar?q=%22On%20a%20General%20Method%20in%20Dynamics%22" }
+      ] },
     { "id": "analytic_number_theory", "name": "Analytic number theory", "year": 1837, "clade": "number", "msc": "11M",
       "description": "Dirichlet and then Riemann attack primes with the tools of analysis: a hybrid of two distant lineages.",
-      "results": ["Dirichlet's theorem on primes in progressions", "Riemann hypothesis posed (1859)", "Prime number theorem (1896)"] },
+      "results": ["Dirichlet's theorem on primes in progressions", "Riemann hypothesis posed (1859)", "Prime number theorem (1896)"],
+      "papers": [
+        { "title": "Beweis des Satzes, dass jede unbegrenzte arithmetische Progression ... Primzahlen enthält", "authors": "P. G. L. Dirichlet", "year": 1837, "url": "https://scholar.google.com/scholar?q=%22Beweis%20des%20Satzes%2C%20dass%20jede%20unbegrenzte%20arithmetische%20Progression%20...%20Primzahlen%20enth%C3%A4lt%22" },
+        { "title": "On the Number of Primes Less Than a Given Magnitude", "authors": "Bernhard Riemann", "year": 1859, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=On+the+Number+of+Primes+Less+Than+a+Given+Magnitude&go=Go" }
+      ] },
     { "id": "quaternions", "name": "Quaternions", "year": 1843, "clade": "algebra", "msc": "11R52",
       "description": "Hamilton carves i² = j² = k² = ijk = −1 into Brougham Bridge: the first number system where multiplication does not commute.",
-      "results": ["Non-commutative division algebra", "Rotations of 3D space", "Dot and cross product (via Gibbs and Heaviside)"] },
+      "results": ["Non-commutative division algebra", "Rotations of 3D space", "Dot and cross product (via Gibbs and Heaviside)"],
+      "papers": [
+        { "title": "On Quaternions; or on a new System of Imaginaries in Algebra", "authors": "William Rowan Hamilton", "year": 1844, "url": "https://scholar.google.com/scholar?q=%22On%20Quaternions%3B%20or%20on%20a%20new%20System%20of%20Imaginaries%20in%20Algebra%22" }
+      ] },
     { "id": "linear_algebra", "name": "Linear algebra", "year": 1844, "clade": "algebra", "msc": "15",
       "description": "Grassmann's extension theory and Cayley's matrices: vector spaces and linear maps as objects of study.",
-      "results": ["Matrix algebra", "Cayley–Hamilton theorem", "Exterior algebra"] },
+      "results": ["Matrix algebra", "Cayley–Hamilton theorem", "Exterior algebra"],
+      "papers": [
+        { "title": "Die lineale Ausdehnungslehre", "authors": "Hermann Grassmann", "year": 1844, "url": "https://scholar.google.com/scholar?q=%22Die%20lineale%20Ausdehnungslehre%22" },
+        { "title": "A memoir on the theory of matrices", "authors": "Arthur Cayley", "year": 1858, "url": "https://scholar.google.com/scholar?q=%22A%20memoir%20on%20the%20theory%20of%20matrices%22" }
+      ] },
     { "id": "invariant_theory", "name": "Invariant theory", "year": 1845, "clade": "algebra", "msc": "13A50", "status": "dormant",
       "description": "Cayley and Sylvester compute polynomials unchanged under linear substitutions. Hilbert's 1890 proofs ended the computational era, and the field went quiet.",
-      "results": ["Hilbert's basis theorem", "Gordan's finiteness for binary forms"] },
+      "results": ["Hilbert's basis theorem", "Gordan's finiteness for binary forms"],
+      "papers": [
+        { "title": "Ueber die Theorie der algebraischen Formen", "authors": "David Hilbert", "year": 1890, "url": "https://scholar.google.com/scholar?q=%22Ueber%20die%20Theorie%20der%20algebraischen%20Formen%22" }
+      ] },
     { "id": "boolean_logic", "name": "Boolean logic", "year": 1847, "clade": "foundations", "msc": "03G05",
       "description": "Boole writes reasoning as algebra: propositions become variables, and logic becomes calculation.",
-      "results": ["Boolean algebra", "Laws of thought as equations"] },
+      "results": ["Boolean algebra", "Laws of thought as equations"],
+      "papers": [
+        { "title": "The Mathematical Analysis of Logic", "authors": "George Boole", "year": 1847, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=The+Mathematical+Analysis+of+Logic&go=Go" },
+        { "title": "The Laws of Thought", "authors": "George Boole", "year": 1854, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=The+Laws+of+Thought&go=Go" }
+      ] },
     { "id": "algebraic_number_theory", "name": "Algebraic number theory", "year": 1847, "clade": "number", "msc": "11R",
       "description": "Kummer's ideal numbers rescue unique factorization in cyclotomic integers; Dedekind turns them into ideals.",
-      "results": ["Kummer's proof of Fermat for regular primes", "Dedekind domains and ideals", "Class groups"] },
+      "results": ["Kummer's proof of Fermat for regular primes", "Dedekind domains and ideals", "Class groups"],
+      "papers": [
+        { "title": "Zur Theorie der complexen Zahlen", "authors": "Ernst Kummer", "year": 1847, "url": "https://scholar.google.com/scholar?q=%22Zur%20Theorie%20der%20complexen%20Zahlen%22" },
+        { "title": "Über die Theorie der ganzen algebraischen Zahlen (Supplement XI)", "authors": "Richard Dedekind", "year": 1871, "url": "https://scholar.google.com/scholar?q=%22%C3%9Cber%20die%20Theorie%20der%20ganzen%20algebraischen%20Zahlen%20%28Supplement%20XI%29%22" }
+      ] },
     { "id": "riemannian_geometry", "name": "Riemannian geometry", "year": 1854, "clade": "geometry", "msc": "53B20",
       "description": "Riemann's Habilitation lecture: space of any dimension with a variable metric. Euclidean and non-Euclidean geometry become special cases.",
-      "results": ["Riemann curvature tensor", "Manifolds", "Later: the geometry of general relativity"] },
+      "results": ["Riemann curvature tensor", "Manifolds", "Later: the geometry of general relativity"],
+      "papers": [
+        { "title": "Ueber die Hypothesen, welche der Geometrie zu Grunde liegen", "authors": "Bernhard Riemann", "year": 1854, "url": "https://scholar.google.com/scholar?q=%22Ueber%20die%20Hypothesen%2C%20welche%20der%20Geometrie%20zu%20Grunde%20liegen%22" }
+      ] },
     { "id": "knot_theory", "name": "Knot theory", "year": 1867, "clade": "topology", "msc": "57K10",
       "description": "Kelvin guesses atoms are knotted vortices; Tait tabulates knots to build a periodic table. The physics failed but the mathematics stayed.",
-      "results": ["Tait's knot tables", "Gauss linking number", "Alexander polynomial (1928)"] },
+      "results": ["Tait's knot tables", "Gauss linking number", "Alexander polynomial (1928)"],
+      "papers": [
+        { "title": "On Knots", "authors": "Peter Guthrie Tait", "year": 1877, "url": "https://scholar.google.com/scholar?q=%22On%20Knots%22" },
+        { "title": "Topological invariants of knots and links", "authors": "J. W. Alexander", "year": 1928, "url": "https://scholar.google.com/scholar?q=%22Topological%20invariants%20of%20knots%20and%20links%22" }
+      ] },
     { "id": "lie_theory", "name": "Lie groups & algebras", "year": 1873, "clade": "algebra", "msc": "22E",
       "description": "Sophus Lie seeks a Galois theory for differential equations and finds continuous symmetry groups.",
-      "results": ["Lie's correspondence between groups and algebras", "Killing–Cartan classification of simple Lie algebras", "E8"] },
+      "results": ["Lie's correspondence between groups and algebras", "Killing–Cartan classification of simple Lie algebras", "E8"],
+      "papers": [
+        { "title": "Theorie der Transformationsgruppen", "authors": "Sophus Lie & Friedrich Engel", "year": 1888, "url": "https://scholar.google.com/scholar?q=%22Theorie%20der%20Transformationsgruppen%22" }
+      ] },
     { "id": "set_theory", "name": "Set theory", "year": 1874, "clade": "foundations", "msc": "03E",
       "description": "Cantor's study of where Fourier series can fail leads him to infinite sets and different sizes of infinity.",
-      "results": ["Uncountability of the reals", "Transfinite cardinals and ordinals", "Diagonal argument"] },
+      "results": ["Uncountability of the reals", "Transfinite cardinals and ordinals", "Diagonal argument"],
+      "papers": [
+        { "title": "Ueber eine Eigenschaft des Inbegriffes aller reellen algebraischen Zahlen", "authors": "Georg Cantor", "year": 1874, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Georg+Cantor%27s+first+set+theory+article&go=Go" }
+      ] },
     { "id": "mathematical_logic", "name": "Mathematical logic", "year": 1879, "clade": "foundations", "msc": "03B",
       "description": "Frege's Begriffsschrift introduces quantifiers and a formal language precise enough for all of mathematics.",
-      "results": ["First-order predicate logic", "Peano axioms (1889)", "Russell's paradox (1901)"] },
+      "results": ["First-order predicate logic", "Peano axioms (1889)", "Russell's paradox (1901)"],
+      "papers": [
+        { "title": "Begriffsschrift", "authors": "Gottlob Frege", "year": 1879, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Begriffsschrift&go=Go" }
+      ] },
     { "id": "algebraic_geometry", "name": "Algebraic geometry", "year": 1890, "clade": "geometry", "msc": "14",
       "description": "Solution sets of polynomial equations, studied by the Italian school, Hilbert and Noether. Geometry and algebra fully interbred.",
-      "results": ["Hilbert's Nullstellensatz", "Classification of algebraic surfaces", "Riemann–Roch"] },
+      "results": ["Hilbert's Nullstellensatz", "Classification of algebraic surfaces", "Riemann–Roch"],
+      "papers": [
+        { "title": "Ueber die vollen Invariantensysteme", "authors": "David Hilbert", "year": 1893, "url": "https://scholar.google.com/scholar?q=%22Ueber%20die%20vollen%20Invariantensysteme%22" }
+      ] },
     { "id": "dynamical_systems", "name": "Dynamical systems", "year": 1890, "clade": "analysis", "msc": "37",
       "description": "Poincaré's three-body work studies the shape of all solutions rather than formulas for one. Chaos followed (Lorenz, 1963).",
-      "results": ["Poincaré recurrence", "Sensitive dependence on initial conditions", "Strange attractors"] },
+      "results": ["Poincaré recurrence", "Sensitive dependence on initial conditions", "Strange attractors"],
+      "papers": [
+        { "title": "Les méthodes nouvelles de la mécanique céleste", "authors": "Henri Poincaré", "year": 1892, "url": "https://scholar.google.com/scholar?q=%22Les%20m%C3%A9thodes%20nouvelles%20de%20la%20m%C3%A9canique%20c%C3%A9leste%22" },
+        { "title": "Deterministic Nonperiodic Flow", "authors": "Edward Lorenz", "year": 1963, "url": "https://scholar.google.com/scholar?q=%22Deterministic%20Nonperiodic%20Flow%22" }
+      ] },
     { "id": "algebraic_topology", "name": "Algebraic topology", "year": 1895, "clade": "topology", "msc": "55",
       "description": "Poincaré's Analysis Situs attaches groups to spaces to tell them apart. Euler's graphs, Riemann's surfaces and Galois's groups all feed in.",
-      "results": ["Fundamental group", "Homology", "Poincaré conjecture posed (proved 2003)"] },
+      "results": ["Fundamental group", "Homology", "Poincaré conjecture posed (proved 2003)"],
+      "papers": [
+        { "title": "Analysis Situs", "authors": "Henri Poincaré", "year": 1895, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Analysis+Situs+%28paper%29&go=Go" }
+      ] },
     { "id": "representation_theory", "name": "Representation theory", "year": 1896, "clade": "algebra", "msc": "20C",
       "description": "Frobenius studies groups by how they act as matrices, turning abstract symmetry into linear algebra.",
-      "results": ["Character theory", "Peter–Weyl theorem", "Weyl character formula"] },
+      "results": ["Character theory", "Peter–Weyl theorem", "Weyl character formula"],
+      "papers": [
+        { "title": "Über Gruppencharaktere", "authors": "Georg Frobenius", "year": 1896, "url": "https://scholar.google.com/scholar?q=%22%C3%9Cber%20Gruppencharaktere%22" }
+      ] },
     { "id": "p_adic", "name": "p-adic numbers", "year": 1897, "clade": "number", "msc": "11S",
       "description": "Hensel completes the rationals with respect to divisibility by a prime, making a separate calculus for each prime.",
-      "results": ["Hensel's lemma", "Hasse–Minkowski local-global principle", "Ostrowski's theorem"] },
+      "results": ["Hensel's lemma", "Hasse–Minkowski local-global principle", "Ostrowski's theorem"],
+      "papers": [
+        { "title": "Über eine neue Begründung der Theorie der algebraischen Zahlen", "authors": "Kurt Hensel", "year": 1897, "url": "https://scholar.google.com/scholar?q=%22%C3%9Cber%20eine%20neue%20Begr%C3%BCndung%20der%20Theorie%20der%20algebraischen%20Zahlen%22" }
+      ] },
     { "id": "tensor_calculus", "name": "Tensor calculus", "year": 1900, "clade": "geometry", "msc": "53A45",
       "description": "Ricci-Curbastro and Levi-Civita's absolute differential calculus: coordinate-free bookkeeping for curved space.",
-      "results": ["Covariant derivative", "Levi-Civita connection", "Einstein summation convention"] },
+      "results": ["Covariant derivative", "Levi-Civita connection", "Einstein summation convention"],
+      "papers": [
+        { "title": "Méthodes de calcul différentiel absolu et leurs applications", "authors": "Ricci-Curbastro & Levi-Civita", "year": 1900, "url": "https://scholar.google.com/scholar?q=%22M%C3%A9thodes%20de%20calcul%20diff%C3%A9rentiel%20absolu%20et%20leurs%20applications%22" }
+      ] },
     { "id": "measure_theory", "name": "Measure theory", "year": 1902, "clade": "analysis", "msc": "28",
       "description": "Lebesgue measures far wilder sets than Riemann could, giving an integral that commutes with limits.",
-      "results": ["Lebesgue integral", "Dominated convergence theorem"] },
+      "results": ["Lebesgue integral", "Dominated convergence theorem"],
+      "papers": [
+        { "title": "Intégrale, longueur, aire", "authors": "Henri Lebesgue", "year": 1902, "url": "https://scholar.google.com/scholar?q=%22Int%C3%A9grale%2C%20longueur%2C%20aire%22" }
+      ] },
     { "id": "functional_analysis", "name": "Functional analysis", "year": 1906, "clade": "analysis", "msc": "46",
       "description": "Hilbert, Fréchet, Riesz and Banach treat functions as points in infinite-dimensional spaces.",
-      "results": ["Hilbert spaces", "Banach spaces", "Spectral theorem"] },
+      "results": ["Hilbert spaces", "Banach spaces", "Spectral theorem"],
+      "papers": [
+        { "title": "Grundzüge einer allgemeinen Theorie der linearen Integralgleichungen", "authors": "David Hilbert", "year": 1912, "url": "https://scholar.google.com/scholar?q=%22Grundz%C3%BCge%20einer%20allgemeinen%20Theorie%20der%20linearen%20Integralgleichungen%22" },
+        { "title": "Théorie des opérations linéaires", "authors": "Stefan Banach", "year": 1932, "url": "https://scholar.google.com/scholar?q=%22Th%C3%A9orie%20des%20op%C3%A9rations%20lin%C3%A9aires%22" }
+      ] },
     { "id": "markov_chains", "name": "Markov chains", "year": 1906, "clade": "chance", "msc": "60J10",
       "description": "Markov extends the law of large numbers to dependent events, testing it on the vowels in Pushkin's Eugene Onegin.",
-      "results": ["Stationary distributions", "Ergodic theorem for chains", "PageRank (1998)"] },
+      "results": ["Stationary distributions", "Ergodic theorem for chains", "PageRank (1998)"],
+      "papers": [
+        { "title": "Extension of the law of large numbers to dependent quantities", "authors": "Andrey Markov", "year": 1906, "url": "https://scholar.google.com/scholar?q=%22Extension%20of%20the%20law%20of%20large%20numbers%20to%20dependent%20quantities%22" }
+      ] },
     { "id": "intuitionism", "name": "Intuitionism", "year": 1907, "clade": "foundations", "msc": "03F55",
       "description": "Brouwer rejects the law of excluded middle for infinite sets: to exist is to be constructed. Marginal for decades, it returns in type theory.",
-      "results": ["Heyting arithmetic", "Brouwer–Heyting–Kolmogorov interpretation", "Choice sequences"] },
+      "results": ["Heyting arithmetic", "Brouwer–Heyting–Kolmogorov interpretation", "Choice sequences"],
+      "papers": [
+        { "title": "Over de grondslagen der wiskunde", "authors": "L. E. J. Brouwer", "year": 1907, "url": "https://scholar.google.com/scholar?q=%22Over%20de%20grondslagen%20der%20wiskunde%22" }
+      ] },
     { "id": "zfc", "name": "Axiomatic set theory", "year": 1908, "clade": "foundations", "msc": "03E30",
       "description": "Zermelo axiomatizes sets to escape Russell's paradox; with Fraenkel's additions, ZFC becomes the default foundation of mathematics.",
-      "results": ["ZFC axioms", "Well-ordering theorem", "Cumulative hierarchy"] },
+      "results": ["ZFC axioms", "Well-ordering theorem", "Cumulative hierarchy"],
+      "papers": [
+        { "title": "Untersuchungen über die Grundlagen der Mengenlehre I", "authors": "Ernst Zermelo", "year": 1908, "url": "https://scholar.google.com/scholar?q=%22Untersuchungen%20%C3%BCber%20die%20Grundlagen%20der%20Mengenlehre%20I%22" }
+      ] },
     { "id": "point_set_topology", "name": "Point-set topology", "year": 1914, "clade": "topology", "msc": "54",
       "description": "Hausdorff axiomatizes open sets, giving continuity its most general home.",
-      "results": ["Topological spaces", "Compactness", "Tychonoff's theorem"] },
+      "results": ["Topological spaces", "Compactness", "Tychonoff's theorem"],
+      "papers": [
+        { "title": "Grundzüge der Mengenlehre", "authors": "Felix Hausdorff", "year": 1914, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Grundz%C3%BCge+der+Mengenlehre&go=Go" }
+      ] },
     { "id": "general_relativity", "name": "General relativity", "year": 1915, "clade": "applied", "msc": "83C",
       "description": "Einstein models gravity as the curvature of spacetime. Riemann's geometry, built with no application in mind, turns out to describe gravity.",
-      "results": ["Einstein field equations", "Schwarzschild solution", "Perihelion of Mercury explained"] },
+      "results": ["Einstein field equations", "Schwarzschild solution", "Perihelion of Mercury explained"],
+      "papers": [
+        { "title": "Die Feldgleichungen der Gravitation", "authors": "Albert Einstein", "year": 1915, "url": "https://scholar.google.com/scholar?q=%22Die%20Feldgleichungen%20der%20Gravitation%22" }
+      ] },
     { "id": "complex_dynamics", "name": "Complex dynamics", "year": 1918, "clade": "analysis", "msc": "37F10",
       "description": "Fatou and Julia independently study iteration of rational maps of the complex plane, competing for the same prize.",
-      "results": ["Julia and Fatou sets", "Classification of Fatou components (Sullivan, 1985)"] },
+      "results": ["Julia and Fatou sets", "Classification of Fatou components (Sullivan, 1985)"],
+      "papers": [
+        { "title": "Mémoire sur l'itération des fonctions rationnelles", "authors": "Gaston Julia", "year": 1918, "url": "https://scholar.google.com/scholar?q=%22M%C3%A9moire%20sur%20l%27it%C3%A9ration%20des%20fonctions%20rationnelles%22" },
+        { "title": "Sur les équations fonctionnelles", "authors": "Pierre Fatou", "year": 1919, "url": "https://scholar.google.com/scholar?q=%22Sur%20les%20%C3%A9quations%20fonctionnelles%22" }
+      ] },
     { "id": "abstract_algebra", "name": "Abstract algebra", "year": 1921, "clade": "algebra", "msc": "13",
       "description": "Emmy Noether shifts algebra from calculation to structure: rings, ideals and modules.",
-      "results": ["Noetherian rings", "Isomorphism theorems", "van der Waerden's Moderne Algebra (1930)"] },
+      "results": ["Noetherian rings", "Isomorphism theorems", "van der Waerden's Moderne Algebra (1930)"],
+      "papers": [
+        { "title": "Idealtheorie in Ringbereichen", "authors": "Emmy Noether", "year": 1921, "url": "https://scholar.google.com/scholar?q=%22Idealtheorie%20in%20Ringbereichen%22" },
+        { "title": "Moderne Algebra", "authors": "B. L. van der Waerden", "year": 1930, "url": "https://scholar.google.com/scholar?q=%22Moderne%20Algebra%22" }
+      ] },
     { "id": "elliptic_curves", "name": "Elliptic curves", "year": 1922, "clade": "number", "msc": "11G05",
       "description": "Cubic curves whose rational points form a group. Mordell proves that group is finitely generated.",
-      "results": ["Mordell's theorem", "Birch–Swinnerton-Dyer conjecture (1965)", "Taniyama–Shimura conjecture (1955)"] },
+      "results": ["Mordell's theorem", "Birch–Swinnerton-Dyer conjecture (1965)", "Taniyama–Shimura conjecture (1955)"],
+      "papers": [
+        { "title": "On the rational solutions of the indeterminate equations of the third and fourth degrees", "authors": "Louis Mordell", "year": 1922, "url": "https://scholar.google.com/scholar?q=%22On%20the%20rational%20solutions%20of%20the%20indeterminate%20equations%20of%20the%20third%20and%20fourth%20degrees%22" }
+      ] },
     { "id": "brownian_motion", "name": "Brownian motion", "year": 1923, "clade": "chance", "msc": "60J65",
       "description": "Bachelier (1900, stock prices) and Einstein (1905, pollen grains) model random motion independently; Wiener makes it rigorous.",
-      "results": ["Wiener measure", "Nowhere-differentiable paths", "Avogadro's number measured (Perrin)"] },
+      "results": ["Wiener measure", "Nowhere-differentiable paths", "Avogadro's number measured (Perrin)"],
+      "papers": [
+        { "title": "Théorie de la spéculation", "authors": "Louis Bachelier", "year": 1900, "url": "https://scholar.google.com/scholar?q=%22Th%C3%A9orie%20de%20la%20sp%C3%A9culation%22" },
+        { "title": "Über die von der molekularkinetischen Theorie der Wärme geforderte Bewegung von in ruhenden Flüssigkeiten suspendierten Teilchen", "authors": "Albert Einstein", "year": 1905, "url": "https://scholar.google.com/scholar?q=%22%C3%9Cber%20die%20von%20der%20molekularkinetischen%20Theorie%20der%20W%C3%A4rme%20geforderte%20Bewegung%20von%20in%20ruhenden%20Fl%C3%BCssigkeiten%20suspendierten%20Teilchen%22" },
+        { "title": "Differential-space", "authors": "Norbert Wiener", "year": 1923, "url": "https://scholar.google.com/scholar?q=%22Differential-space%22" }
+      ] },
     { "id": "game_theory", "name": "Game theory", "year": 1928, "clade": "chance", "msc": "91A",
       "description": "Von Neumann proves the minimax theorem, making strategic conflict a mathematical subject.",
-      "results": ["Minimax theorem", "Nash equilibrium (1950)"] },
+      "results": ["Minimax theorem", "Nash equilibrium (1950)"],
+      "papers": [
+        { "title": "Zur Theorie der Gesellschaftsspiele", "authors": "John von Neumann", "year": 1928, "url": "https://scholar.google.com/scholar?q=%22Zur%20Theorie%20der%20Gesellschaftsspiele%22" },
+        { "title": "Theory of Games and Economic Behavior", "authors": "von Neumann & Morgenstern", "year": 1944, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Theory+of+Games+and+Economic+Behavior&go=Go" }
+      ] },
     { "id": "ramsey", "name": "Ramsey theory", "year": 1930, "clade": "discrete", "msc": "05D10",
       "description": "Frank Ramsey, working on a problem in logic, proves complete disorder is impossible: large structures always contain order.",
-      "results": ["Ramsey's theorem", "Erdős–Szekeres theorem", "Van der Waerden's theorem"] },
+      "results": ["Ramsey's theorem", "Erdős–Szekeres theorem", "Van der Waerden's theorem"],
+      "papers": [
+        { "title": "On a Problem of Formal Logic", "authors": "Frank Ramsey", "year": 1930, "url": "https://scholar.google.com/scholar?q=%22On%20a%20Problem%20of%20Formal%20Logic%22" }
+      ] },
     { "id": "incompleteness", "name": "Incompleteness", "year": 1931, "clade": "foundations", "msc": "03F40",
       "description": "Gödel shows any consistent formal system containing arithmetic has true but unprovable statements.",
-      "results": ["First and second incompleteness theorems", "Gödel numbering"] },
+      "results": ["First and second incompleteness theorems", "Gödel numbering"],
+      "papers": [
+        { "title": "Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I", "authors": "Kurt Gödel", "year": 1931, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=On+Formally+Undecidable+Propositions+of+Principia+Mathematica+and+Related+Systems&go=Go" }
+      ] },
     { "id": "quantum_mechanics", "name": "Quantum mechanics", "year": 1932, "clade": "applied", "msc": "81",
       "description": "Von Neumann puts quantum theory on Hilbert spaces: states are vectors, observables are self-adjoint operators.",
-      "results": ["Mathematical Foundations of Quantum Mechanics", "Uncertainty principle as an operator inequality", "Stone–von Neumann theorem"] },
+      "results": ["Mathematical Foundations of Quantum Mechanics", "Uncertainty principle as an operator inequality", "Stone–von Neumann theorem"],
+      "papers": [
+        { "title": "Mathematische Grundlagen der Quantenmechanik", "authors": "John von Neumann", "year": 1932, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Mathematical+Foundations+of+Quantum+Mechanics&go=Go" }
+      ] },
     { "id": "axiomatic_probability", "name": "Axiomatic probability", "year": 1933, "clade": "chance", "msc": "60A05",
       "description": "Kolmogorov grounds probability in measure theory. Three axioms, and a centuries-old field becomes rigorous.",
-      "results": ["Kolmogorov axioms", "Conditional expectation", "Stochastic processes"] },
+      "results": ["Kolmogorov axioms", "Conditional expectation", "Stochastic processes"],
+      "papers": [
+        { "title": "Grundbegriffe der Wahrscheinlichkeitsrechnung", "authors": "Andrey Kolmogorov", "year": 1933, "url": "https://scholar.google.com/scholar?q=%22Grundbegriffe%20der%20Wahrscheinlichkeitsrechnung%22" }
+      ] },
     { "id": "model_theory", "name": "Model theory", "year": 1933, "clade": "foundations", "msc": "03C",
       "description": "Tarski defines truth in a structure; logic becomes a tool for studying algebraic and geometric structures.",
-      "results": ["Tarski's undefinability of truth", "Compactness theorem", "Ax–Grothendieck theorem"] },
+      "results": ["Tarski's undefinability of truth", "Compactness theorem", "Ax–Grothendieck theorem"],
+      "papers": [
+        { "title": "The Concept of Truth in Formalized Languages", "authors": "Alfred Tarski", "year": 1933, "url": "https://scholar.google.com/scholar?q=%22The%20Concept%20of%20Truth%20in%20Formalized%20Languages%22" }
+      ] },
     { "id": "lambda_calculus", "name": "Lambda calculus", "year": 1936, "clade": "foundations", "msc": "03B40",
       "description": "Church defines effective calculability via function abstraction and application.",
-      "results": ["Undecidability of the Entscheidungsproblem", "Church encoding"] },
+      "results": ["Undecidability of the Entscheidungsproblem", "Church encoding"],
+      "papers": [
+        { "title": "An Unsolvable Problem of Elementary Number Theory", "authors": "Alonzo Church", "year": 1936, "url": "https://scholar.google.com/scholar?q=%22An%20Unsolvable%20Problem%20of%20Elementary%20Number%20Theory%22" }
+      ] },
     { "id": "turing_machines", "name": "Turing machines", "year": 1936, "clade": "foundations", "msc": "68Q",
       "description": "Turing reaches the same limits independently, with an imagined machine. The two definitions turn out equivalent.",
-      "results": ["Halting problem", "Universal machine"] },
+      "results": ["Halting problem", "Universal machine"],
+      "papers": [
+        { "title": "On Computable Numbers, with an Application to the Entscheidungsproblem", "authors": "Alan Turing", "year": 1936, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Turing%27s+proof&go=Go" }
+      ] },
     { "id": "finite_elements", "name": "Finite element method", "year": 1943, "clade": "applied", "msc": "65N30",
       "description": "Courant splits a domain into small pieces and solves PDEs on each; engineers adopt it for bridges and aircraft.",
-      "results": ["Galerkin approximation", "Céa's lemma", "Structural and fluid simulation"] },
+      "results": ["Galerkin approximation", "Céa's lemma", "Structural and fluid simulation"],
+      "papers": [
+        { "title": "Variational methods for the solution of problems of equilibrium and vibrations", "authors": "Richard Courant", "year": 1943, "url": "https://scholar.google.com/scholar?q=%22Variational%20methods%20for%20the%20solution%20of%20problems%20of%20equilibrium%20and%20vibrations%22" }
+      ] },
     { "id": "stochastic_calculus", "name": "Stochastic calculus", "year": 1944, "clade": "chance", "msc": "60H",
       "description": "Itô defines integrals against Brownian motion, giving calculus for systems driven by noise.",
-      "results": ["Itô's lemma", "Stochastic differential equations", "Martingale theory (Doob)"] },
+      "results": ["Itô's lemma", "Stochastic differential equations", "Martingale theory (Doob)"],
+      "papers": [
+        { "title": "Stochastic integral", "authors": "Kiyosi Itô", "year": 1944, "url": "https://scholar.google.com/scholar?q=%22Stochastic%20integral%22" }
+      ] },
     { "id": "category_theory", "name": "Category theory", "year": 1945, "clade": "algebra", "msc": "18",
       "description": "Eilenberg and Mac Lane invent a language for 'natural' maps between constructions in algebraic topology.",
-      "results": ["Functors and natural transformations", "Yoneda lemma", "Adjunctions"] },
+      "results": ["Functors and natural transformations", "Yoneda lemma", "Adjunctions"],
+      "papers": [
+        { "title": "General Theory of Natural Equivalences", "authors": "Eilenberg & Mac Lane", "year": 1945, "url": "https://scholar.google.com/scholar?q=%22General%20Theory%20of%20Natural%20Equivalences%22" }
+      ] },
     { "id": "sheaf_theory", "name": "Sheaf theory", "year": 1945, "clade": "topology", "msc": "18F20",
       "description": "Leray, a prisoner of war, invents sheaves to track how local data patches together into global data.",
-      "results": ["Sheaf cohomology", "Leray spectral sequence", "Oka–Cartan theory"] },
+      "results": ["Sheaf cohomology", "Leray spectral sequence", "Oka–Cartan theory"],
+      "papers": [
+        { "title": "Faisceaux algébriques cohérents", "authors": "Jean-Pierre Serre", "year": 1955, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Faisceaux+alg%C3%A9briques+coh%C3%A9rents&go=Go" }
+      ] },
     { "id": "monte_carlo", "name": "Monte Carlo methods", "year": 1946, "clade": "applied", "msc": "65C05",
       "description": "Ulam, recovering from illness and playing solitaire, proposes estimating hard quantities by random sampling; von Neumann codes it for ENIAC.",
-      "results": ["Metropolis algorithm (1953)", "Markov chain Monte Carlo", "Error falls as 1/√N regardless of dimension"] },
+      "results": ["Metropolis algorithm (1953)", "Markov chain Monte Carlo", "Error falls as 1/√N regardless of dimension"],
+      "papers": [
+        { "title": "The Monte Carlo Method", "authors": "Metropolis & Ulam", "year": 1949, "url": "https://scholar.google.com/scholar?q=%22The%20Monte%20Carlo%20Method%22" },
+        { "title": "Equation of State Calculations by Fast Computing Machines", "authors": "Metropolis, Rosenbluth, Rosenbluth, Teller & Teller", "year": 1953, "url": "https://scholar.google.com/scholar?q=%22Equation%20of%20State%20Calculations%20by%20Fast%20Computing%20Machines%22" }
+      ] },
     { "id": "linear_programming", "name": "Linear programming", "year": 1947, "clade": "applied", "msc": "90C05",
       "description": "Dantzig's simplex method optimizes over polytopes. Kantorovich had found the idea in 1939, unnoticed in the West.",
-      "results": ["Simplex method", "LP duality", "Interior-point methods (Karmarkar, 1984)"] },
+      "results": ["Simplex method", "LP duality", "Interior-point methods (Karmarkar, 1984)"],
+      "papers": [
+        { "title": "Mathematical methods of organizing and planning production", "authors": "Leonid Kantorovich", "year": 1939, "url": "https://scholar.google.com/scholar?q=%22Mathematical%20methods%20of%20organizing%20and%20planning%20production%22" },
+        { "title": "Maximization of a linear function of variables subject to linear inequalities", "authors": "George Dantzig", "year": 1951, "url": "https://scholar.google.com/scholar?q=%22Maximization%20of%20a%20linear%20function%20of%20variables%20subject%20to%20linear%20inequalities%22" }
+      ] },
     { "id": "probabilistic_method", "name": "Probabilistic method", "year": 1947, "clade": "discrete", "msc": "05D40",
       "description": "Erdős proves objects exist by showing a random one works with positive probability, without constructing one.",
-      "results": ["Exponential lower bound for Ramsey numbers", "Lovász local lemma", "Random graphs (Erdős–Rényi, 1959)"] },
+      "results": ["Exponential lower bound for Ramsey numbers", "Lovász local lemma", "Random graphs (Erdős–Rényi, 1959)"],
+      "papers": [
+        { "title": "Some remarks on the theory of graphs", "authors": "Paul Erdős", "year": 1947, "url": "https://scholar.google.com/scholar?q=%22Some%20remarks%20on%20the%20theory%20of%20graphs%22" },
+        { "title": "On random graphs I", "authors": "Erdős & Rényi", "year": 1959, "url": "https://scholar.google.com/scholar?q=%22On%20random%20graphs%20I%22" }
+      ] },
     { "id": "information_theory", "name": "Information theory", "year": 1948, "clade": "chance", "msc": "94A",
       "description": "Shannon quantifies information as entropy, built from probability and Boolean switching circuits.",
-      "results": ["Source coding theorem", "Channel capacity"] },
+      "results": ["Source coding theorem", "Channel capacity"],
+      "papers": [
+        { "title": "A Mathematical Theory of Communication", "authors": "Claude Shannon", "year": 1948, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=A+Mathematical+Theory+of+Communication&go=Go" }
+      ] },
     { "id": "coding_theory", "name": "Coding theory", "year": 1950, "clade": "discrete", "msc": "94B",
       "description": "Hamming, annoyed by weekend job failures, builds codes that correct their own errors using finite fields.",
-      "results": ["Hamming codes", "Reed–Solomon codes (1960)", "Turbo and LDPC codes"] },
+      "results": ["Hamming codes", "Reed–Solomon codes (1960)", "Turbo and LDPC codes"],
+      "papers": [
+        { "title": "Error detecting and error correcting codes", "authors": "Richard Hamming", "year": 1950, "url": "https://scholar.google.com/scholar?q=%22Error%20detecting%20and%20error%20correcting%20codes%22" }
+      ] },
     { "id": "automata", "name": "Automata & formal languages", "year": 1951, "clade": "foundations", "msc": "68Q45",
       "description": "Kleene's regular expressions and Chomsky's grammar hierarchy classify machines by the languages they can recognize.",
-      "results": ["Kleene's theorem", "Chomsky hierarchy", "Pumping lemmas"] },
+      "results": ["Kleene's theorem", "Chomsky hierarchy", "Pumping lemmas"],
+      "papers": [
+        { "title": "Representation of events in nerve nets and finite automata", "authors": "Stephen Kleene", "year": 1956, "url": "https://scholar.google.com/scholar?q=%22Representation%20of%20events%20in%20nerve%20nets%20and%20finite%20automata%22" },
+        { "title": "Three models for the description of language", "authors": "Noam Chomsky", "year": 1956, "url": "https://scholar.google.com/scholar?q=%22Three%20models%20for%20the%20description%20of%20language%22" }
+      ] },
     { "id": "gauge_theory", "name": "Gauge theory", "year": 1954, "clade": "applied", "msc": "81T13",
       "description": "Yang and Mills generalize electromagnetism to non-abelian symmetry groups. Physicists later learn it is the geometry of fiber bundles.",
-      "results": ["Yang–Mills equations", "Standard Model", "Donaldson invariants of 4-manifolds (1983)"] },
+      "results": ["Yang–Mills equations", "Standard Model", "Donaldson invariants of 4-manifolds (1983)"],
+      "papers": [
+        { "title": "Conservation of Isotopic Spin and Isotopic Gauge Invariance", "authors": "Yang & Mills", "year": 1954, "url": "https://scholar.google.com/scholar?q=%22Conservation%20of%20Isotopic%20Spin%20and%20Isotopic%20Gauge%20Invariance%22" }
+      ] },
     { "id": "homological_algebra", "name": "Homological algebra", "year": 1956, "clade": "algebra", "msc": "18G",
       "description": "Cartan and Eilenberg extract the algebraic machinery of homology so it can run anywhere.",
-      "results": ["Derived functors", "Ext and Tor", "Spectral sequences"] },
+      "results": ["Derived functors", "Ext and Tor", "Spectral sequences"],
+      "papers": [
+        { "title": "Homological Algebra", "authors": "Cartan & Eilenberg", "year": 1956, "url": "https://scholar.google.com/scholar?q=%22Homological%20Algebra%22" },
+        { "title": "Sur quelques points d'algèbre homologique", "authors": "Alexander Grothendieck", "year": 1957, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=Grothendieck%27s+T%C3%B4hoku+paper&go=Go" }
+      ] },
     { "id": "differential_topology", "name": "Differential topology", "year": 1956, "clade": "topology", "msc": "57R",
       "description": "Milnor finds a 7-dimensional sphere with a different smooth structure: smoothness is more than shape.",
-      "results": ["Exotic 7-spheres", "h-cobordism theorem (Smale)", "Morse theory"] },
+      "results": ["Exotic 7-spheres", "h-cobordism theorem (Smale)", "Morse theory"],
+      "papers": [
+        { "title": "On manifolds homeomorphic to the 7-sphere", "authors": "John Milnor", "year": 1956, "url": "https://scholar.google.com/scholar?q=%22On%20manifolds%20homeomorphic%20to%20the%207-sphere%22" }
+      ] },
     { "id": "schemes", "name": "Schemes", "year": 1960, "clade": "geometry", "msc": "14A15",
       "description": "Grothendieck rebuilds algebraic geometry on commutative rings and categories, unifying it with number theory.",
-      "results": ["Étale cohomology", "Weil conjectures (Deligne, 1974)"] },
+      "results": ["Étale cohomology", "Weil conjectures (Deligne, 1974)"],
+      "papers": [
+        { "title": "Éléments de géométrie algébrique", "authors": "Alexander Grothendieck", "year": 1960, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=%C3%89l%C3%A9ments+de+g%C3%A9om%C3%A9trie+alg%C3%A9brique&go=Go" }
+      ] },
     { "id": "forcing", "name": "Forcing & independence", "year": 1963, "clade": "foundations", "msc": "03E35",
       "description": "Cohen invents forcing to show the continuum hypothesis cannot be proved from ZFC. Gödel had shown it cannot be disproved.",
-      "results": ["Independence of the continuum hypothesis", "Independence of the axiom of choice", "Boolean-valued models"] },
+      "results": ["Independence of the continuum hypothesis", "Independence of the axiom of choice", "Boolean-valued models"],
+      "papers": [
+        { "title": "The independence of the continuum hypothesis", "authors": "Paul Cohen", "year": 1963, "url": "https://scholar.google.com/scholar?q=%22The%20independence%20of%20the%20continuum%20hypothesis%22" }
+      ] },
     { "id": "topos_theory", "name": "Topos theory", "year": 1963, "clade": "foundations", "msc": "18B25",
       "description": "Grothendieck's toposes, built for geometry, turn out (Lawvere, 1970) to be universes for logic with their own internal mathematics.",
-      "results": ["Elementary toposes", "Internal logic is intuitionistic", "Classifying toposes"] },
+      "results": ["Elementary toposes", "Internal logic is intuitionistic", "Classifying toposes"],
+      "papers": [
+        { "title": "Théorie des topos et cohomologie étale des schémas (SGA 4)", "authors": "Artin, Grothendieck & Verdier", "year": 1964, "url": "https://scholar.google.com/scholar?q=%22Th%C3%A9orie%20des%20topos%20et%20cohomologie%20%C3%A9tale%20des%20sch%C3%A9mas%20%28SGA%204%29%22" },
+        { "title": "Quantifiers and sheaves", "authors": "F. William Lawvere", "year": 1970, "url": "https://scholar.google.com/scholar?q=%22Quantifiers%20and%20sheaves%22" }
+      ] },
     { "id": "git", "name": "Geometric invariant theory", "year": 1965, "clade": "geometry", "msc": "14L24", "status": "revived",
       "description": "Mumford revives classical invariant theory inside scheme theory to construct moduli spaces. A dormant lineage returns.",
-      "results": ["Moduli of curves", "Stability conditions"] },
+      "results": ["Moduli of curves", "Stability conditions"],
+      "papers": [
+        { "title": "Geometric Invariant Theory", "authors": "David Mumford", "year": 1965, "url": "https://scholar.google.com/scholar?q=%22Geometric%20Invariant%20Theory%22" }
+      ] },
     { "id": "langlands", "name": "Langlands program", "year": 1967, "clade": "number", "msc": "11F70",
       "description": "Langlands's letter to Weil conjectures a vast dictionary between number theory, representation theory and geometry.",
-      "results": ["Modularity theorem → Fermat's Last Theorem (1995)", "Geometric Langlands (2024)"] },
+      "results": ["Modularity theorem → Fermat's Last Theorem (1995)", "Geometric Langlands (2024)"],
+      "papers": [
+        { "title": "Letter to André Weil", "authors": "Robert Langlands", "year": 1967, "url": "https://scholar.google.com/scholar?q=%22Letter%20to%20Andr%C3%A9%20Weil%22" },
+        { "title": "Problems in the theory of automorphic forms", "authors": "Robert Langlands", "year": 1970, "url": "https://scholar.google.com/scholar?q=%22Problems%20in%20the%20theory%20of%20automorphic%20forms%22" }
+      ] },
     { "id": "complexity", "name": "Computational complexity", "year": 1971, "clade": "foundations", "msc": "68Q15",
       "description": "Cook and Levin define NP-completeness: not what can be computed, but what can be computed efficiently.",
-      "results": ["Cook–Levin theorem", "P vs NP posed"] },
+      "results": ["Cook–Levin theorem", "P vs NP posed"],
+      "papers": [
+        { "title": "The complexity of theorem-proving procedures", "authors": "Stephen Cook", "year": 1971, "url": "https://scholar.google.com/scholar?q=%22The%20complexity%20of%20theorem-proving%20procedures%22" },
+        { "title": "Reducibility among combinatorial problems", "authors": "Richard Karp", "year": 1972, "url": "https://scholar.google.com/scholar?q=%22Reducibility%20among%20combinatorial%20problems%22" }
+      ] },
     { "id": "learning_theory", "name": "Statistical learning theory", "year": 1971, "clade": "applied", "msc": "68T05",
       "description": "Vapnik and Chervonenkis ask when learning from examples generalizes. Machine learning grows from this root.",
-      "results": ["VC dimension", "PAC learning (Valiant, 1984)", "Support vector machines"] },
+      "results": ["VC dimension", "PAC learning (Valiant, 1984)", "Support vector machines"],
+      "papers": [
+        { "title": "On the uniform convergence of relative frequencies of events to their probabilities", "authors": "Vapnik & Chervonenkis", "year": 1971, "url": "https://scholar.google.com/scholar?q=%22On%20the%20uniform%20convergence%20of%20relative%20frequencies%20of%20events%20to%20their%20probabilities%22" },
+        { "title": "A theory of the learnable", "authors": "Leslie Valiant", "year": 1984, "url": "https://scholar.google.com/scholar?q=%22A%20theory%20of%20the%20learnable%22" }
+      ] },
     { "id": "type_theory", "name": "Type theory & proof assistants", "year": 1972, "clade": "foundations", "msc": "03B38",
       "description": "Martin-Löf's dependent types, descended from lambda calculus, become the foundation of Coq and Lean.",
-      "results": ["Curry–Howard correspondence", "Lean's mathlib", "Homotopy type theory (2013)"] },
+      "results": ["Curry–Howard correspondence", "Lean's mathlib", "Homotopy type theory (2013)"],
+      "papers": [
+        { "title": "An intuitionistic theory of types", "authors": "Per Martin-Löf", "year": 1972, "url": "https://scholar.google.com/scholar?q=%22An%20intuitionistic%20theory%20of%20types%22" },
+        { "title": "Homotopy Type Theory: Univalent Foundations of Mathematics", "authors": "The Univalent Foundations Program", "year": 2013, "url": "https://homotopytypetheory.org/book/" }
+      ] },
     { "id": "mathematical_finance", "name": "Mathematical finance", "year": 1973, "clade": "applied", "msc": "91G",
       "description": "Black, Scholes and Merton price options by eliminating risk with a hedge, reducing the problem to a heat equation.",
-      "results": ["Black–Scholes equation", "Risk-neutral pricing", "Fundamental theorem of asset pricing"] },
+      "results": ["Black–Scholes equation", "Risk-neutral pricing", "Fundamental theorem of asset pricing"],
+      "papers": [
+        { "title": "The Pricing of Options and Corporate Liabilities", "authors": "Black & Scholes", "year": 1973, "url": "https://scholar.google.com/scholar?q=%22The%20Pricing%20of%20Options%20and%20Corporate%20Liabilities%22" },
+        { "title": "Theory of Rational Option Pricing", "authors": "Robert Merton", "year": 1973, "url": "https://scholar.google.com/scholar?q=%22Theory%20of%20Rational%20Option%20Pricing%22" }
+      ] },
     { "id": "fractals", "name": "Fractal geometry", "year": 1975, "clade": "geometry", "msc": "28A80",
       "description": "Mandelbrot names and popularizes self-similar sets with fractional dimension, drawn by early computers.",
-      "results": ["Mandelbrot set", "Hausdorff dimension in practice", "Coastline paradox"] },
+      "results": ["Mandelbrot set", "Hausdorff dimension in practice", "Coastline paradox"],
+      "papers": [
+        { "title": "How Long Is the Coast of Britain?", "authors": "Benoit Mandelbrot", "year": 1967, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=How+Long+Is+the+Coast+of+Britain%3F+Statistical+Self-Similarity+and+Fractional+Dimension&go=Go" },
+        { "title": "The Fractal Geometry of Nature", "authors": "Benoit Mandelbrot", "year": 1982, "url": "https://en.wikipedia.org/w/index.php?title=Special%3ASearch&search=The+Fractal+Geometry+of+Nature&go=Go" }
+      ] },
     { "id": "cryptography", "name": "Public-key cryptography", "year": 1976, "clade": "discrete", "msc": "94A60",
       "description": "Diffie–Hellman and RSA base secrecy on hard number-theoretic problems. GCHQ had found the same ideas in secret in 1970–73.",
-      "results": ["Diffie–Hellman key exchange", "RSA", "Elliptic-curve cryptography (1985)"] },
+      "results": ["Diffie–Hellman key exchange", "RSA", "Elliptic-curve cryptography (1985)"],
+      "papers": [
+        { "title": "New Directions in Cryptography", "authors": "Diffie & Hellman", "year": 1976, "url": "https://scholar.google.com/scholar?q=%22New%20Directions%20in%20Cryptography%22" },
+        { "title": "A method for obtaining digital signatures and public-key cryptosystems", "authors": "Rivest, Shamir & Adleman", "year": 1978, "url": "https://scholar.google.com/scholar?q=%22A%20method%20for%20obtaining%20digital%20signatures%20and%20public-key%20cryptosystems%22" }
+      ] },
     { "id": "quantum_topology", "name": "Quantum topology", "year": 1984, "clade": "topology", "msc": "57K14",
       "description": "Jones finds a new knot invariant inside von Neumann algebras; Witten explains it with quantum field theory.",
-      "results": ["Jones polynomial", "Chern–Simons theory", "Khovanov homology (2000)"] },
+      "results": ["Jones polynomial", "Chern–Simons theory", "Khovanov homology (2000)"],
+      "papers": [
+        { "title": "A polynomial invariant for knots via von Neumann algebras", "authors": "Vaughan Jones", "year": 1985, "url": "https://scholar.google.com/scholar?q=%22A%20polynomial%20invariant%20for%20knots%20via%20von%20Neumann%20algebras%22" },
+        { "title": "Quantum field theory and the Jones polynomial", "authors": "Edward Witten", "year": 1989, "url": "https://scholar.google.com/scholar?q=%22Quantum%20field%20theory%20and%20the%20Jones%20polynomial%22" }
+      ] },
     { "id": "symplectic_geometry", "name": "Symplectic geometry", "year": 1985, "clade": "geometry", "msc": "53D",
       "description": "The geometry of phase space. Gromov's pseudo-holomorphic curves turn it into a modern field.",
-      "results": ["Gromov non-squeezing theorem", "Floer homology", "Mirror symmetry"] },
+      "results": ["Gromov non-squeezing theorem", "Floer homology", "Mirror symmetry"],
+      "papers": [
+        { "title": "Pseudo holomorphic curves in symplectic manifolds", "authors": "Mikhail Gromov", "year": 1985, "url": "https://scholar.google.com/scholar?q=%22Pseudo%20holomorphic%20curves%20in%20symplectic%20manifolds%22" }
+      ] },
     { "id": "fermat_last", "name": "Fermat's Last Theorem", "year": 1995, "clade": "number", "msc": "11D41",
       "description": "Wiles, with Taylor, proves enough of the modularity conjecture to settle Fermat's 358-year-old claim. Three centuries of lineages meet here.",
-      "results": ["Modularity of semistable elliptic curves", "xⁿ + yⁿ = zⁿ has no positive solutions for n > 2"] },
+      "results": ["Modularity of semistable elliptic curves", "xⁿ + yⁿ = zⁿ has no positive solutions for n > 2"],
+      "papers": [
+        { "title": "Modular elliptic curves and Fermat's Last Theorem", "authors": "Andrew Wiles", "year": 1995, "url": "https://doi.org/10.2307/2118559" },
+        { "title": "Ring-theoretic properties of certain Hecke algebras", "authors": "Taylor & Wiles", "year": 1995, "url": "https://doi.org/10.2307/2118560" }
+      ] },
     { "id": "poincare_proof", "name": "Geometrization & Poincaré", "year": 2003, "clade": "topology", "msc": "57M40",
       "description": "Perelman proves Thurston's geometrization conjecture with Hamilton's Ricci flow, settling the Poincaré conjecture after a century.",
-      "results": ["Poincaré conjecture", "Thurston geometrization", "Ricci flow with surgery"] }
+      "results": ["Poincaré conjecture", "Thurston geometrization", "Ricci flow with surgery"],
+      "papers": [
+        { "title": "The entropy formula for the Ricci flow and its geometric applications", "authors": "Grigori Perelman", "year": 2002, "url": "https://arxiv.org/abs/math/0211159" },
+        { "title": "Ricci flow with surgery on three-manifolds", "authors": "Grigori Perelman", "year": 2003, "url": "https://arxiv.org/abs/math/0303109" },
+        { "title": "Finite extinction time for the solutions to the Ricci flow on certain three-manifolds", "authors": "Grigori Perelman", "year": 2003, "url": "https://arxiv.org/abs/math/0307245" }
+      ] }
   ],
   "edges": [
     { "source": "babylonian", "target": "pythagorean", "type": "inherits" },

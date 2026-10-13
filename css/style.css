@@ -202,6 +202,11 @@ body {
 .links button:hover { border-color: var(--edge); }
 .links .sw { width: 8px; height: 8px; border-radius: 50%; }
 .links .kind { color: var(--muted); font-size: 11px; }
+.panel ul.papers { list-style: none; padding: 0; display: grid; gap: 8px; }
+.papers a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--edge); text-underline-offset: 2px; line-height: 1.35; }
+.papers a:hover { text-decoration-color: var(--ink); }
+.paper-meta { display: block; color: var(--muted); font-size: 12px; margin-top: 2px; }
+.paper-meta .kind { text-transform: uppercase; letter-spacing: 0.05em; font-size: 10.5px; }
 .counts { color: var(--muted); font-size: 12.5px; margin-top: 14px; border-top: 1px solid var(--line); padding-top: 10px; }
 .about code { font-size: 13px; }
 

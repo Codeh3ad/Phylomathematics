@@ -29,6 +29,14 @@ for n in data["nodes"]:
     if n.get("status", "active") not in STATUSES:
         errors.append(f"node {n['id']}: unknown status '{n['status']}'")
 
+for n in data["nodes"]:
+    for p in n.get("papers", []):
+        for key in ("title", "authors", "year", "url"):
+            if key not in p:
+                errors.append(f"node {n['id']}: paper missing '{key}'")
+        if not str(p.get("url", "")).startswith("https://"):
+            errors.append(f"node {n['id']}: paper url must be https: {p.get('url')}")
+
 descent = defaultdict(list)  # target -> [(source, type)]
 seen = set()
 for e in data["edges"]:

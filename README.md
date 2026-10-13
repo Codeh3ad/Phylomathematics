@@ -34,13 +34,21 @@ Everything lives in [`data/nodes.json`](data/nodes.json).
     "msc": "53B20",               // MSC2020 code (optional)
     "status": "active",           // active | dormant | revived (optional)
     "description": "…",
-    "results": ["Riemann curvature tensor", "…"]
+    "results": ["Riemann curvature tensor", "…"],
+    "papers": [{                  // optional
+      "title": "Ueber die Hypothesen, welche der Geometrie zu Grunde liegen",
+      "authors": "Bernhard Riemann",
+      "year": 1854,
+      "url": "https://…"          // DOI or arXiv when known; otherwise Wikipedia or a Scholar search
+    }]
   }],
   "edges": [
     { "source": "bolyai", "target": "riemannian_geometry", "type": "merges" }
   ]
 }
 ```
+
+Paper links are a mix. A few go straight to the paper (DOI, arXiv). Many go to a Wikipedia article about the work, through Wikipedia's "Go" search so a renamed article still resolves. The rest are Google Scholar searches for the exact title. The panel labels each link with its kind. Replacing Scholar searches with DOIs is an easy way to contribute.
 
 Edge types:
 
