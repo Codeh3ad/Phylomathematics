@@ -22,7 +22,8 @@
     .replace(/`+([^`]*)`+/g, "$1").replace(/\*\*([^*]+)\*\*/g, "$1").replace(/(^|\s)\*([^*]+)\*/g, "$1$2")
     .replace(/\$\$?([^$]+)\$\$?/g, "$1").replace(/\\mathbb\{([RCNZQ])\}/g, (m, l) => ({ R: "ℝ", C: "ℂ", N: "ℕ", Z: "ℤ", Q: "ℚ" }[l])).replace(/\\(mathbb|mathrm|mathcal|operatorname)\{([^}]*)\}/g, "$2")
     .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1").replace(/\s+/g, " ").trim();
-  const plainMath = (s) => untex(plain(s));
+  // Lean names that slip into prose (exists_dense_of_growth) read as words; short subscripts (m_n) stay.
+  const plainMath = (s) => untex(plain(s)).replace(/\b[A-Za-z][A-Za-z0-9]*(?:_[A-Za-z0-9]+){2,}\b/g, (w) => w.replace(/_/g, " "));
   // Common TeX commands authors use in docstrings, as the symbols a reader expects.
   const TEX = {
     C: "ℂ", R: "ℝ", N: "ℕ", Z: "ℤ", Q: "ℚ", to: "→", mapsto: "↦", in: "∈", notin: "∉", sum: "∑", prod: "∏", int: "∫",
