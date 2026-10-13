@@ -159,6 +159,17 @@
     const label = nodeSel.append("text").attr("x", 10).attr("dy", "0.35em");
     label.append("tspan").text((n) => n.name);
     nodeSel.append("title").text((n) => `${n.name} (${fmtYear(n.year)})`);
+    // SVG text only catches clicks on the glyphs themselves, so put a transparent
+    // box behind each dot and name: the whole label, gaps included, opens the panel.
+    nodeSel.each(function () {
+      const box = this.querySelector("text").getBBox();
+      const left = -10, right = box.x + box.width + 4;
+      d3.select(this).insert("rect", ":first-child")
+        .attr("class", "hit")
+        .attr("x", left).attr("y", Math.min(-10, box.y - 3))
+        .attr("width", right - left).attr("height", Math.max(20, box.height + 6))
+        .attr("rx", 4);
+    });
 
     function applyColors() {
       edgeSel.filter((e) => e.type !== "convergent").attr("stroke", (e) => cladeColor(e.s.clade));

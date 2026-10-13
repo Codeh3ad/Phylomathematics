@@ -111,7 +111,11 @@ body {
   stroke-linejoin: round;
 }
 .node text .yr { fill: var(--muted); font-size: 10.5px; }
-.node:hover text { font-weight: 600; }
+.node .hit { fill: transparent; pointer-events: all; }
+.node:hover .hit { fill: var(--band); }
+.node:hover text { font-weight: 600; text-decoration: underline; text-decoration-color: var(--edge); }
+.node:focus-visible { outline: none; }
+.node:focus-visible .hit { stroke: var(--edge); stroke-width: 1.5; }
 
 /* Selection state */
 .has-selection .edge { stroke-opacity: 0.07; }
