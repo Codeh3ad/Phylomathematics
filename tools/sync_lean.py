@@ -5,7 +5,9 @@ Reads data/lean-map.json (which mathlib folders and which external Lean
 projects belong to each field), then:
 
   * clones mathlib4 without file contents and with only recent history,
-  * counts mathlib files per field and lists recent changes touching them,
+  * counts mathlib files per field and lists recent additions touching them
+    (commits labelled "feat", i.e. new definitions and theorems; chores,
+    refactors, fixes and docs are left out),
   * flags changes whose commit message credits an AI tool,
   * records the latest commit of each external project.
 
@@ -47,6 +49,18 @@ def credits_ai(text):
     return any(p.search(text) for p in AI_PATTERNS)
 
 
+# mathlib commit titles follow "type(scope): text (#PR)".
+TITLE = re.compile(r"^(?P<type>[a-z]+)(?:\((?P<scope>[^)]*)\))?!?:\s*(?P<text>.*?)\s*(?:\(#\d+\))?\s*$")
+
+
+def parse_title(subject):
+    m = TITLE.match(subject.strip())
+    if not m:
+        return None, None, subject.strip()
+    text = m.group("text")
+    return m.group("type"), m.group("scope"), text[:1].upper() + text[1:]
+
+
 def pr_url(subject, sha):
     m = re.search(r"\(#(\d+)\)\s*$", subject)
     return f"{MATHLIB}/pull/{m.group(1)}" if m else f"{MATHLIB}/commit/{sha}"
@@ -70,12 +84,18 @@ def sync_mathlib(lean_map, workdir):
     for chunk in log.split("\x1e")[1:]:
         meta, _, paths = chunk.partition("\x1d")
         sha, date, subject, body = meta.split("\x1f", 3)
+        kind, scope, text = parse_title(subject)
         commits.append({
-            "sha": sha, "date": date, "title": subject.strip(),
+            "sha": sha, "date": date, "kind": kind, "scope": scope, "title": text,
             "url": pr_url(subject.strip(), sha),
             "ai": credits_ai(subject + "\n" + body),
             "paths": [p for p in paths.split("\n") if p.endswith(".lean")],
         })
+
+    total_changes = len(commits)
+    # Only new mathematics: drop chores, refactors, fixes, docs, style and CI work.
+    commits = [c for c in commits if c["kind"] == "feat"]
+    keys = ("date", "title", "scope", "url", "ai")
 
     fields = {}
     for fid, prefixes in lean_map["mathlib"].items():
@@ -84,9 +104,9 @@ def sync_mathlib(lean_map, workdir):
         fields[fid] = {
             "prefixes": prefixes,
             "files": n_files,
-            "changes": len(touching),
-            "ai_changes": sum(c["ai"] for c in touching),
-            "recent": [{k: c[k] for k in ("date", "title", "url", "ai")} for c in touching[:RECENT_PER_FIELD]],
+            "additions": len(touching),
+            "ai_additions": sum(c["ai"] for c in touching),
+            "recent": [{k: c[k] for k in keys} for c in touching[:RECENT_PER_FIELD]],
         }
 
     feed = []
@@ -94,14 +114,14 @@ def sync_mathlib(lean_map, workdir):
         ids = [fid for fid, prefixes in lean_map["mathlib"].items()
                if any(under(p, q) for p in c["paths"] for q in prefixes)]
         if ids:
-            feed.append({**{k: c[k] for k in ("date", "title", "url", "ai")}, "fields": ids})
+            feed.append({**{k: c[k] for k in keys}, "fields": ids})
     ai_feed = [c for c in feed if c["ai"]]
     # Keep every AI-credited change in the window, topped up with the newest of the rest.
     keep = {id(c) for c in ai_feed} | {id(c) for c in feed[:FEED_SIZE]}
     feed = [c for c in feed if id(c) in keep]
 
-    mathlib = {"commit": head[0], "date": head[1], "files": len(files),
-               "changes": len(commits), "ai_changes": sum(c["ai"] for c in commits)}
+    mathlib = {"commit": head[0], "date": head[1], "files": len(files), "changes": total_changes,
+               "additions": len(commits), "ai_additions": sum(c["ai"] for c in commits)}
     return mathlib, fields, feed
 
 
@@ -138,7 +158,8 @@ def main():
     }
     (ROOT / "data" / "lean.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n")
     print(f"mathlib {mathlib['commit'][:10]} ({mathlib['date']}): {mathlib['files']} files, "
-          f"{mathlib['changes']} changes in {WINDOW_DAYS} days, {mathlib['ai_changes']} credit AI; "
+          f"{mathlib['additions']} additions of {mathlib['changes']} changes in {WINDOW_DAYS} days, "
+          f"{mathlib['ai_additions']} credit AI; "
           f"{len(feed)} feed items; {sum('updated' in p for p in projects)}/{len(projects)} projects read")
 
 

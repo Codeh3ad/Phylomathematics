@@ -320,7 +320,7 @@
     const aiBadge = '<span class="badge ai" title="The commit message credits an AI tool. Lean checked the proof either way.">AI</span>';
     const changeItem = (c, withFields) =>
       `<li><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.title)}</a>` +
-      `<span class="paper-meta">${fmtDate(c.date)}${c.ai ? " · " + aiBadge : ""}</span>` +
+      `<span class="paper-meta">${fmtDate(c.date)}${c.scope ? ` · <code>${esc(c.scope)}</code>` : ""}${c.ai ? " · " + aiBadge : ""}</span>` +
       (withFields ? `<div class="links">${c.fields.slice(0, 6).map((id) => chip(byId.get(id))).join("")}` +
         `${c.fields.length > 6 ? `<span class="more">+${c.fields.length - 6} more</span>` : ""}</div>` : "") + "</li>";
     const projectItem = (p) =>
@@ -341,8 +341,8 @@
       let html = `<h3>Formalized in Lean</h3>`;
       if (f && f.files) {
         html += `<p class="lean-summary">${f.files.toLocaleString()} files in mathlib under ${f.prefixes.map(prefixLink).join(", ")}. ` +
-          `${f.changes} change${f.changes === 1 ? "" : "s"} in the last ${lean.window_days} days` +
-          `${f.ai_changes ? `, ${f.ai_changes} crediting AI tools` : ""}.</p>`;
+          `${f.additions} new result${f.additions === 1 ? "" : "s"} in the last ${lean.window_days} days` +
+          `${f.ai_additions ? `, ${f.ai_additions} crediting AI tools` : ""}.</p>`;
         if (f.recent.length) html += `<ul class="papers">${f.recent.map((c) => changeItem(c, false)).join("")}</ul>`;
       }
       if (projects.length) html += `<h3>Lean projects</h3><ul class="papers">${projects.map(projectItem).join("")}</ul>`;
@@ -360,15 +360,15 @@
       leanBody.innerHTML = `
         <h2>Lean formalization</h2>
         <p class="lean-intro">Every proof in Lean's <a href="${MATHLIB_URL}" target="_blank" rel="noopener">mathlib</a> and in the projects below is checked by Lean's kernel, whoever or whatever wrote it. This page is refreshed daily from GitHub.</p>
-        <div class="meta"><span>${m.files.toLocaleString()} mathlib files</span><span>${m.changes.toLocaleString()} changes in ${lean.window_days} days</span><span>${m.ai_changes} credit AI tools</span><span>Updated ${esc(lean.generated.slice(0, 10))}</span></div>
+        <div class="meta"><span>${m.files.toLocaleString()} mathlib files</span><span>${m.additions.toLocaleString()} new results in ${lean.window_days} days</span><span>${m.ai_additions} credit AI tools</span><span>Updated ${esc(lean.generated.slice(0, 10))}</span></div>
         <h3>AI-generated & automated</h3>
         <ul class="papers">${lean.projects.filter((p) => p.kind === "ai" || p.kind === "automated").map(projectItem).join("")}</ul>
-        <h3 class="feed-head">Recent mathlib changes
+        <h3 class="feed-head">New in mathlib
           <label class="toggle"><input id="lean-ai-only" type="checkbox"${onlyAI ? " checked" : ""}> Only AI-credited</label></h3>
-        <ul class="papers">${feed.map((c) => changeItem(c, true)).join("") || "<li>No changes in this window.</li>"}</ul>
+        <ul class="papers">${feed.map((c) => changeItem(c, true)).join("") || "<li>No new results in this window.</li>"}</ul>
         <h3>Human-led projects & open problems</h3>
         <ul class="papers">${lean.projects.filter((p) => p.kind === "human" || p.kind === "benchmark").map(projectItem).join("")}</ul>
-        <p class="counts">"AI" marks commits whose message credits an AI tool, such as an AI-use disclosure or a co-author line. It is a self-report, not detection.</p>`;
+        <p class="counts">Only additions of new definitions and theorems are listed; maintenance work is left out. "AI" marks commits whose message credits an AI tool, such as an AI-use disclosure or a co-author line. It is a self-report, not detection.</p>`;
     }
 
     function closeOverlays() {
