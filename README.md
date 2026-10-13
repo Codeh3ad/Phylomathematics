@@ -1,0 +1,78 @@
+# Phylomathematics
+
+The evolutionary history of mathematics, drawn as a phylogenetic network.
+
+Math doesn't evolve as a strict tree, so this site doesn't draw one:
+
+- **Hybridization**: algebraic geometry, analytic number theory and algebraic topology each have several parents.
+- **Convergent evolution**: Newton and Leibniz both found calculus; Bolyai and Lobachevsky both found non-Euclidean geometry; Church and Turing both defined computability.
+- **Dormancy and revival**: projective geometry slept from Desargues to Poncelet; invariant theory went quiet after Hilbert and returned as geometric invariant theory.
+
+Time runs left to right on a compressed axis from Babylonian arithmetic to the present. Rows group fields into broad clades (Number, Geometry, Algebra, Analysis, Chance, Topology, Foundations). Click a field to see its description, key results and MSC2020 code, with its full ancestry highlighted. Links are shareable: `/#algebraic_geometry`.
+
+## Run locally
+
+It's a static site with no build step. Serve the folder (opening `index.html` directly won't work because the page fetches its data):
+
+```sh
+python3 -m http.server
+# open http://localhost:8000
+```
+
+## Data
+
+Everything lives in [`data/nodes.json`](data/nodes.json).
+
+```jsonc
+{
+  "clades": [{ "id": "geometry", "name": "Geometry", "color": "#0369a1" }],
+  "nodes": [{
+    "id": "riemannian_geometry",
+    "name": "Riemannian geometry",
+    "year": 1854,                 // negative = BCE
+    "clade": "geometry",
+    "msc": "53B20",               // MSC2020 code (optional)
+    "status": "active",           // active | dormant | revived (optional)
+    "description": "…",
+    "results": ["Riemann curvature tensor", "…"]
+  }],
+  "edges": [
+    { "source": "bolyai", "target": "riemannian_geometry", "type": "merges" }
+  ]
+}
+```
+
+Edge types:
+
+| type | meaning |
+| --- | --- |
+| `inherits` | the target's only parent |
+| `merges` | one of several parents of a hybrid field |
+| `convergent` | the two nodes were found independently; not descent |
+
+Before committing, run the validator. It checks for unknown IDs, cycles, parents younger than children, and `inherits`/`merges` labels that don't match the parent count. CI runs it on every push.
+
+```sh
+python3 tools/validate.py
+```
+
+## Deploy
+
+**GitHub Pages:** go to Settings → Pages, set Source to "Deploy from a branch", and choose `main` / root. The `.nojekyll` file makes Pages serve the files exactly as they are.
+
+**Custom domain:** buy `phylomathematics.com` (or `.org`) at a registrar, then:
+
+1. In Settings → Pages → Custom domain, enter the domain. This commits a `CNAME` file.
+2. At the registrar, add DNS records:
+   - apex: `A` records to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - `www`: `CNAME` to `<your-user>.github.io`
+3. Once the certificate is issued, tick "Enforce HTTPS".
+
+Cloudflare Pages or Netlify also work: connect the repo with no build command and the output directory set to `/`.
+
+## Roadmap
+
+- MSC2020 view: show the subject classification as a radial tree next to the descent network, to compare classification with ancestry.
+- Scale past hand-curation with Wikidata relations.
+- Infer a tree of fields from Lean mathlib's dependency graph (distance matrix → neighbor-joining) and compare it with the historical one.
+- An optional people layer from the Mathematics Genealogy Project (check their terms before reusing the data).

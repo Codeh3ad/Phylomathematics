@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phylomathematics</title>
+  <meta name="description" content="The evolutionary history of mathematics, drawn as a phylogenetic network: lineages, hybrids, convergent discoveries and revivals.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1>Phylomathematics</h1>
+      <p class="tagline">How mathematical ideas descend, hybridize and reappear</p>
+    </div>
+    <div class="controls">
+      <input id="search" type="search" placeholder="Find a field…" list="node-list" aria-label="Find a field" autocomplete="off">
+      <datalist id="node-list"></datalist>
+      <label class="toggle"><input id="show-convergent" type="checkbox" checked> Convergences</label>
+      <button id="reset" type="button">Reset view</button>
+      <button id="about-btn" type="button" aria-expanded="false" aria-controls="about">About</button>
+    </div>
+  </header>
+
+  <main class="stage">
+    <div id="chart" aria-label="Phylogenetic network of mathematics"></div>
+
+    <aside class="legend" aria-label="Legend">
+      <div class="legend-row"><svg width="34" height="10"><line x1="2" y1="5" x2="32" y2="5" class="lg-inherits"/></svg> Inherits (one parent)</div>
+      <div class="legend-row"><svg width="34" height="10"><line x1="2" y1="5" x2="32" y2="5" class="lg-merges"/></svg> Merges (hybrid of parents)</div>
+      <div class="legend-row"><svg width="34" height="10"><line x1="2" y1="5" x2="32" y2="5" class="lg-convergent"/></svg> Independent rediscovery</div>
+      <div class="legend-row"><svg width="34" height="14"><circle cx="17" cy="7" r="5" class="lg-dormant"/></svg> Dormant</div>
+      <div class="legend-row"><svg width="34" height="14"><circle cx="17" cy="7" r="5" class="lg-revived"/><circle cx="17" cy="7" r="8" class="lg-revived-ring"/></svg> Revived</div>
+      <div class="legend-hint">Drag to pan · scroll to zoom · click a field</div>
+    </aside>
+
+    <aside id="panel" class="panel" hidden aria-live="polite">
+      <button class="panel-close" type="button" aria-label="Close">×</button>
+      <div id="panel-body"></div>
+    </aside>
+
+    <section id="about" class="about" hidden>
+      <button class="panel-close" type="button" aria-label="Close">×</button>
+      <h2>Why a network, not a tree</h2>
+      <p>Mathematics does not branch like a strict tree. Fields <strong>hybridize</strong>: algebraic geometry, analytic number theory and algebraic topology each have several parents. Ideas <strong>converge</strong>: Newton and Leibniz both found calculus; Bolyai and Lobachevsky both found non-Euclidean geometry. And lineages go <strong>dormant and revive</strong>: invariant theory went quiet after Hilbert and returned as geometric invariant theory.</p>
+      <p>So each node is a field or idea placed at the date it took recognizable form, and each edge says “descends from”. Time runs left to right; the axis is compressed for the ancient world. Rows group fields into broad clades, which are a convenience, not a claim of ancestry.</p>
+      <p>Click a field to see its description, key results, and its full ancestry highlighted. The data lives in <code>data/nodes.json</code>; corrections and additions are welcome.</p>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
