@@ -58,6 +58,8 @@ Edge types:
 | `merges` | one of several parents of a hybrid field |
 | `convergent` | the two nodes were found independently; not descent |
 
+After changing anything in `css/` or `js/`, run `python3 tools/bump_version.py` so visitors get the new files instead of cached ones (CI checks this).
+
 Before committing, run the validator. It checks for unknown IDs, cycles, parents younger than children, and `inherits`/`merges` labels that don't match the parent count. CI runs it on every push.
 
 ```sh

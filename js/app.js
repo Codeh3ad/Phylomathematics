@@ -42,7 +42,7 @@
   };
   const tickLabel = (y) => (y < 0 ? `${-y} BCE` : y === 0 ? "1 CE" : String(y));
 
-  const getJSON = (url) => fetch(url).then((r) => {
+  const getJSON = (url) => fetch(url, { cache: "no-cache" }).then((r) => {
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     return r.json();
   });

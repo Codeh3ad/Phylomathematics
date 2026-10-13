@@ -13,3 +13,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: python3 tools/validate.py
+      - name: Check asset versions are current
+        run: |
+          python3 tools/bump_version.py
+          git diff --exit-code index.html || { echo "::error::Run python3 tools/bump_version.py and commit index.html"; exit 1; }
