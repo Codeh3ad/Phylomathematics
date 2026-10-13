@@ -418,6 +418,7 @@
     const projectItem = (p) =>
       `<li><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.name)}</a>` +
       `<span class="badge ${p.kind}">${KIND_LABEL[p.kind] || esc(p.kind)}</span>` +
+      (p.lean_files && window.ProofViewer ? `<button type="button" class="view-proof" data-project="${esc(p.repo)}">Explore ${p.lean_files} proof file${p.lean_files === 1 ? "" : "s"}</button>` : "") +
       `<span class="paper-meta">${esc(p.description)}${p.updated ? ` Updated ${fmtDate(p.updated)}.` : ""}</span></li>`;
     const prefixLink = (prefix) => {
       const name = prefix.replace(/^Mathlib\//, "");
@@ -570,6 +571,22 @@
         if (v) {
           const c = proofTargets[+v.dataset.proof];
           ProofViewer.open({ title: c.title, files: c.files, ref: c.sha, start: startFile(c.files, c.scope) });
+          return;
+        }
+        const pj = ev.target.closest("button[data-project]");
+        if (pj) {
+          pj.disabled = true;
+          try {
+            leanFiles ??= await getJSON("data/lean-files.json");
+            const info = leanFiles.projects?.[pj.dataset.project];
+            const proj = lean.projects.find((x) => x.repo === pj.dataset.project);
+            if (info) ProofViewer.open({ title: proj.name, files: info.files, ref: info.ref, repo: pj.dataset.project,
+              eyebrow: `${KIND_LABEL[proj.kind] || "Lean"} proofs · ${pj.dataset.project}` });
+          } catch {
+            pj.textContent = "Could not load. Try again.";
+          } finally {
+            pj.disabled = false;
+          }
           return;
         }
         const br = ev.target.closest("button[data-browse]");

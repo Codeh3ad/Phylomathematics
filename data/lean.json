@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-13T19:15Z",
+ "generated": "2026-10-13T19:21Z",
  "window_days": 60,
  "mathlib": {
   "commit": "fcd79238d34137c492bb55aef27aba0916e0a36f",
@@ -6758,7 +6758,8 @@
    "latest": {
     "title": "chore: bump mathlib to c0da404, fix breaking changes (#1200)",
     "url": "https://github.com/ImperialCollegeLondon/FLT/commit/f6c6a2fe9796d6d89cd2a0d24e8a453729d881ff"
-   }
+   },
+   "lean_files": 271
   },
   {
    "name": "Strong Prime Number Theorem (Gauss)",
@@ -6773,7 +6774,8 @@
    "latest": {
     "title": "Let there be light",
     "url": "https://github.com/math-inc/strongpnt/commit/2f5835c322314f55f1026ec2f139d704b7c45c69"
-   }
+   },
+   "lean_files": 8
   },
   {
    "name": "PrimeNumberTheoremAnd",
@@ -6788,7 +6790,8 @@
    "latest": {
     "title": "Chore: Bump to V4.34.0 (#1782)",
     "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd/commit/c39a751132c88b6e8080b74c74023fd95b3d8be0"
-   }
+   },
+   "lean_files": 236
   },
   {
    "name": "Formal Conjectures",
@@ -6807,7 +6810,8 @@
    "latest": {
     "title": "fix(ErdosProblems/295): define `k` without the proof of `exists_k` (#6952)",
     "url": "https://github.com/google-deepmind/formal-conjectures/commit/e47a327f7befa3df97115abf87aa8ed35c381f1f"
-   }
+   },
+   "lean_files": 400
   },
   {
    "name": "Polynomial Freiman–Ruzsa",
@@ -6824,7 +6828,8 @@
    "latest": {
     "title": "chore: bump mathlib to a37dcbd, fix breaking changes (#323)",
     "url": "https://github.com/teorth/pfr/commit/4c56de547b2f33b0bc47b92f3bfbcebc6457a776"
-   }
+   },
+   "lean_files": 76
   },
   {
    "name": "Equational Theories",
@@ -6841,7 +6846,8 @@
    "latest": {
     "title": "remove unused Hasse diagram infoview widget (#1509)",
     "url": "https://github.com/teorth/equational_theories/commit/1aec8a7acf223b7c56e4830977b6e90d4ef1924b"
-   }
+   },
+   "lean_files": 400
   },
   {
    "name": "Carleson's theorem",
@@ -6858,7 +6864,8 @@
    "latest": {
     "title": "chore: delete upstreamed lemmas (#679)",
     "url": "https://github.com/fpvandoorn/carleson/commit/12fb202e6dba84aa57a9d39c7d019dc344902912"
-   }
+   },
+   "lean_files": 118
   },
   {
    "name": "Sphere eversion",
@@ -6873,7 +6880,8 @@
    "latest": {
     "title": "chore: update actions/upload-pages-artifact to v5 (#155)",
     "url": "https://github.com/leanprover-community/sphere-eversion/commit/df3e74a3fbe1ae42c2cd9b075d77ff3863c1b795"
-   }
+   },
+   "lean_files": 65
   },
   {
    "name": "Tao's Analysis I in Lean",
@@ -6889,7 +6897,8 @@
    "latest": {
     "title": "Merge pull request #718 from Chessing234/feat/fam-mono-additivity",
     "url": "https://github.com/teorth/analysis/commit/2c165a0da64f1b2c8a0000600bc464ec77671c7a"
-   }
+   },
+   "lean_files": 108
   },
   {
    "name": "LeanAPAP",
@@ -6905,7 +6914,8 @@
    "latest": {
     "title": "chore: bump mathlib to a37dcbd, fix breaking changes (#27)",
     "url": "https://github.com/YaelDillies/LeanAPAP/commit/51593813f287062cfd8ef939673de361186a76ba"
-   }
+   },
+   "lean_files": 54
   },
   {
    "name": "Aristotle at IMO 2025",
@@ -6922,7 +6932,8 @@
    "latest": {
     "title": "fix root imports and add P6 statement",
     "url": "https://github.com/harmonic-ai/IMO2025/commit/72b62405a176a7eaeadb335a7fa6ee80b6667161"
-   }
+   },
+   "lean_files": 13
   },
   {
    "name": "DeepSeek-Prover-V2",
@@ -6938,7 +6949,8 @@
    "latest": {
     "title": "update putnam results",
     "url": "https://github.com/deepseek-ai/DeepSeek-Prover-V2/commit/e598a57ea3284997d4a2a168a069fdd5064afbc8"
-   }
+   },
+   "lean_files": 0
   }
  ]
 }

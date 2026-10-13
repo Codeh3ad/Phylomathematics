@@ -457,11 +457,13 @@ body.viewer-open { overflow: hidden; }
 .viewer-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
 .viewer-head h2 { font-family: var(--serif); font-size: 20px; font-weight: 600; margin: 0; text-wrap: balance; }
 .viewer-tools { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-.viewer-tools select, .viewer-tools a {
+.viewer-tools select, .viewer-tools a, .viewer-tools input {
   font: inherit; font-size: 13px; color: var(--ink); background: var(--bg);
   border: 1px solid var(--line); border-radius: 6px; padding: 5px 10px; text-decoration: none; max-width: 360px;
 }
 .viewer-tools a:hover { border-color: var(--ink); }
+.viewer-tools input { width: 160px; }
+.viewer-tools [hidden] { display: none; }
 .viewer-close { font-size: 24px; line-height: 1; border: 0; background: none; color: var(--muted); cursor: pointer; padding: 2px 6px; }
 .viewer-close:hover { color: var(--ink); }
 .viewer-body { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); min-height: 0; }
@@ -502,7 +504,7 @@ body.viewer-open { overflow: hidden; }
 .vd-meta { color: var(--muted); font-size: 12px; flex-basis: 100%; }
 .vd-meta a { color: var(--ink); }
 #viewer-pre {
-  margin: 0; overflow: auto; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  position: relative; margin: 0; overflow: auto; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 12.5px; line-height: 1.55; padding: 8px 0 40vh; tab-size: 2; min-width: 0;
 }
 #viewer-pre .ln { display: grid; grid-template-columns: 52px 1fr; padding-right: 16px; }

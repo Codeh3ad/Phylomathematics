@@ -32,6 +32,7 @@ RECENT_PER_FIELD = 5
 FEED_SIZE = 60
 MAX_FILES_PER_CHANGE = 6
 MAX_FILES_PER_FIELD = 80
+MAX_FILES_PER_PROJECT = 400
 MATHLIB = "https://github.com/leanprover-community/mathlib4"
 
 # Words in a commit message that credit an AI system. Case-sensitive "AI"/"LLM",
@@ -134,8 +135,17 @@ def sync_mathlib(lean_map, workdir):
     return mathlib, fields, feed, browse
 
 
+def project_files(repo_dir):
+    """Lean sources worth reading: skip the build file and test folders, and put
+    files in subfolders (the actual proofs) ahead of top-level import lists."""
+    paths = [f for f in git("ls-tree", "-r", "--name-only", "HEAD", cwd=repo_dir).splitlines()
+             if f.endswith(".lean") and not re.search(r"(^|/)(lakefile\.lean|tests?/|\.lake/)", f, re.I)]
+    return sorted(paths, key=lambda f: ("/" not in f, f))[:MAX_FILES_PER_PROJECT]
+
+
 def sync_projects(lean_map, workdir):
     out = []
+    browse = {}
     for p in lean_map["projects"]:
         entry = {k: p[k] for k in ("name", "repo", "fields", "kind", "description")}
         entry["url"] = f"https://github.com/{p['repo']}"
@@ -145,10 +155,14 @@ def sync_projects(lean_map, workdir):
             sha, date, subject = git("log", "-1", "--format=%H%x1f%cs%x1f%s", cwd=dest).strip().split("\x1f", 2)
             entry["updated"] = date
             entry["latest"] = {"title": subject, "url": f"{entry['url']}/commit/{sha}"}
+            files = project_files(dest)
+            entry["lean_files"] = len(files)
+            if files:
+                browse[p["repo"]] = {"ref": sha, "files": files}
         except subprocess.CalledProcessError as e:
             print(f"warning: could not read {p['repo']}: {e.stderr.strip()}", file=sys.stderr)
         out.append(entry)
-    return out
+    return out, browse
 
 
 def main():
@@ -156,7 +170,7 @@ def main():
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
         mathlib, fields, feed, browse = sync_mathlib(lean_map, tmp)
-        projects = sync_projects(lean_map, tmp)
+        projects, browse["projects"] = sync_projects(lean_map, tmp)
     data = {
         "generated": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
         "window_days": WINDOW_DAYS,

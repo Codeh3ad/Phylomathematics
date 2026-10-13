@@ -6,13 +6,15 @@
  * Right: the source, lightly highlighted. Clicking a node scrolls to its code;
  * clicking a declaration in the code selects its node.
  *
- * Usage: ProofViewer.open({ title, files: [path, ...], ref, link, start })
+ * Usage: ProofViewer.open({ title, files: [path, ...], ref, repo, start })
+ * repo defaults to mathlib; the Docs links only exist for mathlib.
  */
 (() => {
   "use strict";
 
-  const RAW = "https://raw.githubusercontent.com/leanprover-community/mathlib4";
-  const BLOB = "https://github.com/leanprover-community/mathlib4/blob";
+  const MATHLIB = "leanprover-community/mathlib4";
+  const RAW = (repo) => `https://raw.githubusercontent.com/${repo}`;
+  const BLOB = (repo) => `https://github.com/${repo}/blob`;
   const DOCS = "https://leanprover-community.github.io/mathlib4_docs";
 
   const KIND = {
@@ -158,10 +160,11 @@
     <div class="viewer-card">
       <header class="viewer-head">
         <div class="viewer-titles">
-          <span class="viewer-eyebrow">Lean proof</span>
+          <span class="viewer-eyebrow" id="viewer-eyebrow">Lean proof</span>
           <h2 id="viewer-title"></h2>
         </div>
         <div class="viewer-tools">
+          <input id="viewer-filter" type="search" placeholder="Filter files…" aria-label="Filter files" autocomplete="off" hidden>
           <select id="viewer-file" aria-label="File"></select>
           <a id="viewer-gh" target="_blank" rel="noopener">GitHub</a>
           <a id="viewer-docs" target="_blank" rel="noopener">Docs</a>
@@ -202,11 +205,21 @@
     if (!root.hidden && ev.key === "Escape") { ev.stopImmediatePropagation(); close(); }
   }, true);
   fileSel.addEventListener("change", () => load(fileSel.value));
+  const filterIn = $("viewer-filter");
+  const fileOptions = (files) => files.map((f) => `<option value="${esc(f)}">${esc(f.replace(/^Mathlib\//, ""))}</option>`).join("");
+  filterIn.addEventListener("input", () => {
+    if (!state) return;
+    const q = filterIn.value.trim().toLowerCase();
+    const shown = state.files.filter((f) => f.toLowerCase().includes(q));
+    fileSel.innerHTML = fileOptions(shown.length ? shown : [state.path]);
+    fileSel.value = shown.includes(state.path) ? state.path : shown[0] ?? state.path;
+    if (shown.length && fileSel.value !== state.path) load(fileSel.value);
+  });
 
   async function fetchFile(ref, path) {
-    const key = `${ref}/${path}`;
+    const key = `${state.repo}/${ref}/${path}`;
     if (!cache.has(key)) {
-      cache.set(key, fetch(`${RAW}/${ref}/${path}`).then((r) => {
+      cache.set(key, fetch(`${RAW(state.repo)}/${ref}/${path}`).then((r) => {
         if (!r.ok) throw new Error(`GitHub returned ${r.status}`);
         return r.text();
       }));
@@ -214,10 +227,11 @@
     return cache.get(key).catch((e) => { cache.delete(key); throw e; });
   }
 
-  async function load(path) {
+  async function load(path, { skipEmpty = false } = {}) {
     const ref = state.ref;
     state.path = path;
-    $("viewer-gh").href = `${BLOB}/${ref}/${path}`;
+    $("viewer-gh").href = `${BLOB(state.repo)}/${ref}/${path}`;
+    $("viewer-docs").hidden = state.repo !== MATHLIB;
     $("viewer-docs").href = `${DOCS}/${path.replace(/\.lean$/, "")}.html`;
     $("viewer-stats").textContent = "Loading…";
     $("viewer-decl").innerHTML = "";
@@ -230,11 +244,16 @@
       if (state?.path !== path) return;
       $("viewer-stats").textContent = "";
       pre.innerHTML = `<span class="viewer-error">Could not load this file (${esc(e.message)}). ` +
-        `<a href="${BLOB}/${ref}/${esc(path)}" target="_blank" rel="noopener">Open it on GitHub</a> instead.</span>`;
+        `<a href="${BLOB(state.repo)}/${ref}/${esc(path)}" target="_blank" rel="noopener">Open it on GitHub</a> instead.</span>`;
       return;
     }
     if (state?.path !== path) return;
     const parsed = parse(text);
+    // A project's first file is often a tiny helper; on first open, move on to one with proofs.
+    if (skipEmpty && !parsed.decls.length) {
+      const next = state.files[state.files.indexOf(path) + 1];
+      if (next && state.files.indexOf(path) < 5) { fileSel.value = next; return load(next, { skipEmpty }); }
+    }
     state.parsed = parsed;
     renderCode(parsed);
     renderGraph(parsed);
@@ -311,33 +330,43 @@
       .classed("down", (e) => (e.s.idx === idx || down.has(e.s.idx)) && down.has(e.t.idx));
     pre.querySelectorAll(".ln.on").forEach((el) => el.classList.remove("on"));
     for (let i = d.start; i <= d.end; i++) pre.children[i]?.classList.add("on");
-    if (scroll) pre.children[d.start]?.scrollIntoView({ block: "start", behavior: "smooth" });
+    if (scroll && pre.children[d.start]) {
+      const top = pre.children[d.start].offsetTop - 8;
+      const far = Math.abs(pre.scrollTop - top) > pre.clientHeight * 3;
+      pre.scrollTo({ top, behavior: far ? "auto" : "smooth" });
+    }
     if (center && svg) {
-      svg.transition().duration(400).call(zoom.translateTo, d.x + 60, d.y, [svgEl.clientWidth / 2, svgEl.clientHeight / 2]);
+      // Keep labels legible: zoom in to at least 0.85 around the chosen node.
+      const k = Math.max(d3.zoomTransform(svgEl).k, 0.85);
+      const t = d3.zoomIdentity.translate(svgEl.clientWidth / 2 - (d.x + 60) * k, svgEl.clientHeight / 2 - d.y * k).scale(k);
+      svg.transition().duration(400).call(zoom.transform, t);
     }
     const docsHref = `${DOCS}/${state.path.replace(/\.lean$/, "")}.html#${encodeURIComponent(d.full)}`;
     const usesN = d.deps.size, usedN = d.users.length;
     $("viewer-decl").innerHTML =
       `<span class="vk k-${d.kind}">${esc(d.kw)}</span> <code>${esc(d.full)}</code>` +
       `<span class="vd-meta">lines ${d.start + 1}–${d.end + 1} · uses ${usesN} · used by ${usedN} in this file · ` +
-      `<a href="${BLOB}/${state.ref}/${esc(state.path)}#L${d.start + 1}-L${d.end + 1}" target="_blank" rel="noopener">GitHub</a>` +
-      (d.short ? ` · <a href="${docsHref}" target="_blank" rel="noopener">Docs</a>` : "") + `</span>`;
+      `<a href="${BLOB(state.repo)}/${state.ref}/${esc(state.path)}#L${d.start + 1}-L${d.end + 1}" target="_blank" rel="noopener">GitHub</a>` +
+      (d.short && state.repo === MATHLIB ? ` · <a href="${docsHref}" target="_blank" rel="noopener">Docs</a>` : "") + `</span>`;
   }
 
   window.ProofViewer = {
-    open({ title, files, ref = "master", start }) {
+    open({ title, files, ref = "master", repo = MATHLIB, start, eyebrow }) {
       if (!files?.length) return;
       lastFocus = document.activeElement;
-      state = { ref, files };
+      state = { ref, files, repo };
       $("viewer-title").textContent = title;
-      fileSel.innerHTML = files.map((f) => `<option value="${esc(f)}">${esc(f.replace(/^Mathlib\//, ""))}</option>`).join("");
+      $("viewer-eyebrow").textContent = eyebrow || (repo === MATHLIB ? "Lean proof · mathlib" : `Lean proof · ${repo}`);
+      fileSel.innerHTML = fileOptions(files);
       fileSel.hidden = files.length < 2;
+      filterIn.hidden = files.length < 25;
+      filterIn.value = "";
       const first = start && files.includes(start) ? start : files[0];
       fileSel.value = first;
       root.hidden = false;
       document.body.classList.add("viewer-open");
       root.querySelector(".viewer-close").focus();
-      load(first);
+      load(first, { skipEmpty: true });
     },
     close,
   };
