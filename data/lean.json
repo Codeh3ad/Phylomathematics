@@ -1,12 +1,12 @@
 {
- "generated": "2026-10-13T19:21Z",
+ "generated": "2026-10-13T19:26Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "fcd79238d34137c492bb55aef27aba0916e0a36f",
+  "commit": "d0e3562b29dfda144fe47d6652c55d7f96e849b4",
   "date": "2026-10-13",
   "files": 8625,
-  "changes": 1370,
-  "additions": 699,
+  "changes": 1379,
+  "additions": 702,
   "ai_additions": 68
  },
  "fields": {
@@ -18,7 +18,8 @@
    "files": 4,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-babylonian.json"
   },
   "egyptian_geometry": {
    "prefixes": [
@@ -43,7 +44,8 @@
       "Mathlib/MeasureTheory/Measure/Lebesgue/EqHaar.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-egyptian_geometry.json"
   },
   "syllogistic": {
    "prefixes": [
@@ -65,7 +67,8 @@
       "Mathlib/Order/GaloisConnection/Basic.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-syllogistic.json"
   },
   "pythagorean": {
    "prefixes": [
@@ -77,7 +80,8 @@
    "files": 4,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-pythagorean.json"
   },
   "euclid": {
    "prefixes": [
@@ -151,7 +155,8 @@
       "Mathlib/Geometry/Euclidean/MongePoint.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-euclid.json"
   },
   "exhaustion": {
    "prefixes": [
@@ -184,7 +189,8 @@
       "Mathlib/MeasureTheory/Integral/IntervalIntegral/MeanValue.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-exhaustion.json"
   },
   "conics": {
    "prefixes": [
@@ -227,7 +233,8 @@
       "Mathlib/Geometry/Euclidean/Sphere/SecondInter.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-conics.json"
   },
   "trigonometry": {
    "prefixes": [
@@ -305,7 +312,8 @@
       "Mathlib/MeasureTheory/Integral/Lebesgue/DominatedConvergence.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-trigonometry.json"
   },
   "diophantine": {
    "prefixes": [
@@ -316,7 +324,8 @@
    "files": 8,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-diophantine.json"
   },
   "zero": {
    "prefixes": [
@@ -390,7 +399,8 @@
       "Mathlib/Algebra/GroupWithZero/Divisibility.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-zero.json"
   },
   "al_jabr": {
    "prefixes": [
@@ -398,9 +408,20 @@
     "Mathlib/Algebra/Polynomial"
    ],
    "files": 64,
-   "additions": 11,
+   "additions": 12,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-10-13",
+     "title": "Condition for `Polynomial.coeffs p ⊆ s`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44795",
+     "ai": false,
+     "sha": "a937682c293e82bfbd3223f22add0b4139a52eae",
+     "files": [
+      "Mathlib/Algebra/Polynomial/Basic.lean"
+     ]
+    },
     {
      "date": "2026-10-08",
      "title": "Construct a polynomial from its list of coefficients",
@@ -450,21 +471,9 @@
       "Mathlib/Algebra/Polynomial/RuleOfSigns.lean",
       "Mathlib/Data/List/SignVariations.lean"
      ]
-    },
-    {
-     "date": "2026-09-09",
-     "title": "Add IsSMulRegular.all",
-     "scope": "Algebra/Regular/SMul",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43600",
-     "ai": false,
-     "sha": "feb73e2e3977c736a7be439b078f20bc37adce87",
-     "files": [
-      "Mathlib/Algebra/Polynomial/Monic.lean",
-      "Mathlib/Algebra/Polynomial/Roots.lean",
-      "Mathlib/Algebra/Regular/SMul.lean"
-     ]
     }
-   ]
+   ],
+   "overview": "field-al_jabr.json"
   },
   "kerala": {
    "prefixes": [
@@ -489,7 +498,8 @@
       "Mathlib/Analysis/SpecialFunctions/Trigonometric/Sinc.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-kerala.json"
   },
   "cubic": {
    "prefixes": [
@@ -516,7 +526,8 @@
       "Mathlib/GroupTheory/ArchimedeanDensely.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-cubic.json"
   },
   "complex_numbers": {
    "prefixes": [
@@ -525,7 +536,8 @@
    "files": 2,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-complex_numbers.json"
   },
   "symbolic_algebra": {
    "prefixes": [
@@ -569,7 +581,8 @@
       "Mathlib/Algebra/MvPolynomial/Variables.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-symbolic_algebra.json"
   },
   "logarithms": {
    "prefixes": [
@@ -652,7 +665,8 @@
       "Mathlib/Tactic/Linter/DirectoryDependency.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-logarithms.json"
   },
   "analytic_geometry": {
    "prefixes": [
@@ -734,7 +748,8 @@
       "Mathlib/LinearAlgebra/Projectivization/Basic.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-analytic_geometry.json"
   },
   "projective": {
    "prefixes": [
@@ -760,7 +775,8 @@
       "Mathlib/LinearAlgebra/Projectivization/Basic.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-projective.json"
   },
   "probability": {
    "prefixes": [
@@ -770,7 +786,8 @@
    "files": 6,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-probability.json"
   },
   "fluxions": {
    "prefixes": [
@@ -797,7 +814,8 @@
       "Mathlib/Analysis/Polynomial/Basic.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-fluxions.json"
   },
   "leibniz_calculus": {
    "prefixes": [
@@ -847,7 +865,8 @@
       "Mathlib/Analysis/Polynomial/Basic.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-leibniz_calculus.json"
   },
   "differential_equations": {
    "prefixes": [
@@ -856,7 +875,8 @@
    "files": 6,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-differential_equations.json"
   },
   "variations": {
    "prefixes": [
@@ -865,7 +885,8 @@
    "files": 1,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-variations.json"
   },
   "graph_theory": {
    "prefixes": [
@@ -938,7 +959,8 @@
       "Mathlib/Combinatorics/SimpleGraph/Paths.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-graph_theory.json"
   },
   "euler_analysis": {
    "prefixes": [
@@ -949,7 +971,8 @@
    "files": 3,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-euler_analysis.json"
   },
   "modern_number_theory": {
    "prefixes": [
@@ -1006,7 +1029,8 @@
       "Mathlib/GroupTheory/SpecificGroups/Cyclic.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-modern_number_theory.json"
   },
   "fourier": {
    "prefixes": [
@@ -1061,7 +1085,8 @@
       "Mathlib/Tactic/GCongr/CoreAttrs.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-fourier.json"
   },
   "statistics": {
    "prefixes": [
@@ -1110,7 +1135,8 @@
       "Mathlib/Probability/Distributions/Gaussian/Multivariate.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-statistics.json"
   },
   "rigorous_analysis": {
    "prefixes": [
@@ -1190,7 +1216,8 @@
       "Mathlib/Order/Filter/Ultrafilter/Cardinality.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-rigorous_analysis.json"
   },
   "complex_analysis": {
    "prefixes": [
@@ -1273,7 +1300,8 @@
       "Mathlib/Analysis/Meromorphic/Order.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-complex_analysis.json"
   },
   "differential_geometry": {
    "prefixes": [
@@ -1349,7 +1377,8 @@
       "Mathlib/Analysis/Normed/Operator/NormedSpace.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-differential_geometry.json"
   },
   "lobachevsky": {
    "prefixes": [
@@ -1388,7 +1417,8 @@
       "Mathlib/NumberTheory/ModularForms/QExpansion.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-lobachevsky.json"
   },
   "bolyai": {
    "prefixes": [
@@ -1427,7 +1457,8 @@
       "Mathlib/NumberTheory/ModularForms/QExpansion.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-bolyai.json"
   },
   "group_theory": {
    "prefixes": [
@@ -1513,7 +1544,8 @@
       "Mathlib/RingTheory/Ideal/Pointwise.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-group_theory.json"
   },
   "analytic_number_theory": {
    "prefixes": [
@@ -1576,7 +1608,8 @@
       "Mathlib/NumberTheory/Harmonic/ZetaAsymp.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-analytic_number_theory.json"
   },
   "linear_algebra": {
    "prefixes": [
@@ -1584,9 +1617,20 @@
     "Mathlib/Data/Matrix"
    ],
    "files": 402,
-   "additions": 67,
+   "additions": 68,
    "ai_additions": 4,
    "recent": [
+    {
+     "date": "2026-10-13",
+     "title": "Add simp theorems for PiTensorProduct.reindex",
+     "scope": "LinearAlgebra/PiTensorProduct/Basic",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44809",
+     "ai": false,
+     "sha": "b27dc32d4fcf7c2cd45b52949b4f3cfab32fbcdb",
+     "files": [
+      "Mathlib/LinearAlgebra/PiTensorProduct/Basic.lean"
+     ]
+    },
     {
      "date": "2026-10-12",
      "title": "Exists affinely independent set of a cardinality dim + 1",
@@ -1644,19 +1688,9 @@
       "Mathlib/Tactic/Echelon/Core.lean",
       "Mathlib/Tactic/Echelon/Rat.lean"
      ]
-    },
-    {
-     "date": "2026-10-08",
-     "title": "Base change of exterior algebra",
-     "scope": "LinearAlgebra",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44604",
-     "ai": false,
-     "sha": "d1a28f4132a183f8dc05f46156e603fd326858e7",
-     "files": [
-      "Mathlib/LinearAlgebra/ExteriorAlgebra/BaseChange.lean"
-     ]
     }
-   ]
+   ],
+   "overview": "field-linear_algebra.json"
   },
   "invariant_theory": {
    "prefixes": [
@@ -1678,7 +1712,8 @@
       "Mathlib/RingTheory/Invariant/Basic.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-invariant_theory.json"
   },
   "boolean_logic": {
    "prefixes": [
@@ -1687,7 +1722,8 @@
    "files": 3,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-boolean_logic.json"
   },
   "riemannian_geometry": {
    "prefixes": [
@@ -1714,7 +1750,8 @@
       "Mathlib/Topology/VectorBundle/Basic.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-riemannian_geometry.json"
   },
   "set_theory": {
    "prefixes": [
@@ -1798,7 +1835,8 @@
       "Mathlib/SetTheory/Ordinal/Exponential.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-set_theory.json"
   },
   "mathematical_logic": {
    "prefixes": [
@@ -1808,7 +1846,8 @@
    "files": 2,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-mathematical_logic.json"
   },
   "algebraic_geometry": {
    "prefixes": [
@@ -1879,7 +1918,8 @@
       "Mathlib/NumberTheory/Height/EllipticCurve.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-algebraic_geometry.json"
   },
   "algebraic_topology": {
    "prefixes": [
@@ -1952,7 +1992,8 @@
       "Mathlib/AlgebraicTopology/SimplexCategory/Truncated.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-algebraic_topology.json"
   },
   "dynamical_systems": {
    "prefixes": [
@@ -2033,7 +2074,8 @@
       "Mathlib/Dynamics/SymbolicDynamics/Basic.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-dynamical_systems.json"
   },
   "measure_theory": {
    "prefixes": [
@@ -2114,7 +2156,8 @@
       "Mathlib/MeasureTheory/Measure/Lebesgue/EqHaar.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-measure_theory.json"
   },
   "functional_analysis": {
    "prefixes": [
@@ -2190,7 +2233,8 @@
       "Mathlib/Analysis/Normed/Order/UpperLower.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-functional_analysis.json"
   },
   "point_set_topology": {
    "prefixes": [
@@ -2274,7 +2318,8 @@
       "Mathlib/Data/Nat/Cast/Pi.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-point_set_topology.json"
   },
   "abstract_algebra": {
    "prefixes": [
@@ -2358,7 +2403,8 @@
       "Mathlib/Algebra/Ring/Action/ConjAct.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-abstract_algebra.json"
   },
   "game_theory": {
    "prefixes": [],
@@ -2375,7 +2421,8 @@
    "files": 3,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-incompleteness.json"
   },
   "axiomatic_probability": {
    "prefixes": [
@@ -2452,7 +2499,8 @@
       "Mathlib/Analysis/CStarAlgebra/ApproximateUnit.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-axiomatic_probability.json"
   },
   "lambda_calculus": {
    "prefixes": [
@@ -2462,7 +2510,8 @@
    "files": 2,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-lambda_calculus.json"
   },
   "turing_machines": {
    "prefixes": [
@@ -2472,7 +2521,8 @@
    "files": 7,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-turing_machines.json"
   },
   "category_theory": {
    "prefixes": [
@@ -2552,7 +2602,8 @@
       "Mathlib/CategoryTheory/Presentable/OrthogonalReflection.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-category_theory.json"
   },
   "information_theory": {
    "prefixes": [
@@ -2577,7 +2628,8 @@
       "Mathlib/InformationTheory/Coding/UniquelyDecodable.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-information_theory.json"
   },
   "schemes": {
    "prefixes": [
@@ -2647,7 +2699,8 @@
       "Mathlib/NumberTheory/Height/EllipticCurve.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-schemes.json"
   },
   "git": {
    "prefixes": [
@@ -2718,7 +2771,8 @@
       "Mathlib/NumberTheory/Height/EllipticCurve.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-git.json"
   },
   "langlands": {
    "prefixes": [
@@ -2793,7 +2847,8 @@
       "Mathlib/RepresentationTheory/Homological/ContCohomology/Sha.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-langlands.json"
   },
   "complexity": {
    "prefixes": [
@@ -2835,7 +2890,8 @@
       "Mathlib/MeasureTheory/Integral/Lebesgue/DominatedConvergence.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-complexity.json"
   },
   "type_theory": {
    "prefixes": [],
@@ -2930,7 +2986,8 @@
       "Mathlib/Order/SuccPred/Fin.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-nine_chapters.json"
   },
   "indian_combinatorics": {
    "prefixes": [
@@ -2953,7 +3010,8 @@
       "Mathlib/Data/Nat/Factorial/BigOperators.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-indian_combinatorics.json"
   },
   "maya_zero": {
    "prefixes": [
@@ -2962,7 +3020,8 @@
    "files": 3,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-maya_zero.json"
   },
   "algebraic_number_theory": {
    "prefixes": [
@@ -3043,7 +3102,8 @@
       "Mathlib/RingTheory/Radical/Basic.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-algebraic_number_theory.json"
   },
   "p_adic": {
    "prefixes": [
@@ -3122,7 +3182,8 @@
       "Mathlib/NumberTheory/Padics/ValuativeRel.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-p_adic.json"
   },
   "elliptic_curves": {
    "prefixes": [
@@ -3190,7 +3251,8 @@
       "Mathlib/AlgebraicGeometry/EllipticCurve/Weierstrass.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-elliptic_curves.json"
   },
   "fermat_last": {
    "prefixes": [
@@ -3199,7 +3261,8 @@
    "files": 5,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-fermat_last.json"
   },
   "quaternions": {
    "prefixes": [
@@ -3209,7 +3272,8 @@
    "files": 2,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-quaternions.json"
   },
   "lie_theory": {
    "prefixes": [
@@ -3289,7 +3353,8 @@
       "Mathlib/LinearAlgebra/Matrix/Hermitian.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-lie_theory.json"
   },
   "representation_theory": {
    "prefixes": [
@@ -3365,7 +3430,8 @@
       "Mathlib/RepresentationTheory/Basic.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-representation_theory.json"
   },
   "homological_algebra": {
    "prefixes": [
@@ -3443,7 +3509,8 @@
       "Mathlib/Algebra/Homology/HomotopyCategory.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-homological_algebra.json"
   },
   "tensor_calculus": {
    "prefixes": [
@@ -3513,7 +3580,8 @@
       "Mathlib/Topology/VectorBundle/Basic.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-tensor_calculus.json"
   },
   "knot_theory": {
    "prefixes": [
@@ -3549,7 +3617,8 @@
       "Mathlib/Topology/Homotopy/Lifting.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-knot_theory.json"
   },
   "sheaf_theory": {
    "prefixes": [
@@ -3590,7 +3659,8 @@
       "Mathlib/AlgebraicTopology/SimplicialSet/ProdStdSimplex.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-sheaf_theory.json"
   },
   "differential_topology": {
    "prefixes": [
@@ -3666,7 +3736,8 @@
       "Mathlib/Analysis/Normed/Operator/NormedSpace.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-differential_topology.json"
   },
   "fractals": {
    "prefixes": [
@@ -3676,7 +3747,8 @@
    "files": 2,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-fractals.json"
   },
   "symplectic_geometry": {
    "prefixes": [
@@ -3685,7 +3757,8 @@
    "files": 1,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-symplectic_geometry.json"
   },
   "quantum_topology": {
    "prefixes": [
@@ -3694,7 +3767,8 @@
    "files": 1,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-quantum_topology.json"
   },
   "poincare_proof": {
    "prefixes": [
@@ -3770,7 +3844,8 @@
       "Mathlib/Analysis/Normed/Operator/NormedSpace.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-poincare_proof.json"
   },
   "pde": {
    "prefixes": [
@@ -3844,7 +3919,8 @@
       "Mathlib/Analysis/Distribution/TestFunction.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-pde.json"
   },
   "complex_dynamics": {
    "prefixes": [
@@ -3922,7 +3998,8 @@
       "Mathlib/Analysis/Complex/Periodic.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-complex_dynamics.json"
   },
   "celestial_mechanics": {
    "prefixes": [
@@ -3931,7 +4008,8 @@
    "files": 6,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-celestial_mechanics.json"
   },
   "numerical_analysis": {
    "prefixes": [
@@ -3941,7 +4019,8 @@
    "files": 2,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-numerical_analysis.json"
   },
   "hamiltonian_mechanics": {
    "prefixes": [
@@ -3950,7 +4029,8 @@
    "files": 6,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-hamiltonian_mechanics.json"
   },
   "general_relativity": {
    "prefixes": [
@@ -4026,7 +4106,8 @@
       "Mathlib/Analysis/Normed/Operator/NormedSpace.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-general_relativity.json"
   },
   "quantum_mechanics": {
    "prefixes": [
@@ -4103,7 +4184,8 @@
       "Mathlib/Analysis/RCLike/Basic.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-quantum_mechanics.json"
   },
   "finite_elements": {
    "prefixes": [
@@ -4166,7 +4248,8 @@
       "Mathlib/Analysis/InnerProductSpace/Projection/Minimal.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-finite_elements.json"
   },
   "monte_carlo": {
    "prefixes": [
@@ -4175,7 +4258,8 @@
    "files": 1,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-monte_carlo.json"
   },
   "linear_programming": {
    "prefixes": [
@@ -4258,7 +4342,8 @@
       "Mathlib/Algebra/Order/Nonneg/Module.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-linear_programming.json"
   },
   "gauge_theory": {
    "prefixes": [
@@ -4338,7 +4423,8 @@
       "Mathlib/LinearAlgebra/Matrix/Hermitian.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-gauge_theory.json"
   },
   "learning_theory": {
    "prefixes": [
@@ -4413,7 +4499,8 @@
       "Mathlib/Data/Set/Sups.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-learning_theory.json"
   },
   "mathematical_finance": {
    "prefixes": [
@@ -4438,7 +4525,8 @@
       "Mathlib/Probability/Process/LimitProcess.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-mathematical_finance.json"
   },
   "bayesian": {
    "prefixes": [
@@ -4478,7 +4566,8 @@
       "Mathlib/Probability/Kernel/Composition/WithDensity.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-bayesian.json"
   },
   "markov_chains": {
    "prefixes": [
@@ -4517,7 +4606,8 @@
       "Mathlib/Probability/Kernel/Composition/WithDensity.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-markov_chains.json"
   },
   "brownian_motion": {
    "prefixes": [
@@ -4566,7 +4656,8 @@
       "Mathlib/Probability/Distributions/Gaussian/Multivariate.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-brownian_motion.json"
   },
   "stochastic_calculus": {
    "prefixes": [
@@ -4603,7 +4694,8 @@
       "Mathlib/Probability/Process/Indistinguishable.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-stochastic_calculus.json"
   },
   "combinatorics": {
    "prefixes": [
@@ -4676,7 +4768,8 @@
       "Mathlib/Combinatorics/SimpleGraph/Paths.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-combinatorics.json"
   },
   "ramsey": {
    "prefixes": [
@@ -4687,7 +4780,8 @@
    "files": 3,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-ramsey.json"
   },
   "probabilistic_method": {
    "prefixes": [
@@ -4714,7 +4808,8 @@
       "Mathlib/Tactic/GCongr/CoreAttrs.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-probabilistic_method.json"
   },
   "coding_theory": {
    "prefixes": [
@@ -4723,7 +4818,8 @@
    "files": 1,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-coding_theory.json"
   },
   "cryptography": {
    "prefixes": [
@@ -4781,7 +4877,8 @@
       "Mathlib/GroupTheory/SpecificGroups/Cyclic.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-cryptography.json"
   },
   "intuitionism": {
    "prefixes": [
@@ -4807,7 +4904,8 @@
       "Mathlib/CategoryTheory/Limits/IsLimit.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-intuitionism.json"
   },
   "zfc": {
    "prefixes": [
@@ -4833,7 +4931,8 @@
       "Mathlib/Topology/Order/AtTopBotIxx.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-zfc.json"
   },
   "model_theory": {
    "prefixes": [
@@ -4872,7 +4971,8 @@
       "Mathlib/ModelTheory/Order.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-model_theory.json"
   },
   "automata": {
    "prefixes": [
@@ -4884,7 +4984,8 @@
    "files": 4,
    "additions": 0,
    "ai_additions": 0,
-   "recent": []
+   "recent": [],
+   "overview": "field-automata.json"
   },
   "forcing": {
    "prefixes": [
@@ -4911,7 +5012,8 @@
       "Mathlib/Topology/Order/AtTopBotIxx.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-forcing.json"
   },
   "topos_theory": {
    "prefixes": [
@@ -4976,10 +5078,39 @@
       "Mathlib/AlgebraicTopology/SimplicialSet/ProdStdSimplex.lean"
      ]
     }
-   ]
+   ],
+   "overview": "field-topos_theory.json"
   }
  },
  "feed": [
+  {
+   "date": "2026-10-13",
+   "title": "Add simp theorems for PiTensorProduct.reindex",
+   "scope": "LinearAlgebra/PiTensorProduct/Basic",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/44809",
+   "ai": false,
+   "sha": "b27dc32d4fcf7c2cd45b52949b4f3cfab32fbcdb",
+   "files": [
+    "Mathlib/LinearAlgebra/PiTensorProduct/Basic.lean"
+   ],
+   "fields": [
+    "linear_algebra"
+   ]
+  },
+  {
+   "date": "2026-10-13",
+   "title": "Condition for `Polynomial.coeffs p ⊆ s`",
+   "scope": null,
+   "url": "https://github.com/leanprover-community/mathlib4/pull/44795",
+   "ai": false,
+   "sha": "a937682c293e82bfbd3223f22add0b4139a52eae",
+   "files": [
+    "Mathlib/Algebra/Polynomial/Basic.lean"
+   ],
+   "fields": [
+    "al_jabr"
+   ]
+  },
   {
    "date": "2026-10-13",
    "title": "BigO in terms of seminorms",
@@ -5955,45 +6086,6 @@
    ]
   },
   {
-   "date": "2026-10-05",
-   "title": "Use `IsApply` for `AlternatingMap`",
-   "scope": "LinearAlgebra",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/42140",
-   "ai": false,
-   "sha": "ff9a7c19e5c26a798978176b0c5cd03c426fd74f",
-   "files": [
-    "Mathlib/LinearAlgebra/Alternating/Basic.lean",
-    "Mathlib/LinearAlgebra/Alternating/DomCoprod.lean",
-    "Mathlib/LinearAlgebra/Determinant.lean",
-    "Mathlib/LinearAlgebra/Orientation.lean",
-    "Mathlib/MeasureTheory/Measure/Lebesgue/EqHaar.lean"
-   ],
-   "fields": [
-    "egyptian_geometry",
-    "linear_algebra",
-    "measure_theory"
-   ]
-  },
-  {
-   "date": "2026-10-05",
-   "title": "Tag `Function.leftLim` with `to_dual`",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/43525",
-   "ai": false,
-   "sha": "acf4c061310b9fdbd706e49298e105eb24e6de3b",
-   "files": [
-    "Mathlib/Tactic/Translate/ToDual.lean",
-    "Mathlib/Topology/EMetricSpace/BoundedVariation.lean",
-    "Mathlib/Topology/Order/DenselyOrdered.lean",
-    "Mathlib/Topology/Order/LeftRightLim.lean",
-    "Mathlib/Topology/Order/LeftRightNhds.lean",
-    "Mathlib/Topology/Order/Monotone.lean"
-   ],
-   "fields": [
-    "point_set_topology"
-   ]
-  },
-  {
    "date": "2026-09-29",
    "title": "`proj`-composition lemmas for `Pi` reindexing maps",
    "scope": null,
@@ -6759,7 +6851,8 @@
     "title": "chore: bump mathlib to c0da404, fix breaking changes (#1200)",
     "url": "https://github.com/ImperialCollegeLondon/FLT/commit/f6c6a2fe9796d6d89cd2a0d24e8a453729d881ff"
    },
-   "lean_files": 271
+   "overview": "ImperialCollegeLondon__FLT.json",
+   "lean_files": 270
   },
   {
    "name": "Strong Prime Number Theorem (Gauss)",
@@ -6775,7 +6868,8 @@
     "title": "Let there be light",
     "url": "https://github.com/math-inc/strongpnt/commit/2f5835c322314f55f1026ec2f139d704b7c45c69"
    },
-   "lean_files": 8
+   "overview": "math-inc__strongpnt.json",
+   "lean_files": 7
   },
   {
    "name": "PrimeNumberTheoremAnd",
@@ -6791,7 +6885,8 @@
     "title": "Chore: Bump to V4.34.0 (#1782)",
     "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd/commit/c39a751132c88b6e8080b74c74023fd95b3d8be0"
    },
-   "lean_files": 236
+   "overview": "AlexKontorovich__PrimeNumberTheoremAnd.json",
+   "lean_files": 233
   },
   {
    "name": "Formal Conjectures",
@@ -6811,6 +6906,7 @@
     "title": "fix(ErdosProblems/295): define `k` without the proof of `exists_k` (#6952)",
     "url": "https://github.com/google-deepmind/formal-conjectures/commit/e47a327f7befa3df97115abf87aa8ed35c381f1f"
    },
+   "overview": "google-deepmind__formal-conjectures.json",
    "lean_files": 400
   },
   {
@@ -6829,7 +6925,8 @@
     "title": "chore: bump mathlib to a37dcbd, fix breaking changes (#323)",
     "url": "https://github.com/teorth/pfr/commit/4c56de547b2f33b0bc47b92f3bfbcebc6457a776"
    },
-   "lean_files": 76
+   "overview": "teorth__pfr.json",
+   "lean_files": 74
   },
   {
    "name": "Equational Theories",
@@ -6847,7 +6944,8 @@
     "title": "remove unused Hasse diagram infoview widget (#1509)",
     "url": "https://github.com/teorth/equational_theories/commit/1aec8a7acf223b7c56e4830977b6e90d4ef1924b"
    },
-   "lean_files": 400
+   "overview": "teorth__equational_theories.json",
+   "lean_files": 398
   },
   {
    "name": "Carleson's theorem",
@@ -6865,7 +6963,8 @@
     "title": "chore: delete upstreamed lemmas (#679)",
     "url": "https://github.com/fpvandoorn/carleson/commit/12fb202e6dba84aa57a9d39c7d019dc344902912"
    },
-   "lean_files": 118
+   "overview": "fpvandoorn__carleson.json",
+   "lean_files": 117
   },
   {
    "name": "Sphere eversion",
@@ -6881,7 +6980,8 @@
     "title": "chore: update actions/upload-pages-artifact to v5 (#155)",
     "url": "https://github.com/leanprover-community/sphere-eversion/commit/df3e74a3fbe1ae42c2cd9b075d77ff3863c1b795"
    },
-   "lean_files": 65
+   "overview": "leanprover-community__sphere-eversion.json",
+   "lean_files": 64
   },
   {
    "name": "Tao's Analysis I in Lean",
@@ -6898,7 +6998,8 @@
     "title": "Merge pull request #718 from Chessing234/feat/fam-mono-additivity",
     "url": "https://github.com/teorth/analysis/commit/2c165a0da64f1b2c8a0000600bc464ec77671c7a"
    },
-   "lean_files": 108
+   "overview": "teorth__analysis.json",
+   "lean_files": 107
   },
   {
    "name": "LeanAPAP",
@@ -6915,7 +7016,8 @@
     "title": "chore: bump mathlib to a37dcbd, fix breaking changes (#27)",
     "url": "https://github.com/YaelDillies/LeanAPAP/commit/51593813f287062cfd8ef939673de361186a76ba"
    },
-   "lean_files": 54
+   "overview": "YaelDillies__LeanAPAP.json",
+   "lean_files": 53
   },
   {
    "name": "Aristotle at IMO 2025",
@@ -6933,7 +7035,8 @@
     "title": "fix root imports and add P6 statement",
     "url": "https://github.com/harmonic-ai/IMO2025/commit/72b62405a176a7eaeadb335a7fa6ee80b6667161"
    },
-   "lean_files": 13
+   "overview": "harmonic-ai__IMO2025.json",
+   "lean_files": 12
   },
   {
    "name": "DeepSeek-Prover-V2",
@@ -6949,8 +7052,7 @@
    "latest": {
     "title": "update putnam results",
     "url": "https://github.com/deepseek-ai/DeepSeek-Prover-V2/commit/e598a57ea3284997d4a2a168a069fdd5064afbc8"
-   },
-   "lean_files": 0
+   }
   }
  ]
 }

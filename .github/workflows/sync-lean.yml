@@ -26,13 +26,13 @@ jobs:
       - name: Commit if changed
         id: commit
         run: |
-          if git diff --quiet -- data/lean.json data/lean-files.json; then
+          if [ -z "$(git status --porcelain -- data)" ]; then
             echo "No changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/lean.json data/lean-files.json
+          git add -A data
           git commit -m "Sync Lean data"
           git push
           echo "pushed=true" >> "$GITHUB_OUTPUT"

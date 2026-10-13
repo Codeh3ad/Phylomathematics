@@ -1,13 +1,12 @@
-/* Lean proof viewer: opens a mathlib file inside the site.
+/* Lean project explorer: a human-readable overview of formalized mathematics.
  *
- * Left: the file's declarations as a dependency graph. Columns are dependency
- * depth, so a theorem sits to the right of everything it uses, the same way
- * fields sit to the right of their ancestors on the main map.
- * Right: the source, lightly highlighted. Clicking a node scrolls to its code;
- * clicking a declaration in the code selects its node.
+ * Instead of code, it shows a project as a map of its files (each file sits to
+ * the right of the files it builds on, like fields on the main map), and for
+ * each file the English its authors wrote: a title, a summary, and the main
+ * results with their descriptions. The Lean source stays one click away on GitHub.
  *
- * Usage: ProofViewer.open({ title, files: [path, ...], ref, repo, start })
- * repo defaults to mathlib; the Docs links only exist for mathlib.
+ *   ProofViewer.openOverview({ title, eyebrow, description, url, link })  // precomputed summaries
+ *   ProofViewer.openChange({ title, files, ref, repo, link })            // a single change, read live
  */
 (() => {
   "use strict";
@@ -15,137 +14,104 @@
   const MATHLIB = "leanprover-community/mathlib4";
   const RAW = (repo) => `https://raw.githubusercontent.com/${repo}`;
   const BLOB = (repo) => `https://github.com/${repo}/blob`;
-  const DOCS = "https://leanprover-community.github.io/mathlib4_docs";
-
-  const KIND = {
-    theorem: "theorem", lemma: "theorem",
-    def: "def", abbrev: "def", structure: "def", class: "def", inductive: "def", opaque: "def", axiom: "def",
-    instance: "instance", example: "example",
-  };
-  const DECL = /^(?:(?:private|protected|noncomputable|nonrec|partial|unsafe|scoped|public)\s+)*(theorem|lemma|def|abbrev|instance|structure|class|inductive|example|opaque|axiom)\b\s*([^\s:({[⦃]*)/;
-  const KEYWORDS = new Set(("theorem lemma def abbrev instance structure class inductive example opaque axiom where " +
-    "namespace section end variable open import universe noncomputable private protected by have show from fun λ let in " +
-    "match with at if then else do calc deriving extends mutual attribute local scoped set_option omit include").split(" "));
-  const TACTICS = new Set(("simp simp_all simpa rw rwa exact apply intro intros refine obtain rcases rintro cases induction " +
-    "linarith nlinarith omega norm_num ring ring_nf field_simp aesop gcongr positivity constructor use exists " +
-    "specialize unfold dsimp change convert congr ext funext trivial decide rfl tauto contradiction exfalso by_contra " +
-    "push_neg filter_upwards measurability continuity fun_prop bound grind").split(" "));
+  const FOLDER_COLORS = ["#0369a1", "#15803d", "#7c3aed", "#c2410c", "#be185d", "#0d9488", "#a16207", "#475569", "#65a30d", "#b91c1c"];
 
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const cache = new Map();
+  // Backticks in Lean docstrings mark code; show them as code, everything else as text.
+  const prose = (s) => esc(s).replace(/`([^`]+)`/g, "<code>$1</code>").replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>");
+  const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  const isDark = () => (document.documentElement.dataset.theme ? document.documentElement.dataset.theme === "dark" : darkQuery.matches);
+  const tone = (c) => (isDark() ? d3.color(c).brighter(0.9).formatHex() : c);
 
-  // ---- Parsing ------------------------------------------------------------
-  function parse(text) {
-    const lines = text.split("\n");
-    const decls = [];
-    const scopes = [];
-    let pending = null;   // first line of a docstring or attribute block waiting for its declaration
-    let inBlock = false;  // inside /- ... -/
-    let inDoc = false;
-    let cur = null;
-    const close = (end) => { if (cur) { cur.end = Math.max(cur.start, end); cur = null; } };
-
-    lines.forEach((line, i) => {
-      const t = line.trim();
-      if (inBlock) {
-        if (t.includes("-/")) inBlock = false;
-        return;
-      }
-      if (t.startsWith("/--")) { close(i - 1); pending ??= i; if (!t.includes("-/")) { inBlock = true; inDoc = true; } return; }
-      if (t.startsWith("/-")) { if (!t.includes("-/")) inBlock = true; return; }
-      if (inDoc) inDoc = false;
-      if (/^@\[/.test(t) && !DECL.test(t.replace(/^(@\[[^\]]*\]\s*)+/, ""))) { close(i - 1); pending ??= i; return; }
-      const body = t.replace(/^(@\[[^\]]*\]\s*)+/, "");
-      const m = line.startsWith(" ") ? null : DECL.exec(body);
-      if (m) {
-        close((pending ?? i) - 1);
-        const ns = scopes.filter((s) => s.ns).map((s) => s.name).join(".");
-        let name = m[2] || "";
-        const kw = m[1];
-        if (!name || kw === "example") name = `${kw} (line ${i + 1})`;
-        const anonymous = !m[2] || kw === "example";
-        const full = anonymous ? name : name.startsWith("_root_.") ? name.slice(7) : ns ? `${ns}.${name}` : name;
-        cur = { kw, kind: KIND[kw], name, full, short: anonymous ? null : name.split(".").pop(), start: pending ?? i, head: i, end: i };
-        decls.push(cur);
-        pending = null;
-        return;
-      }
-      const sc = /^(?:(?:public|noncomputable)\s+)?(namespace|section|end)\b\s*(\S*)/.exec(t);
-      if (sc && !line.startsWith(" ")) {
-        close(i - 1);
-        pending = null;
-        if (sc[1] === "end") scopes.pop();
-        else for (const part of sc[1] === "namespace" ? sc[2].split(".") : [sc[2]]) scopes.push({ ns: sc[1] === "namespace", name: part });
-        return;
-      }
-      if (/^(variable|open|universe|set_option|import|attribute|noncomputable section|omit|include)\b/.test(t) && !line.startsWith(" ")) {
-        close(i - 1);
-        pending = null;
-      }
-    });
-    close(lines.length - 1);
-    for (const d of decls) {
-      while (d.end > d.head && !lines[d.end].trim()) d.end--;
-    }
-
-    // A declaration depends on any earlier declaration in this file whose name it mentions.
-    const byShort = new Map();
-    decls.forEach((d, k) => {
-      d.idx = k;
-      d.deps = new Set();
-      const body = lines.slice(d.head, d.end + 1).join("\n").replace(/--.*$/gm, "");
-      for (const tok of body.match(/[\p{L}_][\p{L}\p{N}_'!?₀-₉.]*/gu) || []) {
-        for (const cand of [tok, tok.split(".").pop()]) {
-          const hit = cand.length >= 3 && byShort.get(cand);
-          if (hit !== undefined && hit !== false && hit !== k) d.deps.add(hit);
-        }
-      }
-      if (d.short && d.short.length >= 3) byShort.set(d.short, k);
-      if (d.full && d.full !== d.short) byShort.set(d.full, k);
-    });
-    decls.forEach((d) => {
-      d.depth = d.deps.size ? 1 + Math.max(...[...d.deps].map((j) => decls[j].depth)) : 0;
-      d.users = [];
-    });
-    decls.forEach((d) => d.deps.forEach((j) => decls[j].users.push(d.idx)));
-    return { lines, decls };
+  // "FreyPackage.freyCurve" -> "Frey package › frey curve"
+  function humanName(name) {
+    if (!name) return "";
+    return name.replace(/^_root_\./, "").split(".").map((part) => part
+      .replace(/_/g, " ")
+      .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
+      .split(" ").map((w, i) => (/^[A-Z]{2,}/.test(w) ? w : i === 0 ? w : w.toLowerCase())).join(" "),
+    ).join(" › ");
   }
+  const fileLabel = (f) => f.t || f.p.split("/").pop().replace(/\.lean$/, "");
+  // Group files by the first folder below whatever path they all share,
+  // e.g. FLT/Patching/… -> "Patching", Mathlib/NumberTheory/LSeries/… -> "LSeries".
+  function folderNamer(paths) {
+    const dirs = paths.map((p) => p.split("/").slice(0, -1));
+    let common = 0;
+    while (dirs.length && dirs.every((d) => d.length > common && d[common] === dirs[0][common])) common++;
+    // If one folder still holds most files (FLT/…), look one level inside it.
+    const dominant = [];
+    for (;;) {
+      const name = (p) => {
+        const d = p.split("/").slice(0, -1);
+        let lvl = common;
+        while (lvl < d.length && dominant[lvl - common] === d[lvl]) lvl++;
+        return d[lvl] ?? (lvl > common ? d[lvl - 1] : "Main files");
+      };
+      const counts = d3.rollup(paths, (v) => v.length, name);
+      const [top, n] = [...counts].sort((a, b) => b[1] - a[1])[0] || [];
+      const deeper = paths.some((p) => p.split("/").length - 1 > common + dominant.length + 1);
+      if (!top || n < paths.length * 0.6 || !deeper || dominant.length >= 3) return name;
+      dominant.push(top);
+    }
+  }
+  const KIND_LABEL = { result: "Main result", theorem: "Theorem", def: "Definition", instance: "Instance" };
 
-  // ---- Highlighting -------------------------------------------------------
-  function highlight(lines) {
-    let block = false;
-    return lines.map((line) => {
-      let out = "", i = 0;
-      while (i < line.length) {
-        if (block) {
-          const j = line.indexOf("-/", i);
-          const stop = j < 0 ? line.length : j + 2;
-          out += `<span class="tk-c">${esc(line.slice(i, stop))}</span>`;
-          if (j >= 0) block = false;
-          i = stop;
-          continue;
-        }
-        const rest = line.slice(i);
-        if (rest.startsWith("--")) { out += `<span class="tk-c">${esc(rest)}</span>`; break; }
-        if (rest.startsWith("/-")) { block = true; continue; }
-        if (rest[0] === '"') {
-          const m = /^"(?:[^"\\]|\\.)*"?/.exec(rest);
-          out += `<span class="tk-s">${esc(m[0])}</span>`; i += m[0].length; continue;
-        }
-        const w = /^[\p{L}_][\p{L}\p{N}_'!?₀-₉.]*/u.exec(rest);
-        if (w) {
-          const word = w[0];
-          const cls = KEYWORDS.has(word) ? "tk-k" : TACTICS.has(word) ? "tk-t" : /^(Type|Prop|Sort)$/.test(word) ? "tk-y" : "";
-          out += cls ? `<span class="${cls}">${esc(word)}</span>` : esc(word);
-          i += word.length;
-          continue;
-        }
-        const n = /^\d+/.exec(rest);
-        if (n) { out += `<span class="tk-n">${n[0]}</span>`; i += n[0].length; continue; }
-        out += esc(rest[0]); i += 1;
+  // ---- Live summaries for a single change (same shape as tools/lean_summary.py) ----
+  const DECL = /^(?:@\[[^\]]*\]\s*)*(?:(?:private|protected|noncomputable|nonrec|partial|unsafe|scoped|public)\s+)*(theorem|lemma|def|abbrev|instance|structure|class|inductive|opaque|axiom)\b\s*([^\s:({[⦃]*)/;
+  const clean = (t, n) => {
+    t = t.replace(/\[([^\]]+)\]\([^)]*\)/g, "$1").replace(/\s+/g, " ").trim();
+    return t.length > n ? t.slice(0, n).replace(/\s\S*$/, "") + "…" : t;
+  };
+  function summarize(path, text) {
+    const m = /\/-!([\s\S]*?)-\//.exec(text);
+    let title = null, para = "";
+    const mains = [];
+    if (m) {
+      let inMain = false;
+      const body = [];
+      for (const raw of m[1].split("\n")) {
+        const s = raw.trim();
+        const h = /^#\s+(.*)/.exec(s);
+        if (h && title === null) { title = h[1]; continue; }
+        if (/^#+\s*(main (results?|statements?|theorems?|definitions?)|results)\s*$/i.test(s)) { inMain = true; continue; }
+        if (s.startsWith("#")) { inMain = false; body.push("\n"); continue; }
+        if (inMain) {
+          const b = /^[*\-+]\s+(.*)/.exec(s);
+          if (b) mains.push(b[1]);
+          else if (s && mains.length) mains[mains.length - 1] += " " + s;
+        } else body.push(s || "\n");
       }
-      return out || " ";
+      para = clean(body.join(" ").trim().split("\n")[0], 380);
+    }
+    const h = mains.slice(0, 6).map((it) => {
+      const x = /^`([^`]+)`\s*[:：\-–—]?\s*(.*)/.exec(it);
+      return { k: "result", n: x ? x[1] : "", d: clean(x ? x[2] || it : it, 220) };
     });
+    const n = [0, 0, 0];
+    const decls = [];
+    let doc = null, open = null;
+    for (const line of text.split("\n")) {
+      const s = line.trim();
+      if (open) { open.push(line); if (line.includes("-/")) { doc = open.join(" ").split("-/")[0]; open = null; } continue; }
+      if (s.startsWith("/--")) { const f = s.slice(3); if (f.includes("-/")) doc = f.split("-/")[0]; else open = [f]; continue; }
+      if (!s) continue;
+      const d = /^\s/.test(line) ? null : DECL.exec(s);
+      if (d) {
+        const k = /^(theorem|lemma)$/.test(d[1]) ? "theorem" : d[1] === "instance" ? "instance" : "def";
+        n[k === "theorem" ? 0 : k === "def" ? 1 : 2]++;
+        decls.push({ k, n: d[2], d: clean(doc || "", 220) });
+        doc = null;
+      } else if (!s.startsWith("@[")) doc = null;
+    }
+    const seen = new Set(h.map((x) => x.n));
+    const pool = [...decls].reverse().filter((d) => d.d && d.k === "theorem").concat(decls.filter((d) => d.d && d.k === "def"));
+    for (const d of pool) {
+      if (h.length >= 6) break;
+      if (d.n && !seen.has(d.n)) { h.push(d); seen.add(d.n); }
+    }
+    if (!h.length) h.push(...[...decls].reverse().filter((d) => d.k === "theorem" && d.n).slice(0, 2));
+    return { p: path, t: title, s: para, i: [], l: text.split("\n").length, n, h };
   }
 
   // ---- DOM ----------------------------------------------------------------
@@ -160,38 +126,33 @@
     <div class="viewer-card">
       <header class="viewer-head">
         <div class="viewer-titles">
-          <span class="viewer-eyebrow" id="viewer-eyebrow">Lean proof</span>
+          <span class="viewer-eyebrow" id="viewer-eyebrow"></span>
           <h2 id="viewer-title"></h2>
+          <p class="viewer-desc" id="viewer-desc"></p>
         </div>
         <div class="viewer-tools">
-          <input id="viewer-filter" type="search" placeholder="Filter files…" aria-label="Filter files" autocomplete="off" hidden>
-          <select id="viewer-file" aria-label="File"></select>
-          <a id="viewer-gh" target="_blank" rel="noopener">GitHub</a>
-          <a id="viewer-docs" target="_blank" rel="noopener">Docs</a>
-          <button type="button" class="viewer-close" aria-label="Close proof viewer">×</button>
+          <a id="viewer-gh" target="_blank" rel="noopener">View on GitHub ↗</a>
+          <button type="button" class="viewer-close" aria-label="Close">×</button>
         </div>
       </header>
+      <div class="viewer-stats" id="viewer-stats"></div>
       <div class="viewer-body">
         <div class="viewer-graph">
-          <div class="viewer-stats" id="viewer-stats"></div>
-          <svg id="viewer-svg" role="img" aria-label="Declarations in this file and what they use"></svg>
-          <div class="viewer-key">
-            <span><i class="k-def"></i>Definition</span><span><i class="k-theorem"></i>Theorem</span><span><i class="k-instance"></i>Instance</span>
-            <span class="viewer-hint">Arrows point from what is used to what uses it. Click a node.</span>
+          <div class="viewer-map-head">
+            <span class="viewer-map-title">How the files build on each other</span>
+            <input id="viewer-filter" type="search" placeholder="Find a file or result…" aria-label="Find a file or result" autocomplete="off">
           </div>
+          <svg id="viewer-svg" role="img" aria-label="Map of the project's files"></svg>
+          <div class="viewer-key" id="viewer-key"></div>
         </div>
-        <div class="viewer-code">
-          <div class="viewer-decl" id="viewer-decl"></div>
-          <pre id="viewer-pre" tabindex="0"></pre>
-        </div>
+        <div class="viewer-side" id="viewer-side" aria-live="polite"></div>
       </div>
     </div>`;
   document.body.appendChild(root);
 
   const $ = (id) => root.querySelector(`#${id}`);
-  const fileSel = $("viewer-file"), pre = $("viewer-pre"), svgEl = $("viewer-svg");
-  let state = null;
-  let lastFocus = null;
+  const svgEl = $("viewer-svg"), side = $("viewer-side"), filterIn = $("viewer-filter");
+  let state = null, lastFocus = null, gNodes, gEdges, svg, zoom;
 
   function close() {
     root.hidden = true;
@@ -204,169 +165,220 @@
   document.addEventListener("keydown", (ev) => {
     if (!root.hidden && ev.key === "Escape") { ev.stopImmediatePropagation(); close(); }
   }, true);
-  fileSel.addEventListener("change", () => load(fileSel.value));
-  const filterIn = $("viewer-filter");
-  const fileOptions = (files) => files.map((f) => `<option value="${esc(f)}">${esc(f.replace(/^Mathlib\//, ""))}</option>`).join("");
-  filterIn.addEventListener("input", () => {
-    if (!state) return;
-    const q = filterIn.value.trim().toLowerCase();
-    const shown = state.files.filter((f) => f.toLowerCase().includes(q));
-    fileSel.innerHTML = fileOptions(shown.length ? shown : [state.path]);
-    fileSel.value = shown.includes(state.path) ? state.path : shown[0] ?? state.path;
-    if (shown.length && fileSel.value !== state.path) load(fileSel.value);
-  });
 
-  async function fetchFile(ref, path) {
-    const key = `${state.repo}/${ref}/${path}`;
-    if (!cache.has(key)) {
-      cache.set(key, fetch(`${RAW(state.repo)}/${ref}/${path}`).then((r) => {
-        if (!r.ok) throw new Error(`GitHub returned ${r.status}`);
-        return r.text();
-      }));
-    }
-    return cache.get(key).catch((e) => { cache.delete(key); throw e; });
-  }
-
-  async function load(path, { skipEmpty = false } = {}) {
-    const ref = state.ref;
-    state.path = path;
-    $("viewer-gh").href = `${BLOB(state.repo)}/${ref}/${path}`;
-    $("viewer-docs").hidden = state.repo !== MATHLIB;
-    $("viewer-docs").href = `${DOCS}/${path.replace(/\.lean$/, "")}.html`;
-    $("viewer-stats").textContent = "Loading…";
-    $("viewer-decl").innerHTML = "";
-    pre.innerHTML = "";
+  function show({ title, eyebrow, description, link }) {
+    lastFocus = document.activeElement;
+    state = null;
+    $("viewer-title").textContent = title;
+    $("viewer-eyebrow").textContent = eyebrow || "Lean";
+    $("viewer-desc").innerHTML = description ? prose(description) : "";
+    $("viewer-desc").hidden = !description;
+    $("viewer-gh").href = link || "#";
+    $("viewer-gh").hidden = !link;
+    $("viewer-stats").innerHTML = "";
+    $("viewer-key").innerHTML = "";
+    filterIn.value = "";
+    side.innerHTML = `<p class="viewer-loading">Loading…</p>`;
     d3.select(svgEl).selectAll("*").remove();
-    let text;
-    try {
-      text = await fetchFile(ref, path);
-    } catch (e) {
-      if (state?.path !== path) return;
-      $("viewer-stats").textContent = "";
-      pre.innerHTML = `<span class="viewer-error">Could not load this file (${esc(e.message)}). ` +
-        `<a href="${BLOB(state.repo)}/${ref}/${esc(path)}" target="_blank" rel="noopener">Open it on GitHub</a> instead.</span>`;
-      return;
-    }
-    if (state?.path !== path) return;
-    const parsed = parse(text);
-    // A project's first file is often a tiny helper; on first open, move on to one with proofs.
-    if (skipEmpty && !parsed.decls.length) {
-      const next = state.files[state.files.indexOf(path) + 1];
-      if (next && state.files.indexOf(path) < 5) { fileSel.value = next; return load(next, { skipEmpty }); }
-    }
-    state.parsed = parsed;
-    renderCode(parsed);
-    renderGraph(parsed);
-    const counts = { theorem: 0, def: 0, instance: 0, example: 0 };
-    parsed.decls.forEach((d) => counts[d.kind]++);
-    $("viewer-stats").innerHTML = `<b>${counts.theorem}</b> theorems · <b>${counts.def}</b> definitions · <b>${counts.instance}</b> instances · ${parsed.lines.length.toLocaleString()} lines`;
-    // Open on the newest-looking result: the last theorem in the file.
-    const first = [...parsed.decls].reverse().find((d) => d.kind === "theorem") || parsed.decls[0];
-    if (first) pick(first.idx, { scroll: true, center: true });
+    root.hidden = false;
+    document.body.classList.add("viewer-open");
+    root.querySelector(".viewer-close").focus();
   }
 
-  function renderCode({ lines, decls }) {
-    const html = highlight(lines);
-    const headAt = new Map(decls.map((d) => [d.head, d]));
-    pre.innerHTML = html.map((h, i) => {
-      const d = headAt.get(i);
-      return `<div class="ln${d ? " head" : ""}" id="L${i + 1}"${d ? ` data-decl="${d.idx}"` : ""}><span class="no">${i + 1}</span><code>${h}</code></div>`;
-    }).join("");
+  function setData(data) {
+    const folderOf = folderNamer(data.files.map((f) => f.p));
+    const files = data.files.map((f, idx) => ({ ...f, idx, folder: folderOf(f.p) }));
+    const byPath = new Map(files.map((f) => [f.p, f]));
+    files.forEach((f) => { f.deps = f.i.map((p) => byPath.get(p)).filter(Boolean); f.users = []; });
+    files.forEach((f) => f.deps.forEach((d) => d.users.push(f)));
+    // Depth = how many layers of the project a file rests on.
+    const depth = new Map();
+    const depthOf = (f, seen = new Set()) => {
+      if (depth.has(f)) return depth.get(f);
+      if (seen.has(f)) return 0;
+      seen.add(f);
+      const v = f.deps.length ? 1 + Math.max(...f.deps.map((d) => depthOf(d, seen))) : 0;
+      depth.set(f, v);
+      return v;
+    };
+    files.forEach((f) => { f.depth = depthOf(f); });
+    const folders = d3.rollups(files, (v) => v.length, (f) => f.folder).sort((a, b) => b[1] - a[1]);
+    const color = new Map(folders.map(([name], k) => [name, FOLDER_COLORS[k % FOLDER_COLORS.length]]));
+    files.forEach((f) => { f.color = color.get(f.folder); });
+    state = { ...data, files, byPath, folders, color, focusFolder: null };
+
+    const sum = (k) => d3.sum(files, (f) => f.n[k]);
+    const documented = files.filter((f) => f.s || f.h.some((x) => x.d)).length;
+    $("viewer-stats").innerHTML = [
+      [files.length, files.length === 1 ? "file" : "files"],
+      [sum(0), "theorems"],
+      [sum(1), "definitions"],
+      [d3.sum(files, (f) => f.l), "lines of Lean"],
+      [Math.round((100 * documented) / Math.max(files.length, 1)) + "%", "described in English"],
+    ].map(([v, l]) => `<div class="vstat"><b>${typeof v === "number" ? v.toLocaleString() : v}</b><span>${l}</span></div>`).join("");
+
+    renderMap();
+    renderKey();
+    renderOverview();
   }
-  pre.addEventListener("click", (ev) => {
-    const head = ev.target.closest(".ln.head");
-    if (head) pick(+head.dataset.decl, { scroll: false, center: true });
+
+  function renderKey() {
+    const shown = state.folders.slice(0, 8);
+    $("viewer-key").innerHTML = shown.map(([name, count]) =>
+      `<button type="button" class="vfolder${state.focusFolder === name ? " on" : ""}" data-folder="${esc(name)}">` +
+      `<i style="background:${tone(state.color.get(name))}"></i>${esc(name)} <span>${count}</span></button>`).join("") +
+      (state.folders.length > 8 ? `<span class="vmore">+${state.folders.length - 8} more folders</span>` : "") +
+      `<span class="viewer-hint">Each dot is a file, sized by how much it proves. Files on the right build on files to their left. Click a folder to highlight it.</span>`;
+  }
+  $("viewer-key").addEventListener("click", (ev) => {
+    const b = ev.target.closest("[data-folder]");
+    if (!b || !state) return;
+    state.focusFolder = state.focusFolder === b.dataset.folder ? null : b.dataset.folder;
+    renderKey();
+    applyFocus();
   });
 
-  let gNodes, gEdges, zoom, svg;
-  function renderGraph({ decls }) {
+  function renderMap() {
     svg = d3.select(svgEl);
-    const COL = 170, ROW = 26, PAD = 24;
-    const cols = d3.groups(decls, (d) => d.depth).sort((a, b) => a[0] - b[0]);
-    for (const [, list] of cols) list.forEach((d, r) => { d.x = PAD + d.depth * COL; d.y = PAD + r * ROW; });
+    svg.selectAll("*").remove();
+    const { files } = state;
+    const COL = 200, ROW = 30, PAD = 30;
+    const cols = d3.groups(files, (f) => f.depth).sort((a, b) => a[0] - b[0]);
+    for (const [, list] of cols) {
+      // Keep folders together within a column so the colors read as regions.
+      list.sort((a, b) => a.folder.localeCompare(b.folder) || a.p.localeCompare(b.p));
+      list.forEach((f, r) => { f.x = PAD + f.depth * COL; f.y = PAD + r * ROW; });
+    }
+    const weight = (f) => f.n[0] + f.n[1];
+    const r = d3.scaleSqrt().domain([0, d3.max(files, weight) || 1]).range([4, 13]);
     const world = svg.append("g");
-    const edges = decls.flatMap((d) => [...d.deps].map((j) => ({ s: decls[j], t: d })));
-    gEdges = world.append("g").selectAll("path").data(edges).join("path")
-      .attr("class", "v-edge")
+    const edges = files.flatMap((f) => f.deps.map((d) => ({ s: d, t: f })));
+    gEdges = world.append("g").selectAll("path").data(edges).join("path").attr("class", "v-edge")
       .attr("d", (e) => {
-        const x1 = e.s.x + COL - 22, y1 = e.s.y, x2 = e.t.x - 7, y2 = e.t.y, mx = (x1 + x2) / 2;
-        return `M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}`;
+        const x1 = e.s.x + COL - 30, x2 = e.t.x - r(weight(e.t)) - 3, mx = (x1 + x2) / 2;
+        return `M${x1},${e.s.y} C${mx},${e.s.y} ${mx},${e.t.y} ${x2},${e.t.y}`;
       });
-    gNodes = world.append("g").selectAll("g").data(decls).join("g")
-      .attr("class", (d) => `v-node k-${d.kind}`)
-      .attr("transform", (d) => `translate(${d.x},${d.y})`)
-      .on("click", (ev, d) => { ev.stopPropagation(); pick(d.idx, { scroll: true }); });
-    gNodes.append("rect").attr("class", "v-hit").attr("x", -8).attr("y", -10).attr("width", COL - 14).attr("height", 20).attr("rx", 4);
-    gNodes.each(function (d) {
-      const g = d3.select(this);
-      if (d.kind === "def") g.append("rect").attr("class", "v-mark").attr("x", -5).attr("y", -5).attr("width", 10).attr("height", 10).attr("rx", 2);
-      else if (d.kind === "instance") g.append("path").attr("class", "v-mark").attr("d", "M0,-6 L6,0 L0,6 L-6,0 Z");
-      else g.append("circle").attr("class", "v-mark").attr("r", 5);
+    gNodes = world.append("g").selectAll("g").data(files).join("g")
+      .attr("class", "v-node").attr("transform", (f) => `translate(${f.x},${f.y})`)
+      .attr("tabindex", 0).attr("role", "button").attr("aria-label", (f) => fileLabel(f))
+      .on("click", (ev, f) => { ev.stopPropagation(); pick(f); })
+      .on("keydown", (ev, f) => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); pick(f); } });
+    gNodes.append("rect").attr("class", "v-hit").attr("x", -16).attr("y", -13).attr("width", COL - 10).attr("height", 26).attr("rx", 6);
+    gNodes.append("circle").attr("r", (f) => r(weight(f))).attr("fill", (f) => tone(f.color));
+    gNodes.append("text").attr("x", (f) => r(weight(f)) + 6).attr("dy", "0.35em")
+      .text((f) => { const t = fileLabel(f).replace(/`/g, ""); return t.length > 24 ? t.slice(0, 23) + "…" : t; });
+    gNodes.append("title").text((f) => `${fileLabel(f)}\n${f.p}`);
+    svg.on("click", () => renderOverview());
+
+    // Zoomed far out, names are unreadable: show the project as colored clusters instead.
+    zoom = d3.zoom().scaleExtent([0.15, 2.5]).on("zoom", (ev) => {
+      world.attr("transform", ev.transform);
+      svg.classed("far", ev.transform.k < 0.55);
     });
-    const shortLabel = (d) => { const n = d.name.split(".").pop(); return n.length > 20 ? n.slice(0, 19) + "…" : n; };
-    gNodes.append("text").attr("x", 10).attr("dy", "0.35em").text(shortLabel);
-    gNodes.append("title").text((d) => `${d.kw} ${d.full}`);
-
-    zoom = d3.zoom().scaleExtent([0.2, 2.5]).on("zoom", (ev) => world.attr("transform", ev.transform));
     svg.call(zoom).on("dblclick.zoom", null);
-    const w = svgEl.clientWidth, h = svgEl.clientHeight;
-    const maxX = d3.max(decls, (d) => d.x) + COL, maxY = d3.max(decls, (d) => d.y) + PAD;
-    const k = Math.max(0.35, Math.min(1, w / maxX, h / maxY));
-    svg.call(zoom.transform, d3.zoomIdentity.scale(k));
+    const w = svgEl.clientWidth || 600, h = svgEl.clientHeight || 400;
+    const maxX = d3.max(files, (f) => f.x) + COL, maxY = d3.max(files, (f) => f.y) + PAD;
+    const k = Math.max(0.3, Math.min(1.2, w / maxX, h / maxY));
+    svg.call(zoom.transform, d3.zoomIdentity.translate(Math.max(0, (w - maxX * k) / 2), Math.max(0, (h - maxY * k) / 2)).scale(k));
   }
 
-  function pick(idx, { scroll = true, center = false } = {}) {
-    const { decls } = state.parsed;
-    const d = decls[idx];
-    if (!d) return;
-    // Everything this declaration rests on, and everything that rests on it.
-    const up = new Set(), down = new Set();
-    const walk = (k, key, seen) => { for (const j of key === "deps" ? decls[k].deps : decls[k].users) if (!seen.has(j)) { seen.add(j); walk(j, key, seen); } };
-    walk(idx, "deps", up);
-    walk(idx, "users", down);
-    gNodes.classed("sel", (n) => n.idx === idx).classed("up", (n) => up.has(n.idx)).classed("down", (n) => down.has(n.idx))
-      .classed("dim", (n) => n.idx !== idx && !up.has(n.idx) && !down.has(n.idx));
-    gEdges.classed("up", (e) => (e.t.idx === idx || up.has(e.t.idx)) && up.has(e.s.idx))
-      .classed("down", (e) => (e.s.idx === idx || down.has(e.s.idx)) && down.has(e.t.idx));
-    pre.querySelectorAll(".ln.on").forEach((el) => el.classList.remove("on"));
-    for (let i = d.start; i <= d.end; i++) pre.children[i]?.classList.add("on");
-    if (scroll && pre.children[d.start]) {
-      const top = pre.children[d.start].offsetTop - 8;
-      const far = Math.abs(pre.scrollTop - top) > pre.clientHeight * 3;
-      pre.scrollTo({ top, behavior: far ? "auto" : "smooth" });
-    }
-    if (center && svg) {
-      // Keep labels legible: zoom in to at least 0.85 around the chosen node.
-      const k = Math.max(d3.zoomTransform(svgEl).k, 0.85);
-      const t = d3.zoomIdentity.translate(svgEl.clientWidth / 2 - (d.x + 60) * k, svgEl.clientHeight / 2 - d.y * k).scale(k);
-      svg.transition().duration(400).call(zoom.transform, t);
-    }
-    const docsHref = `${DOCS}/${state.path.replace(/\.lean$/, "")}.html#${encodeURIComponent(d.full)}`;
-    const usesN = d.deps.size, usedN = d.users.length;
-    $("viewer-decl").innerHTML =
-      `<span class="vk k-${d.kind}">${esc(d.kw)}</span> <code>${esc(d.full)}</code>` +
-      `<span class="vd-meta">lines ${d.start + 1}–${d.end + 1} · uses ${usesN} · used by ${usedN} in this file · ` +
-      `<a href="${BLOB(state.repo)}/${state.ref}/${esc(state.path)}#L${d.start + 1}-L${d.end + 1}" target="_blank" rel="noopener">GitHub</a>` +
-      (d.short && state.repo === MATHLIB ? ` · <a href="${docsHref}" target="_blank" rel="noopener">Docs</a>` : "") + `</span>`;
+  function applyFocus() {
+    const q = filterIn.value.trim().toLowerCase();
+    const match = (f) => (!state.focusFolder || f.folder === state.focusFolder) &&
+      (!q || fileLabel(f).toLowerCase().includes(q) || f.p.toLowerCase().includes(q) || f.s.toLowerCase().includes(q) ||
+        f.h.some((x) => x.n.toLowerCase().includes(q) || x.d.toLowerCase().includes(q)));
+    const active = state.focusFolder || q;
+    gNodes.classed("faded", (f) => active && !match(f));
+    gEdges.classed("faded", (e) => active && !(match(e.s) && match(e.t)));
   }
+  filterIn.addEventListener("input", () => { if (state) applyFocus(); });
+
+  const fileChip = (f) => `<button type="button" class="vchip" data-file="${f.idx}"><i style="background:${tone(f.color)}"></i>${esc(fileLabel(f).replace(/`/g, ""))}</button>`;
+
+  // With nothing selected: where to start reading.
+  function renderOverview() {
+    if (!state) return;
+    gNodes?.classed("sel up down dim", false);
+    gEdges?.classed("up down", false);
+    const { files } = state;
+    const tops = files.filter((f) => !f.users.length && f.n[0] > 0).sort((a, b) => b.n[0] - a.n[0]).slice(0, 6);
+    const bases = files.filter((f) => f.users.length).sort((a, b) => b.users.length - a.users.length).slice(0, 6);
+    const described = files.filter((f) => f.s).sort((a, b) => b.n[0] - a.n[0]).slice(0, 4);
+    side.innerHTML = `
+      <h3 class="vs-head">Where to start</h3>
+      <p class="vs-intro">Click any dot on the map to read what that file proves, in its authors' own words.</p>
+      ${tops.length ? `<h4>Main results</h4><p class="vs-note">Files nothing else builds on: usually where the project's goals live.</p><div class="vchips">${tops.map(fileChip).join("")}</div>` : ""}
+      ${bases.length ? `<h4>Foundations</h4><p class="vs-note">Files the most others build on.</p><div class="vchips">${bases.map(fileChip).join("")}</div>` : ""}
+      ${described.length ? `<h4>Well described</h4><div class="vcards">${described.map((f) =>
+        `<button type="button" class="vcard" data-file="${f.idx}"><b>${prose(fileLabel(f))}</b><span>${prose(f.s)}</span></button>`).join("")}</div>` : ""}`;
+    side.scrollTop = 0;
+  }
+
+  function pick(f) {
+    const up = new Set(), down = new Set();
+    const walk = (x, key, seen) => { for (const y of x[key]) if (!seen.has(y)) { seen.add(y); walk(y, key, seen); } };
+    walk(f, "deps", up);
+    walk(f, "users", down);
+    gNodes.classed("sel", (n) => n === f).classed("up", (n) => up.has(n)).classed("down", (n) => down.has(n))
+      .classed("dim", (n) => n !== f && !up.has(n) && !down.has(n));
+    gEdges.classed("up", (e) => (e.t === f || up.has(e.t)) && up.has(e.s)).classed("down", (e) => (e.s === f || down.has(e.s)) && down.has(e.t));
+    const k = Math.max(d3.zoomTransform(svgEl).k, 0.8);
+    svg.transition().duration(450).call(zoom.transform,
+      d3.zoomIdentity.translate(svgEl.clientWidth / 2 - (f.x + 60) * k, svgEl.clientHeight / 2 - f.y * k).scale(k));
+
+    const src = `${BLOB(state.repo)}/${state.ref}/${f.p}`;
+    const crumbs = f.p.replace(/\.lean$/, "").split("/");
+    side.innerHTML = `
+      <button type="button" class="vs-back">← Where to start</button>
+      <div class="vs-crumbs" style="--fc:${tone(f.color)}">${crumbs.slice(0, -1).map(esc).join(" / ") || esc(crumbs[0])}</div>
+      <h3 class="vs-title">${prose(fileLabel(f))}</h3>
+      ${f.s ? `<p class="vs-summary">${prose(f.s)}</p>` : `<p class="vs-summary muted">The authors didn't add a description to this file.</p>`}
+      <div class="vs-counts"><span><b>${f.n[0]}</b> theorems</span><span><b>${f.n[1]}</b> definitions</span>${f.n[2] ? `<span><b>${f.n[2]}</b> instances</span>` : ""}<span><b>${f.l.toLocaleString()}</b> lines</span></div>
+      ${f.h.length ? `<h4>What it establishes</h4><ol class="vresults">${f.h.map((x) => `
+        <li class="vr k-${x.k}"><span class="vr-kind">${KIND_LABEL[x.k] || x.k}</span>
+          ${x.n ? `<span class="vr-name" title="${esc(x.n)}">${esc(humanName(x.n))}</span>` : ""}
+          ${x.d ? `<p>${prose(x.d)}</p>` : ""}</li>`).join("")}</ol>` : ""}
+      ${f.deps.length ? `<h4>Builds on</h4><div class="vchips">${f.deps.map(fileChip).join("")}</div>` : ""}
+      ${f.users.length ? `<h4>Used by</h4><div class="vchips">${f.users.slice(0, 12).map(fileChip).join("")}${f.users.length > 12 ? `<span class="vmore">+${f.users.length - 12} more</span>` : ""}</div>` : ""}
+      <a class="vs-source" href="${src}" target="_blank" rel="noopener">Read the Lean source on GitHub ↗</a>`;
+    side.scrollTop = 0;
+  }
+  side.addEventListener("click", (ev) => {
+    if (!state) return;
+    const b = ev.target.closest("[data-file]");
+    if (b) { pick(state.files[+b.dataset.file]); return; }
+    if (ev.target.closest(".vs-back")) renderOverview();
+  });
+  darkQuery.addEventListener("change", () => { if (state) { renderMap(); renderKey(); renderOverview(); } });
 
   window.ProofViewer = {
-    open({ title, files, ref = "master", repo = MATHLIB, start, eyebrow }) {
-      if (!files?.length) return;
-      lastFocus = document.activeElement;
-      state = { ref, files, repo };
-      $("viewer-title").textContent = title;
-      $("viewer-eyebrow").textContent = eyebrow || (repo === MATHLIB ? "Lean proof · mathlib" : `Lean proof · ${repo}`);
-      fileSel.innerHTML = fileOptions(files);
-      fileSel.hidden = files.length < 2;
-      filterIn.hidden = files.length < 25;
-      filterIn.value = "";
-      const first = start && files.includes(start) ? start : files[0];
-      fileSel.value = first;
-      root.hidden = false;
-      document.body.classList.add("viewer-open");
-      root.querySelector(".viewer-close").focus();
-      load(first, { skipEmpty: true });
+    async openOverview({ title, eyebrow, description, url, link }) {
+      show({ title, eyebrow, description, link });
+      try {
+        const r = await fetch(url, { cache: "no-cache" });
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        const data = await r.json();
+        if (root.hidden) return;
+        setData(data);
+      } catch (e) {
+        side.innerHTML = `<p class="viewer-error">Could not load this overview (${esc(e.message)}).</p>`;
+      }
+    },
+    async openChange({ title, files, ref, repo = MATHLIB, link, scope }) {
+      show({ title, eyebrow: "New in mathlib · what it proves", link });
+      try {
+        const texts = await Promise.all(files.map((p) => fetch(`${RAW(repo)}/${ref}/${p}`).then((r) => (r.ok ? r.text() : null))));
+        if (root.hidden) return;
+        const sums = files.map((p, k) => texts[k] && summarize(p, texts[k])).filter(Boolean);
+        if (!sums.length) throw new Error("GitHub did not return the files");
+        setData({ repo, ref, files: sums });
+        // Open on the file the change is about (its scope), else the one with the most results.
+        const main = (scope && state.files.find((f) => f.p.includes(`/${scope}`))) ||
+          [...state.files].sort((a, b) => b.n[0] - a.n[0])[0];
+        if (main) pick(main);
+      } catch (e) {
+        side.innerHTML = `<p class="viewer-error">Could not load this change (${esc(e.message)}).</p>`;
+      }
     },
     close,
   };

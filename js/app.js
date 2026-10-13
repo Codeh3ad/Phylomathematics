@@ -408,7 +408,7 @@
     const viewButton = (c) => {
       if (!c.files?.length || !window.ProofViewer) return "";
       proofTargets.push(c);
-      return `<button type="button" class="view-proof" data-proof="${proofTargets.length - 1}">View proof</button>`;
+      return `<button type="button" class="view-proof" data-proof="${proofTargets.length - 1}">What it proves</button>`;
     };
     const changeItem = (c, withFields) =>
       `<li><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.title)}</a>${viewButton(c)}` +
@@ -418,7 +418,7 @@
     const projectItem = (p) =>
       `<li><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.name)}</a>` +
       `<span class="badge ${p.kind}">${KIND_LABEL[p.kind] || esc(p.kind)}</span>` +
-      (p.lean_files && window.ProofViewer ? `<button type="button" class="view-proof" data-project="${esc(p.repo)}">Explore ${p.lean_files} proof file${p.lean_files === 1 ? "" : "s"}</button>` : "") +
+      (p.overview && window.ProofViewer ? `<button type="button" class="view-proof" data-project="${esc(p.repo)}">Explore the project</button>` : "") +
       `<span class="paper-meta">${esc(p.description)}${p.updated ? ` Updated ${fmtDate(p.updated)}.` : ""}</span></li>`;
     const prefixLink = (prefix) => {
       const name = prefix.replace(/^Mathlib\//, "");
@@ -437,7 +437,7 @@
         html += `<p class="lean-summary">${f.files.toLocaleString()} files in mathlib under ${f.prefixes.map(prefixLink).join(", ")}. ` +
           `${f.additions} new result${f.additions === 1 ? "" : "s"} in the last ${lean.window_days} days` +
           `${f.ai_additions ? `, ${f.ai_additions} crediting AI tools` : ""}.</p>`;
-        if (window.ProofViewer) html += `<button type="button" class="browse-proofs" data-browse="${n.id}"><span aria-hidden="true">⊢</span> Explore ${Math.min(f.files, 80)} Lean file${f.files === 1 ? "" : "s"} in the proof viewer</button>`;
+        if (window.ProofViewer && f.overview) html += `<button type="button" class="browse-proofs" data-browse="${n.id}"><span aria-hidden="true">⊢</span> See how mathlib builds this field</button>`;
         if (f.recent.length) html += `<ul class="papers">${f.recent.map((c) => changeItem(c, false)).join("")}</ul>`;
       }
       if (projects.length) html += `<h3>Lean projects</h3><ul class="papers">${projects.map(projectItem).join("")}</ul>`;
@@ -561,46 +561,30 @@
       panel.scrollTop = 0;
     }
 
-    let leanFiles = null;
-    const startFile = (files, scope) => (scope && files.find((f) => f.includes(`/${scope}`))) || files[files.length - 1];
     for (const el of [panelBody, leanBody]) {
-      el.addEventListener("click", async (ev) => {
+      el.addEventListener("click", (ev) => {
         const b = ev.target.closest("button[data-id]");
         if (b) { select(b.dataset.id); return; }
         const v = ev.target.closest("button[data-proof]");
         if (v) {
           const c = proofTargets[+v.dataset.proof];
-          ProofViewer.open({ title: c.title, files: c.files, ref: c.sha, start: startFile(c.files, c.scope) });
+          ProofViewer.openChange({ title: c.title, files: c.files, ref: c.sha, link: c.url, scope: c.scope });
           return;
         }
         const pj = ev.target.closest("button[data-project]");
         if (pj) {
-          pj.disabled = true;
-          try {
-            leanFiles ??= await getJSON("data/lean-files.json");
-            const info = leanFiles.projects?.[pj.dataset.project];
-            const proj = lean.projects.find((x) => x.repo === pj.dataset.project);
-            if (info) ProofViewer.open({ title: proj.name, files: info.files, ref: info.ref, repo: pj.dataset.project,
-              eyebrow: `${KIND_LABEL[proj.kind] || "Lean"} proofs · ${pj.dataset.project}` });
-          } catch {
-            pj.textContent = "Could not load. Try again.";
-          } finally {
-            pj.disabled = false;
-          }
+          const proj = lean.projects.find((x) => x.repo === pj.dataset.project);
+          ProofViewer.openOverview({ title: proj.name, description: proj.description, link: proj.url,
+            eyebrow: `${KIND_LABEL[proj.kind] || "Lean"} · ${proj.repo}`, url: `data/overview/${proj.overview}` });
           return;
         }
         const br = ev.target.closest("button[data-browse]");
         if (br) {
-          br.disabled = true;
-          try {
-            leanFiles ??= await getJSON("data/lean-files.json");
-            const files = leanFiles.fields[br.dataset.browse] || [];
-            ProofViewer.open({ title: `${byId.get(br.dataset.browse).name} in mathlib`, files, ref: leanFiles.ref });
-          } catch {
-            br.textContent = "Could not load the file list. Try again.";
-          } finally {
-            br.disabled = false;
-          }
+          const n = byId.get(br.dataset.browse);
+          const f = lean.fields[n.id];
+          ProofViewer.openOverview({ title: `${n.name} in mathlib`, eyebrow: "Lean · mathlib",
+            description: `How Lean's main library formalizes ${n.name.toLowerCase()}: ${f.files.toLocaleString()} files, the first ${Math.min(f.files, 60)} shown here.`,
+            link: `${MATHLIB_URL}/tree/master/${f.prefixes[0]}`, url: `data/overview/${f.overview}` });
         }
       });
     }

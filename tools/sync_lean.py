@@ -26,12 +26,17 @@ import sys
 import tempfile
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from lean_summary import module_name, summarize  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
+OVERVIEW_DIR = ROOT / "data" / "overview"
+MATHLIB_REPO = "leanprover-community/mathlib4"
 WINDOW_DAYS = 60
 RECENT_PER_FIELD = 5
 FEED_SIZE = 60
 MAX_FILES_PER_CHANGE = 6
-MAX_FILES_PER_FIELD = 80
+MAX_FILES_PER_FIELD = 60
 MAX_FILES_PER_PROJECT = 400
 MATHLIB = "https://github.com/leanprover-community/mathlib4"
 
@@ -71,6 +76,40 @@ def pr_url(subject, sha):
 
 def under(path, prefix):
     return path.startswith(prefix + "/") or path == prefix + ".lean"
+
+
+def read_files(repo_dir, paths):
+    """Check out just these files (one batched download) and return their text."""
+    subprocess.run(["git", "sparse-checkout", "set", "--no-cone", "--stdin"], cwd=repo_dir, check=True,
+                   input="\n".join("/" + p for p in paths), text=True, capture_output=True)
+    git("checkout", "--quiet", "HEAD", cwd=repo_dir)
+    out = {}
+    for p in paths:
+        f = Path(repo_dir) / p
+        if f.exists():
+            out[p] = f.read_text(encoding="utf-8", errors="replace")
+    return out
+
+
+def summarize_all(paths, texts, modules):
+    out = []
+    for p in paths:
+        if p not in texts:
+            continue
+        s = summarize(p, texts[p], modules)
+        # Files that only import others (e.g. a project's root file) say nothing to a reader.
+        if not any(s["n"]) and len(s["i"]) > 3:
+            continue
+        out.append(s)
+    kept = {s["p"] for s in out}
+    for s in out:
+        s["i"] = [i for i in s["i"] if i in kept]
+    return out
+
+
+def write_overview(name, data):
+    OVERVIEW_DIR.mkdir(parents=True, exist_ok=True)
+    (OVERVIEW_DIR / name).write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "\n")
 
 
 def sync_mathlib(lean_map, workdir):
@@ -128,11 +167,18 @@ def sync_mathlib(lean_map, workdir):
 
     mathlib = {"commit": head[0], "date": head[1], "files": len(files), "changes": total_changes,
                "additions": len(commits), "ai_additions": sum(c["ai"] for c in commits)}
-    # File lists per field for the in-site proof viewer, pinned to this mathlib commit.
-    browse = {"ref": head[0], "fields": {
-        fid: sorted(f for f in files if any(under(f, p) for p in prefixes))[:MAX_FILES_PER_FIELD]
-        for fid, prefixes in lean_map["mathlib"].items()}}
-    return mathlib, fields, feed, browse
+    # Human-readable overviews of each field's mathlib files, pinned to this commit.
+    per_field = {fid: sorted(f for f in files if any(under(f, p) for p in prefixes))[:MAX_FILES_PER_FIELD]
+                 for fid, prefixes in lean_map["mathlib"].items()}
+    texts = read_files(repo, sorted({f for fs in per_field.values() for f in fs}))
+    for fid, fs in per_field.items():
+        if not fs:
+            continue
+        modules = {module_name(f): f for f in fs}
+        name = f"field-{fid}.json"
+        write_overview(name, {"repo": MATHLIB_REPO, "ref": head[0], "files": summarize_all(fs, texts, modules)})
+        fields[fid]["overview"] = name
+    return mathlib, fields, feed
 
 
 def project_files(repo_dir):
@@ -145,7 +191,6 @@ def project_files(repo_dir):
 
 def sync_projects(lean_map, workdir):
     out = []
-    browse = {}
     for p in lean_map["projects"]:
         entry = {k: p[k] for k in ("name", "repo", "fields", "kind", "description")}
         entry["url"] = f"https://github.com/{p['repo']}"
@@ -156,21 +201,28 @@ def sync_projects(lean_map, workdir):
             entry["updated"] = date
             entry["latest"] = {"title": subject, "url": f"{entry['url']}/commit/{sha}"}
             files = project_files(dest)
-            entry["lean_files"] = len(files)
             if files:
-                browse[p["repo"]] = {"ref": sha, "files": files}
+                texts = read_files(dest, files)
+                summaries = summarize_all(files, texts, {module_name(f): f for f in files})
+                name = p["repo"].replace("/", "__") + ".json"
+                write_overview(name, {"repo": p["repo"], "ref": sha, "files": summaries})
+                entry["overview"] = name
+                entry["lean_files"] = len(summaries)
         except subprocess.CalledProcessError as e:
             print(f"warning: could not read {p['repo']}: {e.stderr.strip()}", file=sys.stderr)
         out.append(entry)
-    return out, browse
+    return out
 
 
 def main():
     lean_map = json.loads((ROOT / "data" / "lean-map.json").read_text())
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
-        mathlib, fields, feed, browse = sync_mathlib(lean_map, tmp)
-        projects, browse["projects"] = sync_projects(lean_map, tmp)
+        if OVERVIEW_DIR.exists():
+            for old in OVERVIEW_DIR.glob("*.json"):
+                old.unlink()
+        mathlib, fields, feed = sync_mathlib(lean_map, tmp)
+        projects = sync_projects(lean_map, tmp)
     data = {
         "generated": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
         "window_days": WINDOW_DAYS,
@@ -180,7 +232,7 @@ def main():
         "projects": projects,
     }
     (ROOT / "data" / "lean.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n")
-    (ROOT / "data" / "lean-files.json").write_text(json.dumps(browse, separators=(",", ":")) + "\n")
+
     print(f"mathlib {mathlib['commit'][:10]} ({mathlib['date']}): {mathlib['files']} files, "
           f"{mathlib['additions']} additions of {mathlib['changes']} changes in {WINDOW_DAYS} days, "
           f"{mathlib['ai_additions']} credit AI; "
