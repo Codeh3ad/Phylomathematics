@@ -224,6 +224,7 @@ body {
 .paper-meta .badge.ai { margin-left: 0; }
 .lean-summary, .lean-intro { font-size: 14.5px !important; }
 .lean-summary code { font-size: 12px; }
+.lean-summary a, .lean-intro a { color: var(--ink); text-decoration-color: var(--edge); text-underline-offset: 2px; }
 .panel .links, .about .links { margin-top: 4px; }
 .feed-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
 .feed-head .toggle { text-transform: none; letter-spacing: 0; font-weight: 400; font-size: 12px; }
@@ -231,6 +232,29 @@ body {
 .about ul.papers { list-style: none; padding: 0; display: grid; gap: 8px; margin: 0; }
 .papers > li { min-width: 0; overflow-wrap: anywhere; }
 .links .more { color: var(--muted); font-size: 12px; align-self: center; }
+.nest summary { list-style: none; cursor: pointer; border-radius: 4px; }
+.nest summary::-webkit-details-marker { display: none; }
+.nest summary h3 { display: flex; align-items: center; gap: 6px; }
+.nest summary h3::before {
+  content: "";
+  width: 0; height: 0;
+  border-left: 5px solid currentColor;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  transition: transform 0.15s;
+}
+.nest[open] summary h3::before { transform: rotate(90deg); }
+.nest summary:hover h3 { color: var(--ink); }
+.nest summary:focus-visible { outline: 2px solid var(--edge); outline-offset: 2px; }
+.nest .count {
+  font-weight: 500;
+  letter-spacing: 0;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+}
+@media (prefers-reduced-motion: reduce) { .nest summary h3::before { transition: none; } }
 .counts { color: var(--muted); font-size: 12.5px; margin-top: 14px; border-top: 1px solid var(--line); padding-top: 10px; }
 .about code { font-size: 13px; }
 

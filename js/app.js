@@ -375,6 +375,15 @@
       }
     }
 
+    // The papers section folds away; remember the reader's choice between fields and visits.
+    let papersOpen = false;
+    try { papersOpen = localStorage.getItem("papersOpen") === "1"; } catch {}
+    panelBody.addEventListener("toggle", (ev) => {
+      if (ev.target.id !== "papers-nest") return;
+      papersOpen = ev.target.open;
+      try { localStorage.setItem("papersOpen", papersOpen ? "1" : "0"); } catch {}
+    }, true);
+
     function renderPanel(n, ancCount, descCount) {
       const clade = cladeById.get(n.clade);
       const ps = parents.get(n.id);
@@ -391,7 +400,9 @@
         </div>
         <p>${esc(n.description)}</p>
         ${n.results.length ? `<h3>Key results</h3><ul>${n.results.map((r) => `<li>${esc(r)}</li>`).join("")}</ul>` : ""}
-        ${n.papers.length ? `<h3>Key papers</h3><ul class="papers">${n.papers.map(paperItem).join("")}</ul>` : ""}
+        ${n.papers.length ? `<details class="nest" id="papers-nest"${papersOpen ? " open" : ""}>` +
+          `<summary><h3>Key papers <span class="count">${n.papers.length}</span></h3></summary>` +
+          `<ul class="papers">${n.papers.map(paperItem).join("")}</ul></details>` : ""}
         ${leanSection(n)}
         ${ps.length ? `<h3>${ps.length > 1 ? "Hybrid of" : "Descends from"}</h3><div class="links">${ps.map((e) => chip(e.s)).join("")}</div>` : ""}
         ${cv.length ? `<h3>Independently found alongside</h3><div class="links">${cv.map((m) => chip(m)).join("")}</div>` : ""}
