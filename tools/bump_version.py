@@ -11,8 +11,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 html = ROOT / "index.html"
 text = html.read_text()
-for path in ("css/style.css", "js/app.js"):
+for path in ("css/style.css", "js/viewer.js", "js/app.js"):
     digest = hashlib.sha256((ROOT / path).read_bytes()).hexdigest()[:8]
     text = re.sub(re.escape(path) + r'(\?v=[^"]*)?"', f'{path}?v={digest}"', text)
 html.write_text(text)
-print("stamped", ", ".join(re.findall(r'(?:css/style\.css|js/app\.js)\?v=\w+', text)))
+print("stamped", ", ".join(re.findall(r'(?:css/style\.css|js/viewer\.js|js/app\.js)\?v=\w+', text)))

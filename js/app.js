@@ -403,8 +403,15 @@
     const fmtDate = (iso) => new Date(iso + "T00:00:00Z")
       .toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" });
     const aiBadge = '<span class="badge ai" title="The commit message credits an AI tool. Lean checked the proof either way.">AI</span>';
+    // Proof-viewer targets for the buttons rendered in the current panels.
+    let proofTargets = [];
+    const viewButton = (c) => {
+      if (!c.files?.length || !window.ProofViewer) return "";
+      proofTargets.push(c);
+      return `<button type="button" class="view-proof" data-proof="${proofTargets.length - 1}">View proof</button>`;
+    };
     const changeItem = (c, withFields) =>
-      `<li><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.title)}</a>` +
+      `<li><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.title)}</a>${viewButton(c)}` +
       `<span class="paper-meta">${fmtDate(c.date)}${c.scope ? ` · <code>${esc(c.scope)}</code>` : ""}${c.ai ? " · " + aiBadge : ""}</span>` +
       (withFields ? `<div class="links">${c.fields.slice(0, 6).map((id) => chip(byId.get(id))).join("")}` +
         `${c.fields.length > 6 ? `<span class="more">+${c.fields.length - 6} more</span>` : ""}</div>` : "") + "</li>";
@@ -419,6 +426,7 @@
     };
 
     function leanSection(n) {
+      proofTargets = [];
       if (!lean) return "";
       const f = lean.fields[n.id];
       const projects = projectsFor(n.id);
@@ -428,6 +436,7 @@
         html += `<p class="lean-summary">${f.files.toLocaleString()} files in mathlib under ${f.prefixes.map(prefixLink).join(", ")}. ` +
           `${f.additions} new result${f.additions === 1 ? "" : "s"} in the last ${lean.window_days} days` +
           `${f.ai_additions ? `, ${f.ai_additions} crediting AI tools` : ""}.</p>`;
+        if (window.ProofViewer) html += `<button type="button" class="browse-proofs" data-browse="${n.id}"><span aria-hidden="true">⊢</span> Explore ${Math.min(f.files, 80)} Lean file${f.files === 1 ? "" : "s"} in the proof viewer</button>`;
         if (f.recent.length) html += `<ul class="papers">${f.recent.map((c) => changeItem(c, false)).join("")}</ul>`;
       }
       if (projects.length) html += `<h3>Lean projects</h3><ul class="papers">${projects.map(projectItem).join("")}</ul>`;
@@ -435,6 +444,7 @@
     }
 
     function renderLeanPanel() {
+      proofTargets = [];
       if (!lean) {
         leanBody.innerHTML = `<h2>Lean formalization</h2><p>No Lean data yet. Run <code>python3 tools/sync_lean.py</code> to fetch it.</p>`;
         return;
@@ -550,10 +560,31 @@
       panel.scrollTop = 0;
     }
 
+    let leanFiles = null;
+    const startFile = (files, scope) => (scope && files.find((f) => f.includes(`/${scope}`))) || files[files.length - 1];
     for (const el of [panelBody, leanBody]) {
-      el.addEventListener("click", (ev) => {
+      el.addEventListener("click", async (ev) => {
         const b = ev.target.closest("button[data-id]");
-        if (b) select(b.dataset.id);
+        if (b) { select(b.dataset.id); return; }
+        const v = ev.target.closest("button[data-proof]");
+        if (v) {
+          const c = proofTargets[+v.dataset.proof];
+          ProofViewer.open({ title: c.title, files: c.files, ref: c.sha, start: startFile(c.files, c.scope) });
+          return;
+        }
+        const br = ev.target.closest("button[data-browse]");
+        if (br) {
+          br.disabled = true;
+          try {
+            leanFiles ??= await getJSON("data/lean-files.json");
+            const files = leanFiles.fields[br.dataset.browse] || [];
+            ProofViewer.open({ title: `${byId.get(br.dataset.browse).name} in mathlib`, files, ref: leanFiles.ref });
+          } catch {
+            br.textContent = "Could not load the file list. Try again.";
+          } finally {
+            br.disabled = false;
+          }
+        }
       });
     }
     panelBody.addEventListener("click", (ev) => {

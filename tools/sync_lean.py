@@ -30,6 +30,8 @@ ROOT = Path(__file__).resolve().parent.parent
 WINDOW_DAYS = 60
 RECENT_PER_FIELD = 5
 FEED_SIZE = 60
+MAX_FILES_PER_CHANGE = 6
+MAX_FILES_PER_FIELD = 80
 MATHLIB = "https://github.com/leanprover-community/mathlib4"
 
 # Words in a commit message that credit an AI system. Case-sensitive "AI"/"LLM",
@@ -78,8 +80,9 @@ def sync_mathlib(lean_map, workdir):
     files = [f for f in git("ls-tree", "-r", "--name-only", "HEAD", "--", "Mathlib", cwd=repo).splitlines()
              if f.endswith(".lean")]
 
+    # Only added, modified or renamed files, so every listed path exists at that commit.
     log = git("log", f"--since={WINDOW_DAYS}.days", "--format=%x1e%H%x1f%cs%x1f%s%x1f%b%x1d",
-              "--name-only", "--", "Mathlib", cwd=repo)
+              "--name-only", "--diff-filter=AMR", "--", "Mathlib", cwd=repo)
     commits = []
     for chunk in log.split("\x1e")[1:]:
         meta, _, paths = chunk.partition("\x1d")
@@ -95,7 +98,9 @@ def sync_mathlib(lean_map, workdir):
     total_changes = len(commits)
     # Only new mathematics: drop chores, refactors, fixes, docs, style and CI work.
     commits = [c for c in commits if c["kind"] == "feat"]
-    keys = ("date", "title", "scope", "url", "ai")
+    keys = ("date", "title", "scope", "url", "ai", "sha", "files")
+    for c in commits:
+        c["files"] = c["paths"][:MAX_FILES_PER_CHANGE]
 
     fields = {}
     for fid, prefixes in lean_map["mathlib"].items():
@@ -122,7 +127,11 @@ def sync_mathlib(lean_map, workdir):
 
     mathlib = {"commit": head[0], "date": head[1], "files": len(files), "changes": total_changes,
                "additions": len(commits), "ai_additions": sum(c["ai"] for c in commits)}
-    return mathlib, fields, feed
+    # File lists per field for the in-site proof viewer, pinned to this mathlib commit.
+    browse = {"ref": head[0], "fields": {
+        fid: sorted(f for f in files if any(under(f, p) for p in prefixes))[:MAX_FILES_PER_FIELD]
+        for fid, prefixes in lean_map["mathlib"].items()}}
+    return mathlib, fields, feed, browse
 
 
 def sync_projects(lean_map, workdir):
@@ -146,7 +155,7 @@ def main():
     lean_map = json.loads((ROOT / "data" / "lean-map.json").read_text())
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
-        mathlib, fields, feed = sync_mathlib(lean_map, tmp)
+        mathlib, fields, feed, browse = sync_mathlib(lean_map, tmp)
         projects = sync_projects(lean_map, tmp)
     data = {
         "generated": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
@@ -157,6 +166,7 @@ def main():
         "projects": projects,
     }
     (ROOT / "data" / "lean.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n")
+    (ROOT / "data" / "lean-files.json").write_text(json.dumps(browse, separators=(",", ":")) + "\n")
     print(f"mathlib {mathlib['commit'][:10]} ({mathlib['date']}): {mathlib['files']} files, "
           f"{mathlib['additions']} additions of {mathlib['changes']} changes in {WINDOW_DAYS} days, "
           f"{mathlib['ai_additions']} credit AI; "
