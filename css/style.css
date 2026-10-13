@@ -232,29 +232,108 @@ body {
 .about ul.papers { list-style: none; padding: 0; display: grid; gap: 8px; margin: 0; }
 .papers > li { min-width: 0; overflow-wrap: anywhere; }
 .links .more { color: var(--muted); font-size: 12px; align-self: center; }
-.nest summary { list-style: none; cursor: pointer; border-radius: 4px; }
-.nest summary::-webkit-details-marker { display: none; }
-.nest summary h3 { display: flex; align-items: center; gap: 6px; }
-.nest summary h3::before {
-  content: "";
-  width: 0; height: 0;
-  border-left: 5px solid currentColor;
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-  transition: transform 0.15s;
-}
-.nest[open] summary h3::before { transform: rotate(90deg); }
-.nest summary:hover h3 { color: var(--ink); }
-.nest summary:focus-visible { outline: 2px solid var(--edge); outline-offset: 2px; }
-.nest .count {
-  font-weight: 500;
-  letter-spacing: 0;
-  padding: 0 6px;
-  border-radius: 999px;
-  background: var(--bg);
+/* Key papers: a folded "bundle" that opens into a branch of paper cards. */
+.nest {
+  margin: 16px 0 4px;
   border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg);
+  overflow: hidden;
 }
-@media (prefers-reduced-motion: reduce) { .nest summary h3::before { transition: none; } }
+.nest summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-left: 3px solid var(--clade, var(--edge));
+}
+.nest summary::-webkit-details-marker { display: none; }
+.nest summary:hover { background: var(--surface); }
+.nest summary:focus-visible { outline: 2px solid var(--edge); outline-offset: -2px; }
+.nest-icon svg { width: 22px; height: 22px; fill: none; stroke: var(--clade, var(--muted)); stroke-width: 1.4; stroke-linejoin: round; display: block; }
+.nest-text { display: grid; flex: 1; min-width: 0; }
+.nest-label { font-size: 11.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink); }
+.nest-sub { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.nest-spines { display: flex; align-items: flex-end; gap: 3px; height: 22px; transition: opacity 0.2s; }
+.spine { width: 6px; height: 22px; border-radius: 2px; background: var(--clade, var(--edge)); }
+.spine:nth-child(2n) { height: 18px; }
+.spine:nth-child(3n) { height: 20px; }
+.spine.k-about { opacity: 0.6; }
+.spine.k-search { background: transparent; border: 1.5px dashed var(--clade, var(--edge)); }
+.nest[open] .nest-spines { opacity: 0; }
+.nest-chev {
+  width: 8px; height: 8px;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(-45deg);
+  transition: transform 0.2s;
+  margin-right: 4px;
+}
+.nest[open] .nest-chev { transform: rotate(45deg); }
+.nest[open] .paper-tree { animation: branch-in 0.25s ease; }
+@keyframes branch-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+
+/* The branch: a rail in the clade color with an elbow to each paper. */
+.panel ol.paper-tree { list-style: none; margin: 0; min-width: 0; grid-template-columns: minmax(0, 1fr); padding: 4px 12px 12px 14px; display: grid; gap: 10px; position: relative; }
+.paper-tree::before {
+  content: "";
+  position: absolute;
+  left: 14px; top: 0; bottom: 30px;
+  border-left: 2px solid var(--clade, var(--edge));
+  opacity: 0.5;
+}
+.paper-branch { position: relative; display: grid; grid-template-columns: 56px 1fr; align-items: start; min-width: 0; }
+.paper-branch::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 13px;
+  width: 12px;
+  border-top: 2px solid var(--clade, var(--edge));
+  opacity: 0.5;
+}
+.paper-year {
+  margin-left: 14px;
+  margin-top: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--clade, var(--muted));
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+.paper-year small { display: block; font-size: 9px; letter-spacing: 0.05em; }
+.paper-card {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.paper-branch.k-search .paper-card { border-style: dashed; }
+.paper-card:hover { border-color: var(--clade, var(--edge)); transform: translateX(2px); }
+.paper-card a { color: var(--ink); text-decoration: none; font-weight: 500; line-height: 1.35; }
+.paper-card a:hover { text-decoration: underline; text-underline-offset: 2px; }
+.paper-card .paper-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; margin-top: 4px; }
+.kind-pill {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 1px 6px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+}
+.paper-branch.k-direct .kind-pill { color: var(--clade, var(--ink)); border-color: currentColor; }
+.paper-branch.k-search .kind-pill { border-style: dashed; }
+@media (prefers-reduced-motion: reduce) {
+  .nest-chev, .nest-spines, .paper-card { transition: none; }
+  .nest[open] .paper-tree { animation: none; }
+  .paper-card:hover { transform: none; }
+}
 .counts { color: var(--muted); font-size: 12.5px; margin-top: 14px; border-top: 1px solid var(--line); padding-top: 10px; }
 .about code { font-size: 13px; }
 

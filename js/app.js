@@ -292,9 +292,24 @@
       if (host === "scholar.google.com") return "Scholar search";
       return host.replace(/^www\./, "");
     };
-    const paperItem = (p) =>
-      `<li><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a>` +
-      `<span class="paper-meta">${esc(p.authors)} · ${fmtYear(p.year)} · <span class="kind">${linkKind(p.url)}</span></span></li>`;
+    // Direct links read as solid, search fallbacks as dashed, so the kind shows at a glance.
+    const KIND_CLASS = { DOI: "k-direct", arXiv: "k-direct", Wikipedia: "k-about", "Scholar search": "k-search" };
+    const paperItem = (p) => {
+      const kind = linkKind(p.url);
+      return `<li class="paper-branch ${KIND_CLASS[kind] || "k-direct"}">` +
+        `<span class="paper-year">${p.year < 0 ? `${-p.year}<small>BCE</small>` : p.year}</span>` +
+        `<div class="paper-card"><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a>` +
+        `<span class="paper-meta">${esc(p.authors)}<span class="kind-pill">${kind}</span></span></div></li>`;
+    };
+    // A strip of document "spines" previews the papers while the section is folded.
+    const paperSpines = (papers) => papers.map((p) =>
+      `<span class="spine ${KIND_CLASS[linkKind(p.url)] || "k-direct"}" title="${esc(p.title)}"></span>`).join("");
+    const yearSpan = (papers) => {
+      const ys = papers.map((p) => p.year);
+      const lo = Math.min(...ys), hi = Math.max(...ys);
+      const f = (y) => (y < 0 ? `${-y} BCE` : String(y));
+      return lo === hi ? f(lo) : `${f(lo)}–${f(hi)}`;
+    };
 
     // ---- Lean ---------------------------------------------------------------
     const MATHLIB_URL = "https://github.com/leanprover-community/mathlib4";
@@ -400,9 +415,12 @@
         </div>
         <p>${esc(n.description)}</p>
         ${n.results.length ? `<h3>Key results</h3><ul>${n.results.map((r) => `<li>${esc(r)}</li>`).join("")}</ul>` : ""}
-        ${n.papers.length ? `<details class="nest" id="papers-nest"${papersOpen ? " open" : ""}>` +
-          `<summary><h3>Key papers <span class="count">${n.papers.length}</span></h3></summary>` +
-          `<ul class="papers">${n.papers.map(paperItem).join("")}</ul></details>` : ""}
+        ${n.papers.length ? `<details class="nest" id="papers-nest" style="--clade:${cladeColor(n.clade)}"${papersOpen ? " open" : ""}>` +
+          `<summary><span class="nest-icon" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M6 2.5h6l4 4v11H6z"/><path d="M12 2.5v4h4"/><path d="M3.5 5v12.5H13"/></svg></span>` +
+          `<span class="nest-text"><span class="nest-label">Key papers</span><span class="nest-sub">${n.papers.length} work${n.papers.length === 1 ? "" : "s"} · ${yearSpan(n.papers)}</span></span>` +
+          `<span class="nest-spines" aria-hidden="true">${paperSpines(n.papers)}</span>` +
+          `<span class="nest-chev" aria-hidden="true"></span></summary>` +
+          `<ol class="paper-tree">${n.papers.map(paperItem).join("")}</ol></details>` : ""}
         ${leanSection(n)}
         ${ps.length ? `<h3>${ps.length > 1 ? "Hybrid of" : "Descends from"}</h3><div class="links">${ps.map((e) => chip(e.s)).join("")}</div>` : ""}
         ${cv.length ? `<h3>Independently found alongside</h3><div class="links">${cv.map((m) => chip(m)).join("")}</div>` : ""}
