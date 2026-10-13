@@ -76,6 +76,17 @@ for v in nodes:
     if v not in state:
         visit(v, [v])
 
+lean_map_path = Path(__file__).resolve().parent.parent / "data" / "lean-map.json"
+if lean_map_path.exists():
+    lean_map = json.loads(lean_map_path.read_text())
+    for nid in lean_map["mathlib"]:
+        if nid not in nodes:
+            errors.append(f"lean-map.json: unknown node '{nid}'")
+    for p in lean_map["projects"]:
+        for nid in p["fields"]:
+            if nid not in nodes:
+                errors.append(f"lean-map.json: project {p['repo']} names unknown node '{nid}'")
+
 for e in errors:
     print("ERROR:", e)
 types = Counter(e["type"] for e in data["edges"])

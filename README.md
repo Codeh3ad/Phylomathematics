@@ -64,6 +64,16 @@ Before committing, run the validator. It checks for unknown IDs, cycles, parents
 python3 tools/validate.py
 ```
 
+## Lean formalization
+
+Each field links to where it lives in [Lean's mathlib](https://github.com/leanprover-community/mathlib4) and to Lean projects that formalize it, including AI-generated ones such as Math Inc's strong prime number theorem (Gauss) and Harmonic's Aristotle solutions to IMO 2025. The **Lean** button opens a feed of recent mathlib changes, filterable to those whose commit message credits an AI tool.
+
+- `data/lean-map.json` is hand-curated: mathlib folders per field, plus the list of external projects. Add a new AI-proof repository by adding one entry to `projects` (`kind` is `ai`, `automated`, `human` or `benchmark`).
+- `tools/sync_lean.py` reads the map, clones mathlib (history only, no file contents) and each project, and writes `data/lean.json`.
+- `.github/workflows/sync-lean.yml` runs the sync daily and commits the result. Run it by hand from the Actions tab with "Run workflow".
+
+The "AI" flag is a self-report: it means the commit message credits an AI tool (an AI-use disclosure or a co-author line). Lean checks every proof the same way either way.
+
 ## Deploy
 
 **GitHub Pages:** go to Settings → Pages, set Source to "Deploy from a branch", and choose `main` / root. The `.nojekyll` file makes Pages serve the files exactly as they are.

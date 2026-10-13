@@ -23,6 +23,9 @@
   const panelBody = document.getElementById("panel-body");
   const about = document.getElementById("about");
   const aboutBtn = document.getElementById("about-btn");
+  const leanPanel = document.getElementById("lean");
+  const leanBody = document.getElementById("lean-body");
+  const leanBtn = document.getElementById("lean-btn");
   const search = document.getElementById("search");
   const showConv = document.getElementById("show-convergent");
 
@@ -39,19 +42,21 @@
   };
   const tickLabel = (y) => (y < 0 ? `${-y} BCE` : y === 0 ? "1 CE" : String(y));
 
-  fetch("data/nodes.json")
-    .then((r) => {
-      if (!r.ok) throw new Error(`HTTP ${r.status}`);
-      return r.json();
-    })
-    .then(init)
+  const getJSON = (url) => fetch(url).then((r) => {
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return r.json();
+  });
+
+  // Lean data is optional: the network still works if data/lean.json is missing.
+  Promise.all([getJSON("data/nodes.json"), getJSON("data/lean.json").catch(() => null)])
+    .then(([data, lean]) => init(data, lean))
     .catch((err) => {
       chartEl.innerHTML =
         `<p style="padding:24px;color:var(--muted)">Could not load data/nodes.json (${err.message}). ` +
         `If you opened this file directly, serve the folder instead: <code>python3 -m http.server</code>.</p>`;
     });
 
-  function init(data) {
+  function init(data, lean) {
     const clades = data.clades;
     const cladeById = new Map(clades.map((c) => [c.id, c]));
     const nodes = data.nodes.map((n) => ({ status: "active", results: [], papers: [], ...n }));
@@ -269,8 +274,7 @@
         .classed("lit-down", (e) => e.type !== "convergent" && (e.source === selected || desc.has(e.source)) && desc.has(e.target))
         .classed("lit-conv", (e) => e.type === "convergent" && (e.source === selected || e.target === selected));
       renderPanel(byId.get(selected), anc.size, desc.size);
-      about.hidden = true;
-      aboutBtn.setAttribute("aria-expanded", "false");
+      closeOverlays();
       if (center) centerOn(byId.get(selected));
     }
 
@@ -292,6 +296,85 @@
       `<li><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a>` +
       `<span class="paper-meta">${esc(p.authors)} · ${fmtYear(p.year)} · <span class="kind">${linkKind(p.url)}</span></span></li>`;
 
+    // ---- Lean ---------------------------------------------------------------
+    const MATHLIB_URL = "https://github.com/leanprover-community/mathlib4";
+    const KIND_LABEL = { ai: "AI-generated", automated: "Automated provers", human: "Human-led", benchmark: "Open problems" };
+    const projectsFor = (id) => (lean ? lean.projects.filter((p) => p.fields.includes(id)) : []);
+    const fmtDate = (iso) => new Date(iso + "T00:00:00Z")
+      .toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" });
+    const aiBadge = '<span class="badge ai" title="The commit message credits an AI tool. Lean checked the proof either way.">AI</span>';
+    const changeItem = (c, withFields) =>
+      `<li><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.title)}</a>` +
+      `<span class="paper-meta">${fmtDate(c.date)}${c.ai ? " · " + aiBadge : ""}</span>` +
+      (withFields ? `<div class="links">${c.fields.slice(0, 6).map((id) => chip(byId.get(id))).join("")}` +
+        `${c.fields.length > 6 ? `<span class="more">+${c.fields.length - 6} more</span>` : ""}</div>` : "") + "</li>";
+    const projectItem = (p) =>
+      `<li><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.name)}</a>` +
+      `<span class="badge ${p.kind}">${KIND_LABEL[p.kind] || esc(p.kind)}</span>` +
+      `<span class="paper-meta">${esc(p.description)}${p.updated ? ` Updated ${fmtDate(p.updated)}.` : ""}</span></li>`;
+    const prefixLink = (prefix) => {
+      const name = prefix.replace(/^Mathlib\//, "");
+      // A prefix is either a folder or a single .lean file; GitHub redirects /tree/ to /blob/ for files.
+      return `<a href="${MATHLIB_URL}/tree/master/${esc(prefix)}" target="_blank" rel="noopener"><code>${esc(name)}</code></a>`;
+    };
+
+    function leanSection(n) {
+      if (!lean) return "";
+      const f = lean.fields[n.id];
+      const projects = projectsFor(n.id);
+      if (!(f && f.files) && !projects.length) return "";
+      let html = `<h3>Formalized in Lean</h3>`;
+      if (f && f.files) {
+        html += `<p class="lean-summary">${f.files.toLocaleString()} files in mathlib under ${f.prefixes.map(prefixLink).join(", ")}. ` +
+          `${f.changes} change${f.changes === 1 ? "" : "s"} in the last ${lean.window_days} days` +
+          `${f.ai_changes ? `, ${f.ai_changes} crediting AI tools` : ""}.</p>`;
+        if (f.recent.length) html += `<ul class="papers">${f.recent.map((c) => changeItem(c, false)).join("")}</ul>`;
+      }
+      if (projects.length) html += `<h3>Lean projects</h3><ul class="papers">${projects.map(projectItem).join("")}</ul>`;
+      return html;
+    }
+
+    function renderLeanPanel() {
+      if (!lean) {
+        leanBody.innerHTML = `<h2>Lean formalization</h2><p>No Lean data yet. Run <code>python3 tools/sync_lean.py</code> to fetch it.</p>`;
+        return;
+      }
+      const onlyAI = document.getElementById("lean-ai-only")?.checked ?? false;
+      const feed = lean.feed.filter((c) => !onlyAI || c.ai).slice(0, 40);
+      const m = lean.mathlib;
+      leanBody.innerHTML = `
+        <h2>Lean formalization</h2>
+        <p class="lean-intro">Every proof in Lean's <a href="${MATHLIB_URL}" target="_blank" rel="noopener">mathlib</a> and in the projects below is checked by Lean's kernel, whoever or whatever wrote it. This page is refreshed daily from GitHub.</p>
+        <div class="meta"><span>${m.files.toLocaleString()} mathlib files</span><span>${m.changes.toLocaleString()} changes in ${lean.window_days} days</span><span>${m.ai_changes} credit AI tools</span><span>Updated ${esc(lean.generated.slice(0, 10))}</span></div>
+        <h3>AI-generated & automated</h3>
+        <ul class="papers">${lean.projects.filter((p) => p.kind === "ai" || p.kind === "automated").map(projectItem).join("")}</ul>
+        <h3 class="feed-head">Recent mathlib changes
+          <label class="toggle"><input id="lean-ai-only" type="checkbox"${onlyAI ? " checked" : ""}> Only AI-credited</label></h3>
+        <ul class="papers">${feed.map((c) => changeItem(c, true)).join("") || "<li>No changes in this window.</li>"}</ul>
+        <h3>Human-led projects & open problems</h3>
+        <ul class="papers">${lean.projects.filter((p) => p.kind === "human" || p.kind === "benchmark").map(projectItem).join("")}</ul>
+        <p class="counts">"AI" marks commits whose message credits an AI tool, such as an AI-use disclosure or a co-author line. It is a self-report, not detection.</p>`;
+    }
+
+    function closeOverlays() {
+      about.hidden = true;
+      leanPanel.hidden = true;
+      aboutBtn.setAttribute("aria-expanded", "false");
+      leanBtn.setAttribute("aria-expanded", "false");
+    }
+
+    function toggleOverlay(el, btn) {
+      const open = el.hidden;
+      select(null);
+      closeOverlays();
+      if (open) {
+        if (el === leanPanel) renderLeanPanel();
+        el.hidden = false;
+        el.scrollTop = 0;
+        btn.setAttribute("aria-expanded", "true");
+      }
+    }
+
     function renderPanel(n, ancCount, descCount) {
       const clade = cladeById.get(n.clade);
       const ps = parents.get(n.id);
@@ -309,6 +392,7 @@
         <p>${esc(n.description)}</p>
         ${n.results.length ? `<h3>Key results</h3><ul>${n.results.map((r) => `<li>${esc(r)}</li>`).join("")}</ul>` : ""}
         ${n.papers.length ? `<h3>Key papers</h3><ul class="papers">${n.papers.map(paperItem).join("")}</ul>` : ""}
+        ${leanSection(n)}
         ${ps.length ? `<h3>${ps.length > 1 ? "Hybrid of" : "Descends from"}</h3><div class="links">${ps.map((e) => chip(e.s)).join("")}</div>` : ""}
         ${cv.length ? `<h3>Independently found alongside</h3><div class="links">${cv.map((m) => chip(m)).join("")}</div>` : ""}
         ${cs.length ? `<h3>Gave rise to</h3><div class="links">${cs.map((e) => chip(e.t, e.type === "merges" ? "hybrid" : "")).join("")}</div>` : ""}
@@ -317,10 +401,13 @@
       panel.scrollTop = 0;
     }
 
-    panelBody.addEventListener("click", (ev) => {
-      const b = ev.target.closest("button[data-id]");
-      if (b) select(b.dataset.id);
-    });
+    for (const el of [panelBody, leanBody]) {
+      el.addEventListener("click", (ev) => {
+        const b = ev.target.closest("button[data-id]");
+        if (b) select(b.dataset.id);
+      });
+    }
+    leanBody.addEventListener("change", (ev) => { if (ev.target.id === "lean-ai-only") renderLeanPanel(); });
 
     // ---- Controls ---------------------------------------------------------
     document.getElementById("node-list").innerHTML = nodes
@@ -342,17 +429,13 @@
     showConv.addEventListener("change", () => svg.classed("hide-convergent", !showConv.checked));
     document.getElementById("reset").addEventListener("click", () => { select(null); search.value = ""; fit(500); });
     document.querySelectorAll(".panel-close").forEach((b) => b.addEventListener("click", () => {
-      if (b.closest("#about")) { about.hidden = true; aboutBtn.setAttribute("aria-expanded", "false"); }
+      if (b.closest("#about, #lean")) closeOverlays();
       else select(null);
     }));
-    aboutBtn.addEventListener("click", () => {
-      const open = about.hidden;
-      if (open) select(null);
-      about.hidden = !open;
-      aboutBtn.setAttribute("aria-expanded", String(open));
-    });
+    aboutBtn.addEventListener("click", () => toggleOverlay(about, aboutBtn));
+    leanBtn.addEventListener("click", () => toggleOverlay(leanPanel, leanBtn));
     document.addEventListener("keydown", (ev) => {
-      if (ev.key === "Escape") { select(null); about.hidden = true; aboutBtn.setAttribute("aria-expanded", "false"); }
+      if (ev.key === "Escape") { select(null); closeOverlays(); }
     });
     window.addEventListener("hashchange", () => select(decodeURIComponent(location.hash.slice(1)), { updateHash: false }));
     window.addEventListener("resize", drawOverlay);

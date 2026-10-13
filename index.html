@@ -21,6 +21,7 @@
       <datalist id="node-list"></datalist>
       <label class="toggle"><input id="show-convergent" type="checkbox" checked> Convergences</label>
       <button id="reset" type="button">Reset view</button>
+      <button id="lean-btn" type="button" aria-expanded="false" aria-controls="lean">Lean</button>
       <button id="about-btn" type="button" aria-expanded="false" aria-controls="about">About</button>
     </div>
   </header>
@@ -41,6 +42,11 @@
       <button class="panel-close" type="button" aria-label="Close">×</button>
       <div id="panel-body"></div>
     </aside>
+
+    <section id="lean" class="about" hidden aria-live="polite">
+      <button class="panel-close" type="button" aria-label="Close">×</button>
+      <div id="lean-body"></div>
+    </section>
 
     <section id="about" class="about" hidden>
       <button class="panel-close" type="button" aria-label="Close">×</button>
