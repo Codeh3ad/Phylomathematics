@@ -5,10 +5,10 @@ The evolutionary history of mathematics, drawn as a phylogenetic network.
 Math doesn't evolve as a strict tree, so this site doesn't draw one:
 
 - **Hybridization**: algebraic geometry, analytic number theory and algebraic topology each have several parents.
-- **Convergent evolution**: Newton and Leibniz both found calculus; Bolyai and Lobachevsky both found non-Euclidean geometry; Church and Turing both defined computability.
+- **Convergent evolution**: Newton and Leibniz both found calculus; Bolyai and Lobachevsky both found non-Euclidean geometry; Church and Turing both defined computability; the Maya and Indian mathematicians each invented zero.
 - **Dormancy and revival**: projective geometry slept from Desargues to Poncelet; invariant theory went quiet after Hilbert and returned as geometric invariant theory.
 
-Time runs left to right on a compressed axis from Babylonian arithmetic to the present. Rows group fields into broad clades (Number, Geometry, Algebra, Analysis, Chance, Topology, Foundations). Click a field to see its description, key results and MSC2020 code, with its full ancestry highlighted. Links are shareable: `/#algebraic_geometry`.
+Time runs left to right on a compressed axis from Babylonian arithmetic to the present. Rows group 107 fields into nine broad clades (Number, Algebra, Geometry, Topology, Analysis, Applied, Chance, Discrete, Foundations). Click a field to see its description, key results and MSC2020 code, with its full ancestry highlighted. Links are shareable: `/#algebraic_geometry`.
 
 ## Run locally
 
