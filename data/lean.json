@@ -1,12 +1,12 @@
 {
- "generated": "2026-10-14T11:49Z",
+ "generated": "2026-10-15T11:25Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "6bbb3b8515bdfda5d0598fa10747b5b3ad9bd02c",
-  "date": "2026-10-14",
-  "files": 8628,
-  "changes": 1396,
-  "additions": 713,
+  "commit": "aa35a481e5f0cdb3b04a899ead15d6ca7305a624",
+  "date": "2026-10-15",
+  "files": 8631,
+  "changes": 1406,
+  "additions": 716,
   "ai_additions": 70
  },
  "fields": {
@@ -89,10 +89,34 @@
     "Mathlib/Data/Nat/Prime",
     "Mathlib/Data/Int/GCD"
    ],
-   "files": 52,
-   "additions": 21,
+   "files": 53,
+   "additions": 22,
    "ai_additions": 3,
    "recent": [
+    {
+     "date": "2026-10-14",
+     "title": "South / north pole of a simplex",
+     "scope": "Geometry/Euclidean/Incenter/SouthPole",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44794",
+     "ai": false,
+     "sha": "f816245f5d0cb6c9be357e90340a1d857bfc8e87",
+     "files": [
+      "Mathlib/Geometry/Euclidean/Incenter/SouthPole.lean"
+     ]
+    },
+    {
+     "date": "2026-10-14",
+     "title": "Distance from vertex to nine-point circle center",
+     "scope": "Geometry/Euclidean",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44218",
+     "ai": false,
+     "sha": "12cf93f81c8f8b8bd365cc1365cf509c8b1e3aaf",
+     "files": [
+      "Mathlib/Geometry/Euclidean/Circumcenter.lean",
+      "Mathlib/Geometry/Euclidean/NinePointCircle.lean",
+      "Mathlib/LinearAlgebra/AffineSpace/Simplex/Centroid.lean"
+     ]
+    },
     {
      "date": "2026-10-14",
      "title": "Theorems to prove line parallel from relation between oangles",
@@ -126,29 +150,6 @@
      "files": [
       "Mathlib/Geometry/Euclidean/PerpBisector.lean",
       "Mathlib/Geometry/Euclidean/Projection.lean"
-     ]
-    },
-    {
-     "date": "2026-09-30",
-     "title": "Continuity of composing by a `ContinuousAffineMap`",
-     "scope": "Topology/Algebra",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43339",
-     "ai": false,
-     "sha": "fe2d8262b807d83abc6721c4b7f43b07d2f5eb59",
-     "files": [
-      "Mathlib/Geometry/Euclidean/SignedDist.lean",
-      "Mathlib/Topology/Algebra/ContinuousAffineMap/Topology.lean"
-     ]
-    },
-    {
-     "date": "2026-09-30",
-     "title": "Unoriented angle eq of oriented angle eq",
-     "scope": "Geometry/Euclidean",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/40498",
-     "ai": false,
-     "sha": "4e72019869e688b8263f69d96059a294778e99e5",
-     "files": [
-      "Mathlib/Geometry/Euclidean/Angle/Oriented/Affine.lean"
      ]
     }
    ],
@@ -193,7 +194,7 @@
     "Mathlib/Geometry/Euclidean/Sphere"
    ],
    "files": 7,
-   "additions": 3,
+   "additions": 2,
    "ai_additions": 0,
    "recent": [
     {
@@ -216,17 +217,6 @@
      "sha": "9791f8f704c10ddd96219f87083f1cf87677ab0a",
      "files": [
       "Mathlib/Geometry/Euclidean/Sphere/PolePolar.lean"
-     ]
-    },
-    {
-     "date": "2026-08-15",
-     "title": "Add secondInter difference lemmas",
-     "scope": "Geometry/Euclidean/Sphere/SecondInter",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42308",
-     "ai": false,
-     "sha": "04b2e5d6076347dd74455717a8ddaeb46a823efe",
-     "files": [
-      "Mathlib/Geometry/Euclidean/Sphere/SecondInter.lean"
      ]
     }
    ],
@@ -670,9 +660,22 @@
     "Mathlib/LinearAlgebra/AffineSpace"
    ],
    "files": 25,
-   "additions": 15,
+   "additions": 16,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-10-14",
+     "title": "Distance from vertex to nine-point circle center",
+     "scope": "Geometry/Euclidean",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44218",
+     "ai": false,
+     "sha": "12cf93f81c8f8b8bd365cc1365cf509c8b1e3aaf",
+     "files": [
+      "Mathlib/Geometry/Euclidean/Circumcenter.lean",
+      "Mathlib/Geometry/Euclidean/NinePointCircle.lean",
+      "Mathlib/LinearAlgebra/AffineSpace/Simplex/Centroid.lean"
+     ]
+    },
     {
      "date": "2026-10-13",
      "title": "Define the range of an `AffineMap`",
@@ -723,22 +726,6 @@
       "Mathlib/Analysis/Calculus/BumpFunction/Basic.lean",
       "Mathlib/Analysis/Complex/ValueDistribution/Cartan.lean",
       "Mathlib/Analysis/Complex/ValueDistribution/FirstMainTheorem.lean"
-     ]
-    },
-    {
-     "date": "2026-09-21",
-     "title": "Volume of a simplex",
-     "scope": "Geometry/Euclidean",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/37910",
-     "ai": false,
-     "sha": "28a6b12d39e7ac504db20ba0a467dd3ceaa52ab5",
-     "files": [
-      "Mathlib/Geometry/Euclidean/Altitude.lean",
-      "Mathlib/Geometry/Euclidean/Projection.lean",
-      "Mathlib/Geometry/Euclidean/Volume/Basic.lean",
-      "Mathlib/Geometry/Euclidean/Volume/Def.lean",
-      "Mathlib/Geometry/Euclidean/Volume/Measure.lean",
-      "Mathlib/Geometry/Euclidean/Volume/MeasureSimplex.lean"
      ]
     }
    ],
@@ -887,7 +874,7 @@
     "Mathlib/Combinatorics/Digraph"
    ],
    "files": 90,
-   "additions": 32,
+   "additions": 31,
    "ai_additions": 0,
    "recent": [
     {
@@ -1154,9 +1141,21 @@
     "Mathlib/Order/Filter"
    ],
    "files": 65,
-   "additions": 6,
-   "ai_additions": 0,
+   "additions": 7,
+   "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-14",
+     "title": "Misc filter limit lemmas",
+     "scope": "Order/Filter",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44847",
+     "ai": true,
+     "sha": "e2d19419b0cded0511f4130186fc9c8a32e04eb8",
+     "files": [
+      "Mathlib/Order/Filter/AtTopBot/Ring.lean",
+      "Mathlib/Order/Filter/Pointwise.lean"
+     ]
+    },
     {
      "date": "2026-10-10",
      "title": "Weaken assumptions on theorems about `FloorRing`",
@@ -1210,19 +1209,6 @@
       "Mathlib/Algebra/Group/Pointwise/Set/Finite.lean",
       "Mathlib/Algebra/Group/Pointwise/Set/Lattice.lean",
       "Mathlib/Order/Filter/Pointwise.lean"
-     ]
-    },
-    {
-     "date": "2026-09-04",
-     "title": "Cardinality of `Ultrafilter`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/41297",
-     "ai": false,
-     "sha": "34f98d058675efd3680e0c152e11469530eee882",
-     "files": [
-      "Mathlib/Order/Filter/Basic.lean",
-      "Mathlib/Order/Filter/Ultrafilter/Basic.lean",
-      "Mathlib/Order/Filter/Ultrafilter/Cardinality.lean"
      ]
     }
    ],
@@ -1317,9 +1303,20 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 79,
-   "additions": 19,
+   "additions": 20,
    "ai_additions": 3,
    "recent": [
+    {
+     "date": "2026-10-14",
+     "title": "ContMDiff.mvfderiv and friends",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44711",
+     "ai": false,
+     "sha": "b5d0cc06b31c729ed3eb5c7fc55d7b767f8be9c7",
+     "files": [
+      "Mathlib/Geometry/Manifold/ContMDiffMFDeriv.lean"
+     ]
+    },
     {
      "date": "2026-10-13",
      "title": "Support continuous alternating maps in differential geometry el…",
@@ -1368,22 +1365,6 @@
       "Mathlib/Geometry/Manifold/ContMDiff/Basic.lean",
       "Mathlib/Geometry/Manifold/IsManifold/ExtChartAt.lean",
       "Mathlib/Geometry/Manifold/MFDeriv/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-09-29",
-     "title": "Introduce an IsNormableSpace class",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42983",
-     "ai": false,
-     "sha": "cba67dece737ecab8cd5a3e96c2bfa81b0890111",
-     "files": [
-      "Mathlib/Analysis/LocallyConvex/WithSeminorms.lean",
-      "Mathlib/Analysis/Normed/Module/Dual.lean",
-      "Mathlib/Analysis/Normed/Operator/Basic.lean",
-      "Mathlib/Analysis/Normed/Operator/Bilinear.lean",
-      "Mathlib/Analysis/Normed/Operator/CompleteCodomain.lean",
-      "Mathlib/Analysis/Normed/Operator/NormedSpace.lean"
      ]
     }
    ],
@@ -1647,6 +1628,19 @@
    "recent": [
     {
      "date": "2026-10-14",
+     "title": "Distance from vertex to nine-point circle center",
+     "scope": "Geometry/Euclidean",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44218",
+     "ai": false,
+     "sha": "12cf93f81c8f8b8bd365cc1365cf509c8b1e3aaf",
+     "files": [
+      "Mathlib/Geometry/Euclidean/Circumcenter.lean",
+      "Mathlib/Geometry/Euclidean/NinePointCircle.lean",
+      "Mathlib/LinearAlgebra/AffineSpace/Simplex/Centroid.lean"
+     ]
+    },
+    {
+     "date": "2026-10-14",
      "title": "The Cartan matrix of the root system associated to a Cartan matrix is the matrix you started with",
      "scope": null,
      "url": "https://github.com/leanprover-community/mathlib4/pull/44837",
@@ -1689,20 +1683,6 @@
      "files": [
       "Mathlib/LinearAlgebra/AffineSpace/FiniteDimensional.lean",
       "Mathlib/LinearAlgebra/AffineSpace/Independent.lean"
-     ]
-    },
-    {
-     "date": "2026-10-12",
-     "title": "Add alternate constructor for bases of root systems",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43555",
-     "ai": false,
-     "sha": "4e6064a4a3a617a3ba6739b50152b02e4d6ad3ea",
-     "files": [
-      "Mathlib/LinearAlgebra/LinearIndependent/Lemmas.lean",
-      "Mathlib/LinearAlgebra/RootSystem/Base.lean",
-      "Mathlib/LinearAlgebra/RootSystem/Finite/Lemmas.lean",
-      "Mathlib/LinearAlgebra/RootSystem/Finite/Nondegenerate.lean"
      ]
     }
    ],
@@ -1942,10 +1922,34 @@
     "Mathlib/AlgebraicTopology",
     "Mathlib/Topology/Homotopy"
    ],
-   "files": 179,
-   "additions": 15,
+   "files": 181,
+   "additions": 17,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-14",
+     "title": "Composition of edges in quasicategories",
+     "scope": "AlgebraicTopology",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44775",
+     "ai": false,
+     "sha": "e438a8a8329af5bd73274043f9f21795594c6bfb",
+     "files": [
+      "Mathlib/AlgebraicTopology/Quasicategory/CompStruct.lean",
+      "Mathlib/AlgebraicTopology/Quasicategory/TwoTruncated.lean"
+     ]
+    },
+    {
+     "date": "2026-10-14",
+     "title": "Homotopic maps induce isomorphic functors",
+     "scope": "AlgebraicTopology/SimplicialSet/FundamentalGroupoid",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42576",
+     "ai": false,
+     "sha": "f8b885ace592668c139236c04ceffbed88f65504",
+     "files": [
+      "Mathlib/AlgebraicTopology/SimplicialSet/FundamentalGroupoid/Basic.lean",
+      "Mathlib/AlgebraicTopology/SimplicialSet/FundamentalGroupoid/Homotopy.lean"
+     ]
+    },
     {
      "date": "2026-10-14",
      "title": "The Reedy structure on the simplex category",
@@ -1984,29 +1988,6 @@
       "Mathlib/AlgebraicTopology/SimplexCategory/MorphismProperty.lean",
       "Mathlib/AlgebraicTopology/SimplexCategory/Truncated.lean"
      ]
-    },
-    {
-     "date": "2026-10-10",
-     "title": "The fundamental groupoid",
-     "scope": "AlgebraicTopology/SimplicialSet",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42523",
-     "ai": false,
-     "sha": "88d917f464a8cfa7e1ad44280ec64ba93ed39626",
-     "files": [
-      "Mathlib/AlgebraicTopology/SimplicialObject/Basic.lean",
-      "Mathlib/AlgebraicTopology/SimplicialSet/FundamentalGroupoid/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-10-09",
-     "title": "Close TODOs simplicial category",
-     "scope": "AlgebraicTopology/SimplicialCategory",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44419",
-     "ai": false,
-     "sha": "bfe80ca14530f46f85728288be5ec7c24777c313",
-     "files": [
-      "Mathlib/AlgebraicTopology/SimplicialCategory/Basic.lean"
-     ]
     }
    ],
    "overview": "field-algebraic_topology.json"
@@ -2016,9 +1997,25 @@
     "Mathlib/Dynamics"
    ],
    "files": 35,
-   "additions": 8,
+   "additions": 9,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-14",
+     "title": "Balls",
+     "scope": "Basic/Rel",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/33077",
+     "ai": false,
+     "sha": "f1987d78ee52d63c3b47828e7f432a30cbac2270",
+     "files": [
+      "Mathlib/Basic/Rel.lean",
+      "Mathlib/Basic/Rel/Cover.lean",
+      "Mathlib/Dynamics/TopologicalEntropy/CoverEntropy.lean",
+      "Mathlib/Dynamics/TopologicalEntropy/DynamicalEntourage.lean",
+      "Mathlib/Dynamics/TopologicalEntropy/NetEntropy.lean",
+      "Mathlib/Topology/Algebra/Module/LocallyConvex.lean"
+     ]
+    },
     {
      "date": "2026-10-04",
      "title": "Measurability of set operations",
@@ -2078,17 +2075,6 @@
       "Mathlib/Analysis/Asymptotics/TVS.lean",
       "Mathlib/Analysis/CStarAlgebra/ApproximateUnit.lean"
      ]
-    },
-    {
-     "date": "2026-08-27",
-     "title": "Prove LanguageOn monotonicity under intersection",
-     "scope": "SymbolicDynamics",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/39294",
-     "ai": false,
-     "sha": "13a54b98c4418f7f36b3b585a143a92d9cc2ff4f",
-     "files": [
-      "Mathlib/Dynamics/SymbolicDynamics/Basic.lean"
-     ]
     }
    ],
    "overview": "field-dynamical_systems.json"
@@ -2099,8 +2085,23 @@
    ],
    "files": 339,
    "additions": 45,
-   "ai_additions": 4,
+   "ai_additions": 3,
    "recent": [
+    {
+     "date": "2026-10-15",
+     "title": "Closed and compact square cylinders form a compact system",
+     "scope": "Topology/Compactness/CompactSystem",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/36160",
+     "ai": false,
+     "sha": "f014e73d21d30e10995e35ae8020d9c2ecb072a1",
+     "files": [
+      "Mathlib/Data/Set/Lattice/Bounded.lean",
+      "Mathlib/Data/Set/Lattice/Image.lean",
+      "Mathlib/Data/Set/Prod.lean",
+      "Mathlib/MeasureTheory/Constructions/Cylinders.lean",
+      "Mathlib/Topology/Compactness/CompactSystem.lean"
+     ]
+    },
     {
      "date": "2026-10-13",
      "title": "Remove an hypothesis of `UnifIntegrable.add`",
@@ -2155,21 +2156,6 @@
       "Mathlib/Analysis/Convolution.lean",
       "Mathlib/MeasureTheory/Integral/Prod.lean",
       "Mathlib/MeasureTheory/Measure/Prod.lean"
-     ]
-    },
-    {
-     "date": "2026-10-05",
-     "title": "Use `IsApply` for `AlternatingMap`",
-     "scope": "LinearAlgebra",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42140",
-     "ai": false,
-     "sha": "ff9a7c19e5c26a798978176b0c5cd03c426fd74f",
-     "files": [
-      "Mathlib/LinearAlgebra/Alternating/Basic.lean",
-      "Mathlib/LinearAlgebra/Alternating/DomCoprod.lean",
-      "Mathlib/LinearAlgebra/Determinant.lean",
-      "Mathlib/LinearAlgebra/Orientation.lean",
-      "Mathlib/MeasureTheory/Measure/Lebesgue/EqHaar.lean"
      ]
     }
    ],
@@ -2255,9 +2241,40 @@
     "Mathlib/Topology"
    ],
    "files": 703,
-   "additions": 89,
+   "additions": 91,
    "ai_additions": 5,
    "recent": [
+    {
+     "date": "2026-10-15",
+     "title": "Closed and compact square cylinders form a compact system",
+     "scope": "Topology/Compactness/CompactSystem",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/36160",
+     "ai": false,
+     "sha": "f014e73d21d30e10995e35ae8020d9c2ecb072a1",
+     "files": [
+      "Mathlib/Data/Set/Lattice/Bounded.lean",
+      "Mathlib/Data/Set/Lattice/Image.lean",
+      "Mathlib/Data/Set/Prod.lean",
+      "Mathlib/MeasureTheory/Constructions/Cylinders.lean",
+      "Mathlib/Topology/Compactness/CompactSystem.lean"
+     ]
+    },
+    {
+     "date": "2026-10-14",
+     "title": "Balls",
+     "scope": "Basic/Rel",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/33077",
+     "ai": false,
+     "sha": "f1987d78ee52d63c3b47828e7f432a30cbac2270",
+     "files": [
+      "Mathlib/Basic/Rel.lean",
+      "Mathlib/Basic/Rel/Cover.lean",
+      "Mathlib/Dynamics/TopologicalEntropy/CoverEntropy.lean",
+      "Mathlib/Dynamics/TopologicalEntropy/DynamicalEntourage.lean",
+      "Mathlib/Dynamics/TopologicalEntropy/NetEntropy.lean",
+      "Mathlib/Topology/Algebra/Module/LocallyConvex.lean"
+     ]
+    },
     {
      "date": "2026-10-14",
      "title": "Grind patterns for cfc junk values",
@@ -2299,34 +2316,6 @@
      "files": [
       "Mathlib/Topology/Algebra/Group/Units.lean",
       "Mathlib/Topology/Algebra/IsOpenUnits.lean"
-     ]
-    },
-    {
-     "date": "2026-10-13",
-     "title": "Linear map version of `apply`",
-     "scope": "Topology/Algebra/Module/Spaces/CLM",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43112",
-     "ai": false,
-     "sha": "6fb4b5da2701d9c70c0862aa2b1504a5bca66554",
-     "files": [
-      "Mathlib/Analysis/Normed/Operator/Bilinear.lean",
-      "Mathlib/Topology/Algebra/Module/Spaces/ContinuousLinearMap.lean"
-     ]
-    },
-    {
-     "date": "2026-10-10",
-     "title": "Weaken assumptions on theorems about `FloorRing`",
-     "scope": "Algebra/Order/Floor",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/37964",
-     "ai": false,
-     "sha": "993089ffdf657abb6c628528bd41556f7e16a04f",
-     "files": [
-      "Mathlib/Algebra/ContinuedFractions/Computation/Translations.lean",
-      "Mathlib/Algebra/Order/Floor/Defs.lean",
-      "Mathlib/Algebra/Order/Floor/Ring.lean",
-      "Mathlib/Algebra/Order/Floor/Semifield.lean",
-      "Mathlib/Algebra/Order/Floor/Semiring.lean",
-      "Mathlib/Algebra/Order/Round.lean"
      ]
     }
    ],
@@ -2916,7 +2905,7 @@
     "Mathlib/Data/Int"
    ],
    "files": 124,
-   "additions": 25,
+   "additions": 24,
    "ai_additions": 0,
    "recent": [
     {
@@ -3286,9 +3275,21 @@
     "Mathlib/Geometry/Manifold/Algebra"
    ],
    "files": 66,
-   "additions": 9,
+   "additions": 10,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-14",
+     "title": "Solvability is an exact property for Lie algebras",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44818",
+     "ai": false,
+     "sha": "ef6152065324ea62283621f7e5911f2186525637",
+     "files": [
+      "Mathlib/Algebra/Lie/Quotient.lean",
+      "Mathlib/Algebra/Lie/Solvable.lean"
+     ]
+    },
     {
      "date": "2026-09-30",
      "title": "Add coercion and norm_cast attributes for Lie Ideals",
@@ -3340,22 +3341,6 @@
      "sha": "01c8d16a8c31eed40a54a38a8c8006c4ee001152",
      "files": [
       "Mathlib/Algebra/Lie/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-09-08",
-     "title": "Supporting API for Cartan matrix realisations",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43460",
-     "ai": false,
-     "sha": "f965aad7c522f43bab6b43fb0ec2afe1e2ba022c",
-     "files": [
-      "Mathlib/Algebra/Lie/SerreConstruction.lean",
-      "Mathlib/Analysis/Matrix/PosDef.lean",
-      "Mathlib/Data/Matrix/Mul.lean",
-      "Mathlib/GroupTheory/Perm/Fin.lean",
-      "Mathlib/LinearAlgebra/Matrix/Cartan/Basic.lean",
-      "Mathlib/LinearAlgebra/Matrix/Hermitian.lean"
      ]
     }
    ],
@@ -3444,7 +3429,7 @@
     "Mathlib/CategoryTheory/Abelian"
    ],
    "files": 215,
-   "additions": 17,
+   "additions": 16,
    "ai_additions": 0,
    "recent": [
     {
@@ -3672,9 +3657,20 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 79,
-   "additions": 19,
+   "additions": 20,
    "ai_additions": 3,
    "recent": [
+    {
+     "date": "2026-10-14",
+     "title": "ContMDiff.mvfderiv and friends",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44711",
+     "ai": false,
+     "sha": "b5d0cc06b31c729ed3eb5c7fc55d7b767f8be9c7",
+     "files": [
+      "Mathlib/Geometry/Manifold/ContMDiffMFDeriv.lean"
+     ]
+    },
     {
      "date": "2026-10-13",
      "title": "Support continuous alternating maps in differential geometry el…",
@@ -3723,22 +3719,6 @@
       "Mathlib/Geometry/Manifold/ContMDiff/Basic.lean",
       "Mathlib/Geometry/Manifold/IsManifold/ExtChartAt.lean",
       "Mathlib/Geometry/Manifold/MFDeriv/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-09-29",
-     "title": "Introduce an IsNormableSpace class",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42983",
-     "ai": false,
-     "sha": "cba67dece737ecab8cd5a3e96c2bfa81b0890111",
-     "files": [
-      "Mathlib/Analysis/LocallyConvex/WithSeminorms.lean",
-      "Mathlib/Analysis/Normed/Module/Dual.lean",
-      "Mathlib/Analysis/Normed/Operator/Basic.lean",
-      "Mathlib/Analysis/Normed/Operator/Bilinear.lean",
-      "Mathlib/Analysis/Normed/Operator/CompleteCodomain.lean",
-      "Mathlib/Analysis/Normed/Operator/NormedSpace.lean"
      ]
     }
    ],
@@ -3780,9 +3760,20 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 79,
-   "additions": 19,
+   "additions": 20,
    "ai_additions": 3,
    "recent": [
+    {
+     "date": "2026-10-14",
+     "title": "ContMDiff.mvfderiv and friends",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44711",
+     "ai": false,
+     "sha": "b5d0cc06b31c729ed3eb5c7fc55d7b767f8be9c7",
+     "files": [
+      "Mathlib/Geometry/Manifold/ContMDiffMFDeriv.lean"
+     ]
+    },
     {
      "date": "2026-10-13",
      "title": "Support continuous alternating maps in differential geometry el…",
@@ -3831,22 +3822,6 @@
       "Mathlib/Geometry/Manifold/ContMDiff/Basic.lean",
       "Mathlib/Geometry/Manifold/IsManifold/ExtChartAt.lean",
       "Mathlib/Geometry/Manifold/MFDeriv/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-09-29",
-     "title": "Introduce an IsNormableSpace class",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42983",
-     "ai": false,
-     "sha": "cba67dece737ecab8cd5a3e96c2bfa81b0890111",
-     "files": [
-      "Mathlib/Analysis/LocallyConvex/WithSeminorms.lean",
-      "Mathlib/Analysis/Normed/Module/Dual.lean",
-      "Mathlib/Analysis/Normed/Operator/Basic.lean",
-      "Mathlib/Analysis/Normed/Operator/Bilinear.lean",
-      "Mathlib/Analysis/Normed/Operator/CompleteCodomain.lean",
-      "Mathlib/Analysis/Normed/Operator/NormedSpace.lean"
      ]
     }
    ],
@@ -3933,9 +3908,25 @@
     "Mathlib/Analysis/Complex"
    ],
    "files": 108,
-   "additions": 24,
+   "additions": 25,
    "ai_additions": 6,
    "recent": [
+    {
+     "date": "2026-10-14",
+     "title": "Balls",
+     "scope": "Basic/Rel",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/33077",
+     "ai": false,
+     "sha": "f1987d78ee52d63c3b47828e7f432a30cbac2270",
+     "files": [
+      "Mathlib/Basic/Rel.lean",
+      "Mathlib/Basic/Rel/Cover.lean",
+      "Mathlib/Dynamics/TopologicalEntropy/CoverEntropy.lean",
+      "Mathlib/Dynamics/TopologicalEntropy/DynamicalEntourage.lean",
+      "Mathlib/Dynamics/TopologicalEntropy/NetEntropy.lean",
+      "Mathlib/Topology/Algebra/Module/LocallyConvex.lean"
+     ]
+    },
     {
      "date": "2026-10-13",
      "title": "Liouville theorem for entire functions with polynomial growth",
@@ -3991,17 +3982,6 @@
       "Mathlib/Analysis/Complex/ValueDistribution/Cartan.lean",
       "Mathlib/Analysis/Complex/ValueDistribution/FirstMainTheorem.lean"
      ]
-    },
-    {
-     "date": "2026-09-21",
-     "title": "Cusp function of zero",
-     "scope": "Analysis/Complex/Periodic",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43830",
-     "ai": false,
-     "sha": "adb0561476e86583cf3a0aea7bef0ea38746ebfe",
-     "files": [
-      "Mathlib/Analysis/Complex/Periodic.lean"
-     ]
     }
    ],
    "overview": "field-complex_dynamics.json"
@@ -4042,9 +4022,20 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 79,
-   "additions": 19,
+   "additions": 20,
    "ai_additions": 3,
    "recent": [
+    {
+     "date": "2026-10-14",
+     "title": "ContMDiff.mvfderiv and friends",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44711",
+     "ai": false,
+     "sha": "b5d0cc06b31c729ed3eb5c7fc55d7b767f8be9c7",
+     "files": [
+      "Mathlib/Geometry/Manifold/ContMDiffMFDeriv.lean"
+     ]
+    },
     {
      "date": "2026-10-13",
      "title": "Support continuous alternating maps in differential geometry el…",
@@ -4093,22 +4084,6 @@
       "Mathlib/Geometry/Manifold/ContMDiff/Basic.lean",
       "Mathlib/Geometry/Manifold/IsManifold/ExtChartAt.lean",
       "Mathlib/Geometry/Manifold/MFDeriv/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-09-29",
-     "title": "Introduce an IsNormableSpace class",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42983",
-     "ai": false,
-     "sha": "cba67dece737ecab8cd5a3e96c2bfa81b0890111",
-     "files": [
-      "Mathlib/Analysis/LocallyConvex/WithSeminorms.lean",
-      "Mathlib/Analysis/Normed/Module/Dual.lean",
-      "Mathlib/Analysis/Normed/Operator/Basic.lean",
-      "Mathlib/Analysis/Normed/Operator/Bilinear.lean",
-      "Mathlib/Analysis/Normed/Operator/CompleteCodomain.lean",
-      "Mathlib/Analysis/Normed/Operator/NormedSpace.lean"
      ]
     }
    ],
@@ -4359,9 +4334,21 @@
     "Mathlib/Algebra/Lie"
    ],
    "files": 75,
-   "additions": 9,
+   "additions": 10,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-14",
+     "title": "Solvability is an exact property for Lie algebras",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44818",
+     "ai": false,
+     "sha": "ef6152065324ea62283621f7e5911f2186525637",
+     "files": [
+      "Mathlib/Algebra/Lie/Quotient.lean",
+      "Mathlib/Algebra/Lie/Solvable.lean"
+     ]
+    },
     {
      "date": "2026-09-30",
      "title": "Add coercion and norm_cast attributes for Lie Ideals",
@@ -4413,22 +4400,6 @@
      "sha": "01c8d16a8c31eed40a54a38a8c8006c4ee001152",
      "files": [
       "Mathlib/Algebra/Lie/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-09-08",
-     "title": "Supporting API for Cartan matrix realisations",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43460",
-     "ai": false,
-     "sha": "f965aad7c522f43bab6b43fb0ec2afe1e2ba022c",
-     "files": [
-      "Mathlib/Algebra/Lie/SerreConstruction.lean",
-      "Mathlib/Analysis/Matrix/PosDef.lean",
-      "Mathlib/Data/Matrix/Mul.lean",
-      "Mathlib/GroupTheory/Perm/Fin.lean",
-      "Mathlib/LinearAlgebra/Matrix/Cartan/Basic.lean",
-      "Mathlib/LinearAlgebra/Matrix/Hermitian.lean"
      ]
     }
    ],
@@ -4730,7 +4701,7 @@
     "Mathlib/Data/Nat/Choose"
    ],
    "files": 212,
-   "additions": 43,
+   "additions": 42,
    "ai_additions": 2,
    "recent": [
     {
@@ -5110,6 +5081,156 @@
   }
  },
  "feed": [
+  {
+   "date": "2026-10-15",
+   "title": "Closed and compact square cylinders form a compact system",
+   "scope": "Topology/Compactness/CompactSystem",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/36160",
+   "ai": false,
+   "sha": "f014e73d21d30e10995e35ae8020d9c2ecb072a1",
+   "files": [
+    "Mathlib/Data/Set/Lattice/Bounded.lean",
+    "Mathlib/Data/Set/Lattice/Image.lean",
+    "Mathlib/Data/Set/Prod.lean",
+    "Mathlib/MeasureTheory/Constructions/Cylinders.lean",
+    "Mathlib/Topology/Compactness/CompactSystem.lean"
+   ],
+   "fields": [
+    "measure_theory",
+    "point_set_topology"
+   ]
+  },
+  {
+   "date": "2026-10-14",
+   "title": "Solvability is an exact property for Lie algebras",
+   "scope": null,
+   "url": "https://github.com/leanprover-community/mathlib4/pull/44818",
+   "ai": false,
+   "sha": "ef6152065324ea62283621f7e5911f2186525637",
+   "files": [
+    "Mathlib/Algebra/Lie/Quotient.lean",
+    "Mathlib/Algebra/Lie/Solvable.lean"
+   ],
+   "fields": [
+    "lie_theory",
+    "gauge_theory"
+   ]
+  },
+  {
+   "date": "2026-10-14",
+   "title": "Misc filter limit lemmas",
+   "scope": "Order/Filter",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/44847",
+   "ai": true,
+   "sha": "e2d19419b0cded0511f4130186fc9c8a32e04eb8",
+   "files": [
+    "Mathlib/Order/Filter/AtTopBot/Ring.lean",
+    "Mathlib/Order/Filter/Pointwise.lean"
+   ],
+   "fields": [
+    "rigorous_analysis"
+   ]
+  },
+  {
+   "date": "2026-10-14",
+   "title": "Balls",
+   "scope": "Basic/Rel",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/33077",
+   "ai": false,
+   "sha": "f1987d78ee52d63c3b47828e7f432a30cbac2270",
+   "files": [
+    "Mathlib/Basic/Rel.lean",
+    "Mathlib/Basic/Rel/Cover.lean",
+    "Mathlib/Dynamics/TopologicalEntropy/CoverEntropy.lean",
+    "Mathlib/Dynamics/TopologicalEntropy/DynamicalEntourage.lean",
+    "Mathlib/Dynamics/TopologicalEntropy/NetEntropy.lean",
+    "Mathlib/Topology/Algebra/Module/LocallyConvex.lean"
+   ],
+   "fields": [
+    "dynamical_systems",
+    "point_set_topology",
+    "complex_dynamics"
+   ]
+  },
+  {
+   "date": "2026-10-14",
+   "title": "Composition of edges in quasicategories",
+   "scope": "AlgebraicTopology",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/44775",
+   "ai": false,
+   "sha": "e438a8a8329af5bd73274043f9f21795594c6bfb",
+   "files": [
+    "Mathlib/AlgebraicTopology/Quasicategory/CompStruct.lean",
+    "Mathlib/AlgebraicTopology/Quasicategory/TwoTruncated.lean"
+   ],
+   "fields": [
+    "algebraic_topology"
+   ]
+  },
+  {
+   "date": "2026-10-14",
+   "title": "ContMDiff.mvfderiv and friends",
+   "scope": null,
+   "url": "https://github.com/leanprover-community/mathlib4/pull/44711",
+   "ai": false,
+   "sha": "b5d0cc06b31c729ed3eb5c7fc55d7b767f8be9c7",
+   "files": [
+    "Mathlib/Geometry/Manifold/ContMDiffMFDeriv.lean"
+   ],
+   "fields": [
+    "differential_geometry",
+    "differential_topology",
+    "poincare_proof",
+    "general_relativity"
+   ]
+  },
+  {
+   "date": "2026-10-14",
+   "title": "South / north pole of a simplex",
+   "scope": "Geometry/Euclidean/Incenter/SouthPole",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/44794",
+   "ai": false,
+   "sha": "f816245f5d0cb6c9be357e90340a1d857bfc8e87",
+   "files": [
+    "Mathlib/Geometry/Euclidean/Incenter/SouthPole.lean"
+   ],
+   "fields": [
+    "euclid"
+   ]
+  },
+  {
+   "date": "2026-10-14",
+   "title": "Distance from vertex to nine-point circle center",
+   "scope": "Geometry/Euclidean",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/44218",
+   "ai": false,
+   "sha": "12cf93f81c8f8b8bd365cc1365cf509c8b1e3aaf",
+   "files": [
+    "Mathlib/Geometry/Euclidean/Circumcenter.lean",
+    "Mathlib/Geometry/Euclidean/NinePointCircle.lean",
+    "Mathlib/LinearAlgebra/AffineSpace/Simplex/Centroid.lean"
+   ],
+   "fields": [
+    "euclid",
+    "analytic_geometry",
+    "linear_algebra"
+   ]
+  },
+  {
+   "date": "2026-10-14",
+   "title": "Homotopic maps induce isomorphic functors",
+   "scope": "AlgebraicTopology/SimplicialSet/FundamentalGroupoid",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/42576",
+   "ai": false,
+   "sha": "f8b885ace592668c139236c04ceffbed88f65504",
+   "files": [
+    "Mathlib/AlgebraicTopology/SimplicialSet/FundamentalGroupoid/Basic.lean",
+    "Mathlib/AlgebraicTopology/SimplicialSet/FundamentalGroupoid/Homotopy.lean"
+   ],
+   "fields": [
+    "algebraic_topology"
+   ]
+  },
   {
    "date": "2026-10-14",
    "title": "The Reedy structure on the simplex category",
@@ -5951,128 +6072,6 @@
    ]
   },
   {
-   "date": "2026-10-09",
-   "title": "Add per-model entry certifiers and switched to a reflection-based certificate",
-   "scope": "Tactic/Echelon",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/43438",
-   "ai": false,
-   "sha": "25e572b8074098af3f09d4cb2a4231cbdc584534",
-   "files": [
-    "Mathlib/LinearAlgebra/Matrix/Echelon/Decomposition.lean",
-    "Mathlib/Tactic.lean",
-    "Mathlib/Tactic/Echelon/Bareiss.lean",
-    "Mathlib/Tactic/Echelon/Cert.lean",
-    "Mathlib/Tactic/Echelon/Core.lean",
-    "Mathlib/Tactic/Echelon/Rat.lean"
-   ],
-   "fields": [
-    "linear_algebra",
-    "nine_chapters"
-   ]
-  },
-  {
-   "date": "2026-10-09",
-   "title": "`ValuativeRel` and `IsValuativeTopology (v.adicCompletion K)`",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44279",
-   "ai": false,
-   "sha": "95142c9c4fdb4ff9632553901cfc82d5c84a8ad4",
-   "files": [
-    "Mathlib/NumberTheory/Padics/HeightOneSpectrum.lean",
-    "Mathlib/RingTheory/DedekindDomain/AdicValuation.lean",
-    "Mathlib/RingTheory/LaurentSeries.lean",
-    "Mathlib/RingTheory/Valuation/ValuativeRel/Basic.lean",
-    "Mathlib/Topology/Algebra/ValuativeRel/ValuativeTopology.lean"
-   ],
-   "fields": [
-    "point_set_topology",
-    "abstract_algebra",
-    "algebraic_number_theory",
-    "p_adic"
-   ]
-  },
-  {
-   "date": "2026-10-08",
-   "title": "Closure properties of orthogonals and S. E. Dickson's theorem",
-   "scope": "CategoryTheory/ObjectProperty",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44226",
-   "ai": false,
-   "sha": "a6c28d046d566e64ccccfd03d0af65b142251f23",
-   "files": [
-    "Mathlib/CategoryTheory/Abelian/OrthogonalClosed.lean",
-    "Mathlib/CategoryTheory/Abelian/Subobject.lean",
-    "Mathlib/CategoryTheory/ObjectProperty/EpiMono.lean",
-    "Mathlib/CategoryTheory/ObjectProperty/Extensions.lean",
-    "Mathlib/CategoryTheory/ObjectProperty/Orthogonal.lean",
-    "Mathlib/CategoryTheory/ObjectProperty/OrthogonalLimits.lean"
-   ],
-   "fields": [
-    "category_theory",
-    "homological_algebra"
-   ]
-  },
-  {
-   "date": "2026-10-08",
-   "title": "The delta distribution is induced by the dirac measure",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/41884",
-   "ai": false,
-   "sha": "968097f29589fc5d77b41a6eac235a9a8977696d",
-   "files": [
-    "Mathlib/Analysis/Distribution/Distribution.lean"
-   ],
-   "fields": [
-    "pde"
-   ]
-  },
-  {
-   "date": "2026-10-08",
-   "title": "Zero-dimensional spaces",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/40901",
-   "ai": false,
-   "sha": "cb08acac385772a235cfa5bea8a52ae96f1e7130",
-   "files": [
-    "Mathlib/Topology/Algebra/ClopenNhdofOne.lean",
-    "Mathlib/Topology/Category/Profinite/Basic.lean",
-    "Mathlib/Topology/ClopenBox.lean",
-    "Mathlib/Topology/Connected/TotallyDisconnected.lean",
-    "Mathlib/Topology/InductiveDimension/Classes.lean",
-    "Mathlib/Topology/Metrizable/Basic.lean"
-   ],
-   "fields": [
-    "point_set_topology"
-   ]
-  },
-  {
-   "date": "2026-10-08",
-   "title": "Base change of exterior algebra",
-   "scope": "LinearAlgebra",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44604",
-   "ai": false,
-   "sha": "d1a28f4132a183f8dc05f46156e603fd326858e7",
-   "files": [
-    "Mathlib/LinearAlgebra/ExteriorAlgebra/BaseChange.lean"
-   ],
-   "fields": [
-    "linear_algebra"
-   ]
-  },
-  {
-   "date": "2026-10-08",
-   "title": "Add `IsClosed.nhdsSet_inter_eq`",
-   "scope": "Topology",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44587",
-   "ai": false,
-   "sha": "76dc6b8c79e734bceb577d3450b79c90985d89fe",
-   "files": [
-    "Mathlib/Topology/Separation/Regular.lean"
-   ],
-   "fields": [
-    "point_set_topology"
-   ]
-  },
-  {
    "date": "2026-10-08",
    "title": "Integer powers of integral elements are integral",
    "scope": "RingTheory/IntegralClosure",
@@ -6080,24 +6079,6 @@
    "ai": true,
    "sha": "19b96f57da082d81a8fe7ca247e0bd36970449fd",
    "files": [
-    "Mathlib/RingTheory/IntegralClosure/IsIntegralClosure/Basic.lean"
-   ],
-   "fields": [
-    "abstract_algebra"
-   ]
-  },
-  {
-   "date": "2026-10-08",
-   "title": "Add instances for `adjoin`",
-   "scope": "RingTheory,FieldTheory",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/42154",
-   "ai": false,
-   "sha": "62bf13aabd0db1bf4cbe2a6ec087c6f7a677f448",
-   "files": [
-    "Mathlib/FieldTheory/IntermediateField/Adjoin/Algebra.lean",
-    "Mathlib/FieldTheory/IntermediateField/Adjoin/Basic.lean",
-    "Mathlib/RingTheory/FiniteType.lean",
-    "Mathlib/RingTheory/IntegralClosure/Algebra/Basic.lean",
     "Mathlib/RingTheory/IntegralClosure/IsIntegralClosure/Basic.lean"
    ],
    "fields": [
@@ -6873,20 +6854,6 @@
    "fields": [
     "category_theory"
    ]
-  },
-  {
-   "date": "2026-08-15",
-   "title": "Émile Borel's classic \"Growth Lemma\"",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/41529",
-   "ai": true,
-   "sha": "4423f2e21c23b75e2a621ed0eb4b51223e5ed594",
-   "files": [
-    "Mathlib/MeasureTheory/Function/BorelGrowth.lean"
-   ],
-   "fields": [
-    "measure_theory"
-   ]
   }
  ],
  "projects": [
@@ -6956,10 +6923,10 @@
    "kind": "benchmark",
    "description": "Google DeepMind's collection of open conjectures (Erdős problems and others) stated in Lean, used as targets for provers.",
    "url": "https://github.com/google-deepmind/formal-conjectures",
-   "updated": "2026-10-14",
+   "updated": "2026-10-15",
    "latest": {
-    "title": " chore: tag every yes-or-no question with the question attribute  (#6740)",
-    "url": "https://github.com/google-deepmind/formal-conjectures/commit/75a6d3d52d0b87e78317f2fcc37319d807779030"
+    "title": "Add the Courtade–Kumar conjecture (Paper/CourtadeKumar.lean) (#6688)",
+    "url": "https://github.com/google-deepmind/formal-conjectures/commit/79eac378a26b46d30974cdb33962e0752591b79d"
    },
    "overview": "google-deepmind__formal-conjectures.json",
    "lean_files": 400
