@@ -1,13 +1,13 @@
 {
- "generated": "2026-10-15T11:25Z",
+ "generated": "2026-10-16T11:20Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "aa35a481e5f0cdb3b04a899ead15d6ca7305a624",
-  "date": "2026-10-15",
-  "files": 8631,
-  "changes": 1406,
-  "additions": 716,
-  "ai_additions": 70
+  "commit": "84ae8648849abaf3f72bc9a84cfbe2692090a94b",
+  "date": "2026-10-16",
+  "files": 8633,
+  "changes": 1390,
+  "additions": 705,
+  "ai_additions": 72
  },
  "fields": {
   "babylonian": {
@@ -16,9 +16,22 @@
     "Mathlib/NumberTheory/PythagoreanTriples"
    ],
    "files": 4,
-   "additions": 0,
-   "ai_additions": 0,
-   "recent": [],
+   "additions": 1,
+   "ai_additions": 1,
+   "recent": [
+    {
+     "date": "2026-10-16",
+     "title": "Add digitsAppend API lemmas and List.mapIdx_replicate",
+     "scope": "Data/Nat/Digits",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/40302",
+     "ai": true,
+     "sha": "77f572715e820522fc789387a168a1e6862ed0c8",
+     "files": [
+      "Mathlib/Data/List/Indexes.lean",
+      "Mathlib/Data/Nat/Digits/Lemmas.lean"
+     ]
+    }
+   ],
    "overview": "field-babylonian.json"
   },
   "egyptian_geometry": {
@@ -90,7 +103,7 @@
     "Mathlib/Data/Int/GCD"
    ],
    "files": 53,
-   "additions": 22,
+   "additions": 21,
    "ai_additions": 3,
    "recent": [
     {
@@ -320,8 +333,20 @@
    ],
    "files": 58,
    "additions": 10,
-   "ai_additions": 1,
+   "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-10-16",
+     "title": "Add digitsAppend API lemmas and List.mapIdx_replicate",
+     "scope": "Data/Nat/Digits",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/40302",
+     "ai": true,
+     "sha": "77f572715e820522fc789387a168a1e6862ed0c8",
+     "files": [
+      "Mathlib/Data/List/Indexes.lean",
+      "Mathlib/Data/Nat/Digits/Lemmas.lean"
+     ]
+    },
     {
      "date": "2026-10-10",
      "title": "Generalize SMulZeroClass to MonoidWithZero and lift MulDistribMulAction to nonZeroDivisors",
@@ -372,18 +397,6 @@
      "files": [
       "Mathlib/Algebra/GroupWithZero/Units/Lemmas.lean"
      ]
-    },
-    {
-     "date": "2026-09-12",
-     "title": "Divisibility is a preorder",
-     "scope": "Algebra/Divisibility/Basic",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43686",
-     "ai": false,
-     "sha": "aa21122bf6e385a6828b017c7f22cdfdedaee6a9",
-     "files": [
-      "Mathlib/Algebra/Divisibility/Basic.lean",
-      "Mathlib/Algebra/GroupWithZero/Divisibility.lean"
-     ]
     }
    ],
    "overview": "field-zero.json"
@@ -394,9 +407,22 @@
     "Mathlib/Algebra/Polynomial"
    ],
    "files": 64,
-   "additions": 12,
+   "additions": 13,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-10-15",
+     "title": "The sign of a polynomial immediately to the right of a point",
+     "scope": "Analysis/Polynomial",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44248",
+     "ai": false,
+     "sha": "772fc032a9ac06bef731c47012e6f1f684a1c49b",
+     "files": [
+      "Mathlib/Algebra/Polynomial/FieldDivision.lean",
+      "Mathlib/Analysis/Polynomial/SignRight.lean",
+      "Mathlib/Topology/Instances/Sign.lean"
+     ]
+    },
     {
      "date": "2026-10-13",
      "title": "Condition for `Polynomial.coeffs p ⊆ s`",
@@ -444,18 +470,6 @@
       "Mathlib/LinearAlgebra/TensorProduct/Basis.lean",
       "Mathlib/LinearAlgebra/TensorProduct/Lift.lean",
       "Mathlib/RingTheory/TensorProduct/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-09-15",
-     "title": "Add List.signVariations",
-     "scope": "Data/List/SignVariations",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43783",
-     "ai": true,
-     "sha": "b1383a37134f0e4bfb9f4e59e84d0bbf41f0c17b",
-     "files": [
-      "Mathlib/Algebra/Polynomial/RuleOfSigns.lean",
-      "Mathlib/Data/List/SignVariations.lean"
      ]
     }
    ],
@@ -874,9 +888,20 @@
     "Mathlib/Combinatorics/Digraph"
    ],
    "files": 90,
-   "additions": 31,
+   "additions": 32,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-15",
+     "title": "Simple graph is 2-edge-connected iff it has no bridge",
+     "scope": "Combinatorics/SimpleGraph/Connectivity",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42839",
+     "ai": false,
+     "sha": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+     "files": [
+      "Mathlib/Combinatorics/SimpleGraph/Connectivity/EdgeConnectivity.lean"
+     ]
+    },
     {
      "date": "2026-10-13",
      "title": "Hamiltonian cycle from cyclic permutation",
@@ -926,17 +951,6 @@
       "Mathlib/Combinatorics/SimpleGraph/Hasse.lean",
       "Mathlib/Data/Fintype/Defs.lean",
       "Mathlib/Order/Cover.lean"
-     ]
-    },
-    {
-     "date": "2026-10-10",
-     "title": "`s(u, w) ∈ p.edges ↔ w = p.snd` for paths",
-     "scope": "Combinatorics/SimpleGraph/Paths",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44472",
-     "ai": false,
-     "sha": "aa4180fd65f90dd50307a354941dfbee635cf9d2",
-     "files": [
-      "Mathlib/Combinatorics/SimpleGraph/Paths.lean"
      ]
     }
    ],
@@ -1141,7 +1155,7 @@
     "Mathlib/Order/Filter"
    ],
    "files": 65,
-   "additions": 7,
+   "additions": 6,
    "ai_additions": 1,
    "recent": [
     {
@@ -1457,7 +1471,7 @@
     "Mathlib/FieldTheory/AbelRuffini"
    ],
    "files": 180,
-   "additions": 41,
+   "additions": 40,
    "ai_additions": 11,
    "recent": [
     {
@@ -1623,9 +1637,21 @@
     "Mathlib/Data/Matrix"
    ],
    "files": 403,
-   "additions": 70,
-   "ai_additions": 5,
+   "additions": 69,
+   "ai_additions": 6,
    "recent": [
+    {
+     "date": "2026-10-16",
+     "title": "Prove `comap_ringConGen_equiv` (`proof_wanted`)",
+     "scope": "RingTheory",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43418",
+     "ai": true,
+     "sha": "9b18f3510a221df759474fe313e8310cd4f06ca0",
+     "files": [
+      "Mathlib/LinearAlgebra/FreeProduct/Basic.lean",
+      "Mathlib/RingTheory/Congruence/Basic.lean"
+     ]
+    },
     {
      "date": "2026-10-14",
      "title": "Distance from vertex to nine-point circle center",
@@ -1671,18 +1697,6 @@
      "sha": "b27dc32d4fcf7c2cd45b52949b4f3cfab32fbcdb",
      "files": [
       "Mathlib/LinearAlgebra/PiTensorProduct/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-10-12",
-     "title": "Exists affinely independent set of a cardinality dim + 1",
-     "scope": "AffineSpace",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43910",
-     "ai": false,
-     "sha": "56557d86ab23b9c4a2982a2d9d21dd4fde7dd02a",
-     "files": [
-      "Mathlib/LinearAlgebra/AffineSpace/FiniteDimensional.lean",
-      "Mathlib/LinearAlgebra/AffineSpace/Independent.lean"
      ]
     }
    ],
@@ -1851,7 +1865,7 @@
     "Mathlib/RingTheory/Nullstellensatz"
    ],
    "files": 141,
-   "additions": 12,
+   "additions": 11,
    "ai_additions": 1,
    "recent": [
     {
@@ -2084,7 +2098,7 @@
     "Mathlib/MeasureTheory"
    ],
    "files": 339,
-   "additions": 45,
+   "additions": 44,
    "ai_additions": 3,
    "recent": [
     {
@@ -2167,7 +2181,7 @@
     "Mathlib/Analysis/InnerProductSpace"
    ],
    "files": 222,
-   "additions": 48,
+   "additions": 46,
    "ai_additions": 2,
    "recent": [
     {
@@ -2241,9 +2255,44 @@
     "Mathlib/Topology"
    ],
    "files": 703,
-   "additions": 91,
+   "additions": 93,
    "ai_additions": 5,
    "recent": [
+    {
+     "date": "2026-10-15",
+     "title": "The sign of a polynomial immediately to the right of a point",
+     "scope": "Analysis/Polynomial",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44248",
+     "ai": false,
+     "sha": "772fc032a9ac06bef731c47012e6f1f684a1c49b",
+     "files": [
+      "Mathlib/Algebra/Polynomial/FieldDivision.lean",
+      "Mathlib/Analysis/Polynomial/SignRight.lean",
+      "Mathlib/Topology/Instances/Sign.lean"
+     ]
+    },
+    {
+     "date": "2026-10-15",
+     "title": "Set system of finite unions of sets in a compact system is again a compact system",
+     "scope": "Topology/Compactness/CompactSystem",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/36089",
+     "ai": false,
+     "sha": "e91b128082cc221d6432a6a5aadcd3243af8e76c",
+     "files": [
+      "Mathlib/Topology/Compactness/CompactSystem.lean"
+     ]
+    },
+    {
+     "date": "2026-10-15",
+     "title": "Set system of countable intersections of sets in a compact system is again a compact system",
+     "scope": "Topology/Compactness/CompactSystem",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/36225",
+     "ai": false,
+     "sha": "7e34f44a3aa4320a254c230dcc469790a666a844",
+     "files": [
+      "Mathlib/Topology/Compactness/CompactSystem.lean"
+     ]
+    },
     {
      "date": "2026-10-15",
      "title": "Closed and compact square cylinders form a compact system",
@@ -2274,49 +2323,6 @@
       "Mathlib/Dynamics/TopologicalEntropy/NetEntropy.lean",
       "Mathlib/Topology/Algebra/Module/LocallyConvex.lean"
      ]
-    },
-    {
-     "date": "2026-10-14",
-     "title": "Grind patterns for cfc junk values",
-     "scope": "Analysis/CStarAlgebra",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43025",
-     "ai": false,
-     "sha": "074063781836922cb02701cd12943c9f51731afa",
-     "files": [
-      "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Basic.lean",
-      "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/NonUnital.lean",
-      "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Order.lean",
-      "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Range.lean",
-      "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Restrict.lean",
-      "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Unital.lean"
-     ]
-    },
-    {
-     "date": "2026-10-14",
-     "title": "Pushforward of uniform spaces",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43312",
-     "ai": false,
-     "sha": "f9254e257357eb9fce947e3ac01d428e4ba11d6a",
-     "files": [
-      "Mathlib/Topology/Algebra/Module/Spaces/UniformConvergenceCLM.lean",
-      "Mathlib/Topology/UniformSpace/Ascoli.lean",
-      "Mathlib/Topology/UniformSpace/Basic.lean",
-      "Mathlib/Topology/UniformSpace/Cauchy.lean",
-      "Mathlib/Topology/UniformSpace/UniformConvergenceTopology.lean"
-     ]
-    },
-    {
-     "date": "2026-10-13",
-     "title": "Product and units commute, and the units in products of topological monoids with open units are open (see also Topology/Algebra/IsOpenUnits)",
-     "scope": "Topology/Algebra/Group/Units",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44518",
-     "ai": false,
-     "sha": "351b828a5143bc061215ae0e957abd07481da365",
-     "files": [
-      "Mathlib/Topology/Algebra/Group/Units.lean",
-      "Mathlib/Topology/Algebra/IsOpenUnits.lean"
-     ]
     }
    ],
    "overview": "field-point_set_topology.json"
@@ -2328,9 +2334,21 @@
     "Mathlib/Algebra/Module"
    ],
    "files": 900,
-   "additions": 83,
-   "ai_additions": 20,
+   "additions": 76,
+   "ai_additions": 21,
    "recent": [
+    {
+     "date": "2026-10-16",
+     "title": "Prove `comap_ringConGen_equiv` (`proof_wanted`)",
+     "scope": "RingTheory",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43418",
+     "ai": true,
+     "sha": "9b18f3510a221df759474fe313e8310cd4f06ca0",
+     "files": [
+      "Mathlib/LinearAlgebra/FreeProduct/Basic.lean",
+      "Mathlib/RingTheory/Congruence/Basic.lean"
+     ]
+    },
     {
      "date": "2026-10-14",
      "title": "Add `MulEquiv` version of `Equiv.curry`",
@@ -2384,22 +2402,6 @@
       "Mathlib/Algebra/QuadraticAlgebra/Discriminant.lean",
       "Mathlib/Algebra/QuadraticAlgebra/Int.lean",
       "Mathlib/RingTheory/Localization/FractionRing.lean"
-     ]
-    },
-    {
-     "date": "2026-10-10",
-     "title": "Make two `Nontrivial` theorems low priority instances",
-     "scope": "LinearAlgebra",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44558",
-     "ai": false,
-     "sha": "2009088705a6dd4c77f8feb3b75c22f0448f9361",
-     "files": [
-      "Mathlib/Algebra/Module/SpanRank.lean",
-      "Mathlib/Algebra/QuadraticAlgebra/IsQuadraticExtension.lean",
-      "Mathlib/LinearAlgebra/Charpoly/Basic.lean",
-      "Mathlib/LinearAlgebra/Dimension/Constructions.lean",
-      "Mathlib/LinearAlgebra/Dimension/Finite.lean",
-      "Mathlib/LinearAlgebra/Dimension/Free.lean"
      ]
     }
    ],
@@ -2635,7 +2637,7 @@
     "Mathlib/AlgebraicGeometry"
    ],
    "files": 140,
-   "additions": 12,
+   "additions": 11,
    "ai_additions": 1,
    "recent": [
     {
@@ -2707,7 +2709,7 @@
     "Mathlib/RingTheory/Invariant"
    ],
    "files": 144,
-   "additions": 13,
+   "additions": 12,
    "ai_additions": 1,
    "recent": [
     {
@@ -3013,9 +3015,22 @@
     "Mathlib/Data/Nat/Digits"
    ],
    "files": 3,
-   "additions": 0,
-   "ai_additions": 0,
-   "recent": [],
+   "additions": 1,
+   "ai_additions": 1,
+   "recent": [
+    {
+     "date": "2026-10-16",
+     "title": "Add digitsAppend API lemmas and List.mapIdx_replicate",
+     "scope": "Data/Nat/Digits",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/40302",
+     "ai": true,
+     "sha": "77f572715e820522fc789387a168a1e6862ed0c8",
+     "files": [
+      "Mathlib/Data/List/Indexes.lean",
+      "Mathlib/Data/Nat/Digits/Lemmas.lean"
+     ]
+    }
+   ],
    "overview": "field-maya_zero.json"
   },
   "algebraic_number_theory": {
@@ -3025,7 +3040,7 @@
     "Mathlib/NumberTheory/Cyclotomic"
    ],
    "files": 62,
-   "additions": 15,
+   "additions": 13,
    "ai_additions": 3,
    "recent": [
     {
@@ -3104,7 +3119,7 @@
     "Mathlib/NumberTheory/Padics"
    ],
    "files": 19,
-   "additions": 9,
+   "additions": 8,
    "ai_additions": 0,
    "recent": [
     {
@@ -3184,7 +3199,7 @@
     "Mathlib/AlgebraicGeometry/EllipticCurve"
    ],
    "files": 19,
-   "additions": 6,
+   "additions": 5,
    "ai_additions": 0,
    "recent": [
     {
@@ -3429,7 +3444,7 @@
     "Mathlib/CategoryTheory/Abelian"
    ],
    "files": 215,
-   "additions": 16,
+   "additions": 15,
    "ai_additions": 0,
    "recent": [
     {
@@ -4095,7 +4110,7 @@
     "Mathlib/Analysis/CStarAlgebra"
    ],
    "files": 102,
-   "additions": 27,
+   "additions": 26,
    "ai_additions": 0,
    "recent": [
     {
@@ -4701,9 +4716,20 @@
     "Mathlib/Data/Nat/Choose"
    ],
    "files": 212,
-   "additions": 42,
+   "additions": 43,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-10-15",
+     "title": "Simple graph is 2-edge-connected iff it has no bridge",
+     "scope": "Combinatorics/SimpleGraph/Connectivity",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42839",
+     "ai": false,
+     "sha": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+     "files": [
+      "Mathlib/Combinatorics/SimpleGraph/Connectivity/EdgeConnectivity.lean"
+     ]
+    },
     {
      "date": "2026-10-13",
      "title": "Hamiltonian cycle from cyclic permutation",
@@ -4753,17 +4779,6 @@
       "Mathlib/Combinatorics/SimpleGraph/Hasse.lean",
       "Mathlib/Data/Fintype/Defs.lean",
       "Mathlib/Order/Cover.lean"
-     ]
-    },
-    {
-     "date": "2026-10-10",
-     "title": "`s(u, w) ∈ p.edges ↔ w = p.snd` for paths",
-     "scope": "Combinatorics/SimpleGraph/Paths",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44472",
-     "ai": false,
-     "sha": "aa4180fd65f90dd50307a354941dfbee635cf9d2",
-     "files": [
-      "Mathlib/Combinatorics/SimpleGraph/Paths.lean"
      ]
     }
    ],
@@ -5081,6 +5096,99 @@
   }
  },
  "feed": [
+  {
+   "date": "2026-10-16",
+   "title": "Add digitsAppend API lemmas and List.mapIdx_replicate",
+   "scope": "Data/Nat/Digits",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/40302",
+   "ai": true,
+   "sha": "77f572715e820522fc789387a168a1e6862ed0c8",
+   "files": [
+    "Mathlib/Data/List/Indexes.lean",
+    "Mathlib/Data/Nat/Digits/Lemmas.lean"
+   ],
+   "fields": [
+    "babylonian",
+    "zero",
+    "maya_zero"
+   ]
+  },
+  {
+   "date": "2026-10-16",
+   "title": "Prove `comap_ringConGen_equiv` (`proof_wanted`)",
+   "scope": "RingTheory",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/43418",
+   "ai": true,
+   "sha": "9b18f3510a221df759474fe313e8310cd4f06ca0",
+   "files": [
+    "Mathlib/LinearAlgebra/FreeProduct/Basic.lean",
+    "Mathlib/RingTheory/Congruence/Basic.lean"
+   ],
+   "fields": [
+    "linear_algebra",
+    "abstract_algebra"
+   ]
+  },
+  {
+   "date": "2026-10-15",
+   "title": "Simple graph is 2-edge-connected iff it has no bridge",
+   "scope": "Combinatorics/SimpleGraph/Connectivity",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/42839",
+   "ai": false,
+   "sha": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+   "files": [
+    "Mathlib/Combinatorics/SimpleGraph/Connectivity/EdgeConnectivity.lean"
+   ],
+   "fields": [
+    "graph_theory",
+    "combinatorics"
+   ]
+  },
+  {
+   "date": "2026-10-15",
+   "title": "The sign of a polynomial immediately to the right of a point",
+   "scope": "Analysis/Polynomial",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/44248",
+   "ai": false,
+   "sha": "772fc032a9ac06bef731c47012e6f1f684a1c49b",
+   "files": [
+    "Mathlib/Algebra/Polynomial/FieldDivision.lean",
+    "Mathlib/Analysis/Polynomial/SignRight.lean",
+    "Mathlib/Topology/Instances/Sign.lean"
+   ],
+   "fields": [
+    "al_jabr",
+    "point_set_topology"
+   ]
+  },
+  {
+   "date": "2026-10-15",
+   "title": "Set system of finite unions of sets in a compact system is again a compact system",
+   "scope": "Topology/Compactness/CompactSystem",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/36089",
+   "ai": false,
+   "sha": "e91b128082cc221d6432a6a5aadcd3243af8e76c",
+   "files": [
+    "Mathlib/Topology/Compactness/CompactSystem.lean"
+   ],
+   "fields": [
+    "point_set_topology"
+   ]
+  },
+  {
+   "date": "2026-10-15",
+   "title": "Set system of countable intersections of sets in a compact system is again a compact system",
+   "scope": "Topology/Compactness/CompactSystem",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/36225",
+   "ai": false,
+   "sha": "7e34f44a3aa4320a254c230dcc469790a666a844",
+   "files": [
+    "Mathlib/Topology/Compactness/CompactSystem.lean"
+   ],
+   "fields": [
+    "point_set_topology"
+   ]
+  },
   {
    "date": "2026-10-15",
    "title": "Closed and compact square cylinders form a compact system",
@@ -5980,98 +6088,6 @@
    ]
   },
   {
-   "date": "2026-10-10",
-   "title": "The fundamental groupoid",
-   "scope": "AlgebraicTopology/SimplicialSet",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/42523",
-   "ai": false,
-   "sha": "88d917f464a8cfa7e1ad44280ec64ba93ed39626",
-   "files": [
-    "Mathlib/AlgebraicTopology/SimplicialObject/Basic.lean",
-    "Mathlib/AlgebraicTopology/SimplicialSet/FundamentalGroupoid/Basic.lean"
-   ],
-   "fields": [
-    "algebraic_topology"
-   ]
-  },
-  {
-   "date": "2026-10-10",
-   "title": "Add `ofAntipodeOfAdjoin`",
-   "scope": "RingTheory/HopfAlgebra/Convolution",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/41828",
-   "ai": false,
-   "sha": "32e8ce943e5e04fdbd884b8d111ba88f3280be26",
-   "files": [
-    "Mathlib/Algebra/Algebra/Hom.lean",
-    "Mathlib/RingTheory/HopfAlgebra/Convolution.lean"
-   ],
-   "fields": [
-    "abstract_algebra"
-   ]
-  },
-  {
-   "date": "2026-10-10",
-   "title": "`LocallyFiniteOrder{Bot,Top}` implies `WellFounded{LT,GT}`",
-   "scope": "Order/Interval/Finset/Defs",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/39427",
-   "ai": false,
-   "sha": "e1ea636d6b9399ff436751eb6b46f55d850421c3",
-   "files": [
-    "Mathlib/Analysis/InnerProductSpace/GramSchmidtOrtho.lean",
-    "Mathlib/Analysis/Matrix/LDL.lean",
-    "Mathlib/Order/Interval/Finset/Basic.lean"
-   ],
-   "fields": [
-    "functional_analysis",
-    "quantum_mechanics"
-   ]
-  },
-  {
-   "date": "2026-10-10",
-   "title": "`s(u, w) ∈ p.edges ↔ w = p.snd` for paths",
-   "scope": "Combinatorics/SimpleGraph/Paths",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44472",
-   "ai": false,
-   "sha": "aa4180fd65f90dd50307a354941dfbee635cf9d2",
-   "files": [
-    "Mathlib/Combinatorics/SimpleGraph/Paths.lean"
-   ],
-   "fields": [
-    "graph_theory",
-    "combinatorics"
-   ]
-  },
-  {
-   "date": "2026-10-10",
-   "title": "Add junk value in the definition of Measure.prod",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44637",
-   "ai": false,
-   "sha": "4b8275244e024de5966cab6b72d0b6587be21c5a",
-   "files": [
-    "Mathlib/Analysis/Convolution.lean",
-    "Mathlib/MeasureTheory/Integral/Prod.lean",
-    "Mathlib/MeasureTheory/Measure/Prod.lean"
-   ],
-   "fields": [
-    "measure_theory"
-   ]
-  },
-  {
-   "date": "2026-10-09",
-   "title": "Close TODOs simplicial category",
-   "scope": "AlgebraicTopology/SimplicialCategory",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44419",
-   "ai": false,
-   "sha": "bfe80ca14530f46f85728288be5ec7c24777c313",
-   "files": [
-    "Mathlib/AlgebraicTopology/SimplicialCategory/Basic.lean"
-   ],
-   "fields": [
-    "algebraic_topology"
-   ]
-  },
-  {
    "date": "2026-10-08",
    "title": "Integer powers of integral elements are integral",
    "scope": "RingTheory/IntegralClosure",
@@ -6923,10 +6939,10 @@
    "kind": "benchmark",
    "description": "Google DeepMind's collection of open conjectures (Erdős problems and others) stated in Lean, used as targets for provers.",
    "url": "https://github.com/google-deepmind/formal-conjectures",
-   "updated": "2026-10-15",
+   "updated": "2026-10-16",
    "latest": {
-    "title": "Add the Courtade–Kumar conjecture (Paper/CourtadeKumar.lean) (#6688)",
-    "url": "https://github.com/google-deepmind/formal-conjectures/commit/79eac378a26b46d30974cdb33962e0752591b79d"
+    "title": "feat(ErdosProblems): formalize problem 561 (#7124)",
+    "url": "https://github.com/google-deepmind/formal-conjectures/commit/a2b973d982ddeeeb28c47222a505c8b616c8ebc6"
    },
    "overview": "google-deepmind__formal-conjectures.json",
    "lean_files": 400
@@ -6980,10 +6996,10 @@
    "kind": "human",
    "description": "Formalization of Carleson's theorem on pointwise convergence of Fourier series.",
    "url": "https://github.com/fpvandoorn/carleson",
-   "updated": "2026-10-13",
+   "updated": "2026-10-16",
    "latest": {
-    "title": "chore: delete upstreamed lemmas (#679)",
-    "url": "https://github.com/fpvandoorn/carleson/commit/12fb202e6dba84aa57a9d39c7d019dc344902912"
+    "title": "Move lemmas from and to `WeakType.lean` (#680)",
+    "url": "https://github.com/fpvandoorn/carleson/commit/08f9bf0cb3962cb76a4ba4e5cba9b797f9b8537f"
    },
    "overview": "fpvandoorn__carleson.json",
    "lean_files": 117
