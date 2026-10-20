@@ -1,12 +1,12 @@
 {
- "generated": "2026-10-19T13:09Z",
+ "generated": "2026-10-20T11:33Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "bdece672cbbf25e2f8f77f6238d6cd5438246f5d",
-  "date": "2026-10-19",
+  "commit": "bbe3db288201b39ef92689278906d3bf6d45c291",
+  "date": "2026-10-20",
   "files": 8647,
-  "changes": 1399,
-  "additions": 710,
+  "changes": 1400,
+  "additions": 712,
   "ai_additions": 73
  },
  "fields": {
@@ -39,9 +39,25 @@
     "Mathlib/MeasureTheory/Measure/Lebesgue"
    ],
    "files": 5,
-   "additions": 1,
+   "additions": 2,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-05",
      "title": "Use `IsApply` for `AlternatingMap`",
@@ -103,9 +119,25 @@
     "Mathlib/Data/Int/GCD"
    ],
    "files": 53,
-   "additions": 24,
+   "additions": 25,
    "ai_additions": 3,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Distance from second intersection with circumcircle",
@@ -153,19 +185,6 @@
      "sha": "f816245f5d0cb6c9be357e90340a1d857bfc8e87",
      "files": [
       "Mathlib/Geometry/Euclidean/Incenter/SouthPole.lean"
-     ]
-    },
-    {
-     "date": "2026-10-14",
-     "title": "Distance from vertex to nine-point circle center",
-     "scope": "Geometry/Euclidean",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44218",
-     "ai": false,
-     "sha": "12cf93f81c8f8b8bd365cc1365cf509c8b1e3aaf",
-     "files": [
-      "Mathlib/Geometry/Euclidean/Circumcenter.lean",
-      "Mathlib/Geometry/Euclidean/NinePointCircle.lean",
-      "Mathlib/LinearAlgebra/AffineSpace/Simplex/Centroid.lean"
      ]
     }
    ],
@@ -243,9 +262,25 @@
     "Mathlib/Analysis/SpecialFunctions/Trigonometric"
    ],
    "files": 21,
-   "additions": 6,
+   "additions": 7,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-09-29",
      "title": "Add bounds and classical limits for sinc",
@@ -297,22 +332,6 @@
      "files": [
       "Mathlib/Analysis/SpecialFunctions/Trigonometric/Bounds.lean"
      ]
-    },
-    {
-     "date": "2026-09-04",
-     "title": "Suggest `rwa` for `rw` followed by `assumption`",
-     "scope": "TacticAnalysis",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42732",
-     "ai": false,
-     "sha": "950d27063f377d5ccd80d3eeedcebe319d3eb821",
-     "files": [
-      "Mathlib/Algebra/Regular/SMul.lean",
-      "Mathlib/Analysis/SpecialFunctions/Trigonometric/Chebyshev/RootsExtrema.lean",
-      "Mathlib/Computability/Reduce.lean",
-      "Mathlib/Data/Seq/Computation.lean",
-      "Mathlib/Data/Seq/Defs.lean",
-      "Mathlib/MeasureTheory/Integral/Lebesgue/DominatedConvergence.lean"
-     ]
     }
    ],
    "overview": "field-trigonometry.json"
@@ -324,9 +343,26 @@
     "Mathlib/NumberTheory/FLT"
    ],
    "files": 8,
-   "additions": 0,
+   "additions": 1,
    "ai_additions": 0,
-   "recent": [],
+   "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    }
+   ],
    "overview": "field-diophantine.json"
   },
   "zero": {
@@ -338,6 +374,22 @@
    "additions": 9,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-16",
      "title": "Add digitsAppend API lemmas and List.mapIdx_replicate",
@@ -389,17 +441,6 @@
       "Mathlib/Data/Nat/Cast/Basic.lean",
       "Mathlib/Data/Nat/Cast/Pi.lean"
      ]
-    },
-    {
-     "date": "2026-09-30",
-     "title": "Add `{IsUnit}.map_ringInverse`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44087",
-     "ai": false,
-     "sha": "2a885768dae569d938bb9ff3474da6a8753bb90a",
-     "files": [
-      "Mathlib/Algebra/GroupWithZero/Units/Lemmas.lean"
-     ]
     }
    ],
    "overview": "field-zero.json"
@@ -413,6 +454,22 @@
    "additions": 12,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Prove that a normalised elliptic divisibility sequence is an elliptic sequence",
@@ -460,18 +517,6 @@
      "files": [
       "Mathlib/Algebra/Polynomial/CoeffList.lean",
       "Mathlib/Algebra/Polynomial/RuleOfSigns.lean"
-     ]
-    },
-    {
-     "date": "2026-09-22",
-     "title": "Sturm sequences",
-     "scope": "Algebra/Polynomial/Sturm",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43954",
-     "ai": true,
-     "sha": "2615c5af8dfb56cb1f2011e32ef9bfc1085f31e5",
-     "files": [
-      "Mathlib/Algebra/Polynomial/FieldDivision.lean",
-      "Mathlib/Algebra/Polynomial/Sturm/Sequence.lean"
      ]
     }
    ],
@@ -547,9 +592,25 @@
     "Mathlib/Algebra/MvPolynomial"
    ],
    "files": 24,
-   "additions": 4,
+   "additions": 5,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-18",
      "title": "Ideal generated by indeterminates in a polynomial ring over a domain is prime",
@@ -605,9 +666,25 @@
     "Mathlib/Analysis/SpecialFunctions/Log"
    ],
    "files": 13,
-   "additions": 5,
+   "additions": 6,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-09-29",
      "title": "Truncated Counting Function of Value Distribution Theory",
@@ -665,21 +742,6 @@
       "Mathlib/NumberTheory/ClassNumber/AdmissibleCardPowDegree.lean",
       "Mathlib/Tactic/Convert.lean"
      ]
-    },
-    {
-     "date": "2026-09-01",
-     "title": "Pentagonal number theorem for normed ring",
-     "scope": "combinatorics",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42185",
-     "ai": false,
-     "sha": "98ef485d217e48d24735e2637a46b1b01c41019b",
-     "files": [
-      "Mathlib/Analysis/SpecialFunctions/Log/Summable.lean",
-      "Mathlib/Combinatorics/Enumerative/Pentagonal/EulerFunction.lean",
-      "Mathlib/Combinatorics/Enumerative/Pentagonal/PowerSeries.lean",
-      "Mathlib/Combinatorics/Enumerative/Pentagonal/Ring.lean",
-      "Mathlib/Tactic/Linter/DirectoryDependency.lean"
-     ]
     }
    ],
    "overview": "field-logarithms.json"
@@ -690,9 +752,25 @@
     "Mathlib/LinearAlgebra/AffineSpace"
    ],
    "files": 25,
-   "additions": 16,
+   "additions": 17,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-14",
      "title": "Distance from vertex to nine-point circle center",
@@ -741,22 +819,6 @@
       "Mathlib/LinearAlgebra/AffineSpace/AffineSubspace/Defs.lean",
       "Mathlib/LinearAlgebra/AffineSpace/Dimension.lean"
      ]
-    },
-    {
-     "date": "2026-09-29",
-     "title": "Truncated Counting Function of Value Distribution Theory",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/41809",
-     "ai": true,
-     "sha": "262b64d8c7fd642d7f273a599e4c94d6c44ce3f7",
-     "files": [
-      "Mathlib/Algebra/MonoidAlgebra/PointwiseSMul.lean",
-      "Mathlib/Algebra/Notation/Indicator.lean",
-      "Mathlib/Algebra/Notation/Support.lean",
-      "Mathlib/Analysis/Calculus/BumpFunction/Basic.lean",
-      "Mathlib/Analysis/Complex/ValueDistribution/Cartan.lean",
-      "Mathlib/Analysis/Complex/ValueDistribution/FirstMainTheorem.lean"
-     ]
     }
    ],
    "overview": "field-analytic_geometry.json"
@@ -767,9 +829,25 @@
     "Mathlib/AlgebraicGeometry/ProjectiveSpectrum"
    ],
    "files": 15,
-   "additions": 1,
+   "additions": 2,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-09-15",
      "title": "Add `AffineIndepOn`",
@@ -794,9 +872,42 @@
     "Mathlib/Probability/StrongLaw"
    ],
    "files": 6,
-   "additions": 0,
+   "additions": 2,
    "ai_additions": 0,
-   "recent": [],
+   "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
+    {
+     "date": "2026-10-20",
+     "title": "Generalize ENNReal lemmas",
+     "scope": "Topology/Algebra/InfiniteSum",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/38489",
+     "ai": false,
+     "sha": "4dc3912c3394dbf46f97c6fe75494ae9197b230f",
+     "files": [
+      "Mathlib/MeasureTheory/Measure/CompleteLattice.lean",
+      "Mathlib/MeasureTheory/OuterMeasure/OfFunction.lean",
+      "Mathlib/Probability/ProbabilityMassFunction/Monad.lean",
+      "Mathlib/Topology/Algebra/InfiniteSum/Basic.lean",
+      "Mathlib/Topology/Algebra/InfiniteSum/ENNReal.lean",
+      "Mathlib/Topology/Algebra/InfiniteSum/Order.lean"
+     ]
+    }
+   ],
    "overview": "field-probability.json"
   },
   "fluxions": {
@@ -805,9 +916,25 @@
     "Mathlib/Analysis/Calculus/Taylor"
    ],
    "files": 21,
-   "additions": 1,
+   "additions": 2,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Lint against `∀ᵉ`/`∃ᵉ`",
@@ -834,9 +961,25 @@
     "Mathlib/Analysis/SumIntegralComparisons"
    ],
    "files": 33,
-   "additions": 3,
+   "additions": 4,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Lint against `∀ᵉ`/`∃ᵉ`",
@@ -904,9 +1047,25 @@
     "Mathlib/Combinatorics/Digraph"
    ],
    "files": 90,
-   "additions": 36,
+   "additions": 37,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Add distance lemmas for graph maps",
@@ -960,17 +1119,6 @@
       "Mathlib/Combinatorics/SimpleGraph/CycleGraph.lean",
       "Mathlib/Combinatorics/SimpleGraph/Hasse.lean"
      ]
-    },
-    {
-     "date": "2026-10-15",
-     "title": "Simple graph is 2-edge-connected iff it has no bridge",
-     "scope": "Combinatorics/SimpleGraph/Connectivity",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42839",
-     "ai": false,
-     "sha": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
-     "files": [
-      "Mathlib/Combinatorics/SimpleGraph/Connectivity/EdgeConnectivity.lean"
-     ]
     }
    ],
    "overview": "field-graph_theory.json"
@@ -995,9 +1143,25 @@
     "Mathlib/Data/ZMod"
    ],
    "files": 21,
-   "additions": 3,
+   "additions": 4,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-09-09",
      "title": "Comparison of subgroups of a cyclic group",
@@ -1050,9 +1214,25 @@
     "Mathlib/Analysis/Fourier"
    ],
    "files": 14,
-   "additions": 3,
+   "additions": 4,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-06",
      "title": "Decay of the Fourier transform of a function with integrable derivatives",
@@ -1107,9 +1287,25 @@
     "Mathlib/Probability/Distributions"
    ],
    "files": 35,
-   "additions": 3,
+   "additions": 4,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-14",
      "title": "Grind patterns for cfc junk values",
@@ -1162,9 +1358,25 @@
     "Mathlib/Order/Filter"
    ],
    "files": 65,
-   "additions": 7,
+   "additions": 8,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Lint against `∀ᵉ`/`∃ᵉ`",
@@ -1222,17 +1434,6 @@
       "Mathlib/Order/Filter/AtTopBot/Finset.lean",
       "Mathlib/Topology/Algebra/InfiniteSum/Ring.lean"
      ]
-    },
-    {
-     "date": "2026-09-14",
-     "title": "Add `Filter.HasBasis.iInf_of_finite`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43760",
-     "ai": false,
-     "sha": "d0a6fafa3cdb0a09944ec57001c21e1ef4d0bc5e",
-     "files": [
-      "Mathlib/Order/Filter/Bases/Finite.lean"
-     ]
     }
    ],
    "overview": "field-rigorous_analysis.json"
@@ -1243,9 +1444,25 @@
     "Mathlib/Analysis/Analytic"
    ],
    "files": 92,
-   "additions": 23,
+   "additions": 24,
    "ai_additions": 6,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Lint against `∀ᵉ`/`∃ᵉ`",
@@ -1303,17 +1520,6 @@
       "Mathlib/Topology/Algebra/Module/Multilinear/Basic.lean",
       "Mathlib/Topology/Algebra/Module/Multilinear/Topology.lean"
      ]
-    },
-    {
-     "date": "2026-09-30",
-     "title": "Some useful results about the complex exponential",
-     "scope": "Analysis/Complex/Trigonometric",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44058",
-     "ai": false,
-     "sha": "b5367e1978e729969d76f8651cf93c95a5a2baa5",
-     "files": [
-      "Mathlib/Analysis/Complex/Trigonometric.lean"
-     ]
     }
    ],
    "overview": "field-complex_analysis.json"
@@ -1323,9 +1529,25 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 19,
+   "additions": 20,
    "ai_additions": 3,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Lint against `∀ᵉ`/`∃ᵉ`",
@@ -1375,21 +1597,6 @@
      "files": [
       "Mathlib/Geometry/Manifold/Notation.lean"
      ]
-    },
-    {
-     "date": "2026-10-13",
-     "title": "Alternating maps and associated operations are `ContMDiff` and `MDifferentiable`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44371",
-     "ai": false,
-     "sha": "a646a376b8dae3a215700a465ecc57c74cd1adb3",
-     "files": [
-      "Mathlib/Geometry/Manifold/ContMDiff/Constructions.lean",
-      "Mathlib/Geometry/Manifold/ContMDiff/NormedSpace.lean",
-      "Mathlib/Geometry/Manifold/MFDeriv/NormedSpace.lean",
-      "Mathlib/Geometry/Manifold/MFDeriv/SpecificFunctions.lean",
-      "Mathlib/Geometry/Manifold/WhitneyEmbedding.lean"
-     ]
     }
    ],
    "overview": "field-differential_geometry.json"
@@ -1399,9 +1606,25 @@
     "Mathlib/Analysis/Complex/UpperHalfPlane"
    ],
    "files": 10,
-   "additions": 2,
+   "additions": 3,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-09-09",
      "title": "A locally closed subgroup is closed",
@@ -1439,9 +1662,25 @@
     "Mathlib/Analysis/Complex/UpperHalfPlane"
    ],
    "files": 10,
-   "additions": 2,
+   "additions": 3,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-09-09",
      "title": "A locally closed subgroup is closed",
@@ -1482,8 +1721,24 @@
    ],
    "files": 181,
    "additions": 45,
-   "ai_additions": 12,
+   "ai_additions": 11,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-18",
      "title": "Add HasUniqueRoots instance",
@@ -1536,21 +1791,6 @@
       "Mathlib/GroupTheory/FreeGroup/Basic.lean",
       "Mathlib/GroupTheory/FreeGroup/Reduce.lean"
      ]
-    },
-    {
-     "date": "2026-10-17",
-     "title": "Intermediate fields corresponding to Sylow subgroups",
-     "scope": "FieldTheory/Galois",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44299",
-     "ai": false,
-     "sha": "493f1f1b5b361e7c766de63840a699267e996507",
-     "files": [
-      "Mathlib/FieldTheory/Galois/Basic.lean",
-      "Mathlib/FieldTheory/Galois/Infinite.lean",
-      "Mathlib/FieldTheory/Galois/Sylow.lean",
-      "Mathlib/GroupTheory/Nilpotent.lean",
-      "Mathlib/GroupTheory/Sylow.lean"
-     ]
     }
    ],
    "overview": "field-group_theory.json"
@@ -1563,9 +1803,25 @@
     "Mathlib/NumberTheory/Chebyshev"
    ],
    "files": 31,
-   "additions": 5,
+   "additions": 6,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-14",
      "title": "Grind patterns for cfc junk values",
@@ -1620,17 +1876,6 @@
       "Mathlib/Analysis/SpecialFunctions/Pow/Deriv.lean",
       "Mathlib/NumberTheory/LSeries/RiemannZetaLogDeriv.lean"
      ]
-    },
-    {
-     "date": "2026-08-31",
-     "title": "Pointwise inv_riemannZeta_eq_sub_mul",
-     "scope": "NumberTheory/Harmonic",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43207",
-     "ai": false,
-     "sha": "5961c0e3b76e3df1d36818da5b14e846e307cbca",
-     "files": [
-      "Mathlib/NumberTheory/Harmonic/ZetaAsymp.lean"
-     ]
     }
    ],
    "overview": "field-analytic_number_theory.json"
@@ -1641,9 +1886,25 @@
     "Mathlib/Data/Matrix"
    ],
    "files": 403,
-   "additions": 71,
+   "additions": 72,
    "ai_additions": 6,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Lint against `∀ᵉ`/`∃ᵉ`",
@@ -1696,18 +1957,6 @@
       "Mathlib/Tactic.lean",
       "Mathlib/Tactic/Simproc/IsIndecomposable.lean"
      ]
-    },
-    {
-     "date": "2026-10-16",
-     "title": "Prove `comap_ringConGen_equiv` (`proof_wanted`)",
-     "scope": "RingTheory",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43418",
-     "ai": true,
-     "sha": "9b18f3510a221df759474fe313e8310cd4f06ca0",
-     "files": [
-      "Mathlib/LinearAlgebra/FreeProduct/Basic.lean",
-      "Mathlib/RingTheory/Congruence/Basic.lean"
-     ]
     }
    ],
    "overview": "field-linear_algebra.json"
@@ -1718,9 +1967,26 @@
     "Mathlib/RingTheory/Invariant"
    ],
    "files": 5,
-   "additions": 0,
+   "additions": 1,
    "ai_additions": 0,
-   "recent": [],
+   "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    }
+   ],
    "overview": "field-invariant_theory.json"
   },
   "boolean_logic": {
@@ -1795,9 +2061,25 @@
     "Mathlib/SetTheory/Ordinal"
    ],
    "files": 47,
-   "additions": 9,
+   "additions": 10,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Every element is between two others in a club set",
@@ -1853,20 +2135,6 @@
       "Mathlib/SetTheory/ZFC/VonNeumann.lean",
       "Mathlib/Topology/Order/AtTopBotIxx.lean"
      ]
-    },
-    {
-     "date": "2026-09-05",
-     "title": "Every chain is finite when `<` and `>` are well-founded",
-     "scope": "Order/OrderIsoNat",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42633",
-     "ai": false,
-     "sha": "810b3888d0aa94294b18587c453466bc86c1f0fc",
-     "files": [
-      "Mathlib/GroupTheory/Sylow.lean",
-      "Mathlib/Order/OrderIsoNat.lean",
-      "Mathlib/Order/Preorder/Chain.lean",
-      "Mathlib/SetTheory/Cardinal/EventuallyConst.lean"
-     ]
     }
    ],
    "overview": "field-set_theory.json"
@@ -1888,9 +2156,25 @@
     "Mathlib/RingTheory/Nullstellensatz"
    ],
    "files": 141,
-   "additions": 11,
+   "additions": 12,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-09-25",
      "title": "Degree of a zero-cycle",
@@ -1938,18 +2222,6 @@
       "Mathlib/AlgebraicGeometry/AffineSpace.lean",
       "Mathlib/AlgebraicGeometry/Morphisms/Smooth.lean"
      ]
-    },
-    {
-     "date": "2026-09-07",
-     "title": "Naïve height and approximate parallelogram law",
-     "scope": "NumberTheory/Height/EllipticCurve",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43463",
-     "ai": false,
-     "sha": "751af11de0208780dda5326b40c54b3859607d03",
-     "files": [
-      "Mathlib/AlgebraicGeometry/EllipticCurve/Affine/AddSubMap.lean",
-      "Mathlib/NumberTheory/Height/EllipticCurve.lean"
-     ]
     }
    ],
    "overview": "field-algebraic_geometry.json"
@@ -1960,9 +2232,25 @@
     "Mathlib/Topology/Homotopy"
    ],
    "files": 181,
-   "additions": 16,
+   "additions": 17,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-14",
      "title": "Composition of edges in quasicategories",
@@ -2013,18 +2301,6 @@
       "Mathlib/Data/Set/Image.lean",
       "Mathlib/GroupTheory/ArchimedeanDensely.lean"
      ]
-    },
-    {
-     "date": "2026-10-10",
-     "title": "New lemmas mono_induction and epi_induction",
-     "scope": "AlgebraicTopology/SimplexCategory/MorphismProperty",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44516",
-     "ai": false,
-     "sha": "d3397c72601fd77db86fb9239a521c80369469a2",
-     "files": [
-      "Mathlib/AlgebraicTopology/SimplexCategory/MorphismProperty.lean",
-      "Mathlib/AlgebraicTopology/SimplexCategory/Truncated.lean"
-     ]
     }
    ],
    "overview": "field-algebraic_topology.json"
@@ -2034,9 +2310,25 @@
     "Mathlib/Dynamics"
    ],
    "files": 35,
-   "additions": 8,
+   "additions": 9,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-14",
      "title": "Balls",
@@ -2096,22 +2388,6 @@
       "Mathlib/Dynamics/Ergodic/Extreme.lean",
       "Mathlib/Dynamics/Ergodic/Function.lean"
      ]
-    },
-    {
-     "date": "2026-09-07",
-     "title": "`gconvert` tactic",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/27135",
-     "ai": false,
-     "sha": "8cec5b2fcb2e9b5b92849f6620bebd6efcb7227e",
-     "files": [
-      "Mathlib/Algebra/Lie/LieTheorem.lean",
-      "Mathlib/Algebra/Lie/Nilpotent.lean",
-      "Mathlib/Algebra/Order/GroupWithZero/Basic.lean",
-      "Mathlib/Algebra/Order/Ring/Unbundled/Basic.lean",
-      "Mathlib/Analysis/Asymptotics/TVS.lean",
-      "Mathlib/Analysis/CStarAlgebra/ApproximateUnit.lean"
-     ]
     }
    ],
    "overview": "field-dynamical_systems.json"
@@ -2121,9 +2397,52 @@
     "Mathlib/MeasureTheory"
    ],
    "files": 339,
-   "additions": 45,
+   "additions": 48,
    "ai_additions": 3,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
+    {
+     "date": "2026-10-20",
+     "title": "Generalize ENNReal lemmas",
+     "scope": "Topology/Algebra/InfiniteSum",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/38489",
+     "ai": false,
+     "sha": "4dc3912c3394dbf46f97c6fe75494ae9197b230f",
+     "files": [
+      "Mathlib/MeasureTheory/Measure/CompleteLattice.lean",
+      "Mathlib/MeasureTheory/OuterMeasure/OfFunction.lean",
+      "Mathlib/Probability/ProbabilityMassFunction/Monad.lean",
+      "Mathlib/Topology/Algebra/InfiniteSum/Basic.lean",
+      "Mathlib/Topology/Algebra/InfiniteSum/ENNReal.lean",
+      "Mathlib/Topology/Algebra/InfiniteSum/Order.lean"
+     ]
+    },
+    {
+     "date": "2026-10-19",
+     "title": "Adds AEMeasurable version of `MeasurePreserving.lintegral_comp`",
+     "scope": "MeasureTheory",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44975",
+     "ai": false,
+     "sha": "e3e75e86143b43849829fdcd44a39a6b0fe35234",
+     "files": [
+      "Mathlib/MeasureTheory/Integral/Lebesgue/Map.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Lint against `∀ᵉ`/`∃ᵉ`",
@@ -2155,48 +2474,6 @@
       "Mathlib/MeasureTheory/Function/LpSeminorm/SMul.lean",
       "Mathlib/Tactic/ByCases.lean"
      ]
-    },
-    {
-     "date": "2026-10-15",
-     "title": "Closed and compact square cylinders form a compact system",
-     "scope": "Topology/Compactness/CompactSystem",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/36160",
-     "ai": false,
-     "sha": "f014e73d21d30e10995e35ae8020d9c2ecb072a1",
-     "files": [
-      "Mathlib/Data/Set/Lattice/Bounded.lean",
-      "Mathlib/Data/Set/Lattice/Image.lean",
-      "Mathlib/Data/Set/Prod.lean",
-      "Mathlib/MeasureTheory/Constructions/Cylinders.lean",
-      "Mathlib/Topology/Compactness/CompactSystem.lean"
-     ]
-    },
-    {
-     "date": "2026-10-13",
-     "title": "Remove an hypothesis of `UnifIntegrable.add`",
-     "scope": "UniformIntegrable",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44683",
-     "ai": false,
-     "sha": "4d5ad6b419d2eedf3fae8fa8e0a06b9529647b05",
-     "files": [
-      "Mathlib/MeasureTheory/Function/UniformIntegrable.lean"
-     ]
-    },
-    {
-     "date": "2026-10-13",
-     "title": "Define total variation distance",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/37730",
-     "ai": false,
-     "sha": "67013005101cbec00f56fd1bb726fe675744bb7a",
-     "files": [
-      "Mathlib/MeasureTheory/Integral/Bochner/Basic.lean",
-      "Mathlib/MeasureTheory/Measure/Decomposition/IntegralRNDeriv.lean",
-      "Mathlib/MeasureTheory/Measure/Decomposition/Lebesgue.lean",
-      "Mathlib/MeasureTheory/Measure/MutuallySingular.lean",
-      "Mathlib/MeasureTheory/Measure/TotalVariation/Basic.lean",
-      "Mathlib/MeasureTheory/Measure/TotalVariation/Defs.lean"
-     ]
     }
    ],
    "overview": "field-measure_theory.json"
@@ -2207,9 +2484,25 @@
     "Mathlib/Analysis/InnerProductSpace"
    ],
    "files": 222,
-   "additions": 45,
+   "additions": 46,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Prove `gelfandRadius (A * B) = gelfandRadius (B * A)` for matrices",
@@ -2260,19 +2553,6 @@
       "Mathlib/Analysis/Normed/Operator/Bilinear.lean",
       "Mathlib/Topology/Algebra/Module/Spaces/ContinuousLinearMap.lean"
      ]
-    },
-    {
-     "date": "2026-10-10",
-     "title": "`LocallyFiniteOrder{Bot,Top}` implies `WellFounded{LT,GT}`",
-     "scope": "Order/Interval/Finset/Defs",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/39427",
-     "ai": false,
-     "sha": "e1ea636d6b9399ff436751eb6b46f55d850421c3",
-     "files": [
-      "Mathlib/Analysis/InnerProductSpace/GramSchmidtOrtho.lean",
-      "Mathlib/Analysis/Matrix/LDL.lean",
-      "Mathlib/Order/Interval/Finset/Basic.lean"
-     ]
     }
    ],
    "overview": "field-functional_analysis.json"
@@ -2282,9 +2562,41 @@
     "Mathlib/Topology"
    ],
    "files": 703,
-   "additions": 92,
+   "additions": 93,
    "ai_additions": 5,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
+    {
+     "date": "2026-10-20",
+     "title": "Generalize ENNReal lemmas",
+     "scope": "Topology/Algebra/InfiniteSum",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/38489",
+     "ai": false,
+     "sha": "4dc3912c3394dbf46f97c6fe75494ae9197b230f",
+     "files": [
+      "Mathlib/MeasureTheory/Measure/CompleteLattice.lean",
+      "Mathlib/MeasureTheory/OuterMeasure/OfFunction.lean",
+      "Mathlib/Probability/ProbabilityMassFunction/Monad.lean",
+      "Mathlib/Topology/Algebra/InfiniteSum/Basic.lean",
+      "Mathlib/Topology/Algebra/InfiniteSum/ENNReal.lean",
+      "Mathlib/Topology/Algebra/InfiniteSum/Order.lean"
+     ]
+    },
     {
      "date": "2026-10-19",
      "title": "Equivalent discrete valuations",
@@ -2328,30 +2640,6 @@
       "Mathlib/Geometry/Manifold/VectorBundle/ContinuousAlternatingMap.lean",
       "Mathlib/Topology/VectorBundle/ContinuousAlternatingMap.lean"
      ]
-    },
-    {
-     "date": "2026-10-15",
-     "title": "The sign of a polynomial immediately to the right of a point",
-     "scope": "Analysis/Polynomial",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44248",
-     "ai": false,
-     "sha": "772fc032a9ac06bef731c47012e6f1f684a1c49b",
-     "files": [
-      "Mathlib/Algebra/Polynomial/FieldDivision.lean",
-      "Mathlib/Analysis/Polynomial/SignRight.lean",
-      "Mathlib/Topology/Instances/Sign.lean"
-     ]
-    },
-    {
-     "date": "2026-10-15",
-     "title": "Set system of finite unions of sets in a compact system is again a compact system",
-     "scope": "Topology/Compactness/CompactSystem",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/36089",
-     "ai": false,
-     "sha": "e91b128082cc221d6432a6a5aadcd3243af8e76c",
-     "files": [
-      "Mathlib/Topology/Compactness/CompactSystem.lean"
-     ]
     }
    ],
    "overview": "field-point_set_topology.json"
@@ -2363,9 +2651,25 @@
     "Mathlib/Algebra/Module"
    ],
    "files": 905,
-   "additions": 84,
+   "additions": 85,
    "ai_additions": 22,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-19",
      "title": "Equivalent discrete valuations",
@@ -2414,17 +2718,6 @@
      "files": [
       "Mathlib/RingTheory/Valuation/ValuationSubring.lean"
      ]
-    },
-    {
-     "date": "2026-10-18",
-     "title": "Add `colon_eq_top_iff_le`",
-     "scope": "RingTheory/Ideal/Colon",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44965",
-     "ai": false,
-     "sha": "809ed2c4849d09a3f626df3b73123f7922931438",
-     "files": [
-      "Mathlib/RingTheory/Ideal/Colon.lean"
-     ]
     }
    ],
    "overview": "field-abstract_algebra.json"
@@ -2469,9 +2762,41 @@
     "Mathlib/Probability"
    ],
    "files": 141,
-   "additions": 12,
+   "additions": 14,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
+    {
+     "date": "2026-10-20",
+     "title": "Generalize ENNReal lemmas",
+     "scope": "Topology/Algebra/InfiniteSum",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/38489",
+     "ai": false,
+     "sha": "4dc3912c3394dbf46f97c6fe75494ae9197b230f",
+     "files": [
+      "Mathlib/MeasureTheory/Measure/CompleteLattice.lean",
+      "Mathlib/MeasureTheory/OuterMeasure/OfFunction.lean",
+      "Mathlib/Probability/ProbabilityMassFunction/Monad.lean",
+      "Mathlib/Topology/Algebra/InfiniteSum/Basic.lean",
+      "Mathlib/Topology/Algebra/InfiniteSum/ENNReal.lean",
+      "Mathlib/Topology/Algebra/InfiniteSum/Order.lean"
+     ]
+    },
     {
      "date": "2026-10-14",
      "title": "Grind patterns for cfc junk values",
@@ -2512,31 +2837,6 @@
      "sha": "69fcfdf68750b07da41ab3479efe3a246149d99f",
      "files": [
       "Mathlib/Probability/Decision/Risk/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-10-04",
-     "title": "Generalize `iIndepFun.indepFun_finset` to arbitrary index sets",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43523",
-     "ai": false,
-     "sha": "ef13800c008f4141e6d9b4fb3ea8211e298c8e2b",
-     "files": [
-      "Mathlib/Probability/Independence/Basic.lean",
-      "Mathlib/Probability/Independence/Conditional.lean",
-      "Mathlib/Probability/Independence/Kernel/IndepFun.lean",
-      "Mathlib/Probability/Independence/Process/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-10-04",
-     "title": "Define indistinguishability relation",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43129",
-     "ai": false,
-     "sha": "ecd424ac0b958ca9571ee3905e9b671b2980f262",
-     "files": [
-      "Mathlib/Probability/Process/Indistinguishable.lean"
      ]
     }
    ],
@@ -2589,6 +2889,22 @@
    "additions": 44,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-18",
      "title": "Interaction between `InjectiveResolution.extMk` and the connecting morphism",
@@ -2646,22 +2962,6 @@
       "Mathlib/CategoryTheory/Linear/Basic.lean",
       "Mathlib/CategoryTheory/Linear/Yoneda.lean"
      ]
-    },
-    {
-     "date": "2026-10-10",
-     "title": "The external product of two Guitart exact squares is Guitart exact",
-     "scope": "CategoryTheory",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43895",
-     "ai": false,
-     "sha": "26660f2b1d0b855b530c9a81b6fbd55df69f2cef",
-     "files": [
-      "Mathlib/CategoryTheory/Adjunction/Mates.lean",
-      "Mathlib/CategoryTheory/Comma/StructuredArrow/Basic.lean",
-      "Mathlib/CategoryTheory/Functor/TwoSquare.lean",
-      "Mathlib/CategoryTheory/GuitartExact/Basic.lean",
-      "Mathlib/CategoryTheory/GuitartExact/HorizontalComposition.lean",
-      "Mathlib/CategoryTheory/GuitartExact/KanExtension.lean"
-     ]
     }
    ],
    "overview": "field-category_theory.json"
@@ -2672,9 +2972,25 @@
     "Mathlib/Analysis/SpecialFunctions/BinaryEntropy"
    ],
    "files": 10,
-   "additions": 1,
+   "additions": 2,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-08-24",
      "title": "Add Kraft inequality for prefix-free codes",
@@ -2697,9 +3013,25 @@
     "Mathlib/AlgebraicGeometry"
    ],
    "files": 140,
-   "additions": 11,
+   "additions": 12,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-09-25",
      "title": "Degree of a zero-cycle",
@@ -2746,18 +3078,6 @@
      "files": [
       "Mathlib/AlgebraicGeometry/AffineSpace.lean",
       "Mathlib/AlgebraicGeometry/Morphisms/Smooth.lean"
-     ]
-    },
-    {
-     "date": "2026-09-07",
-     "title": "Naïve height and approximate parallelogram law",
-     "scope": "NumberTheory/Height/EllipticCurve",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43463",
-     "ai": false,
-     "sha": "751af11de0208780dda5326b40c54b3859607d03",
-     "files": [
-      "Mathlib/AlgebraicGeometry/EllipticCurve/Affine/AddSubMap.lean",
-      "Mathlib/NumberTheory/Height/EllipticCurve.lean"
      ]
     }
    ],
@@ -2769,9 +3089,25 @@
     "Mathlib/RingTheory/Invariant"
    ],
    "files": 144,
-   "additions": 11,
+   "additions": 12,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-09-25",
      "title": "Degree of a zero-cycle",
@@ -2819,18 +3155,6 @@
       "Mathlib/AlgebraicGeometry/AffineSpace.lean",
       "Mathlib/AlgebraicGeometry/Morphisms/Smooth.lean"
      ]
-    },
-    {
-     "date": "2026-09-07",
-     "title": "Naïve height and approximate parallelogram law",
-     "scope": "NumberTheory/Height/EllipticCurve",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43463",
-     "ai": false,
-     "sha": "751af11de0208780dda5326b40c54b3859607d03",
-     "files": [
-      "Mathlib/AlgebraicGeometry/EllipticCurve/Affine/AddSubMap.lean",
-      "Mathlib/NumberTheory/Height/EllipticCurve.lean"
-     ]
     }
    ],
    "overview": "field-git.json"
@@ -2841,9 +3165,37 @@
     "Mathlib/RepresentationTheory"
    ],
    "files": 84,
-   "additions": 19,
-   "ai_additions": 3,
+   "additions": 21,
+   "ai_additions": 4,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
+    {
+     "date": "2026-10-19",
+     "title": "Evaluation at E₄, E₆ surjectively maps onto level-1 graded ring",
+     "scope": "NumberTheory/ModularForms",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/39258",
+     "ai": true,
+     "sha": "719bd68261004437feff410dfaefa498ce0b1cee",
+     "files": [
+      "Mathlib/NumberTheory/ModularForms/LevelOne/DimensionFormula.lean",
+      "Mathlib/NumberTheory/ModularForms/LevelOne/GradedRing.lean"
+     ]
+    },
     {
      "date": "2026-10-18",
      "title": "More theorems for slash actions (sub,pow,zpow,inv)",
@@ -2876,34 +3228,6 @@
      "sha": "1dd49d0236914f256f78328e0aab68302f56a704",
      "files": [
       "Mathlib/NumberTheory/ModularForms/ArithmeticSubgroups.lean"
-     ]
-    },
-    {
-     "date": "2026-09-29",
-     "title": "Generalize SMul instances from DistribMulAction to DistribSMul",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/41736",
-     "ai": false,
-     "sha": "b5b6812470cf32a952471074ee53886cffe310ee",
-     "files": [
-      "Mathlib/Algebra/Lie/Free.lean",
-      "Mathlib/Analysis/BoxIntegral/Partition/Additive.lean",
-      "Mathlib/Analysis/Distribution/ContDiffMapSupportedIn.lean",
-      "Mathlib/Geometry/Convex/AffineMap/Module.lean",
-      "Mathlib/Geometry/Convex/ConvexSpace/Module.lean",
-      "Mathlib/RepresentationTheory/Continuous/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-09-29",
-     "title": "Add two simp lemmas",
-     "scope": "RepresentationTheory",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43649",
-     "ai": false,
-     "sha": "5e043698502894993991089b2dd893867c0db5c2",
-     "files": [
-      "Mathlib/RepresentationTheory/Intertwining.lean",
-      "Mathlib/RepresentationTheory/Rep/Basic.lean"
      ]
     }
    ],
@@ -2981,9 +3305,25 @@
     "Mathlib/Data/Int"
    ],
    "files": 124,
-   "additions": 25,
+   "additions": 26,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-16",
      "title": "Add an indecomposability decision simproc",
@@ -3039,22 +3379,6 @@
       "Mathlib/Algebra/Order/Floor/Semiring.lean",
       "Mathlib/Algebra/Order/Round.lean"
      ]
-    },
-    {
-     "date": "2026-10-09",
-     "title": "Add per-model entry certifiers and switched to a reflection-based certificate",
-     "scope": "Tactic/Echelon",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43438",
-     "ai": false,
-     "sha": "25e572b8074098af3f09d4cb2a4231cbdc584534",
-     "files": [
-      "Mathlib/LinearAlgebra/Matrix/Echelon/Decomposition.lean",
-      "Mathlib/Tactic.lean",
-      "Mathlib/Tactic/Echelon/Bareiss.lean",
-      "Mathlib/Tactic/Echelon/Cert.lean",
-      "Mathlib/Tactic/Echelon/Core.lean",
-      "Mathlib/Tactic/Echelon/Rat.lean"
-     ]
     }
    ],
    "overview": "field-nine_chapters.json"
@@ -3065,9 +3389,25 @@
     "Mathlib/Data/Nat/Fib"
    ],
    "files": 13,
-   "additions": 1,
+   "additions": 2,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-09-01",
      "title": "Add prime divisibility for ascFactorial and choose",
@@ -3195,9 +3535,25 @@
     "Mathlib/NumberTheory/Padics"
    ],
    "files": 19,
-   "additions": 7,
+   "additions": 8,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-09",
      "title": "`ValuativeRel` and `IsValuativeTopology (v.adicCompletion K)`",
@@ -3252,19 +3608,6 @@
       "Mathlib/Algebra/Order/Ring/Unbundled/Basic.lean",
       "Mathlib/Analysis/Asymptotics/TVS.lean",
       "Mathlib/Analysis/CStarAlgebra/ApproximateUnit.lean"
-     ]
-    },
-    {
-     "date": "2026-08-31",
-     "title": "Add an instance `IsValuativeTopology ℚ_[p]`",
-     "scope": "Padics",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42998",
-     "ai": false,
-     "sha": "cde48137b3b391cec6216283121d245c478cd082",
-     "files": [
-      "Mathlib/NumberTheory/Padics/LocalField.lean",
-      "Mathlib/NumberTheory/Padics/PadicNumbers.lean",
-      "Mathlib/NumberTheory/Padics/ValuativeRel.lean"
      ]
     }
    ],
@@ -3344,9 +3687,26 @@
     "Mathlib/NumberTheory/FLT"
    ],
    "files": 5,
-   "additions": 0,
+   "additions": 1,
    "ai_additions": 0,
-   "recent": [],
+   "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    }
+   ],
    "overview": "field-fermat_last.json"
   },
   "quaternions": {
@@ -3366,9 +3726,25 @@
     "Mathlib/Geometry/Manifold/Algebra"
    ],
    "files": 66,
-   "additions": 11,
+   "additions": 12,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Lint against `∀ᵉ`/`∃ᵉ`",
@@ -3423,21 +3799,6 @@
       "Mathlib/Geometry/Convex/ConvexSpace/Module.lean",
       "Mathlib/RepresentationTheory/Continuous/Basic.lean"
      ]
-    },
-    {
-     "date": "2026-09-22",
-     "title": "The supremum of compact elements is compact and other basics",
-     "scope": "Order/CompactlyGenerated/Basic",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42421",
-     "ai": false,
-     "sha": "9fe29c4b379922f49446b28b76cbe4fce041c8b3",
-     "files": [
-      "Mathlib/Algebra/Lie/Submodule.lean",
-      "Mathlib/FieldTheory/IntermediateField/Adjoin/Basic.lean",
-      "Mathlib/LinearAlgebra/Span/Basic.lean",
-      "Mathlib/Order/CompactlyGenerated/Basic.lean",
-      "Mathlib/Order/CompactlyGenerated/Intervals.lean"
-     ]
     }
    ],
    "overview": "field-lie_theory.json"
@@ -3447,9 +3808,25 @@
     "Mathlib/RepresentationTheory"
    ],
    "files": 45,
-   "additions": 9,
+   "additions": 10,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Remove `FiniteDimensional` assumption",
@@ -3500,17 +3877,6 @@
      "files": [
       "Mathlib/RepresentationTheory/Subrepresentation.lean"
      ]
-    },
-    {
-     "date": "2026-09-15",
-     "title": "Define Tate-Shafarevich group",
-     "scope": "RepresentationTheory/Homological/ContCohomology/Sha",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43529",
-     "ai": false,
-     "sha": "a4c43ae1f99cb19aabfa62308b3ea75a340e470f",
-     "files": [
-      "Mathlib/RepresentationTheory/Homological/ContCohomology/Sha.lean"
-     ]
     }
    ],
    "overview": "field-representation_theory.json"
@@ -3521,9 +3887,25 @@
     "Mathlib/CategoryTheory/Abelian"
    ],
    "files": 215,
-   "additions": 16,
+   "additions": 17,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-18",
      "title": "Interaction between `InjectiveResolution.extMk` and the connecting morphism",
@@ -3583,18 +3965,6 @@
       "Mathlib/Algebra/Homology/HomotopyCategory/HomComplexSingle.lean",
       "Mathlib/Algebra/Homology/ShortComplex/HomologicalComplex.lean"
      ]
-    },
-    {
-     "date": "2026-09-30",
-     "title": "Pullbacks and pushouts of short exact sequences",
-     "scope": "Algebra/Homology/ShortComplex",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44229",
-     "ai": false,
-     "sha": "0e51f706a3f127b7a708185c0bd7b4beb74d5a17",
-     "files": [
-      "Mathlib/Algebra/Homology/ShortComplex/Pullback.lean",
-      "Mathlib/Algebra/Homology/ShortComplex/Pushout.lean"
-     ]
     }
    ],
    "overview": "field-homological_algebra.json"
@@ -3605,9 +3975,25 @@
     "Mathlib/Geometry/Manifold/VectorBundle"
    ],
    "files": 38,
-   "additions": 6,
+   "additions": 7,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Lint against `∀ᵉ`/`∃ᵉ`",
@@ -3663,21 +4049,6 @@
       "Mathlib/LinearAlgebra/TensorProduct/Map.lean",
       "Mathlib/Topology/Algebra/Module/Equiv.lean"
      ]
-    },
-    {
-     "date": "2026-09-03",
-     "title": "Dual of tensor is tensor of duals for finite projective modules",
-     "scope": "LinearAlgebra",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/41479",
-     "ai": true,
-     "sha": "e21ec05048292b3de86d4cf1987e2208171a5642",
-     "files": [
-      "Mathlib/Algebra/Module/Equiv/Basic.lean",
-      "Mathlib/LinearAlgebra/BilinearForm/TensorProduct.lean",
-      "Mathlib/LinearAlgebra/Contraction.lean",
-      "Mathlib/LinearAlgebra/TensorProduct/Map.lean",
-      "Mathlib/LinearAlgebra/Trace.lean"
-     ]
     }
    ],
    "overview": "field-tensor_calculus.json"
@@ -3687,9 +4058,25 @@
     "Mathlib/Topology/Homotopy"
    ],
    "files": 14,
-   "additions": 2,
+   "additions": 3,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-09-29",
      "title": "Fundamental group of the circle is ℤ",
@@ -3725,9 +4112,25 @@
     "Mathlib/Topology/Sheaves"
    ],
    "files": 148,
-   "additions": 2,
+   "additions": 3,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-09-11",
      "title": "Add exact sequences for Sheaf Cohomology",
@@ -3766,9 +4169,25 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 19,
+   "additions": 20,
    "ai_additions": 3,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Lint against `∀ᵉ`/`∃ᵉ`",
@@ -3817,21 +4236,6 @@
      "sha": "1ace980590d0a4e4805bb23478273ca7b6967206",
      "files": [
       "Mathlib/Geometry/Manifold/Notation.lean"
-     ]
-    },
-    {
-     "date": "2026-10-13",
-     "title": "Alternating maps and associated operations are `ContMDiff` and `MDifferentiable`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44371",
-     "ai": false,
-     "sha": "a646a376b8dae3a215700a465ecc57c74cd1adb3",
-     "files": [
-      "Mathlib/Geometry/Manifold/ContMDiff/Constructions.lean",
-      "Mathlib/Geometry/Manifold/ContMDiff/NormedSpace.lean",
-      "Mathlib/Geometry/Manifold/MFDeriv/NormedSpace.lean",
-      "Mathlib/Geometry/Manifold/MFDeriv/SpecificFunctions.lean",
-      "Mathlib/Geometry/Manifold/WhitneyEmbedding.lean"
      ]
     }
    ],
@@ -3863,9 +4267,26 @@
     "Mathlib/Analysis/VonNeumannAlgebra"
    ],
    "files": 1,
-   "additions": 0,
+   "additions": 1,
    "ai_additions": 0,
-   "recent": [],
+   "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    }
+   ],
    "overview": "field-quantum_topology.json"
   },
   "poincare_proof": {
@@ -3873,9 +4294,25 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 19,
+   "additions": 20,
    "ai_additions": 3,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Lint against `∀ᵉ`/`∃ᵉ`",
@@ -3925,21 +4362,6 @@
      "files": [
       "Mathlib/Geometry/Manifold/Notation.lean"
      ]
-    },
-    {
-     "date": "2026-10-13",
-     "title": "Alternating maps and associated operations are `ContMDiff` and `MDifferentiable`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44371",
-     "ai": false,
-     "sha": "a646a376b8dae3a215700a465ecc57c74cd1adb3",
-     "files": [
-      "Mathlib/Geometry/Manifold/ContMDiff/Constructions.lean",
-      "Mathlib/Geometry/Manifold/ContMDiff/NormedSpace.lean",
-      "Mathlib/Geometry/Manifold/MFDeriv/NormedSpace.lean",
-      "Mathlib/Geometry/Manifold/MFDeriv/SpecificFunctions.lean",
-      "Mathlib/Geometry/Manifold/WhitneyEmbedding.lean"
-     ]
     }
    ],
    "overview": "field-poincare_proof.json"
@@ -3950,9 +4372,25 @@
     "Mathlib/Analysis/Calculus/FDeriv"
    ],
    "files": 40,
-   "additions": 6,
+   "additions": 7,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Lint against `∀ᵉ`/`∃ᵉ`",
@@ -4007,18 +4445,6 @@
       "Mathlib/Analysis/Distribution/ContDiffMapSupportedIn.lean",
       "Mathlib/Analysis/Distribution/TestFunction.lean"
      ]
-    },
-    {
-     "date": "2026-09-05",
-     "title": "Define Bessel potential spaces",
-     "scope": "Analysis",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42307",
-     "ai": false,
-     "sha": "fe6e3cde435e82b2407df2760cbac392694c9e64",
-     "files": [
-      "Mathlib/Analysis/Distribution/Sobolev.lean",
-      "Mathlib/Analysis/FunctionalSpaces/BesselPotentialSpace.lean"
-     ]
     }
    ],
    "overview": "field-pde.json"
@@ -4029,9 +4455,25 @@
     "Mathlib/Analysis/Complex"
    ],
    "files": 108,
-   "additions": 24,
+   "additions": 25,
    "ai_additions": 6,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Add `normalize_mul_star`",
@@ -4087,17 +4529,6 @@
       "Mathlib/MeasureTheory/Measure/AEMeasurable.lean",
       "Mathlib/MeasureTheory/Order/Lattice.lean"
      ]
-    },
-    {
-     "date": "2026-09-30",
-     "title": "Some useful results about the complex exponential",
-     "scope": "Analysis/Complex/Trigonometric",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44058",
-     "ai": false,
-     "sha": "b5367e1978e729969d76f8651cf93c95a5a2baa5",
-     "files": [
-      "Mathlib/Analysis/Complex/Trigonometric.lean"
-     ]
     }
    ],
    "overview": "field-complex_dynamics.json"
@@ -4138,9 +4569,25 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 19,
+   "additions": 20,
    "ai_additions": 3,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Lint against `∀ᵉ`/`∃ᵉ`",
@@ -4190,21 +4637,6 @@
      "files": [
       "Mathlib/Geometry/Manifold/Notation.lean"
      ]
-    },
-    {
-     "date": "2026-10-13",
-     "title": "Alternating maps and associated operations are `ContMDiff` and `MDifferentiable`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44371",
-     "ai": false,
-     "sha": "a646a376b8dae3a215700a465ecc57c74cd1adb3",
-     "files": [
-      "Mathlib/Geometry/Manifold/ContMDiff/Constructions.lean",
-      "Mathlib/Geometry/Manifold/ContMDiff/NormedSpace.lean",
-      "Mathlib/Geometry/Manifold/MFDeriv/NormedSpace.lean",
-      "Mathlib/Geometry/Manifold/MFDeriv/SpecificFunctions.lean",
-      "Mathlib/Geometry/Manifold/WhitneyEmbedding.lean"
-     ]
     }
    ],
    "overview": "field-general_relativity.json"
@@ -4215,9 +4647,25 @@
     "Mathlib/Analysis/CStarAlgebra"
    ],
    "files": 102,
-   "additions": 23,
+   "additions": 24,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-16",
      "title": "Add descending sort `Tuple.sortDesc`",
@@ -4273,22 +4721,6 @@
       "Mathlib/Analysis/Normed/Order/Lattice.lean",
       "Mathlib/Analysis/Normed/Order/UpperLower.lean"
      ]
-    },
-    {
-     "date": "2026-09-30",
-     "title": "Class for `star x * x = 0 → x = 0`",
-     "scope": "Algebra/Star/Basic",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44080",
-     "ai": false,
-     "sha": "b0217dffb6f5fb88bcd1d1510e40b04ffe8fe855",
-     "files": [
-      "Mathlib/Algebra/Order/Star/Basic.lean",
-      "Mathlib/Algebra/Star/Basic.lean",
-      "Mathlib/Analysis/CStarAlgebra/Basic.lean",
-      "Mathlib/Analysis/CStarAlgebra/Module/Constructions.lean",
-      "Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/Abs.lean",
-      "Mathlib/LinearAlgebra/Matrix/DotProduct.lean"
-     ]
     }
    ],
    "overview": "field-quantum_mechanics.json"
@@ -4298,9 +4730,25 @@
     "Mathlib/Analysis/InnerProductSpace/Projection"
    ],
    "files": 5,
-   "additions": 4,
+   "additions": 5,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-09-29",
      "title": "Radial functions",
@@ -4373,9 +4821,25 @@
     "Mathlib/LinearAlgebra/Matrix/DotProduct"
    ],
    "files": 67,
-   "additions": 7,
+   "additions": 8,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Lint against `∀ᵉ`/`∃ᵉ`",
@@ -4435,18 +4899,6 @@
       "Mathlib/Analysis/Convex/Topology.lean",
       "Mathlib/Topology/Algebra/Module/Basic.lean"
      ]
-    },
-    {
-     "date": "2026-09-23",
-     "title": "`egauge` of a seminorm ball",
-     "scope": "Analysis/Convex",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42846",
-     "ai": false,
-     "sha": "6a00b6b4de534c8161d605adf8bbc59df5101859",
-     "files": [
-      "Mathlib/Analysis/Asymptotics/TVS.lean",
-      "Mathlib/Analysis/Convex/EGauge.lean"
-     ]
     }
    ],
    "overview": "field-linear_programming.json"
@@ -4457,9 +4909,25 @@
     "Mathlib/Algebra/Lie"
    ],
    "files": 76,
-   "additions": 12,
+   "additions": 13,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Lint against `∀ᵉ`/`∃ᵉ`",
@@ -4510,22 +4978,6 @@
      "files": [
       "Mathlib/Algebra/Lie/Ideal.lean"
      ]
-    },
-    {
-     "date": "2026-09-29",
-     "title": "Generalize SMul instances from DistribMulAction to DistribSMul",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/41736",
-     "ai": false,
-     "sha": "b5b6812470cf32a952471074ee53886cffe310ee",
-     "files": [
-      "Mathlib/Algebra/Lie/Free.lean",
-      "Mathlib/Analysis/BoxIntegral/Partition/Additive.lean",
-      "Mathlib/Analysis/Distribution/ContDiffMapSupportedIn.lean",
-      "Mathlib/Geometry/Convex/AffineMap/Module.lean",
-      "Mathlib/Geometry/Convex/ConvexSpace/Module.lean",
-      "Mathlib/RepresentationTheory/Continuous/Basic.lean"
-     ]
     }
    ],
    "overview": "field-gauge_theory.json"
@@ -4536,9 +4988,41 @@
     "Mathlib/Probability"
    ],
    "files": 153,
-   "additions": 14,
+   "additions": 16,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
+    {
+     "date": "2026-10-20",
+     "title": "Generalize ENNReal lemmas",
+     "scope": "Topology/Algebra/InfiniteSum",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/38489",
+     "ai": false,
+     "sha": "4dc3912c3394dbf46f97c6fe75494ae9197b230f",
+     "files": [
+      "Mathlib/MeasureTheory/Measure/CompleteLattice.lean",
+      "Mathlib/MeasureTheory/OuterMeasure/OfFunction.lean",
+      "Mathlib/Probability/ProbabilityMassFunction/Monad.lean",
+      "Mathlib/Topology/Algebra/InfiniteSum/Basic.lean",
+      "Mathlib/Topology/Algebra/InfiniteSum/ENNReal.lean",
+      "Mathlib/Topology/Algebra/InfiniteSum/Order.lean"
+     ]
+    },
     {
      "date": "2026-10-14",
      "title": "Grind patterns for cfc junk values",
@@ -4579,31 +5063,6 @@
      "sha": "69fcfdf68750b07da41ab3479efe3a246149d99f",
      "files": [
       "Mathlib/Probability/Decision/Risk/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-10-04",
-     "title": "Generalize `iIndepFun.indepFun_finset` to arbitrary index sets",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43523",
-     "ai": false,
-     "sha": "ef13800c008f4141e6d9b4fb3ea8211e298c8e2b",
-     "files": [
-      "Mathlib/Probability/Independence/Basic.lean",
-      "Mathlib/Probability/Independence/Conditional.lean",
-      "Mathlib/Probability/Independence/Kernel/IndepFun.lean",
-      "Mathlib/Probability/Independence/Process/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-10-04",
-     "title": "Define indistinguishability relation",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43129",
-     "ai": false,
-     "sha": "ecd424ac0b958ca9571ee3905e9b671b2980f262",
-     "files": [
-      "Mathlib/Probability/Process/Indistinguishable.lean"
      ]
     }
    ],
@@ -4722,9 +5181,25 @@
     "Mathlib/Probability/Distributions/Gaussian"
    ],
    "files": 22,
-   "additions": 3,
+   "additions": 4,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-14",
      "title": "Grind patterns for cfc junk values",
@@ -4814,9 +5289,25 @@
     "Mathlib/Data/Nat/Choose"
    ],
    "files": 212,
-   "additions": 46,
+   "additions": 47,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Add distance lemmas for graph maps",
@@ -4870,17 +5361,6 @@
       "Mathlib/Combinatorics/SimpleGraph/CycleGraph.lean",
       "Mathlib/Combinatorics/SimpleGraph/Hasse.lean"
      ]
-    },
-    {
-     "date": "2026-10-15",
-     "title": "Simple graph is 2-edge-connected iff it has no bridge",
-     "scope": "Combinatorics/SimpleGraph/Connectivity",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42839",
-     "ai": false,
-     "sha": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
-     "files": [
-      "Mathlib/Combinatorics/SimpleGraph/Connectivity/EdgeConnectivity.lean"
-     ]
     }
    ],
    "overview": "field-combinatorics.json"
@@ -4903,9 +5383,25 @@
     "Mathlib/Combinatorics/Additive"
    ],
    "files": 27,
-   "additions": 1,
+   "additions": 2,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-09-08",
      "title": "Tag Nat.pow_le_pow_right with @[gcongr high]",
@@ -4999,9 +5495,25 @@
     "Mathlib/Order/Heyting"
    ],
    "files": 4,
-   "additions": 1,
+   "additions": 2,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-09-04",
      "title": "Try all translation pairings until one succeeds",
@@ -5026,9 +5538,25 @@
     "Mathlib/SetTheory/ZFC"
    ],
    "files": 7,
-   "additions": 1,
+   "additions": 2,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-09-13",
      "title": "Small theorems and generalizations",
@@ -5107,9 +5635,25 @@
     "Mathlib/SetTheory/ZFC"
    ],
    "files": 10,
-   "additions": 1,
+   "additions": 2,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-09-13",
      "title": "Small theorems and generalizations",
@@ -5135,9 +5679,25 @@
     "Mathlib/CategoryTheory/Subobject"
    ],
    "files": 132,
-   "additions": 4,
+   "additions": 5,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-20",
+     "title": "Enable Verso if no syntax or doc-gen changes",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+     "ai": false,
+     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+     "files": [
+      "Mathlib/Algebra/AffineMonoid/Basic.lean",
+      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+      "Mathlib/Algebra/Algebra/Bilinear.lean",
+      "Mathlib/Algebra/Algebra/Field.lean"
+     ]
+    },
     {
      "date": "2026-09-25",
      "title": "Extend image subobject API",
@@ -5197,6 +5757,144 @@
   }
  },
  "feed": [
+  {
+   "date": "2026-10-20",
+   "title": "Enable Verso if no syntax or doc-gen changes",
+   "scope": null,
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
+   "ai": false,
+   "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
+   "files": [
+    "Mathlib/Algebra/AffineMonoid/Basic.lean",
+    "Mathlib/Algebra/AffineMonoid/Embedding.lean",
+    "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
+    "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
+    "Mathlib/Algebra/Algebra/Bilinear.lean",
+    "Mathlib/Algebra/Algebra/Field.lean"
+   ],
+   "fields": [
+    "egyptian_geometry",
+    "euclid",
+    "trigonometry",
+    "diophantine",
+    "zero",
+    "al_jabr",
+    "symbolic_algebra",
+    "logarithms",
+    "analytic_geometry",
+    "projective",
+    "probability",
+    "fluxions",
+    "leibniz_calculus",
+    "graph_theory",
+    "modern_number_theory",
+    "fourier",
+    "statistics",
+    "rigorous_analysis",
+    "complex_analysis",
+    "differential_geometry",
+    "lobachevsky",
+    "bolyai",
+    "group_theory",
+    "analytic_number_theory",
+    "linear_algebra",
+    "invariant_theory",
+    "set_theory",
+    "algebraic_geometry",
+    "algebraic_topology",
+    "dynamical_systems",
+    "measure_theory",
+    "functional_analysis",
+    "point_set_topology",
+    "abstract_algebra",
+    "axiomatic_probability",
+    "category_theory",
+    "information_theory",
+    "schemes",
+    "git",
+    "langlands",
+    "nine_chapters",
+    "indian_combinatorics",
+    "p_adic",
+    "fermat_last",
+    "lie_theory",
+    "representation_theory",
+    "homological_algebra",
+    "tensor_calculus",
+    "knot_theory",
+    "sheaf_theory",
+    "differential_topology",
+    "quantum_topology",
+    "poincare_proof",
+    "pde",
+    "complex_dynamics",
+    "general_relativity",
+    "quantum_mechanics",
+    "finite_elements",
+    "linear_programming",
+    "gauge_theory",
+    "learning_theory",
+    "brownian_motion",
+    "combinatorics",
+    "probabilistic_method",
+    "intuitionism",
+    "zfc",
+    "forcing",
+    "topos_theory"
+   ]
+  },
+  {
+   "date": "2026-10-20",
+   "title": "Generalize ENNReal lemmas",
+   "scope": "Topology/Algebra/InfiniteSum",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/38489",
+   "ai": false,
+   "sha": "4dc3912c3394dbf46f97c6fe75494ae9197b230f",
+   "files": [
+    "Mathlib/MeasureTheory/Measure/CompleteLattice.lean",
+    "Mathlib/MeasureTheory/OuterMeasure/OfFunction.lean",
+    "Mathlib/Probability/ProbabilityMassFunction/Monad.lean",
+    "Mathlib/Topology/Algebra/InfiniteSum/Basic.lean",
+    "Mathlib/Topology/Algebra/InfiniteSum/ENNReal.lean",
+    "Mathlib/Topology/Algebra/InfiniteSum/Order.lean"
+   ],
+   "fields": [
+    "probability",
+    "measure_theory",
+    "point_set_topology",
+    "axiomatic_probability",
+    "learning_theory"
+   ]
+  },
+  {
+   "date": "2026-10-19",
+   "title": "Evaluation at E₄, E₆ surjectively maps onto level-1 graded ring",
+   "scope": "NumberTheory/ModularForms",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/39258",
+   "ai": true,
+   "sha": "719bd68261004437feff410dfaefa498ce0b1cee",
+   "files": [
+    "Mathlib/NumberTheory/ModularForms/LevelOne/DimensionFormula.lean",
+    "Mathlib/NumberTheory/ModularForms/LevelOne/GradedRing.lean"
+   ],
+   "fields": [
+    "langlands"
+   ]
+  },
+  {
+   "date": "2026-10-19",
+   "title": "Adds AEMeasurable version of `MeasurePreserving.lintegral_comp`",
+   "scope": "MeasureTheory",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/44975",
+   "ai": false,
+   "sha": "e3e75e86143b43849829fdcd44a39a6b0fe35234",
+   "files": [
+    "Mathlib/MeasureTheory/Integral/Lebesgue/Map.lean"
+   ],
+   "fields": [
+    "measure_theory"
+   ]
+  },
   {
    "date": "2026-10-19",
    "title": "Equivalent discrete valuations",
@@ -6142,20 +6840,6 @@
   },
   {
    "date": "2026-10-13",
-   "title": "Discontinuity and center/global fderiv formulas",
-   "scope": "Inversion",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/36323",
-   "ai": false,
-   "sha": "8f04ce2f68dae15e4669cd1e83f41972fe1a590f",
-   "files": [
-    "Mathlib/Geometry/Euclidean/Inversion/Calculus.lean"
-   ],
-   "fields": [
-    "euclid"
-   ]
-  },
-  {
-   "date": "2026-10-13",
    "title": "Define the range of an `AffineMap`",
    "scope": "LinearAlgebra/AffineSubspace",
    "url": "https://github.com/leanprover-community/mathlib4/pull/44042",
@@ -6168,36 +6852,6 @@
    "fields": [
     "analytic_geometry",
     "linear_algebra"
-   ]
-  },
-  {
-   "date": "2026-10-13",
-   "title": "Product and units commute, and the units in products of topological monoids with open units are open (see also Topology/Algebra/IsOpenUnits)",
-   "scope": "Topology/Algebra/Group/Units",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44518",
-   "ai": false,
-   "sha": "351b828a5143bc061215ae0e957abd07481da365",
-   "files": [
-    "Mathlib/Topology/Algebra/Group/Units.lean",
-    "Mathlib/Topology/Algebra/IsOpenUnits.lean"
-   ],
-   "fields": [
-    "point_set_topology"
-   ]
-  },
-  {
-   "date": "2026-10-13",
-   "title": "Define the Gelfand radius as `lim ‖a ^ k‖ ^ (1 / k)`",
-   "scope": "Analysis/Normed/Algebra/GelfandRadius",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/42607",
-   "ai": false,
-   "sha": "56307dd73d687e33014af41b4234b3ff6cd13591",
-   "files": [
-    "Mathlib/Analysis/Normed/Algebra/GelfandFormula.lean",
-    "Mathlib/Analysis/Normed/Algebra/GelfandRadius.lean"
-   ],
-   "fields": [
-    "functional_analysis"
    ]
   },
   {
@@ -7066,21 +7720,6 @@
     "measure_theory",
     "complex_dynamics"
    ]
-  },
-  {
-   "date": "2026-08-20",
-   "title": "The compositum of two abelian extensions is abelian",
-   "scope": "FieldTheory",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/40905",
-   "ai": true,
-   "sha": "dc30148764c51703bf88996506d6731c04393b85",
-   "files": [
-    "Mathlib/FieldTheory/Galois/Abelian.lean",
-    "Mathlib/FieldTheory/Galois/Basic.lean"
-   ],
-   "fields": [
-    "group_theory"
-   ]
   }
  ],
  "projects": [
@@ -7129,13 +7768,13 @@
    "kind": "human",
    "description": "Kontorovich and Tao's collaborative project on the prime number theorem and related results.",
    "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",
-   "updated": "2026-09-30",
+   "updated": "2026-10-19",
    "latest": {
-    "title": "Chore: Bump to V4.34.0 (#1782)",
-    "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd/commit/c39a751132c88b6e8080b74c74023fd95b3d8be0"
+    "title": "Chore: bump deps to V4.35.0 (#1798)",
+    "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd/commit/127b50e33f6033e2147921167a117af96d9ba4ea"
    },
    "overview": "AlexKontorovich__PrimeNumberTheoremAnd.json",
-   "lean_files": 233
+   "lean_files": 232
   },
   {
    "name": "Formal Conjectures",
@@ -7150,10 +7789,10 @@
    "kind": "benchmark",
    "description": "Google DeepMind's collection of open conjectures (Erdős problems and others) stated in Lean, used as targets for provers.",
    "url": "https://github.com/google-deepmind/formal-conjectures",
-   "updated": "2026-10-19",
+   "updated": "2026-10-20",
    "latest": {
-    "title": "feat(WOWII): mark Conjecture 198a solved (#4597)",
-    "url": "https://github.com/google-deepmind/formal-conjectures/commit/90adbca8684876a198152749912cf21a2dbe2089"
+    "title": "feat(ErdosProblems/382): prove lt_two_mul_of_largestPrimeRepeated (#7471)",
+    "url": "https://github.com/google-deepmind/formal-conjectures/commit/e30c4c3defa569bb11dd45abfd71bfc2ead85669"
    },
    "overview": "google-deepmind__formal-conjectures.json",
    "lean_files": 400
@@ -7207,10 +7846,10 @@
    "kind": "human",
    "description": "Formalization of Carleson's theorem on pointwise convergence of Fourier series.",
    "url": "https://github.com/fpvandoorn/carleson",
-   "updated": "2026-10-16",
+   "updated": "2026-10-19",
    "latest": {
-    "title": "Split WeakType.lean into WNorm.lean and HasType.lean (#682)",
-    "url": "https://github.com/fpvandoorn/carleson/commit/a65358ea0b72c5fce7b51d98aeb60d171b52ec24"
+    "title": "chore(deps): bump leanprover/lean-action from 96e06131c0e9943c780388fd166f55d1e2fa0433 to a2cd0b8fd34c304895595abb5f1cfb892e2b50d8 (#684)",
+    "url": "https://github.com/fpvandoorn/carleson/commit/5f8ce8f27d3e9d8cd47b12a4418f68052d876c3b"
    },
    "overview": "fpvandoorn__carleson.json",
    "lean_files": 118
