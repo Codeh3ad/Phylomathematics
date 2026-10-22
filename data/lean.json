@@ -1,13 +1,13 @@
 {
- "generated": "2026-10-21T11:45Z",
+ "generated": "2026-10-22T11:48Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "c31114ff810d2ce158c0f822f0cdad76771a5a6a",
-  "date": "2026-10-21",
-  "files": 8650,
-  "changes": 1407,
-  "additions": 715,
-  "ai_additions": 73
+  "commit": "5287c96ab0023a821dda3f293a38be0665bebeb7",
+  "date": "2026-10-22",
+  "files": 8653,
+  "changes": 1405,
+  "additions": 712,
+  "ai_additions": 72
  },
  "fields": {
   "babylonian": {
@@ -119,7 +119,7 @@
     "Mathlib/Data/Int/GCD"
    ],
    "files": 53,
-   "additions": 25,
+   "additions": 24,
    "ai_additions": 3,
    "recent": [
     {
@@ -376,7 +376,7 @@
     "Mathlib/Algebra/GroupWithZero"
    ],
    "files": 58,
-   "additions": 9,
+   "additions": 8,
    "ai_additions": 2,
    "recent": [
     {
@@ -1234,9 +1234,25 @@
     "Mathlib/Analysis/Fourier"
    ],
    "files": 14,
-   "additions": 5,
+   "additions": 6,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-21",
+     "title": "Use `IsApply` for `BoundedContinuousFunction`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45087",
+     "ai": false,
+     "sha": "903930a24c18fe1fcb0cc50caf5f65fd04e4003a",
+     "files": [
+      "Mathlib/Analysis/Fourier/FourierTransform.lean",
+      "Mathlib/Analysis/SpecialFunctions/MulExpNegMulSqIntegral.lean",
+      "Mathlib/MeasureTheory/Integral/BoundedContinuousFunction.lean",
+      "Mathlib/MeasureTheory/Measure/FiniteMeasure.lean",
+      "Mathlib/MeasureTheory/Measure/HasOuterApproxClosed.lean",
+      "Mathlib/MeasureTheory/Measure/ProbabilityMeasure.lean"
+     ]
+    },
     {
      "date": "2026-10-21",
      "title": "Use `IsApply` for `SimpleFunc`",
@@ -1296,22 +1312,6 @@
       "Mathlib/Analysis/Polynomial/MahlerMeasure.lean",
       "Mathlib/Analysis/SpecialFunctions/Complex/CircleMap.lean",
       "Mathlib/Analysis/SpecialFunctions/Trigonometric/Angle.lean"
-     ]
-    },
-    {
-     "date": "2026-09-08",
-     "title": "Tag Nat.pow_le_pow_right with @[gcongr high]",
-     "scope": "Data/Nat/Basic",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43505",
-     "ai": false,
-     "sha": "9a1338a6a1a8eb784150b180bee61950c418eca9",
-     "files": [
-      "Mathlib/Analysis/Fourier/FourierTransformDeriv.lean",
-      "Mathlib/Combinatorics/SimpleGraph/Regularity/Bound.lean",
-      "Mathlib/Combinatorics/SimpleGraph/Regularity/Chunk.lean",
-      "Mathlib/Computability/Ackermann.lean",
-      "Mathlib/Data/Nat/Basic.lean",
-      "Mathlib/Tactic/GCongr/CoreAttrs.lean"
      ]
     }
    ],
@@ -1480,8 +1480,8 @@
     "Mathlib/Analysis/Analytic"
    ],
    "files": 92,
-   "additions": 24,
-   "ai_additions": 6,
+   "additions": 23,
+   "ai_additions": 5,
    "recent": [
     {
      "date": "2026-10-20",
@@ -1565,7 +1565,7 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 17,
+   "additions": 16,
    "ai_additions": 3,
    "recent": [
     {
@@ -1756,7 +1756,7 @@
     "Mathlib/FieldTheory/AbelRuffini"
    ],
    "files": 182,
-   "additions": 45,
+   "additions": 44,
    "ai_additions": 11,
    "recent": [
     {
@@ -1922,7 +1922,7 @@
     "Mathlib/Data/Matrix"
    ],
    "files": 404,
-   "additions": 74,
+   "additions": 73,
    "ai_additions": 6,
    "recent": [
     {
@@ -2178,9 +2178,22 @@
     "Mathlib/RingTheory/Nullstellensatz"
    ],
    "files": 141,
-   "additions": 12,
+   "additions": 13,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-22",
+     "title": "Colimit of local ring via local hom",
+     "scope": "Algebra/CommRingCat",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/39075",
+     "ai": false,
+     "sha": "5287c96ab0023a821dda3f293a38be0665bebeb7",
+     "files": [
+      "Mathlib/Algebra/Category/Ring/FilteredColimits.lean",
+      "Mathlib/Algebra/Category/Ring/FilteredColimitsLocal.lean",
+      "Mathlib/AlgebraicGeometry/AffineTransitionLimit.lean"
+     ]
+    },
     {
      "date": "2026-10-20",
      "title": "Enable Verso if no syntax or doc-gen changes",
@@ -2231,18 +2244,6 @@
      "files": [
       "Mathlib/AlgebraicGeometry/AlgebraicCycle/Basic.lean",
       "Mathlib/Topology/LocallyFinsupp.lean"
-     ]
-    },
-    {
-     "date": "2026-09-13",
-     "title": "Affine space is smooth",
-     "scope": "AlgebraicGeometry/AffineSpace",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/39710",
-     "ai": false,
-     "sha": "8d52ea9a145a9255c4d301c0d1a1b8bf6e59305a",
-     "files": [
-      "Mathlib/AlgebraicGeometry/AffineSpace.lean",
-      "Mathlib/AlgebraicGeometry/Morphisms/Smooth.lean"
      ]
     }
    ],
@@ -2419,9 +2420,37 @@
     "Mathlib/MeasureTheory"
    ],
    "files": 339,
-   "additions": 48,
-   "ai_additions": 3,
+   "additions": 49,
+   "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-10-21",
+     "title": "Use `IsApply` for `FiniteMeasure`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45123",
+     "ai": false,
+     "sha": "e83c9eaaf43b752c4fb0de45d4fed1cf97262b5b",
+     "files": [
+      "Mathlib/MeasureTheory/Measure/FiniteMeasure.lean",
+      "Mathlib/MeasureTheory/Measure/ProbabilityMeasure.lean"
+     ]
+    },
+    {
+     "date": "2026-10-21",
+     "title": "Use `IsApply` for `BoundedContinuousFunction`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45087",
+     "ai": false,
+     "sha": "903930a24c18fe1fcb0cc50caf5f65fd04e4003a",
+     "files": [
+      "Mathlib/Analysis/Fourier/FourierTransform.lean",
+      "Mathlib/Analysis/SpecialFunctions/MulExpNegMulSqIntegral.lean",
+      "Mathlib/MeasureTheory/Integral/BoundedContinuousFunction.lean",
+      "Mathlib/MeasureTheory/Measure/FiniteMeasure.lean",
+      "Mathlib/MeasureTheory/Measure/HasOuterApproxClosed.lean",
+      "Mathlib/MeasureTheory/Measure/ProbabilityMeasure.lean"
+     ]
+    },
     {
      "date": "2026-10-21",
      "title": "Use `IsApply` for `SimpleFunc`",
@@ -2469,33 +2498,6 @@
       "Mathlib/Topology/Algebra/InfiniteSum/ENNReal.lean",
       "Mathlib/Topology/Algebra/InfiniteSum/Order.lean"
      ]
-    },
-    {
-     "date": "2026-10-19",
-     "title": "Adds AEMeasurable version of `MeasurePreserving.lintegral_comp`",
-     "scope": "MeasureTheory",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44975",
-     "ai": false,
-     "sha": "e3e75e86143b43849829fdcd44a39a6b0fe35234",
-     "files": [
-      "Mathlib/MeasureTheory/Integral/Lebesgue/Map.lean"
-     ]
-    },
-    {
-     "date": "2026-10-17",
-     "title": "Lint against `∀ᵉ`/`∃ᵉ`",
-     "scope": "Linter/Style",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44544",
-     "ai": false,
-     "sha": "bac53ecd3a5a67e98776aee174207957ebcd3f0f",
-     "files": [
-      "Mathlib/Algebra/Group/Irreducible/Indecomposable.lean",
-      "Mathlib/Algebra/Group/Subgroup/Defs.lean",
-      "Mathlib/Algebra/Group/Subgroup/Pointwise.lean",
-      "Mathlib/Algebra/Lie/Abelian.lean",
-      "Mathlib/Algebra/Lie/Basis/Basic.lean",
-      "Mathlib/Algebra/Lie/Subalgebra.lean"
-     ]
     }
    ],
    "overview": "field-measure_theory.json"
@@ -2506,9 +2508,33 @@
     "Mathlib/Analysis/InnerProductSpace"
    ],
    "files": 222,
-   "additions": 45,
+   "additions": 47,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-10-22",
+     "title": "The Gelfand radius of a block diagonal matrix",
+     "scope": "Analysis/Matrix/GelfandRadius",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44973",
+     "ai": false,
+     "sha": "6fcf84ef4d59992492e50df6ea5135af79118a96",
+     "files": [
+      "Mathlib/Analysis/Matrix/GelfandRadius.lean",
+      "Mathlib/Analysis/Matrix/Normed.lean",
+      "Mathlib/Analysis/Normed/Algebra/GelfandRadius.lean"
+     ]
+    },
+    {
+     "date": "2026-10-21",
+     "title": "More API for `AbsoluteValue.under`",
+     "scope": "Analysis/Normed/Ring/WithAbs",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43841",
+     "ai": false,
+     "sha": "573535abb37a6d98df5f7ad70993a75724d14cb7",
+     "files": [
+      "Mathlib/Analysis/Normed/Ring/WithAbs.lean"
+     ]
+    },
     {
      "date": "2026-10-20",
      "title": "Enable Verso if no syntax or doc-gen changes",
@@ -2551,30 +2577,6 @@
       "Mathlib/Order/Monotone/Basic.lean",
       "Mathlib/Order/Monotone/Defs.lean"
      ]
-    },
-    {
-     "date": "2026-10-13",
-     "title": "Define the Gelfand radius as `lim ‖a ^ k‖ ^ (1 / k)`",
-     "scope": "Analysis/Normed/Algebra/GelfandRadius",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42607",
-     "ai": false,
-     "sha": "56307dd73d687e33014af41b4234b3ff6cd13591",
-     "files": [
-      "Mathlib/Analysis/Normed/Algebra/GelfandFormula.lean",
-      "Mathlib/Analysis/Normed/Algebra/GelfandRadius.lean"
-     ]
-    },
-    {
-     "date": "2026-10-13",
-     "title": "Linear map version of `apply`",
-     "scope": "Topology/Algebra/Module/Spaces/CLM",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43112",
-     "ai": false,
-     "sha": "6fb4b5da2701d9c70c0862aa2b1504a5bca66554",
-     "files": [
-      "Mathlib/Analysis/Normed/Operator/Bilinear.lean",
-      "Mathlib/Topology/Algebra/Module/Spaces/ContinuousLinearMap.lean"
-     ]
     }
    ],
    "overview": "field-functional_analysis.json"
@@ -2584,9 +2586,25 @@
     "Mathlib/Topology"
    ],
    "files": 703,
-   "additions": 93,
+   "additions": 94,
    "ai_additions": 5,
    "recent": [
+    {
+     "date": "2026-10-21",
+     "title": "Use `IsApply` for `BoundedContinuousFunction`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45087",
+     "ai": false,
+     "sha": "903930a24c18fe1fcb0cc50caf5f65fd04e4003a",
+     "files": [
+      "Mathlib/Analysis/Fourier/FourierTransform.lean",
+      "Mathlib/Analysis/SpecialFunctions/MulExpNegMulSqIntegral.lean",
+      "Mathlib/MeasureTheory/Integral/BoundedContinuousFunction.lean",
+      "Mathlib/MeasureTheory/Measure/FiniteMeasure.lean",
+      "Mathlib/MeasureTheory/Measure/HasOuterApproxClosed.lean",
+      "Mathlib/MeasureTheory/Measure/ProbabilityMeasure.lean"
+     ]
+    },
     {
      "date": "2026-10-20",
      "title": "The recurrence relation of bessel function J",
@@ -2645,22 +2663,6 @@
       "Mathlib/Topology/Algebra/InfiniteSum/ENNReal.lean",
       "Mathlib/Topology/Algebra/InfiniteSum/Order.lean"
      ]
-    },
-    {
-     "date": "2026-10-19",
-     "title": "Equivalent discrete valuations",
-     "scope": "RingTheory/Valuation/Discrete/IsDiscreteValuationSubring",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43655",
-     "ai": false,
-     "sha": "bdece672cbbf25e2f8f77f6238d6cd5438246f5d",
-     "files": [
-      "Mathlib/RingTheory/Valuation/Basic.lean",
-      "Mathlib/RingTheory/Valuation/Discrete/Basic.lean",
-      "Mathlib/RingTheory/Valuation/Discrete/IsDiscreteValuationRing.lean",
-      "Mathlib/RingTheory/Valuation/Extension.lean",
-      "Mathlib/RingTheory/Valuation/ValuativeRel/Basic.lean",
-      "Mathlib/Topology/Algebra/Valued/WithVal.lean"
-     ]
     }
    ],
    "overview": "field-point_set_topology.json"
@@ -2672,9 +2674,24 @@
     "Mathlib/Algebra/Module"
    ],
    "files": 905,
-   "additions": 85,
+   "additions": 86,
    "ai_additions": 22,
    "recent": [
+    {
+     "date": "2026-10-21",
+     "title": "Classify quadratic algebras over ℚ",
+     "scope": "Algebra/QuadraticAlgebra",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42393",
+     "ai": false,
+     "sha": "5f7b4198d22a9c82e1c698a379334fe128095c82",
+     "files": [
+      "Mathlib/Algebra/QuadraticAlgebra/Rat.lean",
+      "Mathlib/Algebra/Squarefree/Basic.lean",
+      "Mathlib/Data/Rat/Squarefree.lean",
+      "Mathlib/RingTheory/Int/Basic.lean",
+      "Mathlib/RingTheory/Localization/NumDen.lean"
+     ]
+    },
     {
      "date": "2026-10-20",
      "title": "Enable Verso if no syntax or doc-gen changes",
@@ -2727,17 +2744,6 @@
      "sha": "f3e8c297cb2e87705a3ee571318ee42b1b508466",
      "files": [
       "Mathlib/RingTheory/Unramified/Finite.lean"
-     ]
-    },
-    {
-     "date": "2026-10-19",
-     "title": "Algebraic instances",
-     "scope": "RingTheory/Valuation/ValuationSubring",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43591",
-     "ai": false,
-     "sha": "83c11fb8f9e5e6251cc0751753f5609ffd367d0c",
-     "files": [
-      "Mathlib/RingTheory/Valuation/ValuationSubring.lean"
      ]
     }
    ],
@@ -2912,7 +2918,7 @@
     "Mathlib/CategoryTheory"
    ],
    "files": 1132,
-   "additions": 46,
+   "additions": 45,
    "ai_additions": 0,
    "recent": [
     {
@@ -3036,9 +3042,22 @@
     "Mathlib/AlgebraicGeometry"
    ],
    "files": 140,
-   "additions": 12,
+   "additions": 13,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-22",
+     "title": "Colimit of local ring via local hom",
+     "scope": "Algebra/CommRingCat",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/39075",
+     "ai": false,
+     "sha": "5287c96ab0023a821dda3f293a38be0665bebeb7",
+     "files": [
+      "Mathlib/Algebra/Category/Ring/FilteredColimits.lean",
+      "Mathlib/Algebra/Category/Ring/FilteredColimitsLocal.lean",
+      "Mathlib/AlgebraicGeometry/AffineTransitionLimit.lean"
+     ]
+    },
     {
      "date": "2026-10-20",
      "title": "Enable Verso if no syntax or doc-gen changes",
@@ -3089,18 +3108,6 @@
      "files": [
       "Mathlib/AlgebraicGeometry/AlgebraicCycle/Basic.lean",
       "Mathlib/Topology/LocallyFinsupp.lean"
-     ]
-    },
-    {
-     "date": "2026-09-13",
-     "title": "Affine space is smooth",
-     "scope": "AlgebraicGeometry/AffineSpace",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/39710",
-     "ai": false,
-     "sha": "8d52ea9a145a9255c4d301c0d1a1b8bf6e59305a",
-     "files": [
-      "Mathlib/AlgebraicGeometry/AffineSpace.lean",
-      "Mathlib/AlgebraicGeometry/Morphisms/Smooth.lean"
      ]
     }
    ],
@@ -3112,9 +3119,22 @@
     "Mathlib/RingTheory/Invariant"
    ],
    "files": 144,
-   "additions": 12,
+   "additions": 13,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-22",
+     "title": "Colimit of local ring via local hom",
+     "scope": "Algebra/CommRingCat",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/39075",
+     "ai": false,
+     "sha": "5287c96ab0023a821dda3f293a38be0665bebeb7",
+     "files": [
+      "Mathlib/Algebra/Category/Ring/FilteredColimits.lean",
+      "Mathlib/Algebra/Category/Ring/FilteredColimitsLocal.lean",
+      "Mathlib/AlgebraicGeometry/AffineTransitionLimit.lean"
+     ]
+    },
     {
      "date": "2026-10-20",
      "title": "Enable Verso if no syntax or doc-gen changes",
@@ -3166,18 +3186,6 @@
       "Mathlib/AlgebraicGeometry/AlgebraicCycle/Basic.lean",
       "Mathlib/Topology/LocallyFinsupp.lean"
      ]
-    },
-    {
-     "date": "2026-09-13",
-     "title": "Affine space is smooth",
-     "scope": "AlgebraicGeometry/AffineSpace",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/39710",
-     "ai": false,
-     "sha": "8d52ea9a145a9255c4d301c0d1a1b8bf6e59305a",
-     "files": [
-      "Mathlib/AlgebraicGeometry/AffineSpace.lean",
-      "Mathlib/AlgebraicGeometry/Morphisms/Smooth.lean"
-     ]
     }
    ],
    "overview": "field-git.json"
@@ -3188,7 +3196,7 @@
     "Mathlib/RepresentationTheory"
    ],
    "files": 84,
-   "additions": 21,
+   "additions": 20,
    "ai_additions": 4,
    "recent": [
     {
@@ -3475,9 +3483,23 @@
     "Mathlib/NumberTheory/Cyclotomic"
    ],
    "files": 65,
-   "additions": 16,
+   "additions": 17,
    "ai_additions": 3,
    "recent": [
+    {
+     "date": "2026-10-21",
+     "title": "Prove `‖A i j‖ ≤ ‖A‖` for the operator norm",
+     "scope": "Analysis/Matrix/Normed",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44969",
+     "ai": false,
+     "sha": "4e006b96901cfe4f8e7261376d330974dff1e02f",
+     "files": [
+      "Mathlib/Analysis/CStarAlgebra/CStarMatrix.lean",
+      "Mathlib/Analysis/Matrix/Normed.lean",
+      "Mathlib/NumberTheory/NumberField/House.lean",
+      "Mathlib/NumberTheory/SiegelsLemma.lean"
+     ]
+    },
     {
      "date": "2026-10-21",
      "title": "Use `IsApply` for `SimpleFunc`",
@@ -3535,19 +3557,6 @@
      "files": [
       "Mathlib/NumberTheory/NumberField/Cyclotomic/Ideal.lean",
       "Mathlib/NumberTheory/NumberField/Ideal/KummerDedekind.lean"
-     ]
-    },
-    {
-     "date": "2026-10-13",
-     "title": "Idelic product formula",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/34911",
-     "ai": false,
-     "sha": "f69ff8554f52f2cb9caa43e8732904b28d26bc9c",
-     "files": [
-      "Mathlib/NumberTheory/NumberField/AdeleRing.lean",
-      "Mathlib/NumberTheory/NumberField/FiniteAdeleRing.lean",
-      "Mathlib/NumberTheory/NumberField/InfiniteAdeleRing.lean"
      ]
     }
    ],
@@ -4187,7 +4196,7 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 17,
+   "additions": 16,
    "ai_additions": 3,
    "recent": [
     {
@@ -4312,7 +4321,7 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 17,
+   "additions": 16,
    "ai_additions": 3,
    "recent": [
     {
@@ -4473,8 +4482,8 @@
     "Mathlib/Analysis/Complex"
    ],
    "files": 108,
-   "additions": 25,
-   "ai_additions": 6,
+   "additions": 24,
+   "ai_additions": 5,
    "recent": [
     {
      "date": "2026-10-20",
@@ -4587,7 +4596,7 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 17,
+   "additions": 16,
    "ai_additions": 3,
    "recent": [
     {
@@ -4665,9 +4674,23 @@
     "Mathlib/Analysis/CStarAlgebra"
    ],
    "files": 102,
-   "additions": 23,
+   "additions": 24,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-21",
+     "title": "Prove `‖A i j‖ ≤ ‖A‖` for the operator norm",
+     "scope": "Analysis/Matrix/Normed",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44969",
+     "ai": false,
+     "sha": "4e006b96901cfe4f8e7261376d330974dff1e02f",
+     "files": [
+      "Mathlib/Analysis/CStarAlgebra/CStarMatrix.lean",
+      "Mathlib/Analysis/Matrix/Normed.lean",
+      "Mathlib/NumberTheory/NumberField/House.lean",
+      "Mathlib/NumberTheory/SiegelsLemma.lean"
+     ]
+    },
     {
      "date": "2026-10-20",
      "title": "Enable Verso if no syntax or doc-gen changes",
@@ -4725,19 +4748,6 @@
       "Mathlib/Analysis/InnerProductSpace/GramSchmidtOrtho.lean",
       "Mathlib/Analysis/Matrix/LDL.lean",
       "Mathlib/Order/Interval/Finset/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-10-02",
-     "title": "Generalize distance lemmas to solid norms",
-     "scope": "Analysis/Normed/Order",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44072",
-     "ai": false,
-     "sha": "16b46e2242213b8a9b02c9ac393bfa788b8e74e1",
-     "files": [
-      "Mathlib/Analysis/InnerProductSpace/PiL2.lean",
-      "Mathlib/Analysis/Normed/Order/Lattice.lean",
-      "Mathlib/Analysis/Normed/Order/UpperLower.lean"
      ]
     }
    ],
@@ -5830,6 +5840,126 @@
  },
  "feed": [
   {
+   "date": "2026-10-22",
+   "title": "Colimit of local ring via local hom",
+   "scope": "Algebra/CommRingCat",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/39075",
+   "ai": false,
+   "sha": "5287c96ab0023a821dda3f293a38be0665bebeb7",
+   "files": [
+    "Mathlib/Algebra/Category/Ring/FilteredColimits.lean",
+    "Mathlib/Algebra/Category/Ring/FilteredColimitsLocal.lean",
+    "Mathlib/AlgebraicGeometry/AffineTransitionLimit.lean"
+   ],
+   "fields": [
+    "algebraic_geometry",
+    "schemes",
+    "git"
+   ]
+  },
+  {
+   "date": "2026-10-22",
+   "title": "The Gelfand radius of a block diagonal matrix",
+   "scope": "Analysis/Matrix/GelfandRadius",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/44973",
+   "ai": false,
+   "sha": "6fcf84ef4d59992492e50df6ea5135af79118a96",
+   "files": [
+    "Mathlib/Analysis/Matrix/GelfandRadius.lean",
+    "Mathlib/Analysis/Matrix/Normed.lean",
+    "Mathlib/Analysis/Normed/Algebra/GelfandRadius.lean"
+   ],
+   "fields": [
+    "functional_analysis"
+   ]
+  },
+  {
+   "date": "2026-10-21",
+   "title": "Classify quadratic algebras over ℚ",
+   "scope": "Algebra/QuadraticAlgebra",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/42393",
+   "ai": false,
+   "sha": "5f7b4198d22a9c82e1c698a379334fe128095c82",
+   "files": [
+    "Mathlib/Algebra/QuadraticAlgebra/Rat.lean",
+    "Mathlib/Algebra/Squarefree/Basic.lean",
+    "Mathlib/Data/Rat/Squarefree.lean",
+    "Mathlib/RingTheory/Int/Basic.lean",
+    "Mathlib/RingTheory/Localization/NumDen.lean"
+   ],
+   "fields": [
+    "abstract_algebra"
+   ]
+  },
+  {
+   "date": "2026-10-21",
+   "title": "Prove `‖A i j‖ ≤ ‖A‖` for the operator norm",
+   "scope": "Analysis/Matrix/Normed",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/44969",
+   "ai": false,
+   "sha": "4e006b96901cfe4f8e7261376d330974dff1e02f",
+   "files": [
+    "Mathlib/Analysis/CStarAlgebra/CStarMatrix.lean",
+    "Mathlib/Analysis/Matrix/Normed.lean",
+    "Mathlib/NumberTheory/NumberField/House.lean",
+    "Mathlib/NumberTheory/SiegelsLemma.lean"
+   ],
+   "fields": [
+    "algebraic_number_theory",
+    "quantum_mechanics"
+   ]
+  },
+  {
+   "date": "2026-10-21",
+   "title": "More API for `AbsoluteValue.under`",
+   "scope": "Analysis/Normed/Ring/WithAbs",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/43841",
+   "ai": false,
+   "sha": "573535abb37a6d98df5f7ad70993a75724d14cb7",
+   "files": [
+    "Mathlib/Analysis/Normed/Ring/WithAbs.lean"
+   ],
+   "fields": [
+    "functional_analysis"
+   ]
+  },
+  {
+   "date": "2026-10-21",
+   "title": "Use `IsApply` for `FiniteMeasure`",
+   "scope": null,
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45123",
+   "ai": false,
+   "sha": "e83c9eaaf43b752c4fb0de45d4fed1cf97262b5b",
+   "files": [
+    "Mathlib/MeasureTheory/Measure/FiniteMeasure.lean",
+    "Mathlib/MeasureTheory/Measure/ProbabilityMeasure.lean"
+   ],
+   "fields": [
+    "measure_theory"
+   ]
+  },
+  {
+   "date": "2026-10-21",
+   "title": "Use `IsApply` for `BoundedContinuousFunction`",
+   "scope": null,
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45087",
+   "ai": false,
+   "sha": "903930a24c18fe1fcb0cc50caf5f65fd04e4003a",
+   "files": [
+    "Mathlib/Analysis/Fourier/FourierTransform.lean",
+    "Mathlib/Analysis/SpecialFunctions/MulExpNegMulSqIntegral.lean",
+    "Mathlib/MeasureTheory/Integral/BoundedContinuousFunction.lean",
+    "Mathlib/MeasureTheory/Measure/FiniteMeasure.lean",
+    "Mathlib/MeasureTheory/Measure/HasOuterApproxClosed.lean",
+    "Mathlib/MeasureTheory/Measure/ProbabilityMeasure.lean"
+   ],
+   "fields": [
+    "fourier",
+    "measure_theory",
+    "point_set_topology"
+   ]
+  },
+  {
    "date": "2026-10-21",
    "title": "Use `IsApply` for `SimpleFunc`",
    "scope": null,
@@ -6802,41 +6932,6 @@
    ]
   },
   {
-   "date": "2026-10-15",
-   "title": "Closed and compact square cylinders form a compact system",
-   "scope": "Topology/Compactness/CompactSystem",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/36160",
-   "ai": false,
-   "sha": "f014e73d21d30e10995e35ae8020d9c2ecb072a1",
-   "files": [
-    "Mathlib/Data/Set/Lattice/Bounded.lean",
-    "Mathlib/Data/Set/Lattice/Image.lean",
-    "Mathlib/Data/Set/Prod.lean",
-    "Mathlib/MeasureTheory/Constructions/Cylinders.lean",
-    "Mathlib/Topology/Compactness/CompactSystem.lean"
-   ],
-   "fields": [
-    "measure_theory",
-    "point_set_topology"
-   ]
-  },
-  {
-   "date": "2026-10-14",
-   "title": "Solvability is an exact property for Lie algebras",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44818",
-   "ai": false,
-   "sha": "ef6152065324ea62283621f7e5911f2186525637",
-   "files": [
-    "Mathlib/Algebra/Lie/Quotient.lean",
-    "Mathlib/Algebra/Lie/Solvable.lean"
-   ],
-   "fields": [
-    "lie_theory",
-    "gauge_theory"
-   ]
-  },
-  {
    "date": "2026-10-14",
    "title": "Misc filter limit lemmas",
    "scope": "Order/Filter",
@@ -6849,73 +6944,6 @@
    ],
    "fields": [
     "rigorous_analysis"
-   ]
-  },
-  {
-   "date": "2026-10-14",
-   "title": "Balls",
-   "scope": "Basic/Rel",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/33077",
-   "ai": false,
-   "sha": "f1987d78ee52d63c3b47828e7f432a30cbac2270",
-   "files": [
-    "Mathlib/Basic/Rel.lean",
-    "Mathlib/Basic/Rel/Cover.lean",
-    "Mathlib/Dynamics/TopologicalEntropy/CoverEntropy.lean",
-    "Mathlib/Dynamics/TopologicalEntropy/DynamicalEntourage.lean",
-    "Mathlib/Dynamics/TopologicalEntropy/NetEntropy.lean",
-    "Mathlib/Topology/Algebra/Module/LocallyConvex.lean"
-   ],
-   "fields": [
-    "dynamical_systems",
-    "point_set_topology",
-    "complex_dynamics"
-   ]
-  },
-  {
-   "date": "2026-10-14",
-   "title": "Composition of edges in quasicategories",
-   "scope": "AlgebraicTopology",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44775",
-   "ai": false,
-   "sha": "e438a8a8329af5bd73274043f9f21795594c6bfb",
-   "files": [
-    "Mathlib/AlgebraicTopology/Quasicategory/CompStruct.lean",
-    "Mathlib/AlgebraicTopology/Quasicategory/TwoTruncated.lean"
-   ],
-   "fields": [
-    "algebraic_topology"
-   ]
-  },
-  {
-   "date": "2026-10-14",
-   "title": "ContMDiff.mvfderiv and friends",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44711",
-   "ai": false,
-   "sha": "b5d0cc06b31c729ed3eb5c7fc55d7b767f8be9c7",
-   "files": [
-    "Mathlib/Geometry/Manifold/ContMDiffMFDeriv.lean"
-   ],
-   "fields": [
-    "differential_geometry",
-    "differential_topology",
-    "poincare_proof",
-    "general_relativity"
-   ]
-  },
-  {
-   "date": "2026-10-14",
-   "title": "South / north pole of a simplex",
-   "scope": "Geometry/Euclidean/Incenter/SouthPole",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44794",
-   "ai": false,
-   "sha": "f816245f5d0cb6c9be357e90340a1d857bfc8e87",
-   "files": [
-    "Mathlib/Geometry/Euclidean/Incenter/SouthPole.lean"
-   ],
-   "fields": [
-    "euclid"
    ]
   },
   {
@@ -7783,23 +7811,6 @@
     "poincare_proof",
     "general_relativity"
    ]
-  },
-  {
-   "date": "2026-08-23",
-   "title": "Derivative of the Cauchy integral",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/41817",
-   "ai": true,
-   "sha": "ca0ba44e151cc208307ca089c512d6f58c3f71ec",
-   "files": [
-    "Mathlib/Analysis/Complex/CauchyIntegral.lean",
-    "Mathlib/MeasureTheory/Integral/CircleIntegral.lean"
-   ],
-   "fields": [
-    "complex_analysis",
-    "measure_theory",
-    "complex_dynamics"
-   ]
   }
  ],
  "projects": [
@@ -7814,10 +7825,10 @@
    "kind": "human",
    "description": "Kevin Buzzard's project to formalize a proof of Fermat's Last Theorem in Lean.",
    "url": "https://github.com/ImperialCollegeLondon/FLT",
-   "updated": "2026-10-16",
+   "updated": "2026-10-21",
    "latest": {
-    "title": "chore: bump mathlib to 300d0e5, fix breaking changes (#1201)",
-    "url": "https://github.com/ImperialCollegeLondon/FLT/commit/1ab58c167e4fc60bef518cc02caa3fc15c9590d5"
+    "title": "chore: bump mathlib to 1f41440 (v4.35.0-rc4), fix breaking changes (#1204)",
+    "url": "https://github.com/ImperialCollegeLondon/FLT/commit/923d45174c500aa1d994ba973bac38ea39eacbf7"
    },
    "overview": "ImperialCollegeLondon__FLT.json",
    "lean_files": 270
@@ -7869,10 +7880,10 @@
    "kind": "benchmark",
    "description": "Google DeepMind's collection of open conjectures (Erdős problems and others) stated in Lean, used as targets for provers.",
    "url": "https://github.com/google-deepmind/formal-conjectures",
-   "updated": "2026-10-21",
+   "updated": "2026-10-22",
    "latest": {
-    "title": "feat(ErdosProblems/878): link formal refutation of `parts.iii_eventually` (#7418)",
-    "url": "https://github.com/google-deepmind/formal-conjectures/commit/2a315101d438a68c0ebdf22b7485ac731624efed"
+    "title": "feat(ErdosProblems/911): add Erdős Problem 911 (#7479)",
+    "url": "https://github.com/google-deepmind/formal-conjectures/commit/7a33a65fc13b8ffb12be0fb0388f8d6fd62eb3e8"
    },
    "overview": "google-deepmind__formal-conjectures.json",
    "lean_files": 400
@@ -7926,13 +7937,13 @@
    "kind": "human",
    "description": "Formalization of Carleson's theorem on pointwise convergence of Fourier series.",
    "url": "https://github.com/fpvandoorn/carleson",
-   "updated": "2026-10-21",
+   "updated": "2026-10-22",
    "latest": {
-    "title": " Make `eLorentzNorm` infinite on non-measurable functions; define `wnorm` via `eLorentzNorm` (#683)",
-    "url": "https://github.com/fpvandoorn/carleson/commit/1ad44ad16d9c894892ed3a83974f1268defd92d3"
+    "title": "feat: bump to mathlib 4.35.0-rc4 (#665)",
+    "url": "https://github.com/fpvandoorn/carleson/commit/2bdb4f43649014be3056794e4d739c8be68da556"
    },
    "overview": "fpvandoorn__carleson.json",
-   "lean_files": 118
+   "lean_files": 122
   },
   {
    "name": "Sphere eversion",
@@ -7979,10 +7990,10 @@
    "kind": "human",
    "description": "Formalization of the Kelley–Meka bound on sets without three-term arithmetic progressions.",
    "url": "https://github.com/YaelDillies/LeanAPAP",
-   "updated": "2026-10-17",
+   "updated": "2026-10-22",
    "latest": {
-    "title": "Bump to v4.36.0-rc1",
-    "url": "https://github.com/YaelDillies/LeanAPAP/commit/d0403cc40ba648a465cc330348013d5b2b061e8e"
+    "title": "chore: bump mathlib to c31114f, fix breaking changes (#28)",
+    "url": "https://github.com/YaelDillies/LeanAPAP/commit/b2001974b99b18ca1c13b6aa4791b7801563f939"
    },
    "overview": "YaelDillies__LeanAPAP.json",
    "lean_files": 53
