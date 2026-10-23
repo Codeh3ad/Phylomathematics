@@ -1,13 +1,13 @@
 {
- "generated": "2026-10-22T11:48Z",
+ "generated": "2026-10-23T11:35Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "5287c96ab0023a821dda3f293a38be0665bebeb7",
-  "date": "2026-10-22",
-  "files": 8653,
-  "changes": 1405,
-  "additions": 712,
-  "ai_additions": 72
+  "commit": "da43ae12360e7c72fc957e7c94f156fcbc83d0bf",
+  "date": "2026-10-23",
+  "files": 8656,
+  "changes": 1391,
+  "additions": 711,
+  "ai_additions": 73
  },
  "fields": {
   "babylonian": {
@@ -833,9 +833,22 @@
     "Mathlib/AlgebraicGeometry/ProjectiveSpectrum"
    ],
    "files": 15,
-   "additions": 2,
-   "ai_additions": 0,
+   "additions": 3,
+   "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-23",
+     "title": "Quotient topology on projective space and open quotient map",
+     "scope": "Topology/Algebra",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44117",
+     "ai": true,
+     "sha": "d868575a9b9f952db89bb4315b99497bbd078440",
+     "files": [
+      "Mathlib/LinearAlgebra/Projectivization/Basic.lean",
+      "Mathlib/Topology/Algebra/MulAction.lean",
+      "Mathlib/Topology/Algebra/Projectivization.lean"
+     ]
+    },
     {
      "date": "2026-10-20",
      "title": "Enable Verso if no syntax or doc-gen changes",
@@ -1323,7 +1336,7 @@
     "Mathlib/Probability/Distributions"
    ],
    "files": 35,
-   "additions": 4,
+   "additions": 3,
    "ai_additions": 0,
    "recent": [
     {
@@ -1371,17 +1384,6 @@
       "Mathlib/Probability/Martingale/Convergence.lean",
       "Mathlib/Probability/Process/Filtration.lean",
       "Mathlib/Probability/Process/LimitProcess.lean"
-     ]
-    },
-    {
-     "date": "2026-08-24",
-     "title": "The indicator of a set is a Bernoulli random variable",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/41312",
-     "ai": false,
-     "sha": "00870014e825b3f832ab1559a6a72796a4090031",
-     "files": [
-      "Mathlib/Probability/Distributions/Bernoulli.lean"
      ]
     }
    ],
@@ -1922,9 +1924,22 @@
     "Mathlib/Data/Matrix"
    ],
    "files": 404,
-   "additions": 73,
-   "ai_additions": 6,
+   "additions": 74,
+   "ai_additions": 7,
    "recent": [
+    {
+     "date": "2026-10-23",
+     "title": "Quotient topology on projective space and open quotient map",
+     "scope": "Topology/Algebra",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44117",
+     "ai": true,
+     "sha": "d868575a9b9f952db89bb4315b99497bbd078440",
+     "files": [
+      "Mathlib/LinearAlgebra/Projectivization/Basic.lean",
+      "Mathlib/Topology/Algebra/MulAction.lean",
+      "Mathlib/Topology/Algebra/Projectivization.lean"
+     ]
+    },
     {
      "date": "2026-10-20",
      "title": "Lattice lemmas about `Submodule.toAffineSubspace`",
@@ -1981,19 +1996,6 @@
       "Mathlib/Algebra/Lie/Abelian.lean",
       "Mathlib/Algebra/Lie/Basis/Basic.lean",
       "Mathlib/Algebra/Lie/Subalgebra.lean"
-     ]
-    },
-    {
-     "date": "2026-10-17",
-     "title": "Prove `gelfandRadius (A * B) = gelfandRadius (B * A)` for matrices",
-     "scope": "Analysis/Matrix/GelfandRadius",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44891",
-     "ai": false,
-     "sha": "6f48dc052ef6d300631b6b84d1fb8d60833ff2c4",
-     "files": [
-      "Mathlib/Analysis/Matrix/GelfandRadius.lean",
-      "Mathlib/Analysis/Normed/Algebra/GelfandRadius.lean",
-      "Mathlib/Data/Matrix/Mul.lean"
      ]
     }
    ],
@@ -2585,10 +2587,23 @@
    "prefixes": [
     "Mathlib/Topology"
    ],
-   "files": 703,
+   "files": 704,
    "additions": 94,
-   "ai_additions": 5,
+   "ai_additions": 6,
    "recent": [
+    {
+     "date": "2026-10-23",
+     "title": "Quotient topology on projective space and open quotient map",
+     "scope": "Topology/Algebra",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44117",
+     "ai": true,
+     "sha": "d868575a9b9f952db89bb4315b99497bbd078440",
+     "files": [
+      "Mathlib/LinearAlgebra/Projectivization/Basic.lean",
+      "Mathlib/Topology/Algebra/MulAction.lean",
+      "Mathlib/Topology/Algebra/Projectivization.lean"
+     ]
+    },
     {
      "date": "2026-10-21",
      "title": "Use `IsApply` for `BoundedContinuousFunction`",
@@ -2647,22 +2662,6 @@
       "Mathlib/Algebra/Algebra/Bilinear.lean",
       "Mathlib/Algebra/Algebra/Field.lean"
      ]
-    },
-    {
-     "date": "2026-10-20",
-     "title": "Generalize ENNReal lemmas",
-     "scope": "Topology/Algebra/InfiniteSum",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/38489",
-     "ai": false,
-     "sha": "4dc3912c3394dbf46f97c6fe75494ae9197b230f",
-     "files": [
-      "Mathlib/MeasureTheory/Measure/CompleteLattice.lean",
-      "Mathlib/MeasureTheory/OuterMeasure/OfFunction.lean",
-      "Mathlib/Probability/ProbabilityMassFunction/Monad.lean",
-      "Mathlib/Topology/Algebra/InfiniteSum/Basic.lean",
-      "Mathlib/Topology/Algebra/InfiniteSum/ENNReal.lean",
-      "Mathlib/Topology/Algebra/InfiniteSum/Order.lean"
-     ]
     }
    ],
    "overview": "field-point_set_topology.json"
@@ -2674,9 +2673,31 @@
     "Mathlib/Algebra/Module"
    ],
    "files": 905,
-   "additions": 86,
+   "additions": 88,
    "ai_additions": 22,
    "recent": [
+    {
+     "date": "2026-10-22",
+     "title": "Add `restrictScalars_comap`",
+     "scope": "Algebra/Module/Submodule/Range",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45180",
+     "ai": false,
+     "sha": "d414f239922da523b382f46e3100b3f34f23f564",
+     "files": [
+      "Mathlib/Algebra/Module/Submodule/Range.lean"
+     ]
+    },
+    {
+     "date": "2026-10-22",
+     "title": "A unit is a square iff its underlying element is a square",
+     "scope": "Algebra/Group/Even",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45025",
+     "ai": false,
+     "sha": "ba5499e069f24171b4be2229dea365c897205f5e",
+     "files": [
+      "Mathlib/Algebra/Ring/Parity.lean"
+     ]
+    },
     {
      "date": "2026-10-21",
      "title": "Classify quadratic algebras over ℚ",
@@ -2723,28 +2744,6 @@
       "Mathlib/RingTheory/Valuation/ValuativeRel/Basic.lean",
       "Mathlib/Topology/Algebra/Valued/WithVal.lean"
      ]
-    },
-    {
-     "date": "2026-10-19",
-     "title": "Add IsEquiv lemmas",
-     "scope": "RingTheory/Valuation/ValuativeRel/Basic",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43683",
-     "ai": false,
-     "sha": "42b0c74178bcb5056ce9955d53e76ad6c35a2be6",
-     "files": [
-      "Mathlib/RingTheory/Valuation/ValuativeRel/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-10-19",
-     "title": "`elem` is idempotent",
-     "scope": "RingTheory/Unramified/Finite",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44966",
-     "ai": false,
-     "sha": "f3e8c297cb2e87705a3ee571318ee42b1b508466",
-     "files": [
-      "Mathlib/RingTheory/Unramified/Finite.lean"
-     ]
     }
    ],
    "overview": "field-abstract_algebra.json"
@@ -2789,7 +2788,7 @@
     "Mathlib/Probability"
    ],
    "files": 141,
-   "additions": 15,
+   "additions": 13,
    "ai_additions": 0,
    "recent": [
     {
@@ -3001,7 +3000,7 @@
     "Mathlib/Analysis/SpecialFunctions/BinaryEntropy"
    ],
    "files": 10,
-   "additions": 2,
+   "additions": 1,
    "ai_additions": 0,
    "recent": [
     {
@@ -3018,20 +3017,6 @@
       "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
       "Mathlib/Algebra/Algebra/Bilinear.lean",
       "Mathlib/Algebra/Algebra/Field.lean"
-     ]
-    },
-    {
-     "date": "2026-08-24",
-     "title": "Add Kraft inequality for prefix-free codes",
-     "scope": "InformationTheory/Coding",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42584",
-     "ai": false,
-     "sha": "8aca7ebab6fcc7f4a5f1a1665d7414e5388b11e7",
-     "files": [
-      "Mathlib/InformationTheory/Coding/Kraft.lean",
-      "Mathlib/InformationTheory/Coding/KraftMcMillan.lean",
-      "Mathlib/InformationTheory/Coding/PrefixFree.lean",
-      "Mathlib/InformationTheory/Coding/UniquelyDecodable.lean"
      ]
     }
    ],
@@ -5033,7 +5018,7 @@
     "Mathlib/Probability"
    ],
    "files": 153,
-   "additions": 17,
+   "additions": 15,
    "ai_additions": 0,
    "recent": [
     {
@@ -5839,6 +5824,52 @@
   }
  },
  "feed": [
+  {
+   "date": "2026-10-23",
+   "title": "Quotient topology on projective space and open quotient map",
+   "scope": "Topology/Algebra",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/44117",
+   "ai": true,
+   "sha": "d868575a9b9f952db89bb4315b99497bbd078440",
+   "files": [
+    "Mathlib/LinearAlgebra/Projectivization/Basic.lean",
+    "Mathlib/Topology/Algebra/MulAction.lean",
+    "Mathlib/Topology/Algebra/Projectivization.lean"
+   ],
+   "fields": [
+    "projective",
+    "linear_algebra",
+    "point_set_topology"
+   ]
+  },
+  {
+   "date": "2026-10-22",
+   "title": "Add `restrictScalars_comap`",
+   "scope": "Algebra/Module/Submodule/Range",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45180",
+   "ai": false,
+   "sha": "d414f239922da523b382f46e3100b3f34f23f564",
+   "files": [
+    "Mathlib/Algebra/Module/Submodule/Range.lean"
+   ],
+   "fields": [
+    "abstract_algebra"
+   ]
+  },
+  {
+   "date": "2026-10-22",
+   "title": "A unit is a square iff its underlying element is a square",
+   "scope": "Algebra/Group/Even",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45025",
+   "ai": false,
+   "sha": "ba5499e069f24171b4be2229dea365c897205f5e",
+   "files": [
+    "Mathlib/Algebra/Ring/Parity.lean"
+   ],
+   "fields": [
+    "abstract_algebra"
+   ]
+  },
   {
    "date": "2026-10-22",
    "title": "Colimit of local ring via local hom",
@@ -6887,51 +6918,6 @@
    ]
   },
   {
-   "date": "2026-10-15",
-   "title": "The sign of a polynomial immediately to the right of a point",
-   "scope": "Analysis/Polynomial",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44248",
-   "ai": false,
-   "sha": "772fc032a9ac06bef731c47012e6f1f684a1c49b",
-   "files": [
-    "Mathlib/Algebra/Polynomial/FieldDivision.lean",
-    "Mathlib/Analysis/Polynomial/SignRight.lean",
-    "Mathlib/Topology/Instances/Sign.lean"
-   ],
-   "fields": [
-    "al_jabr",
-    "point_set_topology"
-   ]
-  },
-  {
-   "date": "2026-10-15",
-   "title": "Set system of finite unions of sets in a compact system is again a compact system",
-   "scope": "Topology/Compactness/CompactSystem",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/36089",
-   "ai": false,
-   "sha": "e91b128082cc221d6432a6a5aadcd3243af8e76c",
-   "files": [
-    "Mathlib/Topology/Compactness/CompactSystem.lean"
-   ],
-   "fields": [
-    "point_set_topology"
-   ]
-  },
-  {
-   "date": "2026-10-15",
-   "title": "Set system of countable intersections of sets in a compact system is again a compact system",
-   "scope": "Topology/Compactness/CompactSystem",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/36225",
-   "ai": false,
-   "sha": "7e34f44a3aa4320a254c230dcc469790a666a844",
-   "files": [
-    "Mathlib/Topology/Compactness/CompactSystem.lean"
-   ],
-   "fields": [
-    "point_set_topology"
-   ]
-  },
-  {
    "date": "2026-10-14",
    "title": "Misc filter limit lemmas",
    "scope": "Order/Filter",
@@ -7825,10 +7811,10 @@
    "kind": "human",
    "description": "Kevin Buzzard's project to formalize a proof of Fermat's Last Theorem in Lean.",
    "url": "https://github.com/ImperialCollegeLondon/FLT",
-   "updated": "2026-10-21",
+   "updated": "2026-10-22",
    "latest": {
-    "title": "chore: bump mathlib to 1f41440 (v4.35.0-rc4), fix breaking changes (#1204)",
-    "url": "https://github.com/ImperialCollegeLondon/FLT/commit/923d45174c500aa1d994ba973bac38ea39eacbf7"
+    "title": "chore: bump mathlib to 56a0058 (v4.35.0), fix breaking changes (#1205)",
+    "url": "https://github.com/ImperialCollegeLondon/FLT/commit/a3210204ad8876e851e32f73dd97d882bf1ccd0a"
    },
    "overview": "ImperialCollegeLondon__FLT.json",
    "lean_files": 270
@@ -7880,10 +7866,10 @@
    "kind": "benchmark",
    "description": "Google DeepMind's collection of open conjectures (Erdős problems and others) stated in Lean, used as targets for provers.",
    "url": "https://github.com/google-deepmind/formal-conjectures",
-   "updated": "2026-10-22",
+   "updated": "2026-10-23",
    "latest": {
-    "title": "feat(ErdosProblems/911): add Erdős Problem 911 (#7479)",
-    "url": "https://github.com/google-deepmind/formal-conjectures/commit/7a33a65fc13b8ffb12be0fb0388f8d6fd62eb3e8"
+    "title": "feat(Borsuk): add the n ≥ 9 variant and isometry transport (#7312)",
+    "url": "https://github.com/google-deepmind/formal-conjectures/commit/41436e9c7693d48826acab529cb3feda3ba0f042"
    },
    "overview": "google-deepmind__formal-conjectures.json",
    "lean_files": 400
@@ -7937,10 +7923,10 @@
    "kind": "human",
    "description": "Formalization of Carleson's theorem on pointwise convergence of Fourier series.",
    "url": "https://github.com/fpvandoorn/carleson",
-   "updated": "2026-10-22",
+   "updated": "2026-10-23",
    "latest": {
-    "title": "feat: bump to mathlib 4.35.0-rc4 (#665)",
-    "url": "https://github.com/fpvandoorn/carleson/commit/2bdb4f43649014be3056794e4d739c8be68da556"
+    "title": "chore: bump to current mathlib (#687)",
+    "url": "https://github.com/fpvandoorn/carleson/commit/3f6b9fe8ec5ff9613f65e1c83c42758e55cdc677"
    },
    "overview": "fpvandoorn__carleson.json",
    "lean_files": 122
