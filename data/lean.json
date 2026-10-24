@@ -1,13 +1,13 @@
 {
- "generated": "2026-10-23T11:35Z",
+ "generated": "2026-10-24T10:56Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "da43ae12360e7c72fc957e7c94f156fcbc83d0bf",
-  "date": "2026-10-23",
-  "files": 8656,
-  "changes": 1391,
-  "additions": 711,
-  "ai_additions": 73
+  "commit": "0b57f692c89cf9373c4bb287d0a37acb77d8a22e",
+  "date": "2026-10-24",
+  "files": 8658,
+  "changes": 1388,
+  "additions": 701,
+  "ai_additions": 74
  },
  "fields": {
   "babylonian": {
@@ -455,10 +455,22 @@
     "Mathlib/Algebra/QuadraticDiscriminant",
     "Mathlib/Algebra/Polynomial"
    ],
-   "files": 64,
-   "additions": 12,
+   "files": 65,
+   "additions": 13,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-10-24",
+     "title": "Add Algebra.Polynomial.Laurent.Roots",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43264",
+     "ai": false,
+     "sha": "fdc20e4c7de3bf346efdabe4d36ecc73101e2fe8",
+     "files": [
+      "Mathlib/Algebra/Polynomial/Laurent.lean",
+      "Mathlib/Algebra/Polynomial/Laurent/Roots.lean"
+     ]
+    },
     {
      "date": "2026-10-20",
      "title": "Enable Verso if no syntax or doc-gen changes",
@@ -510,18 +522,6 @@
      "sha": "a937682c293e82bfbd3223f22add0b4139a52eae",
      "files": [
       "Mathlib/Algebra/Polynomial/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-10-08",
-     "title": "Construct a polynomial from its list of coefficients",
-     "scope": "Algebra/Polynomial/CoeffList",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44430",
-     "ai": false,
-     "sha": "79edc735c1979a4f9d61962f5826834d07fcc889",
-     "files": [
-      "Mathlib/Algebra/Polynomial/CoeffList.lean",
-      "Mathlib/Algebra/Polynomial/RuleOfSigns.lean"
      ]
     }
    ],
@@ -1080,7 +1080,7 @@
     "Mathlib/Combinatorics/Digraph"
    ],
    "files": 90,
-   "additions": 38,
+   "additions": 37,
    "ai_additions": 0,
    "recent": [
     {
@@ -1482,7 +1482,7 @@
     "Mathlib/Analysis/Analytic"
    ],
    "files": 92,
-   "additions": 23,
+   "additions": 22,
    "ai_additions": 5,
    "recent": [
     {
@@ -1567,8 +1567,8 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 16,
-   "ai_additions": 3,
+   "additions": 15,
+   "ai_additions": 2,
    "recent": [
     {
      "date": "2026-10-20",
@@ -1841,9 +1841,22 @@
     "Mathlib/NumberTheory/Chebyshev"
    ],
    "files": 31,
-   "additions": 6,
-   "ai_additions": 0,
+   "additions": 7,
+   "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-23",
+     "title": "`2 ^ n ≤ lcmUpto n` for `7 ≤ n`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43373",
+     "ai": true,
+     "sha": "e24da5a7cf66d20500908674460ce67c7fca2eae",
+     "files": [
+      "Mathlib/Data/Nat/Choose/Central.lean",
+      "Mathlib/Data/Nat/Choose/Factorization.lean",
+      "Mathlib/NumberTheory/Chebyshev.lean"
+     ]
+    },
     {
      "date": "2026-10-20",
      "title": "Enable Verso if no syntax or doc-gen changes",
@@ -1901,19 +1914,6 @@
       "Mathlib/Analysis/SpecialFunctions/Pow/Real.lean",
       "Mathlib/NumberTheory/Harmonic/GammaDeriv.lean"
      ]
-    },
-    {
-     "date": "2026-09-08",
-     "title": "Functional equation for the log-derivative of the zeta function",
-     "scope": "NumberTheory/LSeries",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43252",
-     "ai": false,
-     "sha": "cbb02347a10969826b02a5813a1a81697d05d1ce",
-     "files": [
-      "Mathlib/Analysis/Calculus/LogDeriv.lean",
-      "Mathlib/Analysis/SpecialFunctions/Pow/Deriv.lean",
-      "Mathlib/NumberTheory/LSeries/RiemannZetaLogDeriv.lean"
-     ]
     }
    ],
    "overview": "field-analytic_number_theory.json"
@@ -1924,7 +1924,7 @@
     "Mathlib/Data/Matrix"
    ],
    "files": 404,
-   "additions": 74,
+   "additions": 72,
    "ai_additions": 7,
    "recent": [
     {
@@ -2180,7 +2180,7 @@
     "Mathlib/RingTheory/Nullstellensatz"
    ],
    "files": 141,
-   "additions": 13,
+   "additions": 12,
    "ai_additions": 1,
    "recent": [
     {
@@ -2335,7 +2335,7 @@
     "Mathlib/Dynamics"
    ],
    "files": 35,
-   "additions": 9,
+   "additions": 8,
    "ai_additions": 0,
    "recent": [
     {
@@ -2422,7 +2422,7 @@
     "Mathlib/MeasureTheory"
    ],
    "files": 339,
-   "additions": 49,
+   "additions": 46,
    "ai_additions": 2,
    "recent": [
     {
@@ -2510,7 +2510,7 @@
     "Mathlib/Analysis/InnerProductSpace"
    ],
    "files": 222,
-   "additions": 47,
+   "additions": 46,
    "ai_additions": 2,
    "recent": [
     {
@@ -2588,7 +2588,7 @@
     "Mathlib/Topology"
    ],
    "files": 704,
-   "additions": 94,
+   "additions": 92,
    "ai_additions": 6,
    "recent": [
     {
@@ -2788,7 +2788,7 @@
     "Mathlib/Probability"
    ],
    "files": 141,
-   "additions": 13,
+   "additions": 12,
    "ai_additions": 0,
    "recent": [
     {
@@ -3027,7 +3027,7 @@
     "Mathlib/AlgebraicGeometry"
    ],
    "files": 140,
-   "additions": 13,
+   "additions": 12,
    "ai_additions": 1,
    "recent": [
     {
@@ -3104,7 +3104,7 @@
     "Mathlib/RingTheory/Invariant"
    ],
    "files": 144,
-   "additions": 13,
+   "additions": 12,
    "ai_additions": 1,
    "recent": [
     {
@@ -3321,7 +3321,7 @@
     "Mathlib/Data/Int"
    ],
    "files": 125,
-   "additions": 27,
+   "additions": 26,
    "ai_additions": 0,
    "recent": [
     {
@@ -3404,9 +3404,22 @@
     "Mathlib/Data/Nat/Fib"
    ],
    "files": 13,
-   "additions": 2,
-   "ai_additions": 1,
+   "additions": 3,
+   "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-10-23",
+     "title": "`2 ^ n ≤ lcmUpto n` for `7 ≤ n`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43373",
+     "ai": true,
+     "sha": "e24da5a7cf66d20500908674460ce67c7fca2eae",
+     "files": [
+      "Mathlib/Data/Nat/Choose/Central.lean",
+      "Mathlib/Data/Nat/Choose/Factorization.lean",
+      "Mathlib/NumberTheory/Chebyshev.lean"
+     ]
+    },
     {
      "date": "2026-10-20",
      "title": "Enable Verso if no syntax or doc-gen changes",
@@ -3635,7 +3648,7 @@
     "Mathlib/AlgebraicGeometry/EllipticCurve"
    ],
    "files": 19,
-   "additions": 5,
+   "additions": 4,
    "ai_additions": 0,
    "recent": [
     {
@@ -3682,18 +3695,6 @@
      "files": [
       "Mathlib/AlgebraicGeometry/EllipticCurve/Affine/Formula.lean",
       "Mathlib/AlgebraicGeometry/EllipticCurve/Affine/Point.lean"
-     ]
-    },
-    {
-     "date": "2026-08-24",
-     "title": "Roots of the 2-torsion polynomial",
-     "scope": "AlgebraicGeometry/EllipticCurve",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42160",
-     "ai": false,
-     "sha": "f1c1e67f08f57b6d7088b1a98fdceab6da4407ee",
-     "files": [
-      "Mathlib/AlgebraicGeometry/EllipticCurve/Affine/Point.lean",
-      "Mathlib/AlgebraicGeometry/EllipticCurve/Weierstrass.lean"
      ]
     }
    ],
@@ -3743,8 +3744,8 @@
     "Mathlib/Geometry/Manifold/Algebra"
    ],
    "files": 66,
-   "additions": 12,
-   "ai_additions": 1,
+   "additions": 11,
+   "ai_additions": 0,
    "recent": [
     {
      "date": "2026-10-20",
@@ -4181,8 +4182,8 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 16,
-   "ai_additions": 3,
+   "additions": 15,
+   "ai_additions": 2,
    "recent": [
     {
      "date": "2026-10-20",
@@ -4306,8 +4307,8 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 16,
-   "ai_additions": 3,
+   "additions": 15,
+   "ai_additions": 2,
    "recent": [
     {
      "date": "2026-10-20",
@@ -4467,7 +4468,7 @@
     "Mathlib/Analysis/Complex"
    ],
    "files": 108,
-   "additions": 24,
+   "additions": 22,
    "ai_additions": 5,
    "recent": [
     {
@@ -4581,8 +4582,8 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 16,
-   "ai_additions": 3,
+   "additions": 15,
+   "ai_additions": 2,
    "recent": [
     {
      "date": "2026-10-20",
@@ -5018,7 +5019,7 @@
     "Mathlib/Probability"
    ],
    "files": 153,
-   "additions": 15,
+   "additions": 14,
    "ai_additions": 0,
    "recent": [
     {
@@ -5357,8 +5358,21 @@
    ],
    "files": 212,
    "additions": 48,
-   "ai_additions": 2,
+   "ai_additions": 3,
    "recent": [
+    {
+     "date": "2026-10-23",
+     "title": "`2 ^ n ≤ lcmUpto n` for `7 ≤ n`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43373",
+     "ai": true,
+     "sha": "e24da5a7cf66d20500908674460ce67c7fca2eae",
+     "files": [
+      "Mathlib/Data/Nat/Choose/Central.lean",
+      "Mathlib/Data/Nat/Choose/Factorization.lean",
+      "Mathlib/NumberTheory/Chebyshev.lean"
+     ]
+    },
     {
      "date": "2026-10-20",
      "title": "Add lemma about the first dart if dropLast is a path",
@@ -5414,19 +5428,6 @@
       "Mathlib/Algebra/Lie/Abelian.lean",
       "Mathlib/Algebra/Lie/Basis/Basic.lean",
       "Mathlib/Algebra/Lie/Subalgebra.lean"
-     ]
-    },
-    {
-     "date": "2026-10-17",
-     "title": "A graph is a tree iff it's acyclic and has exactly `n - 1` edges",
-     "scope": "Combinatorics/SimpleGraph/Acyclic",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/34910",
-     "ai": false,
-     "sha": "067866870b10c7da7ff8745373951b0e849b1717",
-     "files": [
-      "Mathlib/Combinatorics/SimpleGraph/Acyclic.lean",
-      "Mathlib/Combinatorics/SimpleGraph/Connectivity/Connected.lean",
-      "Mathlib/Order/RelIso/Basic.lean"
      ]
     }
    ],
@@ -5824,6 +5825,39 @@
   }
  },
  "feed": [
+  {
+   "date": "2026-10-24",
+   "title": "Add Algebra.Polynomial.Laurent.Roots",
+   "scope": null,
+   "url": "https://github.com/leanprover-community/mathlib4/pull/43264",
+   "ai": false,
+   "sha": "fdc20e4c7de3bf346efdabe4d36ecc73101e2fe8",
+   "files": [
+    "Mathlib/Algebra/Polynomial/Laurent.lean",
+    "Mathlib/Algebra/Polynomial/Laurent/Roots.lean"
+   ],
+   "fields": [
+    "al_jabr"
+   ]
+  },
+  {
+   "date": "2026-10-23",
+   "title": "`2 ^ n ≤ lcmUpto n` for `7 ≤ n`",
+   "scope": null,
+   "url": "https://github.com/leanprover-community/mathlib4/pull/43373",
+   "ai": true,
+   "sha": "e24da5a7cf66d20500908674460ce67c7fca2eae",
+   "files": [
+    "Mathlib/Data/Nat/Choose/Central.lean",
+    "Mathlib/Data/Nat/Choose/Factorization.lean",
+    "Mathlib/NumberTheory/Chebyshev.lean"
+   ],
+   "fields": [
+    "analytic_number_theory",
+    "indian_combinatorics",
+    "combinatorics"
+   ]
+  },
   {
    "date": "2026-10-23",
    "title": "Quotient topology on projective space and open quotient map",
@@ -6903,21 +6937,6 @@
    ]
   },
   {
-   "date": "2026-10-15",
-   "title": "Simple graph is 2-edge-connected iff it has no bridge",
-   "scope": "Combinatorics/SimpleGraph/Connectivity",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/42839",
-   "ai": false,
-   "sha": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
-   "files": [
-    "Mathlib/Combinatorics/SimpleGraph/Connectivity/EdgeConnectivity.lean"
-   ],
-   "fields": [
-    "graph_theory",
-    "combinatorics"
-   ]
-  },
-  {
    "date": "2026-10-14",
    "title": "Misc filter limit lemmas",
    "scope": "Order/Filter",
@@ -7779,24 +7798,6 @@
    "fields": [
     "point_set_topology"
    ]
-  },
-  {
-   "date": "2026-08-24",
-   "title": "Add ContMDiffConstSMul typeclass",
-   "scope": "Geometry/Manifold",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/41534",
-   "ai": true,
-   "sha": "b3b0975775174f6297d844465485adea46220e84",
-   "files": [
-    "Mathlib/Geometry/Manifold/Algebra/SMul.lean"
-   ],
-   "fields": [
-    "differential_geometry",
-    "lie_theory",
-    "differential_topology",
-    "poincare_proof",
-    "general_relativity"
-   ]
   }
  ],
  "projects": [
@@ -7868,8 +7869,8 @@
    "url": "https://github.com/google-deepmind/formal-conjectures",
    "updated": "2026-10-23",
    "latest": {
-    "title": "feat(Borsuk): add the n ≥ 9 variant and isometry transport (#7312)",
-    "url": "https://github.com/google-deepmind/formal-conjectures/commit/41436e9c7693d48826acab529cb3feda3ba0f042"
+    "title": "Add Hedetniemi's conjecture (disproved, Shitov 2019) (#5187)",
+    "url": "https://github.com/google-deepmind/formal-conjectures/commit/c094b979118b89adb77cf5f8d923ac9dd2e51b1d"
    },
    "overview": "google-deepmind__formal-conjectures.json",
    "lean_files": 400
