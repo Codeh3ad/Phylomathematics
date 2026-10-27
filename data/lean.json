@@ -1,13 +1,13 @@
 {
- "generated": "2026-10-26T12:57Z",
+ "generated": "2026-10-27T12:08Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "8d14a32337a069dbae9b92875aeb697de357b5ac",
-  "date": "2026-10-26",
+  "commit": "b9b0b7670815a5ffe1caf104ce2ffbfc3c0dfd24",
+  "date": "2026-10-27",
   "files": 8661,
-  "changes": 1320,
-  "additions": 656,
-  "ai_additions": 70
+  "changes": 1309,
+  "additions": 641,
+  "ai_additions": 66
  },
  "fields": {
   "babylonian": {
@@ -1069,7 +1069,7 @@
     "Mathlib/Combinatorics/Digraph"
    ],
    "files": 90,
-   "additions": 36,
+   "additions": 34,
    "ai_additions": 0,
    "recent": [
     {
@@ -1540,8 +1540,8 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 15,
-   "ai_additions": 2,
+   "additions": 14,
+   "ai_additions": 1,
    "recent": [
     {
      "date": "2026-10-20",
@@ -1705,7 +1705,7 @@
     "Mathlib/FieldTheory/AbelRuffini"
    ],
    "files": 182,
-   "additions": 40,
+   "additions": 37,
    "ai_additions": 10,
    "recent": [
     {
@@ -1877,9 +1877,20 @@
     "Mathlib/Data/Matrix"
    ],
    "files": 404,
-   "additions": 69,
+   "additions": 70,
    "ai_additions": 7,
    "recent": [
+    {
+     "date": "2026-10-27",
+     "title": "Add `baseChange_le_iff_le_comap`",
+     "scope": "LinearAlgebra/TensorProduct/Tower",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45181",
+     "ai": false,
+     "sha": "37a7c30974a79c29ebbe8d6d0a2c40345f3c0714",
+     "files": [
+      "Mathlib/LinearAlgebra/TensorProduct/Tower.lean"
+     ]
+    },
     {
      "date": "2026-10-25",
      "title": "Add `finrank_span_eq_finrank_iff`",
@@ -1930,21 +1941,6 @@
      "sha": "e8bc55fd6d8462b4bf133b7ad572340b754e35a8",
      "files": [
       "Mathlib/LinearAlgebra/AffineSpace/AffineSubspace/Defs.lean"
-     ]
-    },
-    {
-     "date": "2026-10-20",
-     "title": "An algorithm that computes the characteristic polynomial of an Hessenberg matrix",
-     "scope": "Tactic/Hessenberg",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44431",
-     "ai": false,
-     "sha": "ab5a4bbfe1dcedc3a1c3c2d085a59cbd14718ef9",
-     "files": [
-      "Mathlib/LinearAlgebra/Matrix/Array.lean",
-      "Mathlib/LinearAlgebra/Matrix/Defs.lean",
-      "Mathlib/LinearAlgebra/Matrix/Determinant/Bird/Correctness.lean",
-      "Mathlib/Tactic.lean",
-      "Mathlib/Tactic/Hessenberg/Charpoly.lean"
      ]
     }
    ],
@@ -2459,7 +2455,7 @@
     "Mathlib/Analysis/InnerProductSpace"
    ],
    "files": 222,
-   "additions": 39,
+   "additions": 37,
    "ai_additions": 2,
    "recent": [
     {
@@ -2537,9 +2533,23 @@
     "Mathlib/Topology"
    ],
    "files": 704,
-   "additions": 87,
-   "ai_additions": 5,
+   "additions": 84,
+   "ai_additions": 4,
    "recent": [
+    {
+     "date": "2026-10-26",
+     "title": "Use `abbrev` for `Presheaf`, `IsSheaf`, and `Sheaf`",
+     "scope": "Topology/Sheaves",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/34094",
+     "ai": false,
+     "sha": "a74bf10698f3ffbe140547bcb3f36401540da755",
+     "files": [
+      "Mathlib/Topology/Sheaves/AddCommGrpCat.lean",
+      "Mathlib/Topology/Sheaves/Flasque.lean",
+      "Mathlib/Topology/Sheaves/LocallySurjective.lean",
+      "Mathlib/Topology/Sheaves/Sheaf.lean"
+     ]
+    },
     {
      "date": "2026-10-24",
      "title": "`membership` tactic",
@@ -2598,19 +2608,6 @@
       "Mathlib/Topology/Algebra/InfiniteSum/Defs.lean",
       "Mathlib/Topology/Algebra/InfiniteSum/Ring.lean"
      ]
-    },
-    {
-     "date": "2026-10-20",
-     "title": "Add some lemmas that closures of some sets are compact",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/39382",
-     "ai": false,
-     "sha": "6e31548e5d1f89e1d78028d7f64bae9e3713addf",
-     "files": [
-      "Mathlib/Topology/MetricSpace/Bounded.lean",
-      "Mathlib/Topology/Order/Compact.lean",
-      "Mathlib/Topology/Order/OrderClosed.lean"
-     ]
     }
    ],
    "overview": "field-point_set_topology.json"
@@ -2622,7 +2619,7 @@
     "Mathlib/Algebra/Module"
    ],
    "files": 906,
-   "additions": 84,
+   "additions": 83,
    "ai_additions": 21,
    "recent": [
     {
@@ -2861,7 +2858,7 @@
     "Mathlib/CategoryTheory"
    ],
    "files": 1133,
-   "additions": 46,
+   "additions": 45,
    "ai_additions": 0,
    "recent": [
     {
@@ -3116,8 +3113,8 @@
     "Mathlib/RepresentationTheory"
    ],
    "files": 84,
-   "additions": 19,
-   "ai_additions": 3,
+   "additions": 16,
+   "ai_additions": 2,
    "recent": [
     {
      "date": "2026-10-20",
@@ -3416,7 +3413,7 @@
     "Mathlib/NumberTheory/Cyclotomic"
    ],
    "files": 65,
-   "additions": 16,
+   "additions": 14,
    "ai_additions": 3,
    "recent": [
     {
@@ -3761,7 +3758,7 @@
     "Mathlib/RepresentationTheory"
    ],
    "files": 45,
-   "additions": 10,
+   "additions": 9,
    "ai_additions": 0,
    "recent": [
     {
@@ -3923,9 +3920,20 @@
     "Mathlib/Geometry/Manifold/VectorBundle"
    ],
    "files": 38,
-   "additions": 6,
+   "additions": 7,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-27",
+     "title": "Add `baseChange_le_iff_le_comap`",
+     "scope": "LinearAlgebra/TensorProduct/Tower",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45181",
+     "ai": false,
+     "sha": "37a7c30974a79c29ebbe8d6d0a2c40345f3c0714",
+     "files": [
+      "Mathlib/LinearAlgebra/TensorProduct/Tower.lean"
+     ]
+    },
     {
      "date": "2026-10-20",
      "title": "Enable Verso if no syntax or doc-gen changes",
@@ -3982,20 +3990,6 @@
       "Mathlib/LinearAlgebra/TensorProduct/Basis.lean",
       "Mathlib/LinearAlgebra/TensorProduct/Lift.lean",
       "Mathlib/RingTheory/TensorProduct/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-09-07",
-     "title": "Add TensorProduct.congrL",
-     "scope": "Analysis/InnerProductSpace/TensorProduct",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/40846",
-     "ai": false,
-     "sha": "5845c9e4561c0e6e233df32e89da1ecd4308e5e1",
-     "files": [
-      "Mathlib/Analysis/InnerProductSpace/TensorProduct.lean",
-      "Mathlib/LinearAlgebra/TensorProduct/Graded/Internal.lean",
-      "Mathlib/LinearAlgebra/TensorProduct/Map.lean",
-      "Mathlib/Topology/Algebra/Module/Equiv.lean"
      ]
     }
    ],
@@ -4060,9 +4054,23 @@
     "Mathlib/Topology/Sheaves"
    ],
    "files": 148,
-   "additions": 3,
+   "additions": 4,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-26",
+     "title": "Use `abbrev` for `Presheaf`, `IsSheaf`, and `Sheaf`",
+     "scope": "Topology/Sheaves",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/34094",
+     "ai": false,
+     "sha": "a74bf10698f3ffbe140547bcb3f36401540da755",
+     "files": [
+      "Mathlib/Topology/Sheaves/AddCommGrpCat.lean",
+      "Mathlib/Topology/Sheaves/Flasque.lean",
+      "Mathlib/Topology/Sheaves/LocallySurjective.lean",
+      "Mathlib/Topology/Sheaves/Sheaf.lean"
+     ]
+    },
     {
      "date": "2026-10-20",
      "title": "Enable Verso if no syntax or doc-gen changes",
@@ -4117,8 +4125,8 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 15,
-   "ai_additions": 2,
+   "additions": 14,
+   "ai_additions": 1,
    "recent": [
     {
      "date": "2026-10-20",
@@ -4242,8 +4250,8 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 15,
-   "ai_additions": 2,
+   "additions": 14,
+   "ai_additions": 1,
    "recent": [
     {
      "date": "2026-10-20",
@@ -4517,8 +4525,8 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 15,
-   "ai_additions": 2,
+   "additions": 14,
+   "ai_additions": 1,
    "recent": [
     {
      "date": "2026-10-20",
@@ -4941,7 +4949,7 @@
     "Mathlib/Probability"
    ],
    "files": 153,
-   "additions": 13,
+   "additions": 12,
    "ai_additions": 0,
    "recent": [
     {
@@ -5253,7 +5261,7 @@
     "Mathlib/Data/Nat/Choose"
    ],
    "files": 212,
-   "additions": 47,
+   "additions": 44,
    "ai_additions": 3,
    "recent": [
     {
@@ -5690,6 +5698,39 @@
   }
  },
  "feed": [
+  {
+   "date": "2026-10-27",
+   "title": "Add `baseChange_le_iff_le_comap`",
+   "scope": "LinearAlgebra/TensorProduct/Tower",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45181",
+   "ai": false,
+   "sha": "37a7c30974a79c29ebbe8d6d0a2c40345f3c0714",
+   "files": [
+    "Mathlib/LinearAlgebra/TensorProduct/Tower.lean"
+   ],
+   "fields": [
+    "linear_algebra",
+    "tensor_calculus"
+   ]
+  },
+  {
+   "date": "2026-10-26",
+   "title": "Use `abbrev` for `Presheaf`, `IsSheaf`, and `Sheaf`",
+   "scope": "Topology/Sheaves",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/34094",
+   "ai": false,
+   "sha": "a74bf10698f3ffbe140547bcb3f36401540da755",
+   "files": [
+    "Mathlib/Topology/Sheaves/AddCommGrpCat.lean",
+    "Mathlib/Topology/Sheaves/Flasque.lean",
+    "Mathlib/Topology/Sheaves/LocallySurjective.lean",
+    "Mathlib/Topology/Sheaves/Sheaf.lean"
+   ],
+   "fields": [
+    "point_set_topology",
+    "sheaf_theory"
+   ]
+  },
   {
    "date": "2026-10-26",
    "title": "Root numbers and non-vanishing in the left half-plane",
@@ -6747,38 +6788,6 @@
    ]
   },
   {
-   "date": "2026-10-17",
-   "title": "Scaling by right-regular elements preserves linear independence",
-   "scope": "LinearAlgebra/LinearIndependent/Basic",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44442",
-   "ai": false,
-   "sha": "3b8786d52a057dd02c5288fe47ff8e209daddb9e",
-   "files": [
-    "Mathlib/LinearAlgebra/LinearIndependent/Basic.lean"
-   ],
-   "fields": [
-    "linear_algebra"
-   ]
-  },
-  {
-   "date": "2026-10-17",
-   "title": "Intermediate fields corresponding to Sylow subgroups",
-   "scope": "FieldTheory/Galois",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44299",
-   "ai": false,
-   "sha": "493f1f1b5b361e7c766de63840a699267e996507",
-   "files": [
-    "Mathlib/FieldTheory/Galois/Basic.lean",
-    "Mathlib/FieldTheory/Galois/Infinite.lean",
-    "Mathlib/FieldTheory/Galois/Sylow.lean",
-    "Mathlib/GroupTheory/Nilpotent.lean",
-    "Mathlib/GroupTheory/Sylow.lean"
-   ],
-   "fields": [
-    "group_theory"
-   ]
-  },
-  {
    "date": "2026-10-16",
    "title": "Add digitsAppend API lemmas and List.mapIdx_replicate",
    "scope": "Data/Nat/Digits",
@@ -7549,56 +7558,6 @@
    "fields": [
     "euclid"
    ]
-  },
-  {
-   "date": "2026-08-28",
-   "title": "Add `ModelWithCorners.MfldCat`, the category of `C^n` manifolds on a fixed model",
-   "scope": "Geometry/Manifold",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/41109",
-   "ai": true,
-   "sha": "cf56c98b80b99547ec26464e3b2866d9f88e1027",
-   "files": [
-    "Mathlib/Geometry/Manifold/Category/MfldCat/OfModel.lean"
-   ],
-   "fields": [
-    "differential_geometry",
-    "differential_topology",
-    "poincare_proof",
-    "general_relativity"
-   ]
-  },
-  {
-   "date": "2026-08-27",
-   "title": "Ramanujan formula for derivatives",
-   "scope": "ModularForms",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/42211",
-   "ai": true,
-   "sha": "e2147bb9454ffd030794d5545c2f9cd225e5ac49",
-   "files": [
-    "Mathlib/NumberTheory/ModularForms/Derivative.lean",
-    "Mathlib/NumberTheory/ModularForms/EisensteinSeries/E2/Summable.lean",
-    "Mathlib/NumberTheory/ModularForms/EisensteinSeries/QExpansion.lean",
-    "Mathlib/NumberTheory/ModularForms/QExpansion.lean",
-    "Mathlib/NumberTheory/ModularForms/RamanujanFormula.lean"
-   ],
-   "fields": [
-    "langlands"
-   ]
-  },
-  {
-   "date": "2026-08-27",
-   "title": "Introduce Deck transformation group",
-   "scope": "Topology/Covering",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/40135",
-   "ai": true,
-   "sha": "1b878ee44e04e5971ec37a53edc9be687080d545",
-   "files": [
-    "Mathlib/Topology/Algebra/ConstMulAction.lean",
-    "Mathlib/Topology/Covering/Deck.lean"
-   ],
-   "fields": [
-    "point_set_topology"
-   ]
   }
  ],
  "projects": [
@@ -7668,10 +7627,10 @@
    "kind": "benchmark",
    "description": "Google DeepMind's collection of open conjectures (Erdős problems and others) stated in Lean, used as targets for provers.",
    "url": "https://github.com/google-deepmind/formal-conjectures",
-   "updated": "2026-10-25",
+   "updated": "2026-10-27",
    "latest": {
-    "title": "feat(OpenQuantumProblems/35): formal proof link for AME(4,6) (#7502)",
-    "url": "https://github.com/google-deepmind/formal-conjectures/commit/039378b7951df701428aa5c6732a94a149a077e1"
+    "title": "Link verified Lean proof of Erdős Problem 1202 (#7638)",
+    "url": "https://github.com/google-deepmind/formal-conjectures/commit/c0c538071a21b36d15f70f5998370eb6a4c31c97"
    },
    "overview": "google-deepmind__formal-conjectures.json",
    "lean_files": 400
@@ -7706,10 +7665,10 @@
    "kind": "automated",
    "description": "Crowdsourced map of implications between magma laws, settled with a mix of human proofs and automated provers, all checked in Lean.",
    "url": "https://github.com/teorth/equational_theories",
-   "updated": "2026-09-12",
+   "updated": "2026-10-26",
    "latest": {
-    "title": "remove unused Hasse diagram infoview widget (#1509)",
-    "url": "https://github.com/teorth/equational_theories/commit/1aec8a7acf223b7c56e4830977b6e90d4ef1924b"
+    "title": "fix: Add missing dual (#1508)",
+    "url": "https://github.com/teorth/equational_theories/commit/2f49bdaf3d38ffb722e54ac1288c8269dac61846"
    },
    "overview": "teorth__equational_theories.json",
    "lean_files": 398
@@ -7725,10 +7684,10 @@
    "kind": "human",
    "description": "Formalization of Carleson's theorem on pointwise convergence of Fourier series.",
    "url": "https://github.com/fpvandoorn/carleson",
-   "updated": "2026-10-23",
+   "updated": "2026-10-26",
    "latest": {
-    "title": "chore: bump to current mathlib (#687)",
-    "url": "https://github.com/fpvandoorn/carleson/commit/3f6b9fe8ec5ff9613f65e1c83c42758e55cdc677"
+    "title": "chore(ToMathlib/RealInterpolation/Misc): remove one superfluous measurability hypothesis (#691)",
+    "url": "https://github.com/fpvandoorn/carleson/commit/c9fba45b9143c4e56ff8617efec6f9b97557bf72"
    },
    "overview": "fpvandoorn__carleson.json",
    "lean_files": 122
