@@ -1,12 +1,12 @@
 {
- "generated": "2026-10-30T12:51Z",
+ "generated": "2026-10-31T12:23Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "ca845bae38a828a90555e03ede3668ff28f8ef92",
-  "date": "2026-10-30",
-  "files": 8677,
-  "changes": 1395,
-  "additions": 685,
+  "commit": "c25839128f86b301f2dc1bddd529e3a91591a648",
+  "date": "2026-10-31",
+  "files": 8692,
+  "changes": 1380,
+  "additions": 677,
   "ai_additions": 70
  },
  "fields": {
@@ -496,9 +496,25 @@
     "Mathlib/Algebra/Polynomial"
    ],
    "files": 65,
-   "additions": 16,
+   "additions": 17,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Field with no nontrivial extensions is algebraically closed",
@@ -553,22 +569,6 @@
      "files": [
       "Mathlib/Algebra/Polynomial/Laurent.lean",
       "Mathlib/Algebra/Polynomial/Laurent/Roots.lean"
-     ]
-    },
-    {
-     "date": "2026-10-20",
-     "title": "Enable Verso if no syntax or doc-gen changes",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
-     "ai": false,
-     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
-     "files": [
-      "Mathlib/Algebra/AffineMonoid/Basic.lean",
-      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
-      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
-      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
-      "Mathlib/Algebra/Algebra/Bilinear.lean",
-      "Mathlib/Algebra/Algebra/Field.lean"
      ]
     }
    ],
@@ -644,9 +644,25 @@
     "Mathlib/Algebra/MvPolynomial"
    ],
    "files": 24,
-   "additions": 6,
+   "additions": 7,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -703,17 +719,6 @@
      "files": [
       "Mathlib/Algebra/MvPolynomial/Rename.lean"
      ]
-    },
-    {
-     "date": "2026-10-10",
-     "title": "Partial derivatives commute",
-     "scope": "Algebra/MvPolynomial",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42783",
-     "ai": true,
-     "sha": "d9b02167b2a6fa05b01973a9b7689d38bd87fb08",
-     "files": [
-      "Mathlib/Algebra/MvPolynomial/PDeriv.lean"
-     ]
     }
    ],
    "overview": "field-symbolic_algebra.json"
@@ -723,9 +728,25 @@
     "Mathlib/Analysis/SpecialFunctions/Log"
    ],
    "files": 13,
-   "additions": 7,
+   "additions": 8,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -783,22 +804,6 @@
      "sha": "84937dc8d5f804866b594164673cd4818226ff57",
      "files": [
       "Mathlib/Analysis/SpecialFunctions/Log/Sum.lean"
-     ]
-    },
-    {
-     "date": "2026-09-18",
-     "title": "Invariance of the characteristic function under Moebius transformations",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43847",
-     "ai": false,
-     "sha": "94ef6b89544e58e90f119da869f3fb48d1da0f4c",
-     "files": [
-      "Mathlib/Analysis/Complex/ValueDistribution/CharacteristicFunction.lean",
-      "Mathlib/Analysis/Complex/ValueDistribution/FirstMainTheorem.lean",
-      "Mathlib/Analysis/Complex/ValueDistribution/LogCounting/Basic.lean",
-      "Mathlib/Analysis/Complex/ValueDistribution/Proximity/Basic.lean",
-      "Mathlib/Analysis/Meromorphic/IsolatedZeros.lean",
-      "Mathlib/Analysis/Meromorphic/RCLike.lean"
      ]
     }
    ],
@@ -1241,6 +1246,22 @@
    "ai_additions": 0,
    "recent": [
     {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
+    {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
      "scope": null,
@@ -1296,17 +1317,6 @@
       "Mathlib/Algebra/Algebra/Bilinear.lean",
       "Mathlib/Algebra/Algebra/Field.lean"
      ]
-    },
-    {
-     "date": "2026-10-17",
-     "title": "Add distance lemmas for graph maps",
-     "scope": "Combinatorics/SimpleGraph/Metric",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44872",
-     "ai": false,
-     "sha": "acf398171765903373586f979b1eaaf7abf3709e",
-     "files": [
-      "Mathlib/Combinatorics/SimpleGraph/Metric.lean"
-     ]
     }
    ],
    "overview": "field-graph_theory.json"
@@ -1348,7 +1358,7 @@
     "Mathlib/Data/ZMod"
    ],
    "files": 21,
-   "additions": 6,
+   "additions": 5,
    "ai_additions": 1,
    "recent": [
     {
@@ -1611,9 +1621,25 @@
     "Mathlib/Order/Filter"
    ],
    "files": 65,
-   "additions": 10,
+   "additions": 11,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -1677,18 +1703,6 @@
       "Mathlib/Algebra/Lie/Basis/Basic.lean",
       "Mathlib/Algebra/Lie/Subalgebra.lean"
      ]
-    },
-    {
-     "date": "2026-10-14",
-     "title": "Misc filter limit lemmas",
-     "scope": "Order/Filter",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44847",
-     "ai": true,
-     "sha": "e2d19419b0cded0511f4130186fc9c8a32e04eb8",
-     "files": [
-      "Mathlib/Order/Filter/AtTopBot/Ring.lean",
-      "Mathlib/Order/Filter/Pointwise.lean"
-     ]
     }
    ],
    "overview": "field-rigorous_analysis.json"
@@ -1702,6 +1716,22 @@
    "additions": 25,
    "ai_additions": 4,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -1760,17 +1790,6 @@
       "Mathlib/Analysis/Complex/Harmonic/Poisson.lean",
       "Mathlib/Analysis/Complex/Schwarz.lean"
      ]
-    },
-    {
-     "date": "2026-10-27",
-     "title": "Cauchy–Goursat for Unbounded Rectangles",
-     "scope": "Analysis/Complex/CauchyIntegral",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/26479",
-     "ai": false,
-     "sha": "1a22a591d08f49075418a57625c7c52e2956a169",
-     "files": [
-      "Mathlib/Analysis/Complex/CauchyIntegral.lean"
-     ]
     }
    ],
    "overview": "field-complex_analysis.json"
@@ -1780,9 +1799,25 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 15,
+   "additions": 16,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -1841,17 +1876,6 @@
      "files": [
       "Mathlib/Geometry/Manifold/VectorBundle/ContinuousAlternatingMap.lean",
       "Mathlib/Topology/VectorBundle/ContinuousAlternatingMap.lean"
-     ]
-    },
-    {
-     "date": "2026-10-14",
-     "title": "ContMDiff.mvfderiv and friends",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44711",
-     "ai": false,
-     "sha": "b5d0cc06b31c729ed3eb5c7fc55d7b767f8be9c7",
-     "files": [
-      "Mathlib/Geometry/Manifold/ContMDiffMFDeriv.lean"
      ]
     }
    ],
@@ -1986,6 +2010,22 @@
    "ai_additions": 11,
    "recent": [
     {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
+    {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
      "scope": null,
@@ -2043,19 +2083,6 @@
       "Mathlib/Algebra/Lie/EngelSubalgebra.lean",
       "Mathlib/Algebra/Lie/LieTheorem.lean"
      ]
-    },
-    {
-     "date": "2026-10-28",
-     "title": "Add divisibility lemma and golf proof",
-     "scope": "Data/Nat/Prime",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45283",
-     "ai": true,
-     "sha": "7e722502212b601a828a6633359d823f78c67913",
-     "files": [
-      "Mathlib/Data/Nat/Prime/Defs.lean",
-      "Mathlib/GroupTheory/OrderOfElement.lean",
-      "Mathlib/NumberTheory/LucasPrimality.lean"
-     ]
     }
    ],
    "overview": "field-group_theory.json"
@@ -2068,9 +2095,41 @@
     "Mathlib/NumberTheory/Chebyshev"
    ],
    "files": 31,
-   "additions": 8,
+   "additions": 10,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
+    {
+     "date": "2026-10-30",
+     "title": "Use `IsApply` for `ArithmeticFunction`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45386",
+     "ai": false,
+     "sha": "75b1f08d2d82a89ce11b4f02c19df0de263cc466",
+     "files": [
+      "Mathlib/NumberTheory/ArithmeticFunction/Defs.lean",
+      "Mathlib/NumberTheory/ArithmeticFunction/LFunction.lean",
+      "Mathlib/NumberTheory/ArithmeticFunction/Misc.lean",
+      "Mathlib/NumberTheory/ArithmeticFunction/Moebius.lean",
+      "Mathlib/NumberTheory/ArithmeticFunction/VonMangoldt.lean",
+      "Mathlib/NumberTheory/ArithmeticFunction/Zeta.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -2115,38 +2174,6 @@
       "Mathlib/Data/Nat/Choose/Factorization.lean",
       "Mathlib/NumberTheory/Chebyshev.lean"
      ]
-    },
-    {
-     "date": "2026-10-20",
-     "title": "Enable Verso if no syntax or doc-gen changes",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
-     "ai": false,
-     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
-     "files": [
-      "Mathlib/Algebra/AffineMonoid/Basic.lean",
-      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
-      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
-      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
-      "Mathlib/Algebra/Algebra/Bilinear.lean",
-      "Mathlib/Algebra/Algebra/Field.lean"
-     ]
-    },
-    {
-     "date": "2026-10-14",
-     "title": "Grind patterns for cfc junk values",
-     "scope": "Analysis/CStarAlgebra",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43025",
-     "ai": false,
-     "sha": "074063781836922cb02701cd12943c9f51731afa",
-     "files": [
-      "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Basic.lean",
-      "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/NonUnital.lean",
-      "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Order.lean",
-      "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Range.lean",
-      "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Restrict.lean",
-      "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Unital.lean"
-     ]
     }
    ],
    "overview": "field-analytic_number_theory.json"
@@ -2157,9 +2184,25 @@
     "Mathlib/Data/Matrix"
    ],
    "files": 405,
-   "additions": 82,
+   "additions": 80,
    "ai_additions": 7,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-30",
      "title": "Interactions between `tsum` and {`IsHermitian`, `PosSemidef`, `trace`}",
@@ -2218,22 +2261,6 @@
       "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
       "Mathlib/Algebra/Algebra/Bilinear.lean",
       "Mathlib/Algebra/Algebra/Field.lean"
-     ]
-    },
-    {
-     "date": "2026-10-29",
-     "title": "Use `IsApply` for `LinearEquiv`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45391",
-     "ai": false,
-     "sha": "5b08efb3fa4374f50443e3388de6308eb1ae400f",
-     "files": [
-      "Mathlib/Algebra/Module/Equiv/Basic.lean",
-      "Mathlib/Algebra/Module/Equiv/Defs.lean",
-      "Mathlib/LinearAlgebra/FiniteSpan.lean",
-      "Mathlib/LinearAlgebra/Reflection.lean",
-      "Mathlib/LinearAlgebra/RootSystem/Defs.lean",
-      "Mathlib/LinearAlgebra/Transvection/Generation.lean"
      ]
     }
    ],
@@ -2304,9 +2331,40 @@
     "Mathlib/Order/BooleanAlgebra"
    ],
    "files": 3,
-   "additions": 0,
+   "additions": 2,
    "ai_additions": 0,
-   "recent": [],
+   "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
+    {
+     "date": "2026-10-30",
+     "title": "`insert a` and `· \\ {a}` are injective on the sets they move",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45161",
+     "ai": false,
+     "sha": "14577ea482283da071a3e7e6eac0725e5eb4da97",
+     "files": [
+      "Mathlib/Data/Finset/Basic.lean",
+      "Mathlib/Data/Finset/SDiff.lean",
+      "Mathlib/Order/BooleanAlgebra/Set.lean",
+      "Mathlib/Order/Disjoint.lean"
+     ]
+    }
+   ],
    "overview": "field-boolean_logic.json"
   },
   "riemannian_geometry": {
@@ -2354,10 +2412,22 @@
     "Mathlib/SetTheory/Cardinal",
     "Mathlib/SetTheory/Ordinal"
    ],
-   "files": 47,
-   "additions": 15,
+   "files": 48,
+   "additions": 16,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-30",
+     "title": "Add cardinality bounds for direct limits",
+     "scope": "SetTheory/Cardinal",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42125",
+     "ai": false,
+     "sha": "a354dac4230a93f6122bda889b84c9dd954b1b64",
+     "files": [
+      "Mathlib/Order/DirectedInverseSystem.lean",
+      "Mathlib/SetTheory/Cardinal/DirectLimit.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -2414,17 +2484,6 @@
      "files": [
       "Mathlib/SetTheory/Cardinal/Aleph.lean"
      ]
-    },
-    {
-     "date": "2026-10-27",
-     "title": "`x ≤ 1` implies `x ^ y ≤ 1` on ordinals",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45104",
-     "ai": false,
-     "sha": "14c4e538d5e437740f95b12b96a1e3cee2df54e9",
-     "files": [
-      "Mathlib/SetTheory/Ordinal/Exponential.lean"
-     ]
     }
    ],
    "overview": "field-set_theory.json"
@@ -2449,6 +2508,22 @@
    "additions": 13,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -2506,17 +2581,6 @@
       "Mathlib/AlgebraicGeometry/ResidueField.lean",
       "Mathlib/Topology/LocallyFinsupp.lean"
      ]
-    },
-    {
-     "date": "2026-09-22",
-     "title": "Add Jacobian blueprint via def_wanted/theorem_wanted",
-     "scope": "AlgebraicGeometry/Group",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/40616",
-     "ai": true,
-     "sha": "1cfb94c897980847d8f0c110fa6334f505f9796c",
-     "files": [
-      "Mathlib/AlgebraicGeometry/Morphisms/Smooth.lean"
-     ]
     }
    ],
    "overview": "field-algebraic_geometry.json"
@@ -2527,9 +2591,25 @@
     "Mathlib/Topology/Homotopy"
    ],
    "files": 181,
-   "additions": 18,
+   "additions": 19,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-30",
      "title": "Eilenberg Steenrod axioms",
@@ -2584,18 +2664,6 @@
      "files": [
       "Mathlib/AlgebraicTopology/Quasicategory/CompStruct.lean",
       "Mathlib/AlgebraicTopology/Quasicategory/TwoTruncated.lean"
-     ]
-    },
-    {
-     "date": "2026-10-14",
-     "title": "Homotopic maps induce isomorphic functors",
-     "scope": "AlgebraicTopology/SimplicialSet/FundamentalGroupoid",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42576",
-     "ai": false,
-     "sha": "f8b885ace592668c139236c04ceffbed88f65504",
-     "files": [
-      "Mathlib/AlgebraicTopology/SimplicialSet/FundamentalGroupoid/Basic.lean",
-      "Mathlib/AlgebraicTopology/SimplicialSet/FundamentalGroupoid/Homotopy.lean"
      ]
     }
    ],
@@ -2699,6 +2767,33 @@
    "ai_additions": 2,
    "recent": [
     {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
+    {
+     "date": "2026-10-30",
+     "title": "Countable uncurry preserves strong measurability",
+     "scope": "MeasureTheory",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45492",
+     "ai": false,
+     "sha": "e363848c929ded4d9fe7c5eae8ef36403e8b7809",
+     "files": [
+      "Mathlib/MeasureTheory/Function/StronglyMeasurable/Basic.lean"
+     ]
+    },
+    {
      "date": "2026-10-30",
      "title": "NullMeasurable versions of some measurable_of_X lemmas",
      "scope": null,
@@ -2736,38 +2831,6 @@
       "Mathlib/Algebra/Algebra/Bilinear.lean",
       "Mathlib/Algebra/Algebra/Field.lean"
      ]
-    },
-    {
-     "date": "2026-10-28",
-     "title": "Use `IsApply` for `Measure`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45225",
-     "ai": false,
-     "sha": "8fe7ce475b056f0b266d7107893f2c4d772c712f",
-     "files": [
-      "Mathlib/Algebra/Lie/Basic.lean",
-      "Mathlib/Analysis/InnerProductSpace/NormDet.lean",
-      "Mathlib/Analysis/InnerProductSpace/Symmetric.lean",
-      "Mathlib/Dynamics/Ergodic/Extreme.lean",
-      "Mathlib/Geometry/Euclidean/Volume/Measure.lean",
-      "Mathlib/LinearAlgebra/BilinearMap.lean"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "title": "Tag `Metric.closedBall_subset_ball` with `@[gcongr strict]`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43419",
-     "ai": false,
-     "sha": "c63d9df9d32f8568577fead4a94a4fd63b637c29",
-     "files": [
-      "Mathlib/Analysis/BoxIntegral/Basic.lean",
-      "Mathlib/Analysis/CStarAlgebra/SpecialFunctions/PosPart.lean",
-      "Mathlib/Analysis/Calculus/FDeriv/Basic.lean",
-      "Mathlib/Analysis/Complex/Harmonic/MeanValue.lean",
-      "Mathlib/Analysis/Complex/Harmonic/Poisson.lean",
-      "Mathlib/Analysis/Complex/Schwarz.lean"
-     ]
     }
    ],
    "overview": "field-measure_theory.json"
@@ -2778,9 +2841,25 @@
     "Mathlib/Analysis/InnerProductSpace"
    ],
    "files": 222,
-   "additions": 42,
+   "additions": 43,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Notation for `MultilinearMap`",
@@ -2844,22 +2923,6 @@
       "Mathlib/Algebra/Lie/EngelSubalgebra.lean",
       "Mathlib/Algebra/Lie/LieTheorem.lean"
      ]
-    },
-    {
-     "date": "2026-10-27",
-     "title": "Tag `Metric.closedBall_subset_ball` with `@[gcongr strict]`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43419",
-     "ai": false,
-     "sha": "c63d9df9d32f8568577fead4a94a4fd63b637c29",
-     "files": [
-      "Mathlib/Analysis/BoxIntegral/Basic.lean",
-      "Mathlib/Analysis/CStarAlgebra/SpecialFunctions/PosPart.lean",
-      "Mathlib/Analysis/Calculus/FDeriv/Basic.lean",
-      "Mathlib/Analysis/Complex/Harmonic/MeanValue.lean",
-      "Mathlib/Analysis/Complex/Harmonic/Poisson.lean",
-      "Mathlib/Analysis/Complex/Schwarz.lean"
-     ]
     }
    ],
    "overview": "field-functional_analysis.json"
@@ -2869,9 +2932,25 @@
     "Mathlib/Topology"
    ],
    "files": 706,
-   "additions": 98,
+   "additions": 95,
    "ai_additions": 6,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-30",
      "title": "Eilenberg Steenrod axioms",
@@ -2927,19 +3006,6 @@
       "Mathlib/LinearAlgebra/Alternating/DomCoprod.lean",
       "Mathlib/LinearAlgebra/Multilinear/Basic.lean"
      ]
-    },
-    {
-     "date": "2026-10-29",
-     "title": "The Amice transform is a ring isomorphism",
-     "scope": "NumberTheory/Padics",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42836",
-     "ai": false,
-     "sha": "cfd775e20342f2d98fbc366f3167b1d09ca6fe21",
-     "files": [
-      "Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean",
-      "Mathlib/NumberTheory/Padics/Measure/Monoid.lean",
-      "Mathlib/Topology/Constructions.lean"
-     ]
     }
    ],
    "overview": "field-point_set_topology.json"
@@ -2952,8 +3018,36 @@
    ],
    "files": 907,
    "additions": 96,
-   "ai_additions": 22,
+   "ai_additions": 23,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
+    {
+     "date": "2026-10-30",
+     "title": "Integral elements and the discriminant",
+     "scope": "Algebra/QuadraticAlgebra/Int",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45296",
+     "ai": true,
+     "sha": "c51f4102de2372f0c3abbf9ca6c4a2062f6e53f6",
+     "files": [
+      "Mathlib/Algebra/QuadraticAlgebra/Int.lean",
+      "Mathlib/Algebra/Ring/Int/Parity.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Notation for `MultilinearMap`",
@@ -3001,30 +3095,6 @@
       "Mathlib/LinearAlgebra/RootSystem/Defs.lean",
       "Mathlib/LinearAlgebra/Transvection/Generation.lean"
      ]
-    },
-    {
-     "date": "2026-10-29",
-     "title": "Simple modules over a simple Artinian ring are isomorphic",
-     "scope": "RingTheory/SimpleModule",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45047",
-     "ai": false,
-     "sha": "c5ad680749cbcb7eab8c1eb158d9d16d9e7836cb",
-     "files": [
-      "Mathlib/RingTheory/SimpleModule/Isotypic.lean",
-      "Mathlib/RingTheory/SimpleModule/WedderburnArtin.lean"
-     ]
-    },
-    {
-     "date": "2026-10-29",
-     "title": "`simp` lemmas for `normalize` being irreducible and prime",
-     "scope": "Algebra/GCDMonoid",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44487",
-     "ai": false,
-     "sha": "1cadb48320723bbf68f79977bc4d1b145c8ee5ff",
-     "files": [
-      "Mathlib/Algebra/GCDMonoid/Basic.lean",
-      "Mathlib/RingTheory/UniqueFactorizationDomain/NormalizedFactors.lean"
-     ]
     }
    ],
    "overview": "field-abstract_algebra.json"
@@ -3069,9 +3139,32 @@
     "Mathlib/Probability"
    ],
    "files": 141,
-   "additions": 14,
+   "additions": 16,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-30",
+     "title": "Define complete filtrations",
+     "scope": "Probability",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45237",
+     "ai": false,
+     "sha": "ecb7b357fca8363979edcef8fc8e11e7ae81ba59",
+     "files": [
+      "Mathlib/Probability/Process/Filtration.lean",
+      "Mathlib/Probability/Process/Stopping.lean"
+     ]
+    },
+    {
+     "date": "2026-10-30",
+     "title": "Define the `leastGT` stopping time",
+     "scope": "Probability",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45239",
+     "ai": false,
+     "sha": "143b867c7573c7826ad6e2544c7de65f0fcdff86",
+     "files": [
+      "Mathlib/Probability/Martingale/BorelCantelli.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -3119,38 +3212,6 @@
       "Mathlib/MeasureTheory/Covering/Besicovitch.lean",
       "Mathlib/MeasureTheory/Covering/Differentiation.lean"
      ]
-    },
-    {
-     "date": "2026-10-21",
-     "title": "Use `IsApply` for `SimpleFunc`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45077",
-     "ai": false,
-     "sha": "c31114ff810d2ce158c0f822f0cdad76771a5a6a",
-     "files": [
-      "Mathlib/Analysis/Fourier/PoissonSummation.lean",
-      "Mathlib/Analysis/SpecialFunctions/MulExpNegMulSqIntegral.lean",
-      "Mathlib/Geometry/Euclidean/Volume/Measure.lean",
-      "Mathlib/MeasureTheory/Function/ConditionalExpectation/PullOut.lean",
-      "Mathlib/MeasureTheory/Function/SimpleFunc.lean",
-      "Mathlib/MeasureTheory/Function/SimpleFuncDenseLp.lean"
-     ]
-    },
-    {
-     "date": "2026-10-20",
-     "title": "Enable Verso if no syntax or doc-gen changes",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
-     "ai": false,
-     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
-     "files": [
-      "Mathlib/Algebra/AffineMonoid/Basic.lean",
-      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
-      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
-      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
-      "Mathlib/Algebra/Algebra/Bilinear.lean",
-      "Mathlib/Algebra/Algebra/Field.lean"
-     ]
     }
    ],
    "overview": "field-axiomatic_probability.json"
@@ -3189,19 +3250,92 @@
     "Mathlib/Computability/Halting"
    ],
    "files": 7,
-   "additions": 0,
+   "additions": 1,
    "ai_additions": 0,
-   "recent": [],
+   "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    }
+   ],
    "overview": "field-turing_machines.json"
   },
   "category_theory": {
    "prefixes": [
     "Mathlib/CategoryTheory"
    ],
-   "files": 1134,
-   "additions": 42,
+   "files": 1146,
+   "additions": 45,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
+    {
+     "date": "2026-10-30",
+     "title": "Stability under retracts of the preservation of (co)limits",
+     "scope": "CategoryTheory",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45417",
+     "ai": false,
+     "sha": "f9738e46d32221bdd20d876adf69c619543cc523",
+     "files": [
+      "Mathlib/CategoryTheory/ObjectProperty/FunctorCategory/PreservesLimits.lean",
+      "Mathlib/CategoryTheory/ObjectProperty/Retract.lean",
+      "Mathlib/CategoryTheory/Retract.lean"
+     ]
+    },
+    {
+     "date": "2026-10-30",
+     "title": "External products of derivability structures",
+     "scope": "CategoryTheory",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43896",
+     "ai": false,
+     "sha": "f20abd6d9eae85220f785ca42bc54f45dfa44de0",
+     "files": [
+      "Mathlib/CategoryTheory/Localization/DerivabilityStructure/Product.lean",
+      "Mathlib/CategoryTheory/Localization/Equivalence.lean",
+      "Mathlib/CategoryTheory/Localization/LocalizerMorphism.lean",
+      "Mathlib/CategoryTheory/Localization/Resolution.lean",
+      "Mathlib/CategoryTheory/Products/Basic.lean"
+     ]
+    },
+    {
+     "date": "2026-10-30",
+     "title": "Left derived bifunctors",
+     "scope": "CategoryTheory/Functor",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45460",
+     "ai": false,
+     "sha": "f67412bdfdb3d4aa6fef1a42373e20d421eb5ccc",
+     "files": [
+      "Mathlib/CategoryTheory/Functor/Currying.lean",
+      "Mathlib/CategoryTheory/Functor/Derived/LeftDerivedTwo.lean"
+     ]
+    },
     {
      "date": "2026-10-30",
      "title": "Pasting for kan extensions",
@@ -3212,56 +3346,6 @@
      "files": [
       "Mathlib/CategoryTheory/Bicategory/Extension.lean",
       "Mathlib/CategoryTheory/Bicategory/Kan/IsKan.lean"
-     ]
-    },
-    {
-     "date": "2026-10-29",
-     "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45466",
-     "ai": false,
-     "sha": "32a422c83a18ddd0f352908187e5f68aad829904",
-     "files": [
-      "Mathlib/Algebra/AffineMonoid/Basic.lean",
-      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
-      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
-      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
-      "Mathlib/Algebra/Algebra/Bilinear.lean",
-      "Mathlib/Algebra/Algebra/Field.lean"
-     ]
-    },
-    {
-     "date": "2026-10-29",
-     "title": "Limits and colimits of inserters",
-     "scope": "CategoryTheory/Inserter",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45275",
-     "ai": false,
-     "sha": "de45c71d6e9b339261c12f61ef532d0003e7bc8b",
-     "files": [
-      "Mathlib/CategoryTheory/Inserter/Limits.lean"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "title": "The category of inserters",
-     "scope": "CategoryTheory",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45273",
-     "ai": false,
-     "sha": "957aaac3eedba59f06dde6e25469a7a0c556097c",
-     "files": [
-      "Mathlib/CategoryTheory/Inserter/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "title": "Relate equivalences and skeletons",
-     "scope": "CategoryTheory",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42802",
-     "ai": false,
-     "sha": "c5945d8114ffda310bcc3a4932e395d0cca67143",
-     "files": [
-      "Mathlib/CategoryTheory/EssentiallySmall.lean",
-      "Mathlib/CategoryTheory/Skeletal.lean"
      ]
     }
    ],
@@ -3320,6 +3404,22 @@
    "ai_additions": 1,
    "recent": [
     {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
+    {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
      "scope": null,
@@ -3375,17 +3475,6 @@
       "Mathlib/AlgebraicGeometry/AlgebraicCycle/Basic.lean",
       "Mathlib/AlgebraicGeometry/ResidueField.lean",
       "Mathlib/Topology/LocallyFinsupp.lean"
-     ]
-    },
-    {
-     "date": "2026-09-22",
-     "title": "Add Jacobian blueprint via def_wanted/theorem_wanted",
-     "scope": "AlgebraicGeometry/Group",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/40616",
-     "ai": true,
-     "sha": "1cfb94c897980847d8f0c110fa6334f505f9796c",
-     "files": [
-      "Mathlib/AlgebraicGeometry/Morphisms/Smooth.lean"
      ]
     }
    ],
@@ -3401,6 +3490,22 @@
    "ai_additions": 1,
    "recent": [
     {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
+    {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
      "scope": null,
@@ -3456,17 +3561,6 @@
       "Mathlib/AlgebraicGeometry/AlgebraicCycle/Basic.lean",
       "Mathlib/AlgebraicGeometry/ResidueField.lean",
       "Mathlib/Topology/LocallyFinsupp.lean"
-     ]
-    },
-    {
-     "date": "2026-09-22",
-     "title": "Add Jacobian blueprint via def_wanted/theorem_wanted",
-     "scope": "AlgebraicGeometry/Group",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/40616",
-     "ai": true,
-     "sha": "1cfb94c897980847d8f0c110fa6334f505f9796c",
-     "files": [
-      "Mathlib/AlgebraicGeometry/Morphisms/Smooth.lean"
      ]
     }
    ],
@@ -3566,9 +3660,25 @@
     "Mathlib/Computability"
    ],
    "files": 29,
-   "additions": 3,
+   "additions": 4,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Lint against `∀ᵉ`/`∃ᵉ`",
@@ -3975,7 +4085,7 @@
     "Mathlib/AlgebraicGeometry/EllipticCurve"
    ],
    "files": 19,
-   "additions": 4,
+   "additions": 3,
    "ai_additions": 0,
    "recent": [
     {
@@ -4010,18 +4120,6 @@
      "sha": "f6b141f42c749fea409a8b37c5bf63872994e0bf",
      "files": [
       "Mathlib/AlgebraicGeometry/EllipticCurve/Reduction.lean"
-     ]
-    },
-    {
-     "date": "2026-08-31",
-     "title": "More on `xRep`",
-     "scope": "AlgebraicGeometry/EllipticCurve/Affine",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/40303",
-     "ai": false,
-     "sha": "be865aa50cc0364be66c3941a6dc0c845a2c2ceb",
-     "files": [
-      "Mathlib/AlgebraicGeometry/EllipticCurve/Affine/Formula.lean",
-      "Mathlib/AlgebraicGeometry/EllipticCurve/Affine/Point.lean"
      ]
     }
    ],
@@ -4087,9 +4185,25 @@
     "Mathlib/Geometry/Manifold/Algebra"
    ],
    "files": 66,
-   "additions": 14,
+   "additions": 15,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Lemmas showing properties of ofDerivation added",
@@ -4147,22 +4261,6 @@
       "Mathlib/Algebra/Lie/Derivation/Basic.lean",
       "Mathlib/Algebra/Lie/EngelSubalgebra.lean",
       "Mathlib/Algebra/Lie/LieTheorem.lean"
-     ]
-    },
-    {
-     "date": "2026-10-20",
-     "title": "Enable Verso if no syntax or doc-gen changes",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
-     "ai": false,
-     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
-     "files": [
-      "Mathlib/Algebra/AffineMonoid/Basic.lean",
-      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
-      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
-      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
-      "Mathlib/Algebra/Algebra/Bilinear.lean",
-      "Mathlib/Algebra/Algebra/Field.lean"
      ]
     }
    ],
@@ -4260,10 +4358,22 @@
     "Mathlib/Algebra/Homology",
     "Mathlib/CategoryTheory/Abelian"
    ],
-   "files": 216,
-   "additions": 19,
+   "files": 217,
+   "additions": 18,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-30",
+     "title": "Bounded above cochain complexes",
+     "scope": "Algebra/Homology",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45274",
+     "ai": false,
+     "sha": "10d46ad27faef3a4ed05ccb621047c9786f883fc",
+     "files": [
+      "Mathlib/Algebra/Homology/CochainComplexMinus.lean",
+      "Mathlib/Algebra/Homology/CochainComplexPlus.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -4317,22 +4427,6 @@
       "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
       "Mathlib/Algebra/Algebra/Bilinear.lean",
       "Mathlib/Algebra/Algebra/Field.lean"
-     ]
-    },
-    {
-     "date": "2026-10-18",
-     "title": "Interaction between `InjectiveResolution.extMk` and the connecting morphism",
-     "scope": "Category/Abelian/Injective",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43224",
-     "ai": false,
-     "sha": "f039e1b8a616d45782a5c7fc5e7909249c36b8ea",
-     "files": [
-      "Mathlib/Algebra/Homology/DerivedCategory/Ext/Map.lean",
-      "Mathlib/Algebra/Homology/DerivedCategory/SingleTriangle.lean",
-      "Mathlib/Algebra/Homology/DerivedCategory/SmallShiftedHom.lean",
-      "Mathlib/Algebra/Homology/HomotopyCategory/HomComplex.lean",
-      "Mathlib/Algebra/Homology/HomotopyCategory/HomComplexShift.lean",
-      "Mathlib/Algebra/Homology/HomotopyCategory/HomComplexSingle.lean"
      ]
     }
    ],
@@ -4587,9 +4681,25 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 15,
+   "additions": 16,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -4648,17 +4758,6 @@
      "files": [
       "Mathlib/Geometry/Manifold/VectorBundle/ContinuousAlternatingMap.lean",
       "Mathlib/Topology/VectorBundle/ContinuousAlternatingMap.lean"
-     ]
-    },
-    {
-     "date": "2026-10-14",
-     "title": "ContMDiff.mvfderiv and friends",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44711",
-     "ai": false,
-     "sha": "b5d0cc06b31c729ed3eb5c7fc55d7b767f8be9c7",
-     "files": [
-      "Mathlib/Geometry/Manifold/ContMDiffMFDeriv.lean"
      ]
     }
    ],
@@ -4766,9 +4865,25 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 15,
+   "additions": 16,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -4827,17 +4942,6 @@
      "files": [
       "Mathlib/Geometry/Manifold/VectorBundle/ContinuousAlternatingMap.lean",
       "Mathlib/Topology/VectorBundle/ContinuousAlternatingMap.lean"
-     ]
-    },
-    {
-     "date": "2026-10-14",
-     "title": "ContMDiff.mvfderiv and friends",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44711",
-     "ai": false,
-     "sha": "b5d0cc06b31c729ed3eb5c7fc55d7b767f8be9c7",
-     "files": [
-      "Mathlib/Geometry/Manifold/ContMDiffMFDeriv.lean"
      ]
     }
    ],
@@ -4936,9 +5040,25 @@
     "Mathlib/Analysis/Complex"
    ],
    "files": 108,
-   "additions": 24,
+   "additions": 25,
    "ai_additions": 4,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -4996,22 +5116,6 @@
      "sha": "730ef8ec2b7f0871037a78036d8ab81543fa251a",
      "files": [
       "Mathlib/Analysis/Complex/CauchyIntegral.lean"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "title": "Tag `Metric.closedBall_subset_ball` with `@[gcongr strict]`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43419",
-     "ai": false,
-     "sha": "c63d9df9d32f8568577fead4a94a4fd63b637c29",
-     "files": [
-      "Mathlib/Analysis/BoxIntegral/Basic.lean",
-      "Mathlib/Analysis/CStarAlgebra/SpecialFunctions/PosPart.lean",
-      "Mathlib/Analysis/Calculus/FDeriv/Basic.lean",
-      "Mathlib/Analysis/Complex/Harmonic/MeanValue.lean",
-      "Mathlib/Analysis/Complex/Harmonic/Poisson.lean",
-      "Mathlib/Analysis/Complex/Schwarz.lean"
      ]
     }
    ],
@@ -5087,9 +5191,25 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 15,
+   "additions": 16,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -5149,17 +5269,6 @@
       "Mathlib/Geometry/Manifold/VectorBundle/ContinuousAlternatingMap.lean",
       "Mathlib/Topology/VectorBundle/ContinuousAlternatingMap.lean"
      ]
-    },
-    {
-     "date": "2026-10-14",
-     "title": "ContMDiff.mvfderiv and friends",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44711",
-     "ai": false,
-     "sha": "b5d0cc06b31c729ed3eb5c7fc55d7b767f8be9c7",
-     "files": [
-      "Mathlib/Geometry/Manifold/ContMDiffMFDeriv.lean"
-     ]
     }
    ],
    "overview": "field-general_relativity.json"
@@ -5173,6 +5282,22 @@
    "additions": 25,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -5236,20 +5361,6 @@
       "Mathlib/Analysis/Complex/Harmonic/Poisson.lean",
       "Mathlib/Analysis/Complex/Schwarz.lean"
      ]
-    },
-    {
-     "date": "2026-10-21",
-     "title": "Prove `‖A i j‖ ≤ ‖A‖` for the operator norm",
-     "scope": "Analysis/Matrix/Normed",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44969",
-     "ai": false,
-     "sha": "4e006b96901cfe4f8e7261376d330974dff1e02f",
-     "files": [
-      "Mathlib/Analysis/CStarAlgebra/CStarMatrix.lean",
-      "Mathlib/Analysis/Matrix/Normed.lean",
-      "Mathlib/NumberTheory/NumberField/House.lean",
-      "Mathlib/NumberTheory/SiegelsLemma.lean"
-     ]
     }
    ],
    "overview": "field-quantum_mechanics.json"
@@ -5259,9 +5370,25 @@
     "Mathlib/Analysis/InnerProductSpace/Projection"
    ],
    "files": 5,
-   "additions": 5,
+   "additions": 6,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -5322,17 +5449,6 @@
       "Mathlib/Analysis/Normed/Group/RadialFunction.lean",
       "Mathlib/Analysis/RCLike/Basic.lean"
      ]
-    },
-    {
-     "date": "2026-09-15",
-     "title": "Relate projection distance to infDist",
-     "scope": "Analysis/InnerProductSpace/Projection",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43645",
-     "ai": false,
-     "sha": "d96715aca2d66d22f6581569d4cdbe66240c883d",
-     "files": [
-      "Mathlib/Analysis/InnerProductSpace/Projection/Basic.lean"
-     ]
     }
    ],
    "overview": "field-finite_elements.json"
@@ -5373,6 +5489,22 @@
    "additions": 9,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -5436,21 +5568,6 @@
       "Mathlib/Algebra/Lie/Basis/Basic.lean",
       "Mathlib/Algebra/Lie/Subalgebra.lean"
      ]
-    },
-    {
-     "date": "2026-10-13",
-     "title": "BigO in terms of seminorms",
-     "scope": "Analysis",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42676",
-     "ai": false,
-     "sha": "089be84e24e41b7a26860084d1747195cf9299f3",
-     "files": [
-      "Mathlib/Algebra/Order/Hom/GroupNorm.lean",
-      "Mathlib/Analysis/Asymptotics/Basic.lean",
-      "Mathlib/Analysis/Convex/EGauge.lean",
-      "Mathlib/Analysis/LocallyConvex/Asymptotics.lean",
-      "Mathlib/Analysis/LocallyConvex/WithSeminorms.lean"
-     ]
     }
    ],
    "overview": "field-linear_programming.json"
@@ -5461,9 +5578,25 @@
     "Mathlib/Algebra/Lie"
    ],
    "files": 76,
-   "additions": 15,
+   "additions": 16,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Lemmas showing properties of ofDerivation added",
@@ -5522,22 +5655,6 @@
       "Mathlib/Algebra/Lie/EngelSubalgebra.lean",
       "Mathlib/Algebra/Lie/LieTheorem.lean"
      ]
-    },
-    {
-     "date": "2026-10-20",
-     "title": "Enable Verso if no syntax or doc-gen changes",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
-     "ai": false,
-     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
-     "files": [
-      "Mathlib/Algebra/AffineMonoid/Basic.lean",
-      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
-      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
-      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
-      "Mathlib/Algebra/Algebra/Bilinear.lean",
-      "Mathlib/Algebra/Algebra/Field.lean"
-     ]
     }
    ],
    "overview": "field-gauge_theory.json"
@@ -5548,9 +5665,48 @@
     "Mathlib/Probability"
    ],
    "files": 153,
-   "additions": 15,
+   "additions": 18,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
+    {
+     "date": "2026-10-30",
+     "title": "Define complete filtrations",
+     "scope": "Probability",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45237",
+     "ai": false,
+     "sha": "ecb7b357fca8363979edcef8fc8e11e7ae81ba59",
+     "files": [
+      "Mathlib/Probability/Process/Filtration.lean",
+      "Mathlib/Probability/Process/Stopping.lean"
+     ]
+    },
+    {
+     "date": "2026-10-30",
+     "title": "Define the `leastGT` stopping time",
+     "scope": "Probability",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45239",
+     "ai": false,
+     "sha": "143b867c7573c7826ad6e2544c7de65f0fcdff86",
+     "files": [
+      "Mathlib/Probability/Martingale/BorelCantelli.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -5582,54 +5738,6 @@
       "Mathlib/Geometry/Euclidean/Volume/Measure.lean",
       "Mathlib/LinearAlgebra/BilinearMap.lean"
      ]
-    },
-    {
-     "date": "2026-10-27",
-     "title": "Deprecate generalized ENNReal lemmas",
-     "scope": "Topology/Algebra/InfiniteSum",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/38193",
-     "ai": false,
-     "sha": "7ed8b0968825700564fa6c31bfe67ceeadb740b3",
-     "files": [
-      "Mathlib/Analysis/Normed/Group/InfiniteSum.lean",
-      "Mathlib/Analysis/PSeries.lean",
-      "Mathlib/Analysis/SpecificLimits/Basic.lean",
-      "Mathlib/MeasureTheory/Constructions/BorelSpace/Real.lean",
-      "Mathlib/MeasureTheory/Covering/Besicovitch.lean",
-      "Mathlib/MeasureTheory/Covering/Differentiation.lean"
-     ]
-    },
-    {
-     "date": "2026-10-21",
-     "title": "Use `IsApply` for `SimpleFunc`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45077",
-     "ai": false,
-     "sha": "c31114ff810d2ce158c0f822f0cdad76771a5a6a",
-     "files": [
-      "Mathlib/Analysis/Fourier/PoissonSummation.lean",
-      "Mathlib/Analysis/SpecialFunctions/MulExpNegMulSqIntegral.lean",
-      "Mathlib/Geometry/Euclidean/Volume/Measure.lean",
-      "Mathlib/MeasureTheory/Function/ConditionalExpectation/PullOut.lean",
-      "Mathlib/MeasureTheory/Function/SimpleFunc.lean",
-      "Mathlib/MeasureTheory/Function/SimpleFuncDenseLp.lean"
-     ]
-    },
-    {
-     "date": "2026-10-20",
-     "title": "Enable Verso if no syntax or doc-gen changes",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
-     "ai": false,
-     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
-     "files": [
-      "Mathlib/Algebra/AffineMonoid/Basic.lean",
-      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
-      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
-      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
-      "Mathlib/Algebra/Algebra/Bilinear.lean",
-      "Mathlib/Algebra/Algebra/Field.lean"
-     ]
     }
    ],
    "overview": "field-learning_theory.json"
@@ -5639,9 +5747,20 @@
     "Mathlib/Probability/Martingale"
    ],
    "files": 7,
-   "additions": 1,
+   "additions": 2,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-30",
+     "title": "Define the `leastGT` stopping time",
+     "scope": "Probability",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45239",
+     "ai": false,
+     "sha": "143b867c7573c7826ad6e2544c7de65f0fcdff86",
+     "files": [
+      "Mathlib/Probability/Martingale/BorelCantelli.lean"
+     ]
+    },
     {
      "date": "2026-10-04",
      "title": "Properties of limitProcess",
@@ -5817,9 +5936,21 @@
     "Mathlib/Probability/Distributions/Gaussian"
    ],
    "files": 22,
-   "additions": 6,
+   "additions": 7,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-30",
+     "title": "Define complete filtrations",
+     "scope": "Probability",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45237",
+     "ai": false,
+     "sha": "ecb7b357fca8363979edcef8fc8e11e7ae81ba59",
+     "files": [
+      "Mathlib/Probability/Process/Filtration.lean",
+      "Mathlib/Probability/Process/Stopping.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -5883,21 +6014,6 @@
       "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Restrict.lean",
       "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Unital.lean"
      ]
-    },
-    {
-     "date": "2026-10-04",
-     "title": "Properties of limitProcess",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43172",
-     "ai": false,
-     "sha": "17e9f587d815324cbb86deaa91761c9741696ac7",
-     "files": [
-      "Mathlib/Analysis/Normed/Group/Continuity.lean",
-      "Mathlib/Probability/Distributions/TwoValued.lean",
-      "Mathlib/Probability/Martingale/Convergence.lean",
-      "Mathlib/Probability/Process/Filtration.lean",
-      "Mathlib/Probability/Process/LimitProcess.lean"
-     ]
     }
    ],
    "overview": "field-brownian_motion.json"
@@ -5908,9 +6024,32 @@
     "Mathlib/Probability/Process"
    ],
    "files": 18,
-   "additions": 3,
+   "additions": 5,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-30",
+     "title": "Define complete filtrations",
+     "scope": "Probability",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45237",
+     "ai": false,
+     "sha": "ecb7b357fca8363979edcef8fc8e11e7ae81ba59",
+     "files": [
+      "Mathlib/Probability/Process/Filtration.lean",
+      "Mathlib/Probability/Process/Stopping.lean"
+     ]
+    },
+    {
+     "date": "2026-10-30",
+     "title": "Define the `leastGT` stopping time",
+     "scope": "Probability",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45239",
+     "ai": false,
+     "sha": "143b867c7573c7826ad6e2544c7de65f0fcdff86",
+     "files": [
+      "Mathlib/Probability/Martingale/BorelCantelli.lean"
+     ]
+    },
     {
      "date": "2026-10-27",
      "title": "Deprecate generalized ENNReal lemmas",
@@ -5962,9 +6101,25 @@
     "Mathlib/Data/Nat/Choose"
    ],
    "files": 212,
-   "additions": 46,
-   "ai_additions": 3,
+   "additions": 45,
+   "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -6018,22 +6173,6 @@
       "Mathlib/Combinatorics/SimpleGraph/Walk/Basic.lean",
       "Mathlib/Combinatorics/SimpleGraph/Walk/Operations.lean"
      ]
-    },
-    {
-     "date": "2026-10-20",
-     "title": "Enable Verso if no syntax or doc-gen changes",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
-     "ai": false,
-     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
-     "files": [
-      "Mathlib/Algebra/AffineMonoid/Basic.lean",
-      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
-      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
-      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
-      "Mathlib/Algebra/Algebra/Bilinear.lean",
-      "Mathlib/Algebra/Algebra/Field.lean"
-     ]
     }
    ],
    "overview": "field-combinatorics.json"
@@ -6056,9 +6195,25 @@
     "Mathlib/Combinatorics/Additive"
    ],
    "files": 27,
-   "additions": 3,
+   "additions": 4,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -6252,9 +6407,25 @@
     "Mathlib/SetTheory/ZFC"
    ],
    "files": 7,
-   "additions": 3,
+   "additions": 4,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -6365,9 +6536,39 @@
     "Mathlib/SetTheory/ZFC"
    ],
    "files": 10,
-   "additions": 3,
+   "additions": 5,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-10-31",
+     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+     "ai": false,
+     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finprod.lean",
+      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+      "Mathlib/Algebra/Lie/Basis/Prod.lean",
+      "Mathlib/Algebra/Module/SpanRank.lean",
+      "Mathlib/Algebra/MvPolynomial/Basic.lean",
+      "Mathlib/Algebra/Polynomial/Splits.lean"
+     ]
+    },
+    {
+     "date": "2026-10-30",
+     "title": "`insert a` and `· \\ {a}` are injective on the sets they move",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45161",
+     "ai": false,
+     "sha": "14577ea482283da071a3e7e6eac0725e5eb4da97",
+     "files": [
+      "Mathlib/Data/Finset/Basic.lean",
+      "Mathlib/Data/Finset/SDiff.lean",
+      "Mathlib/Order/BooleanAlgebra/Set.lean",
+      "Mathlib/Order/Disjoint.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -6503,6 +6704,240 @@
   }
  },
  "feed": [
+  {
+   "date": "2026-10-31",
+   "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
+   "scope": null,
+   "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
+   "ai": false,
+   "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
+   "files": [
+    "Mathlib/Algebra/BigOperators/Finprod.lean",
+    "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+    "Mathlib/Algebra/Lie/Basis/Prod.lean",
+    "Mathlib/Algebra/Module/SpanRank.lean",
+    "Mathlib/Algebra/MvPolynomial/Basic.lean",
+    "Mathlib/Algebra/Polynomial/Splits.lean"
+   ],
+   "fields": [
+    "al_jabr",
+    "symbolic_algebra",
+    "logarithms",
+    "graph_theory",
+    "rigorous_analysis",
+    "complex_analysis",
+    "differential_geometry",
+    "group_theory",
+    "analytic_number_theory",
+    "linear_algebra",
+    "boolean_logic",
+    "algebraic_geometry",
+    "algebraic_topology",
+    "measure_theory",
+    "functional_analysis",
+    "point_set_topology",
+    "abstract_algebra",
+    "turing_machines",
+    "category_theory",
+    "schemes",
+    "git",
+    "complexity",
+    "lie_theory",
+    "differential_topology",
+    "poincare_proof",
+    "complex_dynamics",
+    "general_relativity",
+    "quantum_mechanics",
+    "finite_elements",
+    "linear_programming",
+    "gauge_theory",
+    "learning_theory",
+    "combinatorics",
+    "probabilistic_method",
+    "zfc",
+    "forcing"
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "title": "Countable uncurry preserves strong measurability",
+   "scope": "MeasureTheory",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45492",
+   "ai": false,
+   "sha": "e363848c929ded4d9fe7c5eae8ef36403e8b7809",
+   "files": [
+    "Mathlib/MeasureTheory/Function/StronglyMeasurable/Basic.lean"
+   ],
+   "fields": [
+    "measure_theory"
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "title": "Stability under retracts of the preservation of (co)limits",
+   "scope": "CategoryTheory",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45417",
+   "ai": false,
+   "sha": "f9738e46d32221bdd20d876adf69c619543cc523",
+   "files": [
+    "Mathlib/CategoryTheory/ObjectProperty/FunctorCategory/PreservesLimits.lean",
+    "Mathlib/CategoryTheory/ObjectProperty/Retract.lean",
+    "Mathlib/CategoryTheory/Retract.lean"
+   ],
+   "fields": [
+    "category_theory"
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "title": "Use `IsApply` for `ArithmeticFunction`",
+   "scope": null,
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45386",
+   "ai": false,
+   "sha": "75b1f08d2d82a89ce11b4f02c19df0de263cc466",
+   "files": [
+    "Mathlib/NumberTheory/ArithmeticFunction/Defs.lean",
+    "Mathlib/NumberTheory/ArithmeticFunction/LFunction.lean",
+    "Mathlib/NumberTheory/ArithmeticFunction/Misc.lean",
+    "Mathlib/NumberTheory/ArithmeticFunction/Moebius.lean",
+    "Mathlib/NumberTheory/ArithmeticFunction/VonMangoldt.lean",
+    "Mathlib/NumberTheory/ArithmeticFunction/Zeta.lean"
+   ],
+   "fields": [
+    "analytic_number_theory"
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "title": "Integral elements and the discriminant",
+   "scope": "Algebra/QuadraticAlgebra/Int",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45296",
+   "ai": true,
+   "sha": "c51f4102de2372f0c3abbf9ca6c4a2062f6e53f6",
+   "files": [
+    "Mathlib/Algebra/QuadraticAlgebra/Int.lean",
+    "Mathlib/Algebra/Ring/Int/Parity.lean"
+   ],
+   "fields": [
+    "abstract_algebra"
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "title": "Bounded above cochain complexes",
+   "scope": "Algebra/Homology",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45274",
+   "ai": false,
+   "sha": "10d46ad27faef3a4ed05ccb621047c9786f883fc",
+   "files": [
+    "Mathlib/Algebra/Homology/CochainComplexMinus.lean",
+    "Mathlib/Algebra/Homology/CochainComplexPlus.lean"
+   ],
+   "fields": [
+    "homological_algebra"
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "title": "Add cardinality bounds for direct limits",
+   "scope": "SetTheory/Cardinal",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/42125",
+   "ai": false,
+   "sha": "a354dac4230a93f6122bda889b84c9dd954b1b64",
+   "files": [
+    "Mathlib/Order/DirectedInverseSystem.lean",
+    "Mathlib/SetTheory/Cardinal/DirectLimit.lean"
+   ],
+   "fields": [
+    "set_theory"
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "title": "External products of derivability structures",
+   "scope": "CategoryTheory",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/43896",
+   "ai": false,
+   "sha": "f20abd6d9eae85220f785ca42bc54f45dfa44de0",
+   "files": [
+    "Mathlib/CategoryTheory/Localization/DerivabilityStructure/Product.lean",
+    "Mathlib/CategoryTheory/Localization/Equivalence.lean",
+    "Mathlib/CategoryTheory/Localization/LocalizerMorphism.lean",
+    "Mathlib/CategoryTheory/Localization/Resolution.lean",
+    "Mathlib/CategoryTheory/Products/Basic.lean"
+   ],
+   "fields": [
+    "category_theory"
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "title": "Left derived bifunctors",
+   "scope": "CategoryTheory/Functor",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45460",
+   "ai": false,
+   "sha": "f67412bdfdb3d4aa6fef1a42373e20d421eb5ccc",
+   "files": [
+    "Mathlib/CategoryTheory/Functor/Currying.lean",
+    "Mathlib/CategoryTheory/Functor/Derived/LeftDerivedTwo.lean"
+   ],
+   "fields": [
+    "category_theory"
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "title": "Define complete filtrations",
+   "scope": "Probability",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45237",
+   "ai": false,
+   "sha": "ecb7b357fca8363979edcef8fc8e11e7ae81ba59",
+   "files": [
+    "Mathlib/Probability/Process/Filtration.lean",
+    "Mathlib/Probability/Process/Stopping.lean"
+   ],
+   "fields": [
+    "axiomatic_probability",
+    "learning_theory",
+    "brownian_motion",
+    "stochastic_calculus"
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "title": "Define the `leastGT` stopping time",
+   "scope": "Probability",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45239",
+   "ai": false,
+   "sha": "143b867c7573c7826ad6e2544c7de65f0fcdff86",
+   "files": [
+    "Mathlib/Probability/Martingale/BorelCantelli.lean"
+   ],
+   "fields": [
+    "axiomatic_probability",
+    "learning_theory",
+    "mathematical_finance",
+    "stochastic_calculus"
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "title": "`insert a` and `· \\ {a}` are injective on the sets they move",
+   "scope": null,
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45161",
+   "ai": false,
+   "sha": "14577ea482283da071a3e7e6eac0725e5eb4da97",
+   "files": [
+    "Mathlib/Data/Finset/Basic.lean",
+    "Mathlib/Data/Finset/SDiff.lean",
+    "Mathlib/Order/BooleanAlgebra/Set.lean",
+    "Mathlib/Order/Disjoint.lean"
+   ],
+   "fields": [
+    "boolean_logic",
+    "forcing"
+   ]
+  },
   {
    "date": "2026-10-30",
    "title": "Eilenberg Steenrod axioms",
@@ -7394,68 +7829,6 @@
   },
   {
    "date": "2026-10-27",
-   "title": "Prove `ofNat(n) ^ ω = ω`",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44989",
-   "ai": false,
-   "sha": "89b5898d578dfe55831d3598cc8193c75f298ad4",
-   "files": [
-    "Mathlib/SetTheory/Ordinal/Principal.lean"
-   ],
-   "fields": [
-    "set_theory"
-   ]
-  },
-  {
-   "date": "2026-10-27",
-   "title": "Two formula for area of a triangle",
-   "scope": "Geometry/Euclidean",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/41220",
-   "ai": false,
-   "sha": "1a8688c9d349d8132fdd123d7403afc692ced7ad",
-   "files": [
-    "Mathlib/Geometry/Euclidean/Angle/Unoriented/Affine.lean",
-    "Mathlib/Geometry/Euclidean/Angle/Unoriented/Projection.lean",
-    "Mathlib/Geometry/Euclidean/Triangle.lean",
-    "Mathlib/Geometry/Euclidean/Volume/Triangle.lean"
-   ],
-   "fields": [
-    "euclid"
-   ]
-  },
-  {
-   "date": "2026-10-27",
-   "title": "Deprecate generalized ENNReal lemmas",
-   "scope": "Topology/Algebra/InfiniteSum",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/38193",
-   "ai": false,
-   "sha": "7ed8b0968825700564fa6c31bfe67ceeadb740b3",
-   "files": [
-    "Mathlib/Analysis/Normed/Group/InfiniteSum.lean",
-    "Mathlib/Analysis/PSeries.lean",
-    "Mathlib/Analysis/SpecificLimits/Basic.lean",
-    "Mathlib/MeasureTheory/Constructions/BorelSpace/Real.lean",
-    "Mathlib/MeasureTheory/Covering/Besicovitch.lean",
-    "Mathlib/MeasureTheory/Covering/Differentiation.lean"
-   ],
-   "fields": [
-    "probability",
-    "euler_analysis",
-    "rigorous_analysis",
-    "measure_theory",
-    "functional_analysis",
-    "point_set_topology",
-    "axiomatic_probability",
-    "fractals",
-    "learning_theory",
-    "bayesian",
-    "markov_chains",
-    "brownian_motion",
-    "stochastic_calculus"
-   ]
-  },
-  {
-   "date": "2026-10-27",
    "title": "Separability is hereditary for linearly ordered topological spaces",
    "scope": "Topology/Order",
    "url": "https://github.com/leanprover-community/mathlib4/pull/41918",
@@ -7487,71 +7860,6 @@
   },
   {
    "date": "2026-10-27",
-   "title": "Tower law for algebraic extensions",
-   "scope": "LinearAlgebra/Dimension",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/40448",
-   "ai": false,
-   "sha": "252e56565a9a0d57730cb2723112cb393ef4a328",
-   "files": [
-    "Mathlib/Algebra/Group/Action/Faithful.lean",
-    "Mathlib/LinearAlgebra/Dimension/Domain.lean",
-    "Mathlib/LinearAlgebra/Dimension/Free.lean",
-    "Mathlib/NumberTheory/RamificationInertia/HilbertTheory.lean",
-    "Mathlib/RingTheory/Algebraic/Integral.lean",
-    "Mathlib/RingTheory/Localization/FractionRing.lean"
-   ],
-   "fields": [
-    "linear_algebra",
-    "abstract_algebra"
-   ]
-  },
-  {
-   "date": "2026-10-27",
-   "title": "Cauchy–Goursat for Unbounded Rectangles",
-   "scope": "Analysis/Complex/CauchyIntegral",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/26479",
-   "ai": false,
-   "sha": "1a22a591d08f49075418a57625c7c52e2956a169",
-   "files": [
-    "Mathlib/Analysis/Complex/CauchyIntegral.lean"
-   ],
-   "fields": [
-    "complex_analysis",
-    "complex_dynamics"
-   ]
-  },
-  {
-   "date": "2026-10-27",
-   "title": "A Gδ subset of a Polish space is Polish",
-   "scope": "Topology/MetricSpace",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/42693",
-   "ai": false,
-   "sha": "c25faa1a036708445f5720c615937474e2bb1a94",
-   "files": [
-    "Mathlib/Topology/MetricSpace/Polish.lean"
-   ],
-   "fields": [
-    "point_set_topology"
-   ]
-  },
-  {
-   "date": "2026-10-27",
-   "title": "MulOpposite equivs for submonoid and subgroup",
-   "scope": "Algebra/Group",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/41459",
-   "ai": false,
-   "sha": "1b5a64773fd6b4903707cea89cd05ef01871542a",
-   "files": [
-    "Mathlib/Algebra/Group/Subgroup/MulOpposite.lean",
-    "Mathlib/Algebra/Group/Submonoid/MulOpposite.lean",
-    "Mathlib/Algebra/Ring/Subsemiring/MulOpposite.lean"
-   ],
-   "fields": [
-    "abstract_algebra"
-   ]
-  },
-  {
-   "date": "2026-10-27",
    "title": "Trace and norm lemmas",
    "scope": "Algebra/QuadraticAlgebra",
    "url": "https://github.com/leanprover-community/mathlib4/pull/45281",
@@ -7579,21 +7887,6 @@
    "fields": [
     "abstract_algebra",
     "algebraic_number_theory"
-   ]
-  },
-  {
-   "date": "2026-10-27",
-   "title": "Add `baseChange_le_iff_le_comap`",
-   "scope": "LinearAlgebra/TensorProduct/Tower",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45181",
-   "ai": false,
-   "sha": "37a7c30974a79c29ebbe8d6d0a2c40345f3c0714",
-   "files": [
-    "Mathlib/LinearAlgebra/TensorProduct/Tower.lean"
-   ],
-   "fields": [
-    "linear_algebra",
-    "tensor_calculus"
    ]
   },
   {
@@ -8377,20 +8670,6 @@
     "indian_combinatorics",
     "combinatorics"
    ]
-  },
-  {
-   "date": "2026-09-01",
-   "title": "Word evaluation and reachability",
-   "scope": "Combinatorics/Quiver/Schreier",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/38310",
-   "ai": true,
-   "sha": "7a17763614dd291aa57b85ee79501c867d3a86ca",
-   "files": [
-    "Mathlib/Combinatorics/Quiver/Schreier.lean"
-   ],
-   "fields": [
-    "combinatorics"
-   ]
   }
  ],
  "projects": [
@@ -8460,10 +8739,10 @@
    "kind": "benchmark",
    "description": "Google DeepMind's collection of open conjectures (Erdős problems and others) stated in Lean, used as targets for provers.",
    "url": "https://github.com/google-deepmind/formal-conjectures",
-   "updated": "2026-10-29",
+   "updated": "2026-10-30",
    "latest": {
-    "title": "feat(ErdosProblems/1195): add Erdős Problem 1195 (#7585)",
-    "url": "https://github.com/google-deepmind/formal-conjectures/commit/feacabbcf6ed2e7b622663c3e1c0f61038183392"
+    "title": "feat(ErdosProblems/675): prove minTranslation_squarefree_three (#7700)",
+    "url": "https://github.com/google-deepmind/formal-conjectures/commit/b6939a3a0d89e5f999fa8c6483a6ef646c1e2923"
    },
    "overview": "google-deepmind__formal-conjectures.json",
    "lean_files": 400
