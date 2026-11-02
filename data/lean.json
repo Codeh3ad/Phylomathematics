@@ -1,13 +1,13 @@
 {
- "generated": "2026-11-01T13:18Z",
+ "generated": "2026-11-02T15:45Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "bf20166d9391945becb69bd9e211b6a5383d9b78",
-  "date": "2026-11-01",
-  "files": 8695,
-  "changes": 1333,
-  "additions": 648,
-  "ai_additions": 69
+  "commit": "74d53835e5b04d99ce92987b1552cc882b9e12a4",
+  "date": "2026-11-02",
+  "files": 8696,
+  "changes": 1311,
+  "additions": 632,
+  "ai_additions": 67
  },
  "fields": {
   "babylonian": {
@@ -371,10 +371,21 @@
     "Mathlib/NumberTheory/Pell",
     "Mathlib/NumberTheory/FLT"
    ],
-   "files": 8,
-   "additions": 2,
+   "files": 9,
+   "additions": 3,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-11-01",
+     "title": "Prove Hurwitz's approximation theorem",
+     "scope": "NumberTheory/DiophantineApproximation",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43281",
+     "ai": false,
+     "sha": "89f62b7207d812a1bd8d35aad4e301ac24b54f1c",
+     "files": [
+      "Mathlib/NumberTheory/DiophantineApproximation/Hurwitz.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -496,7 +507,7 @@
     "Mathlib/Algebra/Polynomial"
    ],
    "files": 65,
-   "additions": 16,
+   "additions": 15,
    "ai_additions": 2,
    "recent": [
     {
@@ -1231,7 +1242,7 @@
     "Mathlib/Combinatorics/Digraph"
    ],
    "files": 90,
-   "additions": 36,
+   "additions": 35,
    "ai_additions": 0,
    "recent": [
     {
@@ -1702,8 +1713,8 @@
     "Mathlib/Analysis/Analytic"
    ],
    "files": 92,
-   "additions": 24,
-   "ai_additions": 4,
+   "additions": 23,
+   "ai_additions": 3,
    "recent": [
     {
      "date": "2026-10-31",
@@ -1995,7 +2006,7 @@
     "Mathlib/FieldTheory/AbelRuffini"
    ],
    "files": 182,
-   "additions": 41,
+   "additions": 40,
    "ai_additions": 12,
    "recent": [
     {
@@ -2172,8 +2183,8 @@
     "Mathlib/Data/Matrix"
    ],
    "files": 405,
-   "additions": 78,
-   "ai_additions": 7,
+   "additions": 75,
+   "ai_additions": 6,
    "recent": [
     {
      "date": "2026-11-01",
@@ -2397,7 +2408,7 @@
     "Mathlib/SetTheory/Ordinal"
    ],
    "files": 48,
-   "additions": 15,
+   "additions": 14,
    "ai_additions": 0,
    "recent": [
     {
@@ -2489,7 +2500,7 @@
     "Mathlib/RingTheory/Nullstellensatz"
    ],
    "files": 141,
-   "additions": 12,
+   "additions": 11,
    "ai_additions": 1,
    "recent": [
     {
@@ -2575,7 +2586,7 @@
     "Mathlib/Topology/Homotopy"
    ],
    "files": 181,
-   "additions": 18,
+   "additions": 17,
    "ai_additions": 0,
    "recent": [
     {
@@ -2747,7 +2758,7 @@
     "Mathlib/MeasureTheory"
    ],
    "files": 339,
-   "additions": 43,
+   "additions": 42,
    "ai_additions": 2,
    "recent": [
     {
@@ -2916,8 +2927,8 @@
     "Mathlib/Topology"
    ],
    "files": 706,
-   "additions": 89,
-   "ai_additions": 6,
+   "additions": 86,
+   "ai_additions": 5,
    "recent": [
     {
      "date": "2026-10-31",
@@ -3001,9 +3012,21 @@
     "Mathlib/Algebra/Module"
    ],
    "files": 909,
-   "additions": 98,
-   "ai_additions": 24,
+   "additions": 97,
+   "ai_additions": 23,
    "recent": [
+    {
+     "date": "2026-11-02",
+     "title": "Surjective `RingHom` and `IsLocalHom`",
+     "scope": "RingTheory/Jacobson/Ideal",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/41066",
+     "ai": false,
+     "sha": "b6dfe53cdc8587ca6ff49e4617661ce8cc95288c",
+     "files": [
+      "Mathlib/RingTheory/Henselian.lean",
+      "Mathlib/RingTheory/Jacobson/Ideal.lean"
+     ]
+    },
     {
      "date": "2026-11-01",
      "title": "Define generic determinantal ideals",
@@ -3056,18 +3079,6 @@
       "Mathlib/Algebra/Module/SpanRank.lean",
       "Mathlib/Algebra/MvPolynomial/Basic.lean",
       "Mathlib/Algebra/Polynomial/Splits.lean"
-     ]
-    },
-    {
-     "date": "2026-10-30",
-     "title": "Integral elements and the discriminant",
-     "scope": "Algebra/QuadraticAlgebra/Int",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45296",
-     "ai": true,
-     "sha": "c51f4102de2372f0c3abbf9ca6c4a2062f6e53f6",
-     "files": [
-      "Mathlib/Algebra/QuadraticAlgebra/Int.lean",
-      "Mathlib/Algebra/Ring/Int/Parity.lean"
      ]
     }
    ],
@@ -3251,7 +3262,7 @@
     "Mathlib/CategoryTheory"
    ],
    "files": 1147,
-   "additions": 45,
+   "additions": 44,
    "ai_additions": 0,
    "recent": [
     {
@@ -3373,7 +3384,7 @@
     "Mathlib/AlgebraicGeometry"
    ],
    "files": 140,
-   "additions": 12,
+   "additions": 11,
    "ai_additions": 1,
    "recent": [
     {
@@ -3459,7 +3470,7 @@
     "Mathlib/RingTheory/Invariant"
    ],
    "files": 144,
-   "additions": 12,
+   "additions": 11,
    "ai_additions": 1,
    "recent": [
     {
@@ -4047,7 +4058,7 @@
     "Mathlib/AlgebraicGeometry/EllipticCurve"
    ],
    "files": 19,
-   "additions": 3,
+   "additions": 2,
    "ai_additions": 0,
    "recent": [
     {
@@ -4071,17 +4082,6 @@
      "sha": "69fe4f49ffbc9580a2c3ae6d29591ef6d1d4131e",
      "files": [
       "Mathlib/AlgebraicGeometry/EllipticCurve/Affine/AddSubMap.lean"
-     ]
-    },
-    {
-     "date": "2026-09-02",
-     "title": "Add WeierstrassCurve.exists_variableChange_lift",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/41293",
-     "ai": false,
-     "sha": "f6b141f42c749fea409a8b37c5bf63872994e0bf",
-     "files": [
-      "Mathlib/AlgebraicGeometry/EllipticCurve/Reduction.lean"
      ]
     }
    ],
@@ -4321,7 +4321,7 @@
     "Mathlib/CategoryTheory/Abelian"
    ],
    "files": 217,
-   "additions": 17,
+   "additions": 15,
    "ai_additions": 0,
    "recent": [
     {
@@ -4400,8 +4400,8 @@
     "Mathlib/Geometry/Manifold/VectorBundle"
    ],
    "files": 38,
-   "additions": 9,
-   "ai_additions": 1,
+   "additions": 8,
+   "ai_additions": 0,
    "recent": [
     {
      "date": "2026-10-29",
@@ -4991,8 +4991,8 @@
     "Mathlib/Analysis/Complex"
    ],
    "files": 108,
-   "additions": 25,
-   "ai_additions": 4,
+   "additions": 24,
+   "ai_additions": 3,
    "recent": [
     {
      "date": "2026-10-31",
@@ -6020,7 +6020,7 @@
     "Mathlib/Data/Nat/Choose"
    ],
    "files": 212,
-   "additions": 43,
+   "additions": 41,
    "ai_additions": 1,
    "recent": [
     {
@@ -6400,7 +6400,7 @@
     "Mathlib/ModelTheory"
    ],
    "files": 34,
-   "additions": 2,
+   "additions": 1,
    "ai_additions": 0,
    "recent": [
     {
@@ -6417,19 +6417,6 @@
       "Mathlib/GroupTheory/Finiteness.lean",
       "Mathlib/GroupTheory/Generators.lean",
       "Mathlib/GroupTheory/Schreier.lean"
-     ]
-    },
-    {
-     "date": "2026-09-03",
-     "title": "Sigma types are empty when every fiber is empty",
-     "scope": "Basic/IsEmpty",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43364",
-     "ai": false,
-     "sha": "5390e8a3e5b0081c1643dcd33985bef1a8125665",
-     "files": [
-      "Mathlib/Basic/IsEmpty/Defs.lean",
-      "Mathlib/ModelTheory/Basic.lean",
-      "Mathlib/ModelTheory/Order.lean"
      ]
     }
    ],
@@ -6622,6 +6609,35 @@
   }
  },
  "feed": [
+  {
+   "date": "2026-11-02",
+   "title": "Surjective `RingHom` and `IsLocalHom`",
+   "scope": "RingTheory/Jacobson/Ideal",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/41066",
+   "ai": false,
+   "sha": "b6dfe53cdc8587ca6ff49e4617661ce8cc95288c",
+   "files": [
+    "Mathlib/RingTheory/Henselian.lean",
+    "Mathlib/RingTheory/Jacobson/Ideal.lean"
+   ],
+   "fields": [
+    "abstract_algebra"
+   ]
+  },
+  {
+   "date": "2026-11-01",
+   "title": "Prove Hurwitz's approximation theorem",
+   "scope": "NumberTheory/DiophantineApproximation",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/43281",
+   "ai": false,
+   "sha": "89f62b7207d812a1bd8d35aad4e301ac24b54f1c",
+   "files": [
+    "Mathlib/NumberTheory/DiophantineApproximation/Hurwitz.lean"
+   ],
+   "fields": [
+    "diophantine"
+   ]
+  },
   {
    "date": "2026-11-01",
    "title": "Lemmas about κ-filtered colimits of types",
@@ -7705,53 +7721,6 @@
   },
   {
    "date": "2026-10-27",
-   "title": "Tag `Metric.closedBall_subset_ball` with `@[gcongr strict]`",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/43419",
-   "ai": false,
-   "sha": "c63d9df9d32f8568577fead4a94a4fd63b637c29",
-   "files": [
-    "Mathlib/Analysis/BoxIntegral/Basic.lean",
-    "Mathlib/Analysis/CStarAlgebra/SpecialFunctions/PosPart.lean",
-    "Mathlib/Analysis/Calculus/FDeriv/Basic.lean",
-    "Mathlib/Analysis/Complex/Harmonic/MeanValue.lean",
-    "Mathlib/Analysis/Complex/Harmonic/Poisson.lean",
-    "Mathlib/Analysis/Complex/Schwarz.lean"
-   ],
-   "fields": [
-    "egyptian_geometry",
-    "differential_equations",
-    "complex_analysis",
-    "measure_theory",
-    "functional_analysis",
-    "point_set_topology",
-    "pde",
-    "complex_dynamics",
-    "celestial_mechanics",
-    "hamiltonian_mechanics",
-    "quantum_mechanics",
-    "linear_programming"
-   ]
-  },
-  {
-   "date": "2026-10-27",
-   "title": "Generalize `IsUnramifiedAt.of_liesOver` to flat algebras",
-   "scope": "NumberTheory/RamificationInertia/Unramified",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/42919",
-   "ai": false,
-   "sha": "68c0d2c3b596e5c7100fe04e420040dd4c96a0f1",
-   "files": [
-    "Mathlib/NumberTheory/RamificationInertia/Unramified.lean",
-    "Mathlib/RingTheory/Flat/FaithfullyFlat/Algebra.lean",
-    "Mathlib/RingTheory/Ideal/GoingDown.lean",
-    "Mathlib/RingTheory/Unramified/LocalRing.lean"
-   ],
-   "fields": [
-    "abstract_algebra"
-   ]
-  },
-  {
-   "date": "2026-10-27",
    "title": "Separability is hereditary for linearly ordered topological spaces",
    "scope": "Topology/Order",
    "url": "https://github.com/leanprover-community/mathlib4/pull/41918",
@@ -8539,44 +8508,6 @@
     "abstract_algebra",
     "langlands"
    ]
-  },
-  {
-   "date": "2026-09-03",
-   "title": "Estimate for logarithmic counting functions",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/41864",
-   "ai": true,
-   "sha": "daf99ea15ad54c48440b63d537a412fbe2f2daeb",
-   "files": [
-    "Mathlib/Analysis/Complex/ValueDistribution/FirstMainTheorem.lean",
-    "Mathlib/Analysis/Complex/ValueDistribution/LogCounting/Basic.lean",
-    "Mathlib/Topology/LocallyFinsupp.lean"
-   ],
-   "fields": [
-    "complex_analysis",
-    "point_set_topology",
-    "complex_dynamics"
-   ]
-  },
-  {
-   "date": "2026-09-03",
-   "title": "Dual of tensor is tensor of duals for finite projective modules",
-   "scope": "LinearAlgebra",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/41479",
-   "ai": true,
-   "sha": "e21ec05048292b3de86d4cf1987e2208171a5642",
-   "files": [
-    "Mathlib/Algebra/Module/Equiv/Basic.lean",
-    "Mathlib/LinearAlgebra/BilinearForm/TensorProduct.lean",
-    "Mathlib/LinearAlgebra/Contraction.lean",
-    "Mathlib/LinearAlgebra/TensorProduct/Map.lean",
-    "Mathlib/LinearAlgebra/Trace.lean"
-   ],
-   "fields": [
-    "linear_algebra",
-    "abstract_algebra",
-    "tensor_calculus"
-   ]
   }
  ],
  "projects": [
@@ -8646,10 +8577,10 @@
    "kind": "benchmark",
    "description": "Google DeepMind's collection of open conjectures (Erdős problems and others) stated in Lean, used as targets for provers.",
    "url": "https://github.com/google-deepmind/formal-conjectures",
-   "updated": "2026-11-01",
+   "updated": "2026-11-02",
    "latest": {
-    "title": "feat(Arxiv/math.0608009): formal proof links for the Poisson conjecture (#7657)",
-    "url": "https://github.com/google-deepmind/formal-conjectures/commit/a64e959c32c270df4dd0d96d2027481f15750534"
+    "title": "feat(Arxiv): the Maxwell conjecture and its refutation (arXiv:2607.27197) (#4683)",
+    "url": "https://github.com/google-deepmind/formal-conjectures/commit/7bdc4a42f24c0316f81c73b26121794b2bed96a3"
    },
    "overview": "google-deepmind__formal-conjectures.json",
    "lean_files": 400
@@ -8684,10 +8615,10 @@
    "kind": "automated",
    "description": "Crowdsourced map of implications between magma laws, settled with a mix of human proofs and automated provers, all checked in Lean.",
    "url": "https://github.com/teorth/equational_theories",
-   "updated": "2026-10-26",
+   "updated": "2026-11-01",
    "latest": {
-    "title": "fix: Add missing dual (#1508)",
-    "url": "https://github.com/teorth/equational_theories/commit/2f49bdaf3d38ffb722e54ac1288c8269dac61846"
+    "title": "Remove the raw referee report from the repository again (#1521)",
+    "url": "https://github.com/teorth/equational_theories/commit/2ddb16c4c4c036242ad3e18167579b57cac2a006"
    },
    "overview": "teorth__equational_theories.json",
    "lean_files": 398
