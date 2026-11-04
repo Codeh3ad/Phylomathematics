@@ -1,13 +1,13 @@
 {
- "generated": "2026-11-03T14:08Z",
+ "generated": "2026-11-04T14:28Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "2658fa596a2dd836c4fde9c8b9b765966799703e",
-  "date": "2026-11-03",
-  "files": 8697,
-  "changes": 1300,
-  "additions": 623,
-  "ai_additions": 66
+  "commit": "75b352cd0c82e9835dda9e8867dd7610f2f9af90",
+  "date": "2026-11-04",
+  "files": 8699,
+  "changes": 1308,
+  "additions": 622,
+  "ai_additions": 65
  },
  "fields": {
   "babylonian": {
@@ -427,9 +427,22 @@
     "Mathlib/Algebra/GroupWithZero"
    ],
    "files": 58,
-   "additions": 11,
+   "additions": 12,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-11-03",
+     "title": "Add `inertiaIdempotent`",
+     "scope": "RingTheory/Unramified/Finite",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45390",
+     "ai": false,
+     "sha": "5f44e8099aaff86b8804252d5189966a5b3b8f78",
+     "files": [
+      "Mathlib/Algebra/Algebra/Hom.lean",
+      "Mathlib/Algebra/GroupWithZero/Idempotent.lean",
+      "Mathlib/RingTheory/Unramified/Finite.lean"
+     ]
+    },
     {
      "date": "2026-10-30",
      "title": "Mapping associates",
@@ -480,22 +493,6 @@
      "sha": "568792a09180b811edf50925ab22b5255d7d756f",
      "files": [
       "Mathlib/Algebra/GroupWithZero/WithZero.lean"
-     ]
-    },
-    {
-     "date": "2026-10-20",
-     "title": "Enable Verso if no syntax or doc-gen changes",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
-     "ai": false,
-     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
-     "files": [
-      "Mathlib/Algebra/AffineMonoid/Basic.lean",
-      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
-      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
-      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
-      "Mathlib/Algebra/Algebra/Bilinear.lean",
-      "Mathlib/Algebra/Algebra/Field.lean"
      ]
     }
    ],
@@ -1442,9 +1439,22 @@
     "Mathlib/Analysis/Fourier"
    ],
    "files": 14,
-   "additions": 9,
+   "additions": 10,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-11-03",
+     "title": "The Wiener-Ikehara Tauberian theorem",
+     "scope": "NumberTheory/LSeries",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43233",
+     "ai": false,
+     "sha": "d4bda671c42c9097d07275af15f9c288cad61a28",
+     "files": [
+      "Mathlib/Analysis/Fourier/Notation.lean",
+      "Mathlib/Analysis/SpecialFunctions/ImproperIntegrals.lean",
+      "Mathlib/NumberTheory/LSeries/WienerIkehara.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -1502,22 +1512,6 @@
       "Mathlib/MeasureTheory/Measure/FiniteMeasure.lean",
       "Mathlib/MeasureTheory/Measure/HasOuterApproxClosed.lean",
       "Mathlib/MeasureTheory/Measure/ProbabilityMeasure.lean"
-     ]
-    },
-    {
-     "date": "2026-10-21",
-     "title": "Use `IsApply` for `SimpleFunc`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45077",
-     "ai": false,
-     "sha": "c31114ff810d2ce158c0f822f0cdad76771a5a6a",
-     "files": [
-      "Mathlib/Analysis/Fourier/PoissonSummation.lean",
-      "Mathlib/Analysis/SpecialFunctions/MulExpNegMulSqIntegral.lean",
-      "Mathlib/Geometry/Euclidean/Volume/Measure.lean",
-      "Mathlib/MeasureTheory/Function/ConditionalExpectation/PullOut.lean",
-      "Mathlib/MeasureTheory/Function/SimpleFunc.lean",
-      "Mathlib/MeasureTheory/Function/SimpleFuncDenseLp.lean"
      ]
     }
    ],
@@ -2002,9 +1996,43 @@
     "Mathlib/FieldTheory/AbelRuffini"
    ],
    "files": 182,
-   "additions": 40,
-   "ai_additions": 11,
+   "additions": 42,
+   "ai_additions": 10,
    "recent": [
+    {
+     "date": "2026-11-04",
+     "title": "A group is perfect iff its abelianization is trivial",
+     "scope": "GroupTheory/IsPerfect",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45653",
+     "ai": false,
+     "sha": "75b352cd0c82e9835dda9e8867dd7610f2f9af90",
+     "files": [
+      "Mathlib/GroupTheory/IsPerfect.lean",
+      "Mathlib/GroupTheory/QuotientGroup/Basic.lean"
+     ]
+    },
+    {
+     "date": "2026-11-03",
+     "title": "Quotients of countable groups are countable",
+     "scope": "GroupTheory/Coset/Card",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45597",
+     "ai": false,
+     "sha": "92e25221e3b47d691cbd4a9a1eb8911ac111e6dc",
+     "files": [
+      "Mathlib/GroupTheory/Coset/Card.lean"
+     ]
+    },
+    {
+     "date": "2026-11-03",
+     "title": "Add `QuotientGroup.map_injective_iff`",
+     "scope": "GroupTheory/QuotientGroup",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45580",
+     "ai": false,
+     "sha": "4ab310d7d8d94a6c98cbc3ad0b10544745abed7f",
+     "files": [
+      "Mathlib/GroupTheory/QuotientGroup/Defs.lean"
+     ]
+    },
     {
      "date": "2026-11-03",
      "title": "`row` and `col` are linear maps",
@@ -2035,49 +2063,6 @@
       "Mathlib/NumberTheory/NumberField/Units/Basic.lean",
       "Mathlib/RingTheory/ZMod/UnitsCyclic.lean"
      ]
-    },
-    {
-     "date": "2026-10-31",
-     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
-     "ai": false,
-     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
-     "files": [
-      "Mathlib/Algebra/BigOperators/Finprod.lean",
-      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
-      "Mathlib/Algebra/Lie/Basis/Prod.lean",
-      "Mathlib/Algebra/Module/SpanRank.lean",
-      "Mathlib/Algebra/MvPolynomial/Basic.lean",
-      "Mathlib/Algebra/Polynomial/Splits.lean"
-     ]
-    },
-    {
-     "date": "2026-10-29",
-     "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45466",
-     "ai": false,
-     "sha": "32a422c83a18ddd0f352908187e5f68aad829904",
-     "files": [
-      "Mathlib/Algebra/AffineMonoid/Basic.lean",
-      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
-      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
-      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
-      "Mathlib/Algebra/Algebra/Bilinear.lean",
-      "Mathlib/Algebra/Algebra/Field.lean"
-     ]
-    },
-    {
-     "date": "2026-10-29",
-     "title": "Additivize `PresentedGroup`",
-     "scope": "GroupTheory/PresentedGroup",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45459",
-     "ai": false,
-     "sha": "4bc4670bf916c8dc2ede840e3ead86301e52a40d",
-     "files": [
-      "Mathlib/GroupTheory/PresentedGroup.lean"
-     ]
     }
    ],
    "overview": "field-group_theory.json"
@@ -2089,10 +2074,23 @@
     "Mathlib/NumberTheory/Bertrand",
     "Mathlib/NumberTheory/Chebyshev"
    ],
-   "files": 31,
-   "additions": 10,
+   "files": 32,
+   "additions": 11,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-11-03",
+     "title": "The Wiener-Ikehara Tauberian theorem",
+     "scope": "NumberTheory/LSeries",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43233",
+     "ai": false,
+     "sha": "d4bda671c42c9097d07275af15f9c288cad61a28",
+     "files": [
+      "Mathlib/Analysis/Fourier/Notation.lean",
+      "Mathlib/Analysis/SpecialFunctions/ImproperIntegrals.lean",
+      "Mathlib/NumberTheory/LSeries/WienerIkehara.lean"
+     ]
+    },
     {
      "date": "2026-10-31",
      "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
@@ -2155,19 +2153,6 @@
       "Mathlib/NumberTheory/LSeries/Dirichlet.lean",
       "Mathlib/NumberTheory/LSeries/DirichletContinuation.lean",
       "Mathlib/NumberTheory/LSeries/Nonvanishing.lean"
-     ]
-    },
-    {
-     "date": "2026-10-23",
-     "title": "`2 ^ n ≤ lcmUpto n` for `7 ≤ n`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43373",
-     "ai": true,
-     "sha": "e24da5a7cf66d20500908674460ce67c7fca2eae",
-     "files": [
-      "Mathlib/Data/Nat/Choose/Central.lean",
-      "Mathlib/Data/Nat/Choose/Factorization.lean",
-      "Mathlib/NumberTheory/Chebyshev.lean"
      ]
     }
    ],
@@ -2499,10 +2484,25 @@
     "Mathlib/AlgebraicGeometry",
     "Mathlib/RingTheory/Nullstellensatz"
    ],
-   "files": 141,
+   "files": 142,
    "additions": 10,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-11-04",
+     "title": "Scheme level order of vanishing api",
+     "scope": "AlgebraicGeometry",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43273",
+     "ai": false,
+     "sha": "3996015a88981a113c17e04c8289adac9fe19518",
+     "files": [
+      "Mathlib/AlgebraicGeometry/AffineScheme.lean",
+      "Mathlib/AlgebraicGeometry/FunctionField.lean",
+      "Mathlib/AlgebraicGeometry/OrderOfVanishing/Basic.lean",
+      "Mathlib/AlgebraicGeometry/OrderOfVanishing/DVR.lean",
+      "Mathlib/AlgebraicGeometry/Restrict.lean"
+     ]
+    },
     {
      "date": "2026-10-31",
      "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
@@ -2562,19 +2562,6 @@
       "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
       "Mathlib/Algebra/Algebra/Bilinear.lean",
       "Mathlib/Algebra/Algebra/Field.lean"
-     ]
-    },
-    {
-     "date": "2026-09-25",
-     "title": "Degree of a zero-cycle",
-     "scope": "AlgebraicGeometry",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/41198",
-     "ai": false,
-     "sha": "459d0ae92af32252408b589b9a147814610e8934",
-     "files": [
-      "Mathlib/AlgebraicGeometry/AlgebraicCycle/Basic.lean",
-      "Mathlib/AlgebraicGeometry/ResidueField.lean",
-      "Mathlib/Topology/LocallyFinsupp.lean"
      ]
     }
    ],
@@ -2836,7 +2823,7 @@
     "Mathlib/Analysis/InnerProductSpace"
    ],
    "files": 222,
-   "additions": 38,
+   "additions": 37,
    "ai_additions": 1,
    "recent": [
     {
@@ -2927,7 +2914,7 @@
     "Mathlib/Topology"
    ],
    "files": 706,
-   "additions": 85,
+   "additions": 84,
    "ai_additions": 5,
    "recent": [
     {
@@ -3013,6 +3000,19 @@
    "recent": [
     {
      "date": "2026-11-03",
+     "title": "Add `inertiaIdempotent`",
+     "scope": "RingTheory/Unramified/Finite",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45390",
+     "ai": false,
+     "sha": "5f44e8099aaff86b8804252d5189966a5b3b8f78",
+     "files": [
+      "Mathlib/Algebra/Algebra/Hom.lean",
+      "Mathlib/Algebra/GroupWithZero/Idempotent.lean",
+      "Mathlib/RingTheory/Unramified/Finite.lean"
+     ]
+    },
+    {
+     "date": "2026-11-03",
      "title": "Add `equalizerIdempotent`",
      "scope": "RingTheory/Unramified/Finite",
      "url": "https://github.com/leanprover-community/mathlib4/pull/45499",
@@ -3060,17 +3060,6 @@
       "Mathlib/NumberTheory/ArithmeticFunction/Carmichael.lean",
       "Mathlib/NumberTheory/NumberField/Units/Basic.lean",
       "Mathlib/RingTheory/ZMod/UnitsCyclic.lean"
-     ]
-    },
-    {
-     "date": "2026-10-31",
-     "title": "`Module.Invertible` is a local property",
-     "scope": "RingTheory/LocalProperties",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/39420",
-     "ai": false,
-     "sha": "3aeb8d21d0deef7083a1f547c3e75023904d123e",
-     "files": [
-      "Mathlib/RingTheory/LocalProperties/Invertible.lean"
      ]
     }
    ],
@@ -3254,7 +3243,7 @@
     "Mathlib/CategoryTheory"
    ],
    "files": 1147,
-   "additions": 43,
+   "additions": 41,
    "ai_additions": 0,
    "recent": [
     {
@@ -3375,10 +3364,25 @@
    "prefixes": [
     "Mathlib/AlgebraicGeometry"
    ],
-   "files": 140,
+   "files": 141,
    "additions": 10,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-11-04",
+     "title": "Scheme level order of vanishing api",
+     "scope": "AlgebraicGeometry",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43273",
+     "ai": false,
+     "sha": "3996015a88981a113c17e04c8289adac9fe19518",
+     "files": [
+      "Mathlib/AlgebraicGeometry/AffineScheme.lean",
+      "Mathlib/AlgebraicGeometry/FunctionField.lean",
+      "Mathlib/AlgebraicGeometry/OrderOfVanishing/Basic.lean",
+      "Mathlib/AlgebraicGeometry/OrderOfVanishing/DVR.lean",
+      "Mathlib/AlgebraicGeometry/Restrict.lean"
+     ]
+    },
     {
      "date": "2026-10-31",
      "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
@@ -3438,19 +3442,6 @@
       "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
       "Mathlib/Algebra/Algebra/Bilinear.lean",
       "Mathlib/Algebra/Algebra/Field.lean"
-     ]
-    },
-    {
-     "date": "2026-09-25",
-     "title": "Degree of a zero-cycle",
-     "scope": "AlgebraicGeometry",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/41198",
-     "ai": false,
-     "sha": "459d0ae92af32252408b589b9a147814610e8934",
-     "files": [
-      "Mathlib/AlgebraicGeometry/AlgebraicCycle/Basic.lean",
-      "Mathlib/AlgebraicGeometry/ResidueField.lean",
-      "Mathlib/Topology/LocallyFinsupp.lean"
      ]
     }
    ],
@@ -3461,10 +3452,25 @@
     "Mathlib/AlgebraicGeometry",
     "Mathlib/RingTheory/Invariant"
    ],
-   "files": 144,
+   "files": 145,
    "additions": 10,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-11-04",
+     "title": "Scheme level order of vanishing api",
+     "scope": "AlgebraicGeometry",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43273",
+     "ai": false,
+     "sha": "3996015a88981a113c17e04c8289adac9fe19518",
+     "files": [
+      "Mathlib/AlgebraicGeometry/AffineScheme.lean",
+      "Mathlib/AlgebraicGeometry/FunctionField.lean",
+      "Mathlib/AlgebraicGeometry/OrderOfVanishing/Basic.lean",
+      "Mathlib/AlgebraicGeometry/OrderOfVanishing/DVR.lean",
+      "Mathlib/AlgebraicGeometry/Restrict.lean"
+     ]
+    },
     {
      "date": "2026-10-31",
      "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
@@ -3524,19 +3530,6 @@
       "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
       "Mathlib/Algebra/Algebra/Bilinear.lean",
       "Mathlib/Algebra/Algebra/Field.lean"
-     ]
-    },
-    {
-     "date": "2026-09-25",
-     "title": "Degree of a zero-cycle",
-     "scope": "AlgebraicGeometry",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/41198",
-     "ai": false,
-     "sha": "459d0ae92af32252408b589b9a147814610e8934",
-     "files": [
-      "Mathlib/AlgebraicGeometry/AlgebraicCycle/Basic.lean",
-      "Mathlib/AlgebraicGeometry/ResidueField.lean",
-      "Mathlib/Topology/LocallyFinsupp.lean"
      ]
     }
    ],
@@ -3868,7 +3861,7 @@
     "Mathlib/NumberTheory/Cyclotomic"
    ],
    "files": 65,
-   "additions": 16,
+   "additions": 15,
    "ai_additions": 5,
    "recent": [
     {
@@ -4034,7 +4027,7 @@
     "Mathlib/AlgebraicGeometry/EllipticCurve"
    ],
    "files": 19,
-   "additions": 2,
+   "additions": 1,
    "ai_additions": 0,
    "recent": [
     {
@@ -4047,17 +4040,6 @@
      "files": [
       "Mathlib/AlgebraicGeometry/EllipticCurve/Affine/AddSubMap.lean",
       "Mathlib/NumberTheory/Height/EllipticCurve.lean"
-     ]
-    },
-    {
-     "date": "2026-09-05",
-     "title": "Add the main property of addSubMap and sym2x",
-     "scope": "AlgebraicGeometry/EllipticCurve/Affine/AddSubMap",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43292",
-     "ai": false,
-     "sha": "69fe4f49ffbc9580a2c3ae6d29591ef6d1d4131e",
-     "files": [
-      "Mathlib/AlgebraicGeometry/EllipticCurve/Affine/AddSubMap.lean"
      ]
     }
    ],
@@ -4880,7 +4862,7 @@
     "Mathlib/Analysis/Calculus/FDeriv"
    ],
    "files": 41,
-   "additions": 9,
+   "additions": 8,
    "ai_additions": 0,
    "recent": [
     {
@@ -5206,7 +5188,7 @@
     "Mathlib/Analysis/CStarAlgebra"
    ],
    "files": 102,
-   "additions": 20,
+   "additions": 19,
    "ai_additions": 0,
    "recent": [
     {
@@ -6244,7 +6226,7 @@
     "Mathlib/Order/Heyting"
    ],
    "files": 4,
-   "additions": 3,
+   "additions": 2,
    "ai_additions": 0,
    "recent": [
     {
@@ -6277,22 +6259,6 @@
       "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
       "Mathlib/Algebra/Algebra/Bilinear.lean",
       "Mathlib/Algebra/Algebra/Field.lean"
-     ]
-    },
-    {
-     "date": "2026-09-04",
-     "title": "Try all translation pairings until one succeeds",
-     "scope": "Translate",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42861",
-     "ai": false,
-     "sha": "ab3a27a959ec52ae1c0ab5bf7ec9f2855e795145",
-     "files": [
-      "Mathlib/CategoryTheory/Adjunction/Basic.lean",
-      "Mathlib/CategoryTheory/CommSq.lean",
-      "Mathlib/CategoryTheory/Comma/Basic.lean",
-      "Mathlib/CategoryTheory/LiftingProperties/Basic.lean",
-      "Mathlib/CategoryTheory/Limits/Cones.lean",
-      "Mathlib/CategoryTheory/Limits/IsLimit.lean"
      ]
     }
    ],
@@ -6587,6 +6553,103 @@
   }
  },
  "feed": [
+  {
+   "date": "2026-11-04",
+   "title": "A group is perfect iff its abelianization is trivial",
+   "scope": "GroupTheory/IsPerfect",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45653",
+   "ai": false,
+   "sha": "75b352cd0c82e9835dda9e8867dd7610f2f9af90",
+   "files": [
+    "Mathlib/GroupTheory/IsPerfect.lean",
+    "Mathlib/GroupTheory/QuotientGroup/Basic.lean"
+   ],
+   "fields": [
+    "group_theory"
+   ]
+  },
+  {
+   "date": "2026-11-04",
+   "title": "Scheme level order of vanishing api",
+   "scope": "AlgebraicGeometry",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/43273",
+   "ai": false,
+   "sha": "3996015a88981a113c17e04c8289adac9fe19518",
+   "files": [
+    "Mathlib/AlgebraicGeometry/AffineScheme.lean",
+    "Mathlib/AlgebraicGeometry/FunctionField.lean",
+    "Mathlib/AlgebraicGeometry/OrderOfVanishing/Basic.lean",
+    "Mathlib/AlgebraicGeometry/OrderOfVanishing/DVR.lean",
+    "Mathlib/AlgebraicGeometry/Restrict.lean"
+   ],
+   "fields": [
+    "algebraic_geometry",
+    "schemes",
+    "git"
+   ]
+  },
+  {
+   "date": "2026-11-03",
+   "title": "The Wiener-Ikehara Tauberian theorem",
+   "scope": "NumberTheory/LSeries",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/43233",
+   "ai": false,
+   "sha": "d4bda671c42c9097d07275af15f9c288cad61a28",
+   "files": [
+    "Mathlib/Analysis/Fourier/Notation.lean",
+    "Mathlib/Analysis/SpecialFunctions/ImproperIntegrals.lean",
+    "Mathlib/NumberTheory/LSeries/WienerIkehara.lean"
+   ],
+   "fields": [
+    "fourier",
+    "analytic_number_theory"
+   ]
+  },
+  {
+   "date": "2026-11-03",
+   "title": "Quotients of countable groups are countable",
+   "scope": "GroupTheory/Coset/Card",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45597",
+   "ai": false,
+   "sha": "92e25221e3b47d691cbd4a9a1eb8911ac111e6dc",
+   "files": [
+    "Mathlib/GroupTheory/Coset/Card.lean"
+   ],
+   "fields": [
+    "group_theory"
+   ]
+  },
+  {
+   "date": "2026-11-03",
+   "title": "Add `QuotientGroup.map_injective_iff`",
+   "scope": "GroupTheory/QuotientGroup",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45580",
+   "ai": false,
+   "sha": "4ab310d7d8d94a6c98cbc3ad0b10544745abed7f",
+   "files": [
+    "Mathlib/GroupTheory/QuotientGroup/Defs.lean"
+   ],
+   "fields": [
+    "group_theory"
+   ]
+  },
+  {
+   "date": "2026-11-03",
+   "title": "Add `inertiaIdempotent`",
+   "scope": "RingTheory/Unramified/Finite",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45390",
+   "ai": false,
+   "sha": "5f44e8099aaff86b8804252d5189966a5b3b8f78",
+   "files": [
+    "Mathlib/Algebra/Algebra/Hom.lean",
+    "Mathlib/Algebra/GroupWithZero/Idempotent.lean",
+    "Mathlib/RingTheory/Unramified/Finite.lean"
+   ],
+   "fields": [
+    "zero",
+    "abstract_algebra"
+   ]
+  },
   {
    "date": "2026-11-03",
    "title": "Dense sets in infinite T1 spaces are infinite",
@@ -7603,68 +7666,6 @@
   },
   {
    "date": "2026-10-28",
-   "title": "Use `IsApply` for `Dilation`",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45334",
-   "ai": false,
-   "sha": "40d045ae49deb9db78b341137e71daabe2dd1e79",
-   "files": [
-    "Mathlib/Topology/MetricSpace/Dilation.lean"
-   ],
-   "fields": [
-    "point_set_topology"
-   ]
-  },
-  {
-   "date": "2026-10-28",
-   "title": "Characterise divisibility in `WithZero`",
-   "scope": "Algebra",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45246",
-   "ai": false,
-   "sha": "568792a09180b811edf50925ab22b5255d7d756f",
-   "files": [
-    "Mathlib/Algebra/GroupWithZero/WithZero.lean"
-   ],
-   "fields": [
-    "zero"
-   ]
-  },
-  {
-   "date": "2026-10-28",
-   "title": "Normal functions are (left) order continuous",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44954",
-   "ai": false,
-   "sha": "4f92d6922b160db8d34caaeba0b3609f9a551b0b",
-   "files": [
-    "Mathlib/Order/IsNormal.lean",
-    "Mathlib/Order/OrdContinuous.lean",
-    "Mathlib/SetTheory/Cardinal/Cofinality/Club.lean",
-    "Mathlib/SetTheory/Ordinal/Family.lean",
-    "Mathlib/SetTheory/Ordinal/FixedPoint.lean"
-   ],
-   "fields": [
-    "set_theory"
-   ]
-  },
-  {
-   "date": "2026-10-28",
-   "title": "Generalize",
-   "scope": "Algebra/CharP/Subring",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44918",
-   "ai": false,
-   "sha": "cc8d1ef7e8a52e12d608c19d1b61b56e1a3b0949",
-   "files": [
-    "Mathlib/Algebra/CharP/Subring.lean",
-    "Mathlib/FieldTheory/JacobsonNoether.lean",
-    "Mathlib/RingTheory/Perfection.lean"
-   ],
-   "fields": [
-    "abstract_algebra"
-   ]
-  },
-  {
-   "date": "2026-10-28",
    "title": "Add divisibility lemma and golf proof",
    "scope": "Data/Nat/Prime",
    "url": "https://github.com/leanprover-community/mathlib4/pull/45283",
@@ -7679,21 +7680,6 @@
     "euclid",
     "group_theory",
     "cryptography"
-   ]
-  },
-  {
-   "date": "2026-10-28",
-   "title": "Add trace identity for positive powers of matrix products",
-   "scope": "Matrix",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44917",
-   "ai": false,
-   "sha": "ad49fadc9d42bbf123827c177f2e8649a5e775cf",
-   "files": [
-    "Mathlib/LinearAlgebra/Matrix/Trace.lean"
-   ],
-   "fields": [
-    "linear_algebra",
-    "nine_chapters"
    ]
   },
   {
@@ -8447,22 +8433,6 @@
     "abstract_algebra",
     "algebraic_number_theory"
    ]
-  },
-  {
-   "date": "2026-09-04",
-   "title": "Coatoms of the subgroup lattice",
-   "scope": "GroupTheory",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/41651",
-   "ai": true,
-   "sha": "7954be2d947e3d8230cb2b7f515b16914ce82b57",
-   "files": [
-    "Mathlib/GroupTheory/QuotientGroup/Basic.lean",
-    "Mathlib/GroupTheory/QuotientGroup/Simple.lean",
-    "Mathlib/GroupTheory/SpecificGroups/Cyclic.lean"
-   ],
-   "fields": [
-    "group_theory"
-   ]
   }
  ],
  "projects": [
@@ -8532,10 +8502,10 @@
    "kind": "benchmark",
    "description": "Google DeepMind's collection of open conjectures (Erdős problems and others) stated in Lean, used as targets for provers.",
    "url": "https://github.com/google-deepmind/formal-conjectures",
-   "updated": "2026-11-03",
+   "updated": "2026-11-04",
    "latest": {
-    "title": "feat(ErdosProblems/393): link the Palomar entry for the formal proof (#7762)",
-    "url": "https://github.com/google-deepmind/formal-conjectures/commit/fd57f5d489321515f695ea205913d0ac3289f41c"
+    "title": "docs(Arxiv/2107.12475): link the Turing machine formalization in cryptids (#7797)",
+    "url": "https://github.com/google-deepmind/formal-conjectures/commit/2befc3a33248a785a9e0839d5d2fba300bb07863"
    },
    "overview": "google-deepmind__formal-conjectures.json",
    "lean_files": 400
@@ -8589,10 +8559,10 @@
    "kind": "human",
    "description": "Formalization of Carleson's theorem on pointwise convergence of Fourier series.",
    "url": "https://github.com/fpvandoorn/carleson",
-   "updated": "2026-10-27",
+   "updated": "2026-11-03",
    "latest": {
-    "title": "update Gemfile.lock (#692)",
-    "url": "https://github.com/fpvandoorn/carleson/commit/52cba54d4b7b444e937c7abbc67835afa2a0bb16"
+    "title": "chore(ToMathlib/MeasureTheory/Measure/NoAtoms/Prod): remove superfluous [SFinite v]s (#694)",
+    "url": "https://github.com/fpvandoorn/carleson/commit/8388b77e2609f0265065059bda81174f6267bc3e"
    },
    "overview": "fpvandoorn__carleson.json",
    "lean_files": 122
