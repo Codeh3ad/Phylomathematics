@@ -1,13 +1,13 @@
 {
- "generated": "2026-11-06T14:13Z",
+ "generated": "2026-11-07T12:57Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "9c8f67d65b5d8c67f658e4666accdfa45fa57a76",
-  "date": "2026-11-06",
-  "files": 8714,
-  "changes": 1312,
-  "additions": 616,
-  "ai_additions": 67
+  "commit": "df6966d0d900bebfbed7dff2a86a91e60eb8f3a9",
+  "date": "2026-11-07",
+  "files": 8715,
+  "changes": 1289,
+  "additions": 597,
+  "ai_additions": 66
  },
  "fields": {
   "babylonian": {
@@ -517,7 +517,7 @@
     "Mathlib/Algebra/Polynomial"
    ],
    "files": 65,
-   "additions": 15,
+   "additions": 14,
    "ai_additions": 2,
    "recent": [
     {
@@ -849,7 +849,7 @@
     "Mathlib/LinearAlgebra/AffineSpace"
    ],
    "files": 25,
-   "additions": 16,
+   "additions": 14,
    "ai_additions": 2,
    "recent": [
     {
@@ -1265,7 +1265,7 @@
     "Mathlib/Combinatorics/Digraph"
    ],
    "files": 90,
-   "additions": 29,
+   "additions": 28,
    "ai_additions": 0,
    "recent": [
     {
@@ -1641,7 +1641,7 @@
     "Mathlib/Order/Filter"
    ],
    "files": 65,
-   "additions": 11,
+   "additions": 10,
    "ai_additions": 1,
    "recent": [
     {
@@ -1815,7 +1815,7 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 16,
+   "additions": 14,
    "ai_additions": 1,
    "recent": [
     {
@@ -2054,9 +2054,21 @@
     "Mathlib/FieldTheory/AbelRuffini"
    ],
    "files": 182,
-   "additions": 43,
+   "additions": 44,
    "ai_additions": 10,
    "recent": [
+    {
+     "date": "2026-11-06",
+     "title": "Additivize `IsPerfect` and fix instance name",
+     "scope": "GroupTheory/{IsPerfect,Nilpotent}",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45731",
+     "ai": false,
+     "sha": "6db5db0d2279846cc8fb25901bd53221d37a77d8",
+     "files": [
+      "Mathlib/GroupTheory/IsPerfect.lean",
+      "Mathlib/GroupTheory/Nilpotent.lean"
+     ]
+    },
     {
      "date": "2026-11-05",
      "title": "More API for cusps",
@@ -2112,17 +2124,6 @@
       "Mathlib/GroupTheory/IsPerfect.lean",
       "Mathlib/GroupTheory/QuotientGroup/Basic.lean"
      ]
-    },
-    {
-     "date": "2026-11-03",
-     "title": "Quotients of countable groups are countable",
-     "scope": "GroupTheory/Coset/Card",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45597",
-     "ai": false,
-     "sha": "92e25221e3b47d691cbd4a9a1eb8911ac111e6dc",
-     "files": [
-      "Mathlib/GroupTheory/Coset/Card.lean"
-     ]
     }
    ],
    "overview": "field-group_theory.json"
@@ -2135,7 +2136,7 @@
     "Mathlib/NumberTheory/Chebyshev"
    ],
    "files": 32,
-   "additions": 11,
+   "additions": 10,
    "ai_additions": 1,
    "recent": [
     {
@@ -2224,7 +2225,7 @@
     "Mathlib/Data/Matrix"
    ],
    "files": 405,
-   "additions": 73,
+   "additions": 69,
    "ai_additions": 6,
    "recent": [
     {
@@ -2806,7 +2807,7 @@
     "Mathlib/MeasureTheory"
    ],
    "files": 342,
-   "additions": 44,
+   "additions": 43,
    "ai_additions": 2,
    "recent": [
     {
@@ -2888,7 +2889,7 @@
     "Mathlib/Analysis/InnerProductSpace"
    ],
    "files": 222,
-   "additions": 35,
+   "additions": 33,
    "ai_additions": 1,
    "recent": [
     {
@@ -2979,7 +2980,7 @@
     "Mathlib/Topology"
    ],
    "files": 706,
-   "additions": 83,
+   "additions": 79,
    "ai_additions": 5,
    "recent": [
     {
@@ -3061,8 +3062,8 @@
     "Mathlib/Algebra/Module"
    ],
    "files": 909,
-   "additions": 95,
-   "ai_additions": 22,
+   "additions": 91,
+   "ai_additions": 21,
    "recent": [
     {
      "date": "2026-11-06",
@@ -4004,7 +4005,7 @@
     "Mathlib/NumberTheory/Padics"
    ],
    "files": 19,
-   "additions": 6,
+   "additions": 5,
    "ai_additions": 0,
    "recent": [
     {
@@ -4152,7 +4153,7 @@
     "Mathlib/Geometry/Manifold/Algebra"
    ],
    "files": 66,
-   "additions": 14,
+   "additions": 13,
    "ai_additions": 0,
    "recent": [
     {
@@ -4326,7 +4327,7 @@
     "Mathlib/CategoryTheory/Abelian"
    ],
    "files": 217,
-   "additions": 15,
+   "additions": 14,
    "ai_additions": 0,
    "recent": [
     {
@@ -4405,7 +4406,7 @@
     "Mathlib/Geometry/Manifold/VectorBundle"
    ],
    "files": 38,
-   "additions": 8,
+   "additions": 7,
    "ai_additions": 0,
    "recent": [
     {
@@ -4621,7 +4622,7 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 16,
+   "additions": 14,
    "ai_additions": 1,
    "recent": [
     {
@@ -4805,7 +4806,7 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 16,
+   "additions": 14,
    "ai_additions": 1,
    "recent": [
     {
@@ -5135,7 +5136,7 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 16,
+   "additions": 14,
    "ai_additions": 1,
    "recent": [
     {
@@ -5223,7 +5224,7 @@
     "Mathlib/Analysis/CStarAlgebra"
    ],
    "files": 102,
-   "additions": 17,
+   "additions": 16,
    "ai_additions": 0,
    "recent": [
     {
@@ -5522,7 +5523,7 @@
     "Mathlib/Algebra/Lie"
    ],
    "files": 76,
-   "additions": 15,
+   "additions": 14,
    "ai_additions": 0,
    "recent": [
     {
@@ -6013,7 +6014,7 @@
     "Mathlib/Data/Nat/Choose"
    ],
    "files": 212,
-   "additions": 36,
+   "additions": 35,
    "ai_additions": 1,
    "recent": [
     {
@@ -6576,6 +6577,21 @@
   }
  },
  "feed": [
+  {
+   "date": "2026-11-06",
+   "title": "Additivize `IsPerfect` and fix instance name",
+   "scope": "GroupTheory/{IsPerfect,Nilpotent}",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45731",
+   "ai": false,
+   "sha": "6db5db0d2279846cc8fb25901bd53221d37a77d8",
+   "files": [
+    "Mathlib/GroupTheory/IsPerfect.lean",
+    "Mathlib/GroupTheory/Nilpotent.lean"
+   ],
+   "fields": [
+    "group_theory"
+   ]
+  },
   {
    "date": "2026-11-06",
    "title": "Add lemma eval_smul",
@@ -7660,21 +7676,6 @@
    ]
   },
   {
-   "date": "2026-10-29",
-   "title": "Simple modules over a simple Artinian ring are isomorphic",
-   "scope": "RingTheory/SimpleModule",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45047",
-   "ai": false,
-   "sha": "c5ad680749cbcb7eab8c1eb158d9d16d9e7836cb",
-   "files": [
-    "Mathlib/RingTheory/SimpleModule/Isotypic.lean",
-    "Mathlib/RingTheory/SimpleModule/WedderburnArtin.lean"
-   ],
-   "fields": [
-    "abstract_algebra"
-   ]
-  },
-  {
    "date": "2026-10-28",
    "title": "Add divisibility lemma and golf proof",
    "scope": "Data/Nat/Prime",
@@ -8412,20 +8413,6 @@
     "modern_number_theory",
     "group_theory",
     "measure_theory"
-   ]
-  },
-  {
-   "date": "2026-09-08",
-   "title": "A predicate for separable residue field extensions",
-   "scope": "RingTheory/LocalRing/ResidueField",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/43403",
-   "ai": true,
-   "sha": "9b3b3fc64be044ed52669f5b6f69f9ea22293a06",
-   "files": [
-    "Mathlib/RingTheory/LocalRing/ResidueField/Separable.lean"
-   ],
-   "fields": [
-    "abstract_algebra"
    ]
   }
  ],
