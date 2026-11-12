@@ -1,13 +1,13 @@
 {
- "generated": "2026-11-11T14:16Z",
+ "generated": "2026-11-12T15:09Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "2e9cd83667e279d5ad928d559254e6367a3a66be",
-  "date": "2026-11-11",
-  "files": 8700,
-  "changes": 1286,
-  "additions": 593,
-  "ai_additions": 66
+  "commit": "af6dcfbf23867d9df7ee4835e28567fe509a2677",
+  "date": "2026-11-12",
+  "files": 8706,
+  "changes": 1296,
+  "additions": 606,
+  "ai_additions": 67
  },
  "fields": {
   "babylonian": {
@@ -838,7 +838,7 @@
     "Mathlib/LinearAlgebra/AffineSpace"
    ],
    "files": 25,
-   "additions": 14,
+   "additions": 13,
    "ai_additions": 2,
    "recent": [
     {
@@ -1253,9 +1253,43 @@
     "Mathlib/Combinatorics/Digraph"
    ],
    "files": 80,
-   "additions": 28,
+   "additions": 31,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-11-11",
+     "title": "`neighborSet` of `coe`/`spanningCoe`",
+     "scope": "Combinatorics/SimpleGraph/Subgraph",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/41629",
+     "ai": false,
+     "sha": "fd27cf6fb03fbdc47ef2766527a2419786869565",
+     "files": [
+      "Mathlib/Combinatorics/SimpleGraph/Subgraph.lean"
+     ]
+    },
+    {
+     "date": "2026-11-11",
+     "title": "More length upper bounds",
+     "scope": "Combinatorics/SimpleGraph/Paths",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/41478",
+     "ai": false,
+     "sha": "ab19bac90981b27f5380941f4b36617e738358c9",
+     "files": [
+      "Mathlib/Combinatorics/SimpleGraph/Paths.lean"
+     ]
+    },
+    {
+     "date": "2026-11-11",
+     "title": "A walk is Eulerian iff it is a trail of length `G.edgeSet.encard`",
+     "scope": "SimpleGraph/Trails",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/41623",
+     "ai": false,
+     "sha": "e8af9c8dc066be8c87630e2f35c3ddd26c6375d3",
+     "files": [
+      "Mathlib/Combinatorics/SimpleGraph/Paths.lean",
+      "Mathlib/Combinatorics/SimpleGraph/Trails.lean"
+     ]
+    },
     {
      "date": "2026-11-10",
      "title": "More `map`/`comap` API",
@@ -1277,47 +1311,6 @@
      "files": [
       "Mathlib/Combinatorics/SimpleGraph/Paths.lean",
       "Mathlib/Combinatorics/SimpleGraph/Walk/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-11-10",
-     "title": "A graph is Hamiltonian iff there's a Hamiltonian path with adjacent endpoints",
-     "scope": "SimpleGraph/Hamiltonian",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/41393",
-     "ai": false,
-     "sha": "f592d1199df99ce152bb7443cdeab1bfef204fed",
-     "files": [
-      "Mathlib/Combinatorics/SimpleGraph/Hamiltonian.lean"
-     ]
-    },
-    {
-     "date": "2026-11-10",
-     "title": "Some lemmas about inducing walks",
-     "scope": "Combinatorics/SimpleGraph/Paths",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/40967",
-     "ai": false,
-     "sha": "dfab01f36179a3dba05b46a66362af57104c02d1",
-     "files": [
-      "Mathlib/Combinatorics/SimpleGraph/Paths.lean",
-      "Mathlib/Combinatorics/SimpleGraph/Walk/Maps.lean",
-      "Mathlib/Data/List/Nodup.lean",
-      "Mathlib/Data/Sym/Sym2.lean"
-     ]
-    },
-    {
-     "date": "2026-10-31",
-     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
-     "ai": false,
-     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
-     "files": [
-      "Mathlib/Algebra/BigOperators/Finprod.lean",
-      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
-      "Mathlib/Algebra/Lie/Basis/Prod.lean",
-      "Mathlib/Algebra/Module/SpanRank.lean",
-      "Mathlib/Algebra/MvPolynomial/Basic.lean",
-      "Mathlib/Algebra/Polynomial/Splits.lean"
      ]
     }
    ],
@@ -1766,9 +1759,21 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 14,
+   "additions": 15,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-11-11",
+     "title": "Small missing API lemmas",
+     "scope": "Geometry/Manifold/VectorBundle/Basic",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45448",
+     "ai": false,
+     "sha": "cf6b1c9000fb78e896b21dacc31227af1f19e6ae",
+     "files": [
+      "Mathlib/Geometry/Manifold/VectorBundle/Basic.lean",
+      "Mathlib/Geometry/Manifold/VectorBundle/MDifferentiable.lean"
+     ]
+    },
     {
      "date": "2026-11-10",
      "title": "`isInvertible_fderivWithin_writtenInExtChartAt`",
@@ -1826,22 +1831,6 @@
       "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
       "Mathlib/Algebra/Algebra/Bilinear.lean",
       "Mathlib/Algebra/Algebra/Field.lean"
-     ]
-    },
-    {
-     "date": "2026-10-17",
-     "title": "Lint against `∀ᵉ`/`∃ᵉ`",
-     "scope": "Linter/Style",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44544",
-     "ai": false,
-     "sha": "bac53ecd3a5a67e98776aee174207957ebcd3f0f",
-     "files": [
-      "Mathlib/Algebra/Group/Irreducible/Indecomposable.lean",
-      "Mathlib/Algebra/Group/Subgroup/Defs.lean",
-      "Mathlib/Algebra/Group/Subgroup/Pointwise.lean",
-      "Mathlib/Algebra/Lie/Abelian.lean",
-      "Mathlib/Algebra/Lie/Basis/Basic.lean",
-      "Mathlib/Algebra/Lie/Subalgebra.lean"
      ]
     }
    ],
@@ -1998,9 +1987,20 @@
     "Mathlib/FieldTheory/AbelRuffini"
    ],
    "files": 182,
-   "additions": 42,
+   "additions": 43,
    "ai_additions": 8,
    "recent": [
+    {
+     "date": "2026-11-12",
+     "title": "Abelianization of a quotient",
+     "scope": "GroupTheory/Abelianization/Defs",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45834",
+     "ai": false,
+     "sha": "e1545ebed97594477bbd88b2fe948ffce56e5af2",
+     "files": [
+      "Mathlib/GroupTheory/Abelianization/Defs.lean"
+     ]
+    },
     {
      "date": "2026-11-10",
      "title": "Use `IsApply` for `OneHom`",
@@ -2054,22 +2054,6 @@
       "Mathlib/GroupTheory/IsPerfect.lean",
       "Mathlib/GroupTheory/Nilpotent.lean"
      ]
-    },
-    {
-     "date": "2026-11-05",
-     "title": "More API for cusps",
-     "scope": "NumberTheory/ModularForms",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45009",
-     "ai": false,
-     "sha": "0e248bc7cb5345837452035093e94bb36398fc0a",
-     "files": [
-      "Mathlib/Analysis/Complex/UpperHalfPlane/FixedPoints.lean",
-      "Mathlib/GroupTheory/SpecificGroups/Cyclic.lean",
-      "Mathlib/LinearAlgebra/Matrix/GeneralLinearGroup/FinTwo.lean",
-      "Mathlib/NumberTheory/ModularForms/Basic.lean",
-      "Mathlib/NumberTheory/ModularForms/Bounds.lean",
-      "Mathlib/NumberTheory/ModularForms/Cusps.lean"
-     ]
     }
    ],
    "overview": "field-group_theory.json"
@@ -2081,10 +2065,23 @@
     "Mathlib/NumberTheory/Bertrand",
     "Mathlib/NumberTheory/Chebyshev"
    ],
-   "files": 32,
-   "additions": 10,
+   "files": 33,
+   "additions": 11,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-11-11",
+     "title": "The (weak) prime number theorem",
+     "scope": "NumberTheory/LSeries",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43238",
+     "ai": false,
+     "sha": "99fb99cb24fb9e339255260a2090c4770563fa43",
+     "files": [
+      "Mathlib/Analysis/Asymptotics/Lemmas.lean",
+      "Mathlib/NumberTheory/Chebyshev.lean",
+      "Mathlib/NumberTheory/LSeries/WeakPNT.lean"
+     ]
+    },
     {
      "date": "2026-11-03",
      "title": "The Wiener-Ikehara Tauberian theorem",
@@ -2145,22 +2142,6 @@
       "Mathlib/Algebra/Algebra/Bilinear.lean",
       "Mathlib/Algebra/Algebra/Field.lean"
      ]
-    },
-    {
-     "date": "2026-10-26",
-     "title": "Root numbers and non-vanishing in the left half-plane",
-     "scope": "NumberTheory/LSeries",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43502",
-     "ai": false,
-     "sha": "f6552513969bda8eb4fc083675f90884e81e8759",
-     "files": [
-      "Mathlib/NumberTheory/DirichletCharacter/Basic.lean",
-      "Mathlib/NumberTheory/DirichletCharacter/Bounds.lean",
-      "Mathlib/NumberTheory/GaussSum.lean",
-      "Mathlib/NumberTheory/LSeries/Dirichlet.lean",
-      "Mathlib/NumberTheory/LSeries/DirichletContinuation.lean",
-      "Mathlib/NumberTheory/LSeries/Nonvanishing.lean"
-     ]
     }
    ],
    "overview": "field-analytic_number_theory.json"
@@ -2170,10 +2151,37 @@
     "Mathlib/LinearAlgebra",
     "Mathlib/Data/Matrix"
    ],
-   "files": 406,
-   "additions": 72,
-   "ai_additions": 5,
+   "files": 407,
+   "additions": 73,
+   "ai_additions": 6,
    "recent": [
+    {
+     "date": "2026-11-12",
+     "title": "Symmetrizable matices",
+     "scope": "LinearAlgebra",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45801",
+     "ai": false,
+     "sha": "af6dcfbf23867d9df7ee4835e28567fe509a2677",
+     "files": [
+      "Mathlib/LinearAlgebra/Matrix/Symmetrizable.lean"
+     ]
+    },
+    {
+     "date": "2026-11-11",
+     "title": "Drop finiteness from many theorems",
+     "scope": "LinearAlgebra/Matrix/PosDef",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45897",
+     "ai": true,
+     "sha": "b97762998b0ee14aea85f37006d06dfff25a6afa",
+     "files": [
+      "Mathlib/Analysis/InnerProductSpace/GramMatrix.lean",
+      "Mathlib/Analysis/Matrix/Order.lean",
+      "Mathlib/Data/Matrix/Block.lean",
+      "Mathlib/LinearAlgebra/Matrix/Hermitian.lean",
+      "Mathlib/LinearAlgebra/Matrix/PosDef.lean",
+      "Mathlib/MeasureTheory/Function/L2Space.lean"
+     ]
+    },
     {
      "date": "2026-11-10",
      "title": "Add `Matrix.reindexStarAlgEquiv`",
@@ -2213,33 +2221,6 @@
       "Mathlib/LinearAlgebra/Matrix/Determinant/Basic.lean",
       "Mathlib/LinearAlgebra/Matrix/GeneralLinearGroup/Defs.lean",
       "Mathlib/LinearAlgebra/Matrix/SpecialLinearGroup.lean"
-     ]
-    },
-    {
-     "date": "2026-11-10",
-     "title": "Rank-nullity theorems for Submodule map/comap",
-     "scope": "LinearAlgebra",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/40599",
-     "ai": false,
-     "sha": "8d62694e048a00d6df64642f133d2050e9d7606f",
-     "files": [
-      "Mathlib/Algebra/Module/Submodule/Ker.lean",
-      "Mathlib/Algebra/Module/Submodule/Map.lean",
-      "Mathlib/Algebra/Module/Submodule/Range.lean",
-      "Mathlib/LinearAlgebra/Dimension/RankNullity.lean"
-     ]
-    },
-    {
-     "date": "2026-11-09",
-     "title": "The equality case of the triangle inequality",
-     "scope": "Analysis/Complex",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/39915",
-     "ai": false,
-     "sha": "612433bda1d7724fe092c8c978c89d321aaa784c",
-     "files": [
-      "Mathlib/Analysis/Convex/TriangleEquality.lean",
-      "Mathlib/Analysis/Normed/Module/Normalize.lean",
-      "Mathlib/LinearAlgebra/Ray.lean"
      ]
     }
    ],
@@ -2352,9 +2333,21 @@
     "Mathlib/Geometry/Manifold/VectorBundle"
    ],
    "files": 18,
-   "additions": 2,
+   "additions": 3,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-11-11",
+     "title": "Small missing API lemmas",
+     "scope": "Geometry/Manifold/VectorBundle/Basic",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45448",
+     "ai": false,
+     "sha": "cf6b1c9000fb78e896b21dacc31227af1f19e6ae",
+     "files": [
+      "Mathlib/Geometry/Manifold/VectorBundle/Basic.lean",
+      "Mathlib/Geometry/Manifold/VectorBundle/MDifferentiable.lean"
+     ]
+    },
     {
      "date": "2026-10-17",
      "title": "Lint against `∀ᵉ`/`∃ᵉ`",
@@ -2572,9 +2565,22 @@
     "Mathlib/Topology/Homotopy"
    ],
    "files": 180,
-   "additions": 13,
+   "additions": 14,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-11-12",
+     "title": "The simplicial set of affine simplices of a convex space",
+     "scope": "Geometry/Convex",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43528",
+     "ai": false,
+     "sha": "201a1e519f49cfb73bb24914fb5d3c402cdb0a0a",
+     "files": [
+      "Mathlib/AlgebraicTopology/SimplexCategory/Basic.lean",
+      "Mathlib/AlgebraicTopology/SimplicialSet/Basic.lean",
+      "Mathlib/Geometry/Convex/ConvexSpace/ToSSet.lean"
+     ]
+    },
     {
      "date": "2026-10-31",
      "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
@@ -2633,18 +2639,6 @@
       "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
       "Mathlib/Algebra/Algebra/Bilinear.lean",
       "Mathlib/Algebra/Algebra/Field.lean"
-     ]
-    },
-    {
-     "date": "2026-10-14",
-     "title": "Composition of edges in quasicategories",
-     "scope": "AlgebraicTopology",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44775",
-     "ai": false,
-     "sha": "e438a8a8329af5bd73274043f9f21795594c6bfb",
-     "files": [
-      "Mathlib/AlgebraicTopology/Quasicategory/CompStruct.lean",
-      "Mathlib/AlgebraicTopology/Quasicategory/TwoTruncated.lean"
      ]
     }
    ],
@@ -2745,9 +2739,25 @@
     "Mathlib/MeasureTheory"
    ],
    "files": 342,
-   "additions": 43,
-   "ai_additions": 2,
+   "additions": 44,
+   "ai_additions": 3,
    "recent": [
+    {
+     "date": "2026-11-11",
+     "title": "Drop finiteness from many theorems",
+     "scope": "LinearAlgebra/Matrix/PosDef",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45897",
+     "ai": true,
+     "sha": "b97762998b0ee14aea85f37006d06dfff25a6afa",
+     "files": [
+      "Mathlib/Analysis/InnerProductSpace/GramMatrix.lean",
+      "Mathlib/Analysis/Matrix/Order.lean",
+      "Mathlib/Data/Matrix/Block.lean",
+      "Mathlib/LinearAlgebra/Matrix/Hermitian.lean",
+      "Mathlib/LinearAlgebra/Matrix/PosDef.lean",
+      "Mathlib/MeasureTheory/Function/L2Space.lean"
+     ]
+    },
     {
      "date": "2026-11-10",
      "title": "Instances for `Additive`/`Multiplicative`",
@@ -2806,17 +2816,6 @@
       "Mathlib/MeasureTheory/Constructions/Pi.lean",
       "Mathlib/MeasureTheory/Function/AEEqFun.lean"
      ]
-    },
-    {
-     "date": "2026-11-07",
-     "title": "Simple functions from finite-range monotone maps",
-     "scope": "MeasureTheory",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45493",
-     "ai": false,
-     "sha": "4dcd48f9a8a6bc61472af7148f179a36c4b47c75",
-     "files": [
-      "Mathlib/MeasureTheory/Function/SimpleFunc.lean"
-     ]
     }
    ],
    "overview": "field-measure_theory.json"
@@ -2826,10 +2825,50 @@
     "Mathlib/Analysis/Normed",
     "Mathlib/Analysis/InnerProductSpace"
    ],
-   "files": 220,
-   "additions": 34,
-   "ai_additions": 1,
+   "files": 221,
+   "additions": 36,
+   "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-11-12",
+     "title": "The degree of an extension of absolute values",
+     "scope": "Analysis/Normed/Field/WithAbs",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45192",
+     "ai": false,
+     "sha": "2270f87f5f84941dcce91d6dcfd8e9b91b63275e",
+     "files": [
+      "Mathlib/Analysis/Normed/Field/WithAbs.lean",
+      "Mathlib/Analysis/Normed/Ring/WithAbs.lean"
+     ]
+    },
+    {
+     "date": "2026-11-11",
+     "title": "Drop finiteness from many theorems",
+     "scope": "LinearAlgebra/Matrix/PosDef",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45897",
+     "ai": true,
+     "sha": "b97762998b0ee14aea85f37006d06dfff25a6afa",
+     "files": [
+      "Mathlib/Analysis/InnerProductSpace/GramMatrix.lean",
+      "Mathlib/Analysis/Matrix/Order.lean",
+      "Mathlib/Data/Matrix/Block.lean",
+      "Mathlib/LinearAlgebra/Matrix/Hermitian.lean",
+      "Mathlib/LinearAlgebra/Matrix/PosDef.lean",
+      "Mathlib/MeasureTheory/Function/L2Space.lean"
+     ]
+    },
+    {
+     "date": "2026-11-11",
+     "title": "The Gelfand radius as an algebra norm",
+     "scope": "Analysis/Normed/Unbundled/GelfandRadiusNorm",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44983",
+     "ai": false,
+     "sha": "1c1b51c28bcb0db374090df237584aea36087298",
+     "files": [
+      "Mathlib/Analysis/Matrix/GelfandRadius.lean",
+      "Mathlib/Analysis/Normed/Unbundled/GelfandRadiusNorm.lean"
+     ]
+    },
     {
      "date": "2026-11-10",
      "title": "Use `IsApply` for `AffineMap` and `AffineIsometry`",
@@ -2857,54 +2896,6 @@
       "Mathlib/Analysis/Normed/Module/Normalize.lean",
       "Mathlib/LinearAlgebra/Ray.lean"
      ]
-    },
-    {
-     "date": "2026-11-08",
-     "title": "Generalize `MultilinearMap` with common `RingHom`",
-     "scope": "LinearAlgebra/MultilinearMap",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42534",
-     "ai": false,
-     "sha": "a8d0dfed4f2f657d517c034437ce238c46fef1a8",
-     "files": [
-      "Mathlib/Analysis/Analytic/Composition.lean",
-      "Mathlib/Analysis/Analytic/Inverse.lean",
-      "Mathlib/Analysis/Calculus/ContDiff/FaaDiBruno.lean",
-      "Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean",
-      "Mathlib/LinearAlgebra/Alternating/Basic.lean",
-      "Mathlib/LinearAlgebra/Multilinear/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-10-31",
-     "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42316",
-     "ai": false,
-     "sha": "c1cc962aa0ead632c537be6c1f5b24ebc5540bc1",
-     "files": [
-      "Mathlib/Algebra/BigOperators/Finprod.lean",
-      "Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
-      "Mathlib/Algebra/Lie/Basis/Prod.lean",
-      "Mathlib/Algebra/Module/SpanRank.lean",
-      "Mathlib/Algebra/MvPolynomial/Basic.lean",
-      "Mathlib/Algebra/Polynomial/Splits.lean"
-     ]
-    },
-    {
-     "date": "2026-10-29",
-     "title": "Notation for `MultilinearMap`",
-     "scope": "LinearAlgebra/MultilinearMap",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43877",
-     "ai": false,
-     "sha": "237c53b714060dd21b54c29e7e3256ec0c65f132",
-     "files": [
-      "Mathlib/Analysis/Calculus/ContDiff/FaaDiBruno.lean",
-      "Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean",
-      "Mathlib/Analysis/Normed/Module/Multilinear/Curry.lean",
-      "Mathlib/LinearAlgebra/Alternating/Basic.lean",
-      "Mathlib/LinearAlgebra/Alternating/DomCoprod.lean",
-      "Mathlib/LinearAlgebra/Multilinear/Basic.lean"
-     ]
     }
    ],
    "overview": "field-functional_analysis.json"
@@ -2914,9 +2905,33 @@
     "Mathlib/Topology"
    ],
    "files": 706,
-   "additions": 80,
+   "additions": 81,
    "ai_additions": 7,
    "recent": [
+    {
+     "date": "2026-11-12",
+     "title": "Add prodMk lemmas",
+     "scope": "Topology/CompactOpen",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45907",
+     "ai": false,
+     "sha": "3b957bcfe533b2a04c41b67e4b6b3b962c5898a4",
+     "files": [
+      "Mathlib/Topology/CompactOpen.lean",
+      "Mathlib/Topology/Compactness/LocallyCompact.lean",
+      "Mathlib/Topology/ContinuousMap/Basic.lean"
+     ]
+    },
+    {
+     "date": "2026-11-11",
+     "title": "`ClosedIciTopology` and `OrderClosedTopology` instances for `Compacts`",
+     "scope": "Topology/Sets",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43637",
+     "ai": false,
+     "sha": "861b9942cf81af84d3a1d5dc4139497be980b64f",
+     "files": [
+      "Mathlib/Topology/Sets/VietorisTopology.lean"
+     ]
+    },
     {
      "date": "2026-11-11",
      "title": "Define `Function.IsConstOn` predicate",
@@ -2957,33 +2972,6 @@
       "Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/Rpow/RingInverseOrder.lean",
       "Mathlib/LinearAlgebra/AffineSpace/AffineMap.lean",
       "Mathlib/Topology/Path.lean"
-     ]
-    },
-    {
-     "date": "2026-11-10",
-     "title": "`@[gcongr]` for `eq_top_mono` and friends",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44334",
-     "ai": false,
-     "sha": "e00dcc4752b2c8447f8a84856518360859099662",
-     "files": [
-      "Mathlib/Algebra/Order/IsBotOne.lean",
-      "Mathlib/Data/Set/Basic.lean",
-      "Mathlib/Data/Set/Lattice/Bounded.lean",
-      "Mathlib/MeasureTheory/Measure/AddContent/CompactSystem.lean",
-      "Mathlib/Order/BoundedOrder/Basic.lean",
-      "Mathlib/Order/SetDissipate.lean"
-     ]
-    },
-    {
-     "date": "2026-11-10",
-     "title": "The definition of a KSheaf on a T2 Space",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/40953",
-     "ai": false,
-     "sha": "8bd7210f8c080d5ed93a238ebf6a031d1dbaba19",
-     "files": [
-      "Mathlib/Topology/Sheaves/KSheaf.lean"
      ]
     }
    ],
@@ -3689,10 +3677,37 @@
     "Mathlib/LinearAlgebra/Matrix",
     "Mathlib/Data/Int"
    ],
-   "files": 125,
-   "additions": 31,
-   "ai_additions": 0,
+   "files": 126,
+   "additions": 33,
+   "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-11-12",
+     "title": "Symmetrizable matices",
+     "scope": "LinearAlgebra",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45801",
+     "ai": false,
+     "sha": "af6dcfbf23867d9df7ee4835e28567fe509a2677",
+     "files": [
+      "Mathlib/LinearAlgebra/Matrix/Symmetrizable.lean"
+     ]
+    },
+    {
+     "date": "2026-11-11",
+     "title": "Drop finiteness from many theorems",
+     "scope": "LinearAlgebra/Matrix/PosDef",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45897",
+     "ai": true,
+     "sha": "b97762998b0ee14aea85f37006d06dfff25a6afa",
+     "files": [
+      "Mathlib/Analysis/InnerProductSpace/GramMatrix.lean",
+      "Mathlib/Analysis/Matrix/Order.lean",
+      "Mathlib/Data/Matrix/Block.lean",
+      "Mathlib/LinearAlgebra/Matrix/Hermitian.lean",
+      "Mathlib/LinearAlgebra/Matrix/PosDef.lean",
+      "Mathlib/MeasureTheory/Function/L2Space.lean"
+     ]
+    },
     {
      "date": "2026-11-10",
      "title": "Add `Matrix.reindexStarAlgEquiv`",
@@ -3728,38 +3743,6 @@
      "sha": "8c44dba7254bae656135ee4d8eba2c7f24718678",
      "files": [
       "Mathlib/LinearAlgebra/Matrix/SpecialLinearGroup.lean"
-     ]
-    },
-    {
-     "date": "2026-11-05",
-     "title": "More API for cusps",
-     "scope": "NumberTheory/ModularForms",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45009",
-     "ai": false,
-     "sha": "0e248bc7cb5345837452035093e94bb36398fc0a",
-     "files": [
-      "Mathlib/Analysis/Complex/UpperHalfPlane/FixedPoints.lean",
-      "Mathlib/GroupTheory/SpecificGroups/Cyclic.lean",
-      "Mathlib/LinearAlgebra/Matrix/GeneralLinearGroup/FinTwo.lean",
-      "Mathlib/NumberTheory/ModularForms/Basic.lean",
-      "Mathlib/NumberTheory/ModularForms/Bounds.lean",
-      "Mathlib/NumberTheory/ModularForms/Cusps.lean"
-     ]
-    },
-    {
-     "date": "2026-11-03",
-     "title": "`row` and `col` are linear maps",
-     "scope": "LinearAlgebra/Matrix",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44933",
-     "ai": false,
-     "sha": "e1beb09d4e10d32901d02045b844ef8489ba01ab",
-     "files": [
-      "Mathlib/Combinatorics/Configuration.lean",
-      "Mathlib/Data/Matrix/Basic.lean",
-      "Mathlib/Data/Matrix/Basis.lean",
-      "Mathlib/GroupTheory/Coxeter/Matrix.lean",
-      "Mathlib/LinearAlgebra/Matrix/Defs.lean",
-      "Mathlib/LinearAlgebra/Matrix/Determinant/Basic.lean"
      ]
     }
    ],
@@ -4078,9 +4061,20 @@
     "Mathlib/Geometry/Manifold/Algebra"
    ],
    "files": 66,
-   "additions": 11,
+   "additions": 12,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-11-12",
+     "title": "Basic results about `LieHom`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45757",
+     "ai": false,
+     "sha": "1d2d28f3e26701df896ceae6d5f96e5fb8be4519",
+     "files": [
+      "Mathlib/Algebra/Lie/Ideal.lean"
+     ]
+    },
     {
      "date": "2026-10-31",
      "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
@@ -4138,22 +4132,6 @@
       "Mathlib/Dynamics/Ergodic/Extreme.lean",
       "Mathlib/Geometry/Euclidean/Volume/Measure.lean",
       "Mathlib/LinearAlgebra/BilinearMap.lean"
-     ]
-    },
-    {
-     "date": "2026-10-28",
-     "title": "Use `IsApply` for `Module.End`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45347",
-     "ai": false,
-     "sha": "97bcf245a4285886363c8c50df393a4ac54ad9dc",
-     "files": [
-      "Mathlib/Algebra/Central/End.lean",
-      "Mathlib/Algebra/Group/ForwardDiff.lean",
-      "Mathlib/Algebra/Lie/CartanExists.lean",
-      "Mathlib/Algebra/Lie/Derivation/Basic.lean",
-      "Mathlib/Algebra/Lie/EngelSubalgebra.lean",
-      "Mathlib/Algebra/Lie/LieTheorem.lean"
      ]
     }
    ],
@@ -4331,9 +4309,21 @@
     "Mathlib/Geometry/Manifold/VectorBundle"
    ],
    "files": 39,
-   "additions": 7,
+   "additions": 8,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-11-11",
+     "title": "Small missing API lemmas",
+     "scope": "Geometry/Manifold/VectorBundle/Basic",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45448",
+     "ai": false,
+     "sha": "cf6b1c9000fb78e896b21dacc31227af1f19e6ae",
+     "files": [
+      "Mathlib/Geometry/Manifold/VectorBundle/Basic.lean",
+      "Mathlib/Geometry/Manifold/VectorBundle/MDifferentiable.lean"
+     ]
+    },
     {
      "date": "2026-10-29",
      "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
@@ -4391,22 +4381,6 @@
       "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
       "Mathlib/Algebra/Algebra/Bilinear.lean",
       "Mathlib/Algebra/Algebra/Field.lean"
-     ]
-    },
-    {
-     "date": "2026-10-17",
-     "title": "Lint against `∀ᵉ`/`∃ᵉ`",
-     "scope": "Linter/Style",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44544",
-     "ai": false,
-     "sha": "bac53ecd3a5a67e98776aee174207957ebcd3f0f",
-     "files": [
-      "Mathlib/Algebra/Group/Irreducible/Indecomposable.lean",
-      "Mathlib/Algebra/Group/Subgroup/Defs.lean",
-      "Mathlib/Algebra/Group/Subgroup/Pointwise.lean",
-      "Mathlib/Algebra/Lie/Abelian.lean",
-      "Mathlib/Algebra/Lie/Basis/Basic.lean",
-      "Mathlib/Algebra/Lie/Subalgebra.lean"
      ]
     }
    ],
@@ -4544,9 +4518,21 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 14,
+   "additions": 15,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-11-11",
+     "title": "Small missing API lemmas",
+     "scope": "Geometry/Manifold/VectorBundle/Basic",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45448",
+     "ai": false,
+     "sha": "cf6b1c9000fb78e896b21dacc31227af1f19e6ae",
+     "files": [
+      "Mathlib/Geometry/Manifold/VectorBundle/Basic.lean",
+      "Mathlib/Geometry/Manifold/VectorBundle/MDifferentiable.lean"
+     ]
+    },
     {
      "date": "2026-11-10",
      "title": "`isInvertible_fderivWithin_writtenInExtChartAt`",
@@ -4604,22 +4590,6 @@
       "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
       "Mathlib/Algebra/Algebra/Bilinear.lean",
       "Mathlib/Algebra/Algebra/Field.lean"
-     ]
-    },
-    {
-     "date": "2026-10-17",
-     "title": "Lint against `∀ᵉ`/`∃ᵉ`",
-     "scope": "Linter/Style",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44544",
-     "ai": false,
-     "sha": "bac53ecd3a5a67e98776aee174207957ebcd3f0f",
-     "files": [
-      "Mathlib/Algebra/Group/Irreducible/Indecomposable.lean",
-      "Mathlib/Algebra/Group/Subgroup/Defs.lean",
-      "Mathlib/Algebra/Group/Subgroup/Pointwise.lean",
-      "Mathlib/Algebra/Lie/Abelian.lean",
-      "Mathlib/Algebra/Lie/Basis/Basic.lean",
-      "Mathlib/Algebra/Lie/Subalgebra.lean"
      ]
     }
    ],
@@ -4727,9 +4697,21 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 14,
+   "additions": 15,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-11-11",
+     "title": "Small missing API lemmas",
+     "scope": "Geometry/Manifold/VectorBundle/Basic",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45448",
+     "ai": false,
+     "sha": "cf6b1c9000fb78e896b21dacc31227af1f19e6ae",
+     "files": [
+      "Mathlib/Geometry/Manifold/VectorBundle/Basic.lean",
+      "Mathlib/Geometry/Manifold/VectorBundle/MDifferentiable.lean"
+     ]
+    },
     {
      "date": "2026-11-10",
      "title": "`isInvertible_fderivWithin_writtenInExtChartAt`",
@@ -4787,22 +4769,6 @@
       "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
       "Mathlib/Algebra/Algebra/Bilinear.lean",
       "Mathlib/Algebra/Algebra/Field.lean"
-     ]
-    },
-    {
-     "date": "2026-10-17",
-     "title": "Lint against `∀ᵉ`/`∃ᵉ`",
-     "scope": "Linter/Style",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44544",
-     "ai": false,
-     "sha": "bac53ecd3a5a67e98776aee174207957ebcd3f0f",
-     "files": [
-      "Mathlib/Algebra/Group/Irreducible/Indecomposable.lean",
-      "Mathlib/Algebra/Group/Subgroup/Defs.lean",
-      "Mathlib/Algebra/Group/Subgroup/Pointwise.lean",
-      "Mathlib/Algebra/Lie/Abelian.lean",
-      "Mathlib/Algebra/Lie/Basis/Basic.lean",
-      "Mathlib/Algebra/Lie/Subalgebra.lean"
      ]
     }
    ],
@@ -5048,9 +5014,21 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 14,
+   "additions": 15,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-11-11",
+     "title": "Small missing API lemmas",
+     "scope": "Geometry/Manifold/VectorBundle/Basic",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45448",
+     "ai": false,
+     "sha": "cf6b1c9000fb78e896b21dacc31227af1f19e6ae",
+     "files": [
+      "Mathlib/Geometry/Manifold/VectorBundle/Basic.lean",
+      "Mathlib/Geometry/Manifold/VectorBundle/MDifferentiable.lean"
+     ]
+    },
     {
      "date": "2026-11-10",
      "title": "`isInvertible_fderivWithin_writtenInExtChartAt`",
@@ -5109,22 +5087,6 @@
       "Mathlib/Algebra/Algebra/Bilinear.lean",
       "Mathlib/Algebra/Algebra/Field.lean"
      ]
-    },
-    {
-     "date": "2026-10-17",
-     "title": "Lint against `∀ᵉ`/`∃ᵉ`",
-     "scope": "Linter/Style",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44544",
-     "ai": false,
-     "sha": "bac53ecd3a5a67e98776aee174207957ebcd3f0f",
-     "files": [
-      "Mathlib/Algebra/Group/Irreducible/Indecomposable.lean",
-      "Mathlib/Algebra/Group/Subgroup/Defs.lean",
-      "Mathlib/Algebra/Group/Subgroup/Pointwise.lean",
-      "Mathlib/Algebra/Lie/Abelian.lean",
-      "Mathlib/Algebra/Lie/Basis/Basic.lean",
-      "Mathlib/Algebra/Lie/Subalgebra.lean"
-     ]
     }
    ],
    "overview": "field-general_relativity.json"
@@ -5135,9 +5097,25 @@
     "Mathlib/Analysis/CStarAlgebra"
    ],
    "files": 102,
-   "additions": 15,
-   "ai_additions": 0,
+   "additions": 16,
+   "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-11-11",
+     "title": "Drop finiteness from many theorems",
+     "scope": "LinearAlgebra/Matrix/PosDef",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45897",
+     "ai": true,
+     "sha": "b97762998b0ee14aea85f37006d06dfff25a6afa",
+     "files": [
+      "Mathlib/Analysis/InnerProductSpace/GramMatrix.lean",
+      "Mathlib/Analysis/Matrix/Order.lean",
+      "Mathlib/Data/Matrix/Block.lean",
+      "Mathlib/LinearAlgebra/Matrix/Hermitian.lean",
+      "Mathlib/LinearAlgebra/Matrix/PosDef.lean",
+      "Mathlib/MeasureTheory/Function/L2Space.lean"
+     ]
+    },
     {
      "date": "2026-10-31",
      "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
@@ -5200,22 +5178,6 @@
       "Mathlib/Algebra/Lie/Derivation/Basic.lean",
       "Mathlib/Algebra/Lie/EngelSubalgebra.lean",
       "Mathlib/Algebra/Lie/LieTheorem.lean"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "title": "Tag `Metric.closedBall_subset_ball` with `@[gcongr strict]`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43419",
-     "ai": false,
-     "sha": "c63d9df9d32f8568577fead4a94a4fd63b637c29",
-     "files": [
-      "Mathlib/Analysis/BoxIntegral/Basic.lean",
-      "Mathlib/Analysis/CStarAlgebra/SpecialFunctions/PosPart.lean",
-      "Mathlib/Analysis/Calculus/FDeriv/Basic.lean",
-      "Mathlib/Analysis/Complex/Harmonic/MeanValue.lean",
-      "Mathlib/Analysis/Complex/Harmonic/Poisson.lean",
-      "Mathlib/Analysis/Complex/Schwarz.lean"
      ]
     }
    ],
@@ -5430,9 +5392,32 @@
     "Mathlib/Algebra/Lie"
    ],
    "files": 76,
-   "additions": 12,
+   "additions": 14,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-11-12",
+     "title": "Basic results about `LieHom`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45757",
+     "ai": false,
+     "sha": "1d2d28f3e26701df896ceae6d5f96e5fb8be4519",
+     "files": [
+      "Mathlib/Algebra/Lie/Ideal.lean"
+     ]
+    },
+    {
+     "date": "2026-11-11",
+     "title": "Small missing API lemmas",
+     "scope": "Geometry/Manifold/VectorBundle/Basic",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45448",
+     "ai": false,
+     "sha": "cf6b1c9000fb78e896b21dacc31227af1f19e6ae",
+     "files": [
+      "Mathlib/Geometry/Manifold/VectorBundle/Basic.lean",
+      "Mathlib/Geometry/Manifold/VectorBundle/MDifferentiable.lean"
+     ]
+    },
     {
      "date": "2026-10-31",
      "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
@@ -5474,38 +5459,6 @@
       "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
       "Mathlib/Algebra/Algebra/Bilinear.lean",
       "Mathlib/Algebra/Algebra/Field.lean"
-     ]
-    },
-    {
-     "date": "2026-10-28",
-     "title": "Use `IsApply` for `Measure`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45225",
-     "ai": false,
-     "sha": "8fe7ce475b056f0b266d7107893f2c4d772c712f",
-     "files": [
-      "Mathlib/Algebra/Lie/Basic.lean",
-      "Mathlib/Analysis/InnerProductSpace/NormDet.lean",
-      "Mathlib/Analysis/InnerProductSpace/Symmetric.lean",
-      "Mathlib/Dynamics/Ergodic/Extreme.lean",
-      "Mathlib/Geometry/Euclidean/Volume/Measure.lean",
-      "Mathlib/LinearAlgebra/BilinearMap.lean"
-     ]
-    },
-    {
-     "date": "2026-10-28",
-     "title": "Use `IsApply` for `Module.End`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45347",
-     "ai": false,
-     "sha": "97bcf245a4285886363c8c50df393a4ac54ad9dc",
-     "files": [
-      "Mathlib/Algebra/Central/End.lean",
-      "Mathlib/Algebra/Group/ForwardDiff.lean",
-      "Mathlib/Algebra/Lie/CartanExists.lean",
-      "Mathlib/Algebra/Lie/Derivation/Basic.lean",
-      "Mathlib/Algebra/Lie/EngelSubalgebra.lean",
-      "Mathlib/Algebra/Lie/LieTheorem.lean"
      ]
     }
    ],
@@ -5952,10 +5905,55 @@
     "Mathlib/Combinatorics",
     "Mathlib/Data/Nat/Choose"
    ],
-   "files": 202,
-   "additions": 33,
+   "files": 203,
+   "additions": 37,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-11-11",
+     "title": "Definitions of combinatorial designs",
+     "scope": "Combinatorics/Design/Defs",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/41823",
+     "ai": false,
+     "sha": "da062e9afa75e7074435ef5f3f4dbe6ba1783e61",
+     "files": [
+      "Mathlib/Combinatorics/Design/Defs.lean"
+     ]
+    },
+    {
+     "date": "2026-11-11",
+     "title": "`neighborSet` of `coe`/`spanningCoe`",
+     "scope": "Combinatorics/SimpleGraph/Subgraph",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/41629",
+     "ai": false,
+     "sha": "fd27cf6fb03fbdc47ef2766527a2419786869565",
+     "files": [
+      "Mathlib/Combinatorics/SimpleGraph/Subgraph.lean"
+     ]
+    },
+    {
+     "date": "2026-11-11",
+     "title": "More length upper bounds",
+     "scope": "Combinatorics/SimpleGraph/Paths",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/41478",
+     "ai": false,
+     "sha": "ab19bac90981b27f5380941f4b36617e738358c9",
+     "files": [
+      "Mathlib/Combinatorics/SimpleGraph/Paths.lean"
+     ]
+    },
+    {
+     "date": "2026-11-11",
+     "title": "A walk is Eulerian iff it is a trail of length `G.edgeSet.encard`",
+     "scope": "SimpleGraph/Trails",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/41623",
+     "ai": false,
+     "sha": "e8af9c8dc066be8c87630e2f35c3ddd26c6375d3",
+     "files": [
+      "Mathlib/Combinatorics/SimpleGraph/Paths.lean",
+      "Mathlib/Combinatorics/SimpleGraph/Trails.lean"
+     ]
+    },
     {
      "date": "2026-11-10",
      "title": "More `map`/`comap` API",
@@ -5965,59 +5963,6 @@
      "sha": "a1ba21c8e6fc356b7bd5f4bf2adbcec28da4f997",
      "files": [
       "Mathlib/Combinatorics/SimpleGraph/Maps.lean"
-     ]
-    },
-    {
-     "date": "2026-11-10",
-     "title": "Length of closed a walk/trail isn't `1`/`2`",
-     "scope": "Combinatorics/SimpleGraph/Paths",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/41633",
-     "ai": false,
-     "sha": "42088274d16915c8c8fd694c66b7c15acb74bd72",
-     "files": [
-      "Mathlib/Combinatorics/SimpleGraph/Paths.lean",
-      "Mathlib/Combinatorics/SimpleGraph/Walk/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-11-10",
-     "title": "A graph is Hamiltonian iff there's a Hamiltonian path with adjacent endpoints",
-     "scope": "SimpleGraph/Hamiltonian",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/41393",
-     "ai": false,
-     "sha": "f592d1199df99ce152bb7443cdeab1bfef204fed",
-     "files": [
-      "Mathlib/Combinatorics/SimpleGraph/Hamiltonian.lean"
-     ]
-    },
-    {
-     "date": "2026-11-10",
-     "title": "Some lemmas about inducing walks",
-     "scope": "Combinatorics/SimpleGraph/Paths",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/40967",
-     "ai": false,
-     "sha": "dfab01f36179a3dba05b46a66362af57104c02d1",
-     "files": [
-      "Mathlib/Combinatorics/SimpleGraph/Paths.lean",
-      "Mathlib/Combinatorics/SimpleGraph/Walk/Maps.lean",
-      "Mathlib/Data/List/Nodup.lean",
-      "Mathlib/Data/Sym/Sym2.lean"
-     ]
-    },
-    {
-     "date": "2026-11-03",
-     "title": "`row` and `col` are linear maps",
-     "scope": "LinearAlgebra/Matrix",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44933",
-     "ai": false,
-     "sha": "e1beb09d4e10d32901d02045b844ef8489ba01ab",
-     "files": [
-      "Mathlib/Combinatorics/Configuration.lean",
-      "Mathlib/Data/Matrix/Basic.lean",
-      "Mathlib/Data/Matrix/Basis.lean",
-      "Mathlib/GroupTheory/Coxeter/Matrix.lean",
-      "Mathlib/LinearAlgebra/Matrix/Defs.lean",
-      "Mathlib/LinearAlgebra/Matrix/Determinant/Basic.lean"
      ]
     }
    ],
@@ -6478,6 +6423,246 @@
   }
  },
  "feed": [
+  {
+   "date": "2026-11-12",
+   "title": "Symmetrizable matices",
+   "scope": "LinearAlgebra",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45801",
+   "ai": false,
+   "sha": "af6dcfbf23867d9df7ee4835e28567fe509a2677",
+   "files": [
+    "Mathlib/LinearAlgebra/Matrix/Symmetrizable.lean"
+   ],
+   "fields": [
+    "linear_algebra",
+    "nine_chapters"
+   ]
+  },
+  {
+   "date": "2026-11-12",
+   "title": "Add prodMk lemmas",
+   "scope": "Topology/CompactOpen",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45907",
+   "ai": false,
+   "sha": "3b957bcfe533b2a04c41b67e4b6b3b962c5898a4",
+   "files": [
+    "Mathlib/Topology/CompactOpen.lean",
+    "Mathlib/Topology/Compactness/LocallyCompact.lean",
+    "Mathlib/Topology/ContinuousMap/Basic.lean"
+   ],
+   "fields": [
+    "point_set_topology"
+   ]
+  },
+  {
+   "date": "2026-11-12",
+   "title": "The simplicial set of affine simplices of a convex space",
+   "scope": "Geometry/Convex",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/43528",
+   "ai": false,
+   "sha": "201a1e519f49cfb73bb24914fb5d3c402cdb0a0a",
+   "files": [
+    "Mathlib/AlgebraicTopology/SimplexCategory/Basic.lean",
+    "Mathlib/AlgebraicTopology/SimplicialSet/Basic.lean",
+    "Mathlib/Geometry/Convex/ConvexSpace/ToSSet.lean"
+   ],
+   "fields": [
+    "algebraic_topology"
+   ]
+  },
+  {
+   "date": "2026-11-12",
+   "title": "Abelianization of a quotient",
+   "scope": "GroupTheory/Abelianization/Defs",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45834",
+   "ai": false,
+   "sha": "e1545ebed97594477bbd88b2fe948ffce56e5af2",
+   "files": [
+    "Mathlib/GroupTheory/Abelianization/Defs.lean"
+   ],
+   "fields": [
+    "group_theory"
+   ]
+  },
+  {
+   "date": "2026-11-12",
+   "title": "The degree of an extension of absolute values",
+   "scope": "Analysis/Normed/Field/WithAbs",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45192",
+   "ai": false,
+   "sha": "2270f87f5f84941dcce91d6dcfd8e9b91b63275e",
+   "files": [
+    "Mathlib/Analysis/Normed/Field/WithAbs.lean",
+    "Mathlib/Analysis/Normed/Ring/WithAbs.lean"
+   ],
+   "fields": [
+    "functional_analysis"
+   ]
+  },
+  {
+   "date": "2026-11-12",
+   "title": "Basic results about `LieHom`",
+   "scope": null,
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45757",
+   "ai": false,
+   "sha": "1d2d28f3e26701df896ceae6d5f96e5fb8be4519",
+   "files": [
+    "Mathlib/Algebra/Lie/Ideal.lean"
+   ],
+   "fields": [
+    "lie_theory",
+    "gauge_theory"
+   ]
+  },
+  {
+   "date": "2026-11-11",
+   "title": "Drop finiteness from many theorems",
+   "scope": "LinearAlgebra/Matrix/PosDef",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45897",
+   "ai": true,
+   "sha": "b97762998b0ee14aea85f37006d06dfff25a6afa",
+   "files": [
+    "Mathlib/Analysis/InnerProductSpace/GramMatrix.lean",
+    "Mathlib/Analysis/Matrix/Order.lean",
+    "Mathlib/Data/Matrix/Block.lean",
+    "Mathlib/LinearAlgebra/Matrix/Hermitian.lean",
+    "Mathlib/LinearAlgebra/Matrix/PosDef.lean",
+    "Mathlib/MeasureTheory/Function/L2Space.lean"
+   ],
+   "fields": [
+    "linear_algebra",
+    "measure_theory",
+    "functional_analysis",
+    "nine_chapters",
+    "quantum_mechanics"
+   ]
+  },
+  {
+   "date": "2026-11-11",
+   "title": "The Gelfand radius as an algebra norm",
+   "scope": "Analysis/Normed/Unbundled/GelfandRadiusNorm",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/44983",
+   "ai": false,
+   "sha": "1c1b51c28bcb0db374090df237584aea36087298",
+   "files": [
+    "Mathlib/Analysis/Matrix/GelfandRadius.lean",
+    "Mathlib/Analysis/Normed/Unbundled/GelfandRadiusNorm.lean"
+   ],
+   "fields": [
+    "functional_analysis"
+   ]
+  },
+  {
+   "date": "2026-11-11",
+   "title": "`ClosedIciTopology` and `OrderClosedTopology` instances for `Compacts`",
+   "scope": "Topology/Sets",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/43637",
+   "ai": false,
+   "sha": "861b9942cf81af84d3a1d5dc4139497be980b64f",
+   "files": [
+    "Mathlib/Topology/Sets/VietorisTopology.lean"
+   ],
+   "fields": [
+    "point_set_topology"
+   ]
+  },
+  {
+   "date": "2026-11-11",
+   "title": "The (weak) prime number theorem",
+   "scope": "NumberTheory/LSeries",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/43238",
+   "ai": false,
+   "sha": "99fb99cb24fb9e339255260a2090c4770563fa43",
+   "files": [
+    "Mathlib/Analysis/Asymptotics/Lemmas.lean",
+    "Mathlib/NumberTheory/Chebyshev.lean",
+    "Mathlib/NumberTheory/LSeries/WeakPNT.lean"
+   ],
+   "fields": [
+    "analytic_number_theory"
+   ]
+  },
+  {
+   "date": "2026-11-11",
+   "title": "Small missing API lemmas",
+   "scope": "Geometry/Manifold/VectorBundle/Basic",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45448",
+   "ai": false,
+   "sha": "cf6b1c9000fb78e896b21dacc31227af1f19e6ae",
+   "files": [
+    "Mathlib/Geometry/Manifold/VectorBundle/Basic.lean",
+    "Mathlib/Geometry/Manifold/VectorBundle/MDifferentiable.lean"
+   ],
+   "fields": [
+    "differential_geometry",
+    "riemannian_geometry",
+    "tensor_calculus",
+    "differential_topology",
+    "poincare_proof",
+    "general_relativity",
+    "gauge_theory"
+   ]
+  },
+  {
+   "date": "2026-11-11",
+   "title": "Definitions of combinatorial designs",
+   "scope": "Combinatorics/Design/Defs",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/41823",
+   "ai": false,
+   "sha": "da062e9afa75e7074435ef5f3f4dbe6ba1783e61",
+   "files": [
+    "Mathlib/Combinatorics/Design/Defs.lean"
+   ],
+   "fields": [
+    "combinatorics"
+   ]
+  },
+  {
+   "date": "2026-11-11",
+   "title": "`neighborSet` of `coe`/`spanningCoe`",
+   "scope": "Combinatorics/SimpleGraph/Subgraph",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/41629",
+   "ai": false,
+   "sha": "fd27cf6fb03fbdc47ef2766527a2419786869565",
+   "files": [
+    "Mathlib/Combinatorics/SimpleGraph/Subgraph.lean"
+   ],
+   "fields": [
+    "graph_theory",
+    "combinatorics"
+   ]
+  },
+  {
+   "date": "2026-11-11",
+   "title": "More length upper bounds",
+   "scope": "Combinatorics/SimpleGraph/Paths",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/41478",
+   "ai": false,
+   "sha": "ab19bac90981b27f5380941f4b36617e738358c9",
+   "files": [
+    "Mathlib/Combinatorics/SimpleGraph/Paths.lean"
+   ],
+   "fields": [
+    "graph_theory",
+    "combinatorics"
+   ]
+  },
+  {
+   "date": "2026-11-11",
+   "title": "A walk is Eulerian iff it is a trail of length `G.edgeSet.encard`",
+   "scope": "SimpleGraph/Trails",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/41623",
+   "ai": false,
+   "sha": "e8af9c8dc066be8c87630e2f35c3ddd26c6375d3",
+   "files": [
+    "Mathlib/Combinatorics/SimpleGraph/Paths.lean",
+    "Mathlib/Combinatorics/SimpleGraph/Trails.lean"
+   ],
+   "fields": [
+    "graph_theory",
+    "combinatorics"
+   ]
+  },
   {
    "date": "2026-11-11",
    "title": "Define `Function.IsConstOn` predicate",
@@ -7247,257 +7432,6 @@
    ]
   },
   {
-   "date": "2026-11-05",
-   "title": "Additivize Abelianization",
-   "scope": "GroupTheory/Abelianization/Defs",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45505",
-   "ai": false,
-   "sha": "a949576ef679d90d7534c00c9896caf30f10e375",
-   "files": [
-    "Mathlib/Algebra/Category/Grp/Adjunctions.lean",
-    "Mathlib/GroupTheory/Abelianization/Defs.lean",
-    "Mathlib/GroupTheory/Abelianization/Finite.lean",
-    "Mathlib/GroupTheory/Focal.lean",
-    "Mathlib/GroupTheory/FreeAbelianGroup.lean",
-    "Mathlib/GroupTheory/Schreier.lean"
-   ],
-   "fields": [
-    "group_theory",
-    "set_theory",
-    "langlands",
-    "representation_theory"
-   ]
-  },
-  {
-   "date": "2026-11-04",
-   "title": "Extra lemmas for κ-presentable objects",
-   "scope": "CategoryTheory/Presentable",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45538",
-   "ai": false,
-   "sha": "a1f757688f06e193dde6155dd240b893f2e4a8ca",
-   "files": [
-    "Mathlib/CategoryTheory/ObjectProperty/IsClosedUnderCardinalFilteredColimits.lean",
-    "Mathlib/CategoryTheory/Presentable/Basic.lean",
-    "Mathlib/CategoryTheory/Presentable/CardinalDirectedPoset.lean",
-    "Mathlib/CategoryTheory/Presentable/Comma.lean"
-   ],
-   "fields": [
-    "category_theory"
-   ]
-  },
-  {
-   "date": "2026-11-04",
-   "title": "The ring of S-integers is a localization and a Dedekind Domain",
-   "scope": "RingTheory/DedekindDomain/SInteger",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/40848",
-   "ai": false,
-   "sha": "f1f7df02e2112b1f4e14de23a2c9dc757b999633",
-   "files": [
-    "Mathlib/RingTheory/DedekindDomain/SInteger.lean",
-    "Mathlib/RingTheory/Ideal/Prime.lean"
-   ],
-   "fields": [
-    "abstract_algebra",
-    "algebraic_number_theory"
-   ]
-  },
-  {
-   "date": "2026-11-04",
-   "title": "Remove redundant hypothesis",
-   "scope": "Data/Nat/Totient",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45664",
-   "ai": false,
-   "sha": "c995178e4e646a896fa65d521b9c96e018db04b7",
-   "files": [
-    "Mathlib/Data/Nat/Totient.lean",
-    "Mathlib/NumberTheory/NumberField/Cyclotomic/Basic.lean",
-    "Mathlib/RingTheory/Polynomial/Cyclotomic/Expand.lean"
-   ],
-   "fields": [
-    "cubic",
-    "abstract_algebra",
-    "algebraic_number_theory"
-   ]
-  },
-  {
-   "date": "2026-11-04",
-   "title": "A group is perfect iff its abelianization is trivial",
-   "scope": "GroupTheory/IsPerfect",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45653",
-   "ai": false,
-   "sha": "75b352cd0c82e9835dda9e8867dd7610f2f9af90",
-   "files": [
-    "Mathlib/GroupTheory/IsPerfect.lean",
-    "Mathlib/GroupTheory/QuotientGroup/Basic.lean"
-   ],
-   "fields": [
-    "group_theory"
-   ]
-  },
-  {
-   "date": "2026-11-04",
-   "title": "Scheme level order of vanishing api",
-   "scope": "AlgebraicGeometry",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/43273",
-   "ai": false,
-   "sha": "3996015a88981a113c17e04c8289adac9fe19518",
-   "files": [
-    "Mathlib/AlgebraicGeometry/AffineScheme.lean",
-    "Mathlib/AlgebraicGeometry/FunctionField.lean",
-    "Mathlib/AlgebraicGeometry/OrderOfVanishing/Basic.lean",
-    "Mathlib/AlgebraicGeometry/OrderOfVanishing/DVR.lean",
-    "Mathlib/AlgebraicGeometry/Restrict.lean"
-   ],
-   "fields": [
-    "algebraic_geometry",
-    "schemes",
-    "git"
-   ]
-  },
-  {
-   "date": "2026-11-03",
-   "title": "The Wiener-Ikehara Tauberian theorem",
-   "scope": "NumberTheory/LSeries",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/43233",
-   "ai": false,
-   "sha": "d4bda671c42c9097d07275af15f9c288cad61a28",
-   "files": [
-    "Mathlib/Analysis/Fourier/Notation.lean",
-    "Mathlib/Analysis/SpecialFunctions/ImproperIntegrals.lean",
-    "Mathlib/NumberTheory/LSeries/WienerIkehara.lean"
-   ],
-   "fields": [
-    "fourier",
-    "analytic_number_theory"
-   ]
-  },
-  {
-   "date": "2026-11-03",
-   "title": "Quotients of countable groups are countable",
-   "scope": "GroupTheory/Coset/Card",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45597",
-   "ai": false,
-   "sha": "92e25221e3b47d691cbd4a9a1eb8911ac111e6dc",
-   "files": [
-    "Mathlib/GroupTheory/Coset/Card.lean"
-   ],
-   "fields": [
-    "group_theory"
-   ]
-  },
-  {
-   "date": "2026-11-03",
-   "title": "Add `QuotientGroup.map_injective_iff`",
-   "scope": "GroupTheory/QuotientGroup",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45580",
-   "ai": false,
-   "sha": "4ab310d7d8d94a6c98cbc3ad0b10544745abed7f",
-   "files": [
-    "Mathlib/GroupTheory/QuotientGroup/Defs.lean"
-   ],
-   "fields": [
-    "group_theory"
-   ]
-  },
-  {
-   "date": "2026-11-03",
-   "title": "Add `inertiaIdempotent`",
-   "scope": "RingTheory/Unramified/Finite",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45390",
-   "ai": false,
-   "sha": "5f44e8099aaff86b8804252d5189966a5b3b8f78",
-   "files": [
-    "Mathlib/Algebra/Algebra/Hom.lean",
-    "Mathlib/Algebra/GroupWithZero/Idempotent.lean",
-    "Mathlib/RingTheory/Unramified/Finite.lean"
-   ],
-   "fields": [
-    "zero",
-    "abstract_algebra"
-   ]
-  },
-  {
-   "date": "2026-11-03",
-   "title": "Dense sets in infinite T1 spaces are infinite",
-   "scope": "Topology/Separation/Basic",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45577",
-   "ai": false,
-   "sha": "f1f98279b8979018eef70958d4d74082d55150bc",
-   "files": [
-    "Mathlib/Topology/Closure.lean",
-    "Mathlib/Topology/Separation/Basic.lean"
-   ],
-   "fields": [
-    "point_set_topology"
-   ]
-  },
-  {
-   "date": "2026-11-03",
-   "title": "Add `equalizerIdempotent`",
-   "scope": "RingTheory/Unramified/Finite",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45499",
-   "ai": false,
-   "sha": "296b5b4ac142878b519837d1ba8024ef92961e92",
-   "files": [
-    "Mathlib/RingTheory/TensorProduct/Maps.lean",
-    "Mathlib/RingTheory/Unramified/Finite.lean"
-   ],
-   "fields": [
-    "abstract_algebra"
-   ]
-  },
-  {
-   "date": "2026-11-03",
-   "title": "(SetTheory/Ordinal/Arithmetic): prove `ofNat` version of `simp` lemma",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45260",
-   "ai": false,
-   "sha": "40722835d75d0c5414a37162211fbaf86d0e8f45",
-   "files": [
-    "Mathlib/SetTheory/Ordinal/Arithmetic.lean"
-   ],
-   "fields": [
-    "set_theory"
-   ]
-  },
-  {
-   "date": "2026-11-03",
-   "title": "`row` and `col` are linear maps",
-   "scope": "LinearAlgebra/Matrix",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44933",
-   "ai": false,
-   "sha": "e1beb09d4e10d32901d02045b844ef8489ba01ab",
-   "files": [
-    "Mathlib/Combinatorics/Configuration.lean",
-    "Mathlib/Data/Matrix/Basic.lean",
-    "Mathlib/Data/Matrix/Basis.lean",
-    "Mathlib/GroupTheory/Coxeter/Matrix.lean",
-    "Mathlib/LinearAlgebra/Matrix/Defs.lean",
-    "Mathlib/LinearAlgebra/Matrix/Determinant/Basic.lean"
-   ],
-   "fields": [
-    "group_theory",
-    "linear_algebra",
-    "nine_chapters",
-    "combinatorics"
-   ]
-  },
-  {
-   "date": "2026-11-03",
-   "title": "Connect `Finset.HasAntidiagonal` with `Filter.TendstoCofinite`",
-   "scope": "Algebra/Order/Antidiagonal",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/41555",
-   "ai": false,
-   "sha": "69692f9a627a105e4213f1d97eb89e592746464c",
-   "files": [
-    "Mathlib/Algebra/Order/Antidiag/Prod.lean",
-    "Mathlib/Order/Filter/TendstoCofinite.lean"
-   ],
-   "fields": [
-    "rigorous_analysis"
-   ]
-  },
-  {
    "date": "2026-10-31",
    "title": "(ZMod (2 ^ n))ˣ is generated by -1 and 5",
    "scope": "RingTheory/ZMod/UnitsCyclic",
@@ -8252,10 +8186,10 @@
    "kind": "human",
    "description": "Kontorovich and Tao's collaborative project on the prime number theorem and related results.",
    "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",
-   "updated": "2026-10-19",
+   "updated": "2026-11-12",
    "latest": {
-    "title": "Chore: bump deps to V4.35.0 (#1798)",
-    "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd/commit/127b50e33f6033e2147921167a117af96d9ba4ea"
+    "title": "chore: silence infos (#1807)",
+    "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd/commit/2e6b8d28eafa94b4ef12bcc8e96283be74492dc7"
    },
    "overview": "AlexKontorovich__PrimeNumberTheoremAnd.json",
    "lean_files": 232
@@ -8273,10 +8207,10 @@
    "kind": "benchmark",
    "description": "Google DeepMind's collection of open conjectures (Erdős problems and others) stated in Lean, used as targets for provers.",
    "url": "https://github.com/google-deepmind/formal-conjectures",
-   "updated": "2026-11-11",
+   "updated": "2026-11-12",
    "latest": {
-    "title": "feat(Wikipedia/DiophantineTuple): prove that there are infinitely many integral Diophantine 4-tuples (#7896)",
-    "url": "https://github.com/google-deepmind/formal-conjectures/commit/da703a5f239f734a47ede2f4e99b9ccc9e644cb5"
+    "title": "feat(ErdosProblems/739): add Erdős Problem 739 (#7703)",
+    "url": "https://github.com/google-deepmind/formal-conjectures/commit/a425ca3eb797fe927cb88c950565fdcbbbbada70"
    },
    "overview": "google-deepmind__formal-conjectures.json",
    "lean_files": 400
