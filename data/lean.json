@@ -1,13 +1,13 @@
 {
- "generated": "2026-11-14T13:28Z",
+ "generated": "2026-11-15T13:54Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "bbff2954fe5ee3b7a4b33cc26ef873a1c3277d91",
-  "date": "2026-11-14",
-  "files": 8706,
-  "changes": 1281,
-  "additions": 592,
-  "ai_additions": 65
+  "commit": "f78acaf72ad85f1dc68259a994f3e2f1494fa334",
+  "date": "2026-11-15",
+  "files": 8709,
+  "changes": 1244,
+  "additions": 573,
+  "ai_additions": 63
  },
  "fields": {
   "babylonian": {
@@ -288,8 +288,8 @@
     "Mathlib/Analysis/SpecialFunctions/Trigonometric"
    ],
    "files": 21,
-   "additions": 4,
-   "ai_additions": 2,
+   "additions": 3,
+   "ai_additions": 1,
    "recent": [
     {
      "date": "2026-10-29",
@@ -335,17 +335,6 @@
       "Mathlib/Analysis/SpecialFunctions/Trigonometric/ComplexDeriv.lean",
       "Mathlib/Analysis/SpecialFunctions/Trigonometric/Deriv.lean",
       "Mathlib/Analysis/SpecialFunctions/Trigonometric/Sinc.lean"
-     ]
-    },
-    {
-     "date": "2026-09-15",
-     "title": "Sin_add_le_sin_add_sin",
-     "scope": "Analysis",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43812",
-     "ai": true,
-     "sha": "2711714aa268b4ff194d90b04200f1ad858d1df3",
-     "files": [
-      "Mathlib/Analysis/SpecialFunctions/Trigonometric/Basic.lean"
      ]
     }
    ],
@@ -838,7 +827,7 @@
     "Mathlib/LinearAlgebra/AffineSpace"
    ],
    "files": 25,
-   "additions": 14,
+   "additions": 13,
    "ai_additions": 3,
    "recent": [
     {
@@ -919,7 +908,7 @@
     "Mathlib/AlgebraicGeometry/ProjectiveSpectrum"
    ],
    "files": 15,
-   "additions": 4,
+   "additions": 3,
    "ai_additions": 1,
    "recent": [
     {
@@ -965,21 +954,6 @@
       "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
       "Mathlib/Algebra/Algebra/Bilinear.lean",
       "Mathlib/Algebra/Algebra/Field.lean"
-     ]
-    },
-    {
-     "date": "2026-09-15",
-     "title": "Add `AffineIndepOn`",
-     "scope": "AffineIndependent",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43459",
-     "ai": false,
-     "sha": "5f8d829641684affdf2a2ee6bb6c0b2633df2da0",
-     "files": [
-      "Mathlib/Data/Fin/VecNotation.lean",
-      "Mathlib/LinearAlgebra/AffineSpace/FiniteDimensional.lean",
-      "Mathlib/LinearAlgebra/AffineSpace/Independent.lean",
-      "Mathlib/LinearAlgebra/Matrix/Notation.lean",
-      "Mathlib/LinearAlgebra/Projectivization/Basic.lean"
      ]
     }
    ],
@@ -1690,7 +1664,7 @@
     "Mathlib/Analysis/Analytic"
    ],
    "files": 92,
-   "additions": 22,
+   "additions": 21,
    "ai_additions": 2,
    "recent": [
     {
@@ -1996,7 +1970,7 @@
     "Mathlib/FieldTheory/AbelRuffini"
    ],
    "files": 182,
-   "additions": 44,
+   "additions": 42,
    "ai_additions": 7,
    "recent": [
     {
@@ -2159,9 +2133,24 @@
     "Mathlib/Data/Matrix"
    ],
    "files": 407,
-   "additions": 71,
+   "additions": 68,
    "ai_additions": 7,
    "recent": [
+    {
+     "date": "2026-11-15",
+     "title": "Improve lattice definition",
+     "scope": "Algebra/Module/Lattice",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44365",
+     "ai": false,
+     "sha": "f78acaf72ad85f1dc68259a994f3e2f1494fa334",
+     "files": [
+      "Mathlib/Algebra/Module/Lattice.lean",
+      "Mathlib/Algebra/Module/Lattice/Basic.lean",
+      "Mathlib/Algebra/Module/Lattice/Full.lean",
+      "Mathlib/Algebra/Module/ZLattice/Basic.lean",
+      "Mathlib/LinearAlgebra/Dimension/Localization.lean"
+     ]
+    },
     {
      "date": "2026-11-13",
      "title": "Generalize basic lemmas to rectangular matrices",
@@ -2215,21 +2204,6 @@
      "files": [
       "Mathlib/LinearAlgebra/Matrix/Defs.lean",
       "Mathlib/LinearAlgebra/Matrix/Reindex.lean"
-     ]
-    },
-    {
-     "date": "2026-11-10",
-     "title": "Use `IsApply` for `AffineMap` and `AffineIsometry`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45599",
-     "ai": false,
-     "sha": "2b814700bf7c94c4f30abab6c7d8dbd5d007f559",
-     "files": [
-      "Mathlib/Analysis/Convex/PathConnected.lean",
-      "Mathlib/Analysis/Normed/Affine/Isometry.lean",
-      "Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/Rpow/RingInverseOrder.lean",
-      "Mathlib/LinearAlgebra/AffineSpace/AffineMap.lean",
-      "Mathlib/Topology/Path.lean"
      ]
     }
    ],
@@ -2486,7 +2460,7 @@
     "Mathlib/RingTheory/Nullstellensatz"
    ],
    "files": 142,
-   "additions": 8,
+   "additions": 7,
    "ai_additions": 1,
    "recent": [
     {
@@ -2748,7 +2722,7 @@
     "Mathlib/MeasureTheory"
    ],
    "files": 342,
-   "additions": 45,
+   "additions": 44,
    "ai_additions": 3,
    "recent": [
     {
@@ -2835,7 +2809,7 @@
     "Mathlib/Analysis/InnerProductSpace"
    ],
    "files": 221,
-   "additions": 38,
+   "additions": 36,
    "ai_additions": 3,
    "recent": [
     {
@@ -2913,7 +2887,7 @@
     "Mathlib/Topology"
    ],
    "files": 706,
-   "additions": 79,
+   "additions": 76,
    "ai_additions": 7,
    "recent": [
     {
@@ -2992,10 +2966,38 @@
     "Mathlib/Algebra/Ring",
     "Mathlib/Algebra/Module"
    ],
-   "files": 908,
-   "additions": 91,
+   "files": 910,
+   "additions": 89,
    "ai_additions": 21,
    "recent": [
+    {
+     "date": "2026-11-15",
+     "title": "Improve lattice definition",
+     "scope": "Algebra/Module/Lattice",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44365",
+     "ai": false,
+     "sha": "f78acaf72ad85f1dc68259a994f3e2f1494fa334",
+     "files": [
+      "Mathlib/Algebra/Module/Lattice.lean",
+      "Mathlib/Algebra/Module/Lattice/Basic.lean",
+      "Mathlib/Algebra/Module/Lattice/Full.lean",
+      "Mathlib/Algebra/Module/ZLattice/Basic.lean",
+      "Mathlib/LinearAlgebra/Dimension/Localization.lean"
+     ]
+    },
+    {
+     "date": "2026-11-14",
+     "title": "Right-divisibility under a hom",
+     "scope": "Algebra",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45245",
+     "ai": false,
+     "sha": "7692d7fbbf9cad52d465b18742a9838e5d0c84c5",
+     "files": [
+      "Mathlib/Algebra/Divisibility/Hom.lean",
+      "Mathlib/Algebra/Ring/Divisibility/Basic.lean",
+      "Mathlib/RingTheory/UniqueFactorizationDomain/NormalizedFactors.lean"
+     ]
+    },
     {
      "date": "2026-11-14",
      "title": "Adic valuations are trivial on subfields",
@@ -3033,33 +3035,6 @@
      "sha": "527b85abc1b6f08038d22339005d98d5233dc7e8",
      "files": [
       "Mathlib/RingTheory/MvPowerSeries/Order.lean"
-     ]
-    },
-    {
-     "date": "2026-11-10",
-     "title": "Add some lemmas",
-     "scope": "PowerSeries/Derivative",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43305",
-     "ai": false,
-     "sha": "16956b2a69fcafe09c0668bc262d04a8df3c1a16",
-     "files": [
-      "Mathlib/RingTheory/PowerSeries/Derivative.lean"
-     ]
-    },
-    {
-     "date": "2026-11-10",
-     "title": "Use `IsApply` for `OneHom`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45472",
-     "ai": false,
-     "sha": "1d83db4da400590ea79d27f68afb15fedf623f5d",
-     "files": [
-      "Mathlib/Algebra/Group/Hom/Basic.lean",
-      "Mathlib/Algebra/Group/Hom/Defs.lean",
-      "Mathlib/Algebra/Group/Hom/Instances.lean",
-      "Mathlib/Algebra/MvPolynomial/Degrees.lean",
-      "Mathlib/Data/Nat/Factorization/Basic.lean",
-      "Mathlib/Data/Nat/Factorization/Defs.lean"
      ]
     }
    ],
@@ -3380,7 +3355,7 @@
     "Mathlib/AlgebraicGeometry"
    ],
    "files": 141,
-   "additions": 8,
+   "additions": 7,
    "ai_additions": 1,
    "recent": [
     {
@@ -3468,7 +3443,7 @@
     "Mathlib/RingTheory/Invariant"
    ],
    "files": 145,
-   "additions": 8,
+   "additions": 7,
    "ai_additions": 1,
    "recent": [
     {
@@ -3702,7 +3677,7 @@
     "Mathlib/Data/Int"
    ],
    "files": 126,
-   "additions": 32,
+   "additions": 30,
    "ai_additions": 2,
    "recent": [
     {
@@ -3864,7 +3839,7 @@
     "Mathlib/NumberTheory/Cyclotomic"
    ],
    "files": 65,
-   "additions": 16,
+   "additions": 15,
    "ai_additions": 6,
    "recent": [
     {
@@ -4807,7 +4782,7 @@
     "Mathlib/Analysis/Calculus/FDeriv"
    ],
    "files": 41,
-   "additions": 9,
+   "additions": 8,
    "ai_additions": 1,
    "recent": [
     {
@@ -5123,7 +5098,7 @@
     "Mathlib/Analysis/CStarAlgebra"
    ],
    "files": 102,
-   "additions": 19,
+   "additions": 18,
    "ai_additions": 2,
    "recent": [
     {
@@ -5204,7 +5179,7 @@
     "Mathlib/Analysis/InnerProductSpace/Projection"
    ],
    "files": 5,
-   "additions": 6,
+   "additions": 5,
    "ai_additions": 0,
    "recent": [
     {
@@ -6077,9 +6052,21 @@
     "Mathlib/GroupTheory/OrderOfElement"
    ],
    "files": 7,
-   "additions": 4,
+   "additions": 5,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-11-15",
+     "title": "Prime subfield as a finset",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44690",
+     "ai": false,
+     "sha": "d9a3e61fb84eff4c6bded19e8fbf7138f8890816",
+     "files": [
+      "Mathlib/FieldTheory/Finite/Basic.lean",
+      "Mathlib/FieldTheory/Finite/GaloisField.lean"
+     ]
+    },
     {
      "date": "2026-10-31",
      "title": "(ZMod (2 ^ n))ˣ is generated by -1 and 5",
@@ -6245,26 +6232,9 @@
     "Mathlib/ModelTheory"
    ],
    "files": 34,
-   "additions": 1,
+   "additions": 0,
    "ai_additions": 0,
-   "recent": [
-    {
-     "date": "2026-09-15",
-     "title": "Add general `IsMulFG`",
-     "scope": "GroupTheory/Finiteness",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43532",
-     "ai": false,
-     "sha": "06d89b7685cb97c7ccc0d9b14213e8617b063ebd",
-     "files": [
-      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
-      "Mathlib/Algebra/Group/Submonoid/Basic.lean",
-      "Mathlib/Data/Set/Finite/Basic.lean",
-      "Mathlib/GroupTheory/Finiteness.lean",
-      "Mathlib/GroupTheory/Generators.lean",
-      "Mathlib/GroupTheory/Schreier.lean"
-     ]
-    }
-   ],
+   "recent": [],
    "overview": "field-model_theory.json"
   },
   "automata": {
@@ -6412,6 +6382,56 @@
   }
  },
  "feed": [
+  {
+   "date": "2026-11-15",
+   "title": "Improve lattice definition",
+   "scope": "Algebra/Module/Lattice",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/44365",
+   "ai": false,
+   "sha": "f78acaf72ad85f1dc68259a994f3e2f1494fa334",
+   "files": [
+    "Mathlib/Algebra/Module/Lattice.lean",
+    "Mathlib/Algebra/Module/Lattice/Basic.lean",
+    "Mathlib/Algebra/Module/Lattice/Full.lean",
+    "Mathlib/Algebra/Module/ZLattice/Basic.lean",
+    "Mathlib/LinearAlgebra/Dimension/Localization.lean"
+   ],
+   "fields": [
+    "linear_algebra",
+    "abstract_algebra"
+   ]
+  },
+  {
+   "date": "2026-11-15",
+   "title": "Prime subfield as a finset",
+   "scope": null,
+   "url": "https://github.com/leanprover-community/mathlib4/pull/44690",
+   "ai": false,
+   "sha": "d9a3e61fb84eff4c6bded19e8fbf7138f8890816",
+   "files": [
+    "Mathlib/FieldTheory/Finite/Basic.lean",
+    "Mathlib/FieldTheory/Finite/GaloisField.lean"
+   ],
+   "fields": [
+    "cryptography"
+   ]
+  },
+  {
+   "date": "2026-11-14",
+   "title": "Right-divisibility under a hom",
+   "scope": "Algebra",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45245",
+   "ai": false,
+   "sha": "7692d7fbbf9cad52d465b18742a9838e5d0c84c5",
+   "files": [
+    "Mathlib/Algebra/Divisibility/Hom.lean",
+    "Mathlib/Algebra/Ring/Divisibility/Basic.lean",
+    "Mathlib/RingTheory/UniqueFactorizationDomain/NormalizedFactors.lean"
+   ],
+   "fields": [
+    "abstract_algebra"
+   ]
+  },
   {
    "date": "2026-11-14",
    "title": "Split `transfiniteIterate` into `sup` and `inf` versions",
@@ -7368,56 +7388,6 @@
    ]
   },
   {
-   "date": "2026-11-07",
-   "title": "Add the induced group equiv on `SL n` by a ring equiv and the equivalence between `SL n (Π i, R i) ≃* Π i, SL n (R i) `",
-   "scope": "LinearAlgebra/Matrix/SpecialLinearGroup",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44094",
-   "ai": false,
-   "sha": "8c44dba7254bae656135ee4d8eba2c7f24718678",
-   "files": [
-    "Mathlib/LinearAlgebra/Matrix/SpecialLinearGroup.lean"
-   ],
-   "fields": [
-    "linear_algebra",
-    "nine_chapters"
-   ]
-  },
-  {
-   "date": "2026-11-07",
-   "title": "The homology functor is accessible",
-   "scope": "Algebra/Homology",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/43980",
-   "ai": false,
-   "sha": "2cb5872e1cfff6636a837f2a479f807546d72dc2",
-   "files": [
-    "Mathlib/Algebra/Homology/ShortComplex/Basic.lean",
-    "Mathlib/Algebra/Homology/ShortComplex/HomologicalComplex.lean",
-    "Mathlib/Algebra/Homology/ShortComplex/Homology.lean",
-    "Mathlib/Algebra/Homology/ShortComplex/HomologyCofork.lean",
-    "Mathlib/Algebra/Homology/ShortComplex/LeftHomology.lean",
-    "Mathlib/Algebra/Homology/ShortComplex/Linear.lean"
-   ],
-   "fields": [
-    "category_theory",
-    "homological_algebra"
-   ]
-  },
-  {
-   "date": "2026-11-07",
-   "title": "Instances for `IsMulFG (closure s)`",
-   "scope": "GroupTheory/Finiteness",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/43846",
-   "ai": false,
-   "sha": "5315b0c48779926ad8572951525212f6991a4fb8",
-   "files": [
-    "Mathlib/GroupTheory/Commutator/Finite.lean",
-    "Mathlib/GroupTheory/Finiteness.lean"
-   ],
-   "fields": [
-    "group_theory"
-   ]
-  },
-  {
    "date": "2026-11-06",
    "title": "`multiplicity_pow` without finiteness hypothesis",
    "scope": "RingTheory/Multiplicity",
@@ -8065,20 +8035,6 @@
    "fields": [
     "group_theory"
    ]
-  },
-  {
-   "date": "2026-09-15",
-   "title": "Sin_add_le_sin_add_sin",
-   "scope": "Analysis",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/43812",
-   "ai": true,
-   "sha": "2711714aa268b4ff194d90b04200f1ad858d1df3",
-   "files": [
-    "Mathlib/Analysis/SpecialFunctions/Trigonometric/Basic.lean"
-   ],
-   "fields": [
-    "trigonometry"
-   ]
   }
  ],
  "projects": [
@@ -8127,10 +8083,10 @@
    "kind": "human",
    "description": "Kontorovich and Tao's collaborative project on the prime number theorem and related results.",
    "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",
-   "updated": "2026-11-12",
+   "updated": "2026-11-14",
    "latest": {
-    "title": "chore: don't warn on `sorry` (#1809)",
-    "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd/commit/938912bbff637bdb18025f0cfd62db3939b63b0a"
+    "title": "blueprint updates (#1813)",
+    "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd/commit/a4fb6989b07e9c76b511807ae93e33e25b820e9b"
    },
    "overview": "AlexKontorovich__PrimeNumberTheoremAnd.json",
    "lean_files": 232
@@ -8148,10 +8104,10 @@
    "kind": "benchmark",
    "description": "Google DeepMind's collection of open conjectures (Erdős problems and others) stated in Lean, used as targets for provers.",
    "url": "https://github.com/google-deepmind/formal-conjectures",
-   "updated": "2026-11-13",
+   "updated": "2026-11-14",
    "latest": {
-    "title": "feat(WrittenOnTheWallII): link Lean refutation of conjecture 291 (#7248)",
-    "url": "https://github.com/google-deepmind/formal-conjectures/commit/a919f7f47b836b766f378c2b1360b28168bbdd9d"
+    "title": "feat(Wikipedia/RamseyNumbers): link the Palomar entry for the formal proof of R(5,5) ≥ 43 (#7998)",
+    "url": "https://github.com/google-deepmind/formal-conjectures/commit/e028240a61822d970c933f4656f51da025cf200b"
    },
    "overview": "google-deepmind__formal-conjectures.json",
    "lean_files": 400
