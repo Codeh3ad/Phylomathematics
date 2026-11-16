@@ -1,13 +1,13 @@
 {
- "generated": "2026-11-15T13:54Z",
+ "generated": "2026-11-16T15:41Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "f78acaf72ad85f1dc68259a994f3e2f1494fa334",
-  "date": "2026-11-15",
-  "files": 8709,
-  "changes": 1244,
+  "commit": "1b5169435bfa38cc715628bf4e0fd90e4ffa69af",
+  "date": "2026-11-16",
+  "files": 8711,
+  "changes": 1246,
   "additions": 573,
-  "ai_additions": 63
+  "ai_additions": 62
  },
  "fields": {
   "babylonian": {
@@ -490,9 +490,25 @@
     "Mathlib/Algebra/Polynomial"
    ],
    "files": 65,
-   "additions": 12,
+   "additions": 13,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-11-16",
+     "title": "Root existence for odd-degree polynomials",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44287",
+     "ai": false,
+     "sha": "ac824a7eca054ddf2d7fd44eab00aa81639b5e04",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Group/Finset/Lemmas.lean",
+      "Mathlib/Algebra/Polynomial/FieldDivision.lean",
+      "Mathlib/Algebra/Ring/Int/Parity.lean",
+      "Mathlib/Algebra/Ring/Parity.lean",
+      "Mathlib/Combinatorics/SimpleGraph/Coloring/Constructions.lean",
+      "Mathlib/RingTheory/Polynomial/UniqueFactorization.lean"
+     ]
+    },
     {
      "date": "2026-10-31",
      "title": "Use `max`/`min` for `union`/`inter` in `Set`, `Finset`, `ZFSet`, `Class`",
@@ -551,18 +567,6 @@
       "Mathlib/Algebra/Lie/Derivation/Basic.lean",
       "Mathlib/Algebra/Lie/EngelSubalgebra.lean",
       "Mathlib/Algebra/Lie/LieTheorem.lean"
-     ]
-    },
-    {
-     "date": "2026-10-24",
-     "title": "Add Algebra.Polynomial.Laurent.Roots",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43264",
-     "ai": false,
-     "sha": "fdc20e4c7de3bf346efdabe4d36ecc73101e2fe8",
-     "files": [
-      "Mathlib/Algebra/Polynomial/Laurent.lean",
-      "Mathlib/Algebra/Polynomial/Laurent/Roots.lean"
      ]
     }
    ],
@@ -1232,9 +1236,25 @@
     "Mathlib/Combinatorics/Digraph"
    ],
    "files": 80,
-   "additions": 29,
+   "additions": 30,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-11-16",
+     "title": "Root existence for odd-degree polynomials",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44287",
+     "ai": false,
+     "sha": "ac824a7eca054ddf2d7fd44eab00aa81639b5e04",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Group/Finset/Lemmas.lean",
+      "Mathlib/Algebra/Polynomial/FieldDivision.lean",
+      "Mathlib/Algebra/Ring/Int/Parity.lean",
+      "Mathlib/Algebra/Ring/Parity.lean",
+      "Mathlib/Combinatorics/SimpleGraph/Coloring/Constructions.lean",
+      "Mathlib/RingTheory/Polynomial/UniqueFactorization.lean"
+     ]
+    },
     {
      "date": "2026-11-13",
      "title": "Generalize basic lemmas to rectangular matrices",
@@ -1283,17 +1303,6 @@
      "files": [
       "Mathlib/Combinatorics/SimpleGraph/Paths.lean",
       "Mathlib/Combinatorics/SimpleGraph/Trails.lean"
-     ]
-    },
-    {
-     "date": "2026-11-10",
-     "title": "More `map`/`comap` API",
-     "scope": "Combinatorics/SimpleGraph/Maps",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42370",
-     "ai": false,
-     "sha": "a1ba21c8e6fc356b7bd5f4bf2adbcec28da4f997",
-     "files": [
-      "Mathlib/Combinatorics/SimpleGraph/Maps.lean"
      ]
     }
    ],
@@ -1969,10 +1978,25 @@
     "Mathlib/FieldTheory/Galois",
     "Mathlib/FieldTheory/AbelRuffini"
    ],
-   "files": 182,
+   "files": 183,
    "additions": 42,
-   "ai_additions": 7,
+   "ai_additions": 6,
    "recent": [
+    {
+     "date": "2026-11-16",
+     "title": "Basic center/centralizer properties",
+     "scope": "FreeGroup",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/42677",
+     "ai": false,
+     "sha": "78dd905f67f41639baceb4e30e799b5dc2b6e09d",
+     "files": [
+      "Mathlib/Algebra/Group/Equiv/Defs.lean",
+      "Mathlib/GroupTheory/FreeGroup/Basic.lean",
+      "Mathlib/GroupTheory/FreeGroup/Center.lean",
+      "Mathlib/GroupTheory/GroupAction/Basic.lean",
+      "Mathlib/GroupTheory/Subgroup/Centralizer.lean"
+     ]
+    },
     {
      "date": "2026-11-13",
      "title": "Equivalences between additive and multiplicative abelianizations",
@@ -2020,20 +2044,6 @@
       "Mathlib/Algebra/MvPolynomial/Degrees.lean",
       "Mathlib/Data/Nat/Factorization/Basic.lean",
       "Mathlib/Data/Nat/Factorization/Defs.lean"
-     ]
-    },
-    {
-     "date": "2026-11-10",
-     "title": "Use `IsApply` for `Function.Embedding`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45504",
-     "ai": false,
-     "sha": "7e4e7fce6f5232c04234987ed5fd321aad1ec19e",
-     "files": [
-      "Mathlib/Algebra/Group/Action/FunLike.lean",
-      "Mathlib/Algebra/Module/FunLike.lean",
-      "Mathlib/GroupTheory/GroupAction/Embedding.lean",
-      "Mathlib/GroupTheory/GroupAction/MultipleTransitivity.lean"
      ]
     }
    ],
@@ -2133,9 +2143,23 @@
     "Mathlib/Data/Matrix"
    ],
    "files": 407,
-   "additions": 68,
+   "additions": 69,
    "ai_additions": 7,
    "recent": [
+    {
+     "date": "2026-11-16",
+     "title": "Add `@[gcongr]` attributes",
+     "scope": "Cardinal/Order",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46054",
+     "ai": false,
+     "sha": "d3b6d8f438cd76e927d69583d94eedf857946523",
+     "files": [
+      "Mathlib/LinearAlgebra/Dimension/RankNullity.lean",
+      "Mathlib/RingTheory/Algebraic/Cardinality.lean",
+      "Mathlib/RingTheory/AlgebraicIndependent/RankAndCardinality.lean",
+      "Mathlib/SetTheory/Cardinal/Order.lean"
+     ]
+    },
     {
      "date": "2026-11-15",
      "title": "Improve lattice definition",
@@ -2192,18 +2216,6 @@
       "Mathlib/LinearAlgebra/Matrix/Hermitian.lean",
       "Mathlib/LinearAlgebra/Matrix/PosDef.lean",
       "Mathlib/MeasureTheory/Function/L2Space.lean"
-     ]
-    },
-    {
-     "date": "2026-11-10",
-     "title": "Add `Matrix.reindexStarAlgEquiv`",
-     "scope": "LinearAlgebra/Matrix/Reindex",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45199",
-     "ai": false,
-     "sha": "96ddf2ec4e7633620b28c3f6346eccae11d0b712",
-     "files": [
-      "Mathlib/LinearAlgebra/Matrix/Defs.lean",
-      "Mathlib/LinearAlgebra/Matrix/Reindex.lean"
      ]
     }
    ],
@@ -2368,9 +2380,23 @@
     "Mathlib/SetTheory/Ordinal"
    ],
    "files": 48,
-   "additions": 15,
+   "additions": 16,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-11-16",
+     "title": "Add `@[gcongr]` attributes",
+     "scope": "Cardinal/Order",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46054",
+     "ai": false,
+     "sha": "d3b6d8f438cd76e927d69583d94eedf857946523",
+     "files": [
+      "Mathlib/LinearAlgebra/Dimension/RankNullity.lean",
+      "Mathlib/RingTheory/Algebraic/Cardinality.lean",
+      "Mathlib/RingTheory/AlgebraicIndependent/RankAndCardinality.lean",
+      "Mathlib/SetTheory/Cardinal/Order.lean"
+     ]
+    },
     {
      "date": "2026-11-10",
      "title": "Use `IsApply` for `OneHom`",
@@ -2426,18 +2452,6 @@
      "sha": "40722835d75d0c5414a37162211fbaf86d0e8f45",
      "files": [
       "Mathlib/SetTheory/Ordinal/Arithmetic.lean"
-     ]
-    },
-    {
-     "date": "2026-10-30",
-     "title": "Add cardinality bounds for direct limits",
-     "scope": "SetTheory/Cardinal",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42125",
-     "ai": false,
-     "sha": "a354dac4230a93f6122bda889b84c9dd954b1b64",
-     "files": [
-      "Mathlib/Order/DirectedInverseSystem.lean",
-      "Mathlib/SetTheory/Cardinal/DirectLimit.lean"
      ]
     }
    ],
@@ -2722,7 +2736,7 @@
     "Mathlib/MeasureTheory"
    ],
    "files": 342,
-   "additions": 44,
+   "additions": 43,
    "ai_additions": 3,
    "recent": [
     {
@@ -2813,6 +2827,19 @@
    "ai_additions": 3,
    "recent": [
     {
+     "date": "2026-11-16",
+     "title": "Add `Unitization.continuous_iff`",
+     "scope": "Analysis/Normed/Algebra/Unitization",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46038",
+     "ai": false,
+     "sha": "a8754b1890a7f7f1c859d48281cb84a1fce64139",
+     "files": [
+      "Mathlib/Analysis/Normed/Algebra/Unitization.lean",
+      "Mathlib/Topology/UniformSpace/Basic.lean",
+      "Mathlib/Topology/UniformSpace/Equiv.lean"
+     ]
+    },
+    {
      "date": "2026-11-13",
      "title": "Generalize basic lemmas to rectangular matrices",
      "scope": "Data/Matrix,LinearAlgebra/Matrix",
@@ -2866,18 +2893,6 @@
       "Mathlib/LinearAlgebra/Matrix/PosDef.lean",
       "Mathlib/MeasureTheory/Function/L2Space.lean"
      ]
-    },
-    {
-     "date": "2026-11-11",
-     "title": "The Gelfand radius as an algebra norm",
-     "scope": "Analysis/Normed/Unbundled/GelfandRadiusNorm",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44983",
-     "ai": false,
-     "sha": "1c1b51c28bcb0db374090df237584aea36087298",
-     "files": [
-      "Mathlib/Analysis/Matrix/GelfandRadius.lean",
-      "Mathlib/Analysis/Normed/Unbundled/GelfandRadiusNorm.lean"
-     ]
     }
    ],
    "overview": "field-functional_analysis.json"
@@ -2887,9 +2902,22 @@
     "Mathlib/Topology"
    ],
    "files": 706,
-   "additions": 76,
+   "additions": 77,
    "ai_additions": 7,
    "recent": [
+    {
+     "date": "2026-11-16",
+     "title": "Add `Unitization.continuous_iff`",
+     "scope": "Analysis/Normed/Algebra/Unitization",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46038",
+     "ai": false,
+     "sha": "a8754b1890a7f7f1c859d48281cb84a1fce64139",
+     "files": [
+      "Mathlib/Analysis/Normed/Algebra/Unitization.lean",
+      "Mathlib/Topology/UniformSpace/Basic.lean",
+      "Mathlib/Topology/UniformSpace/Equiv.lean"
+     ]
+    },
     {
      "date": "2026-11-13",
      "title": "One-sided continuous functions are measurable",
@@ -2942,20 +2970,6 @@
       "Mathlib/Order/Filter/EventuallyConst.lean",
       "Mathlib/Topology/LocallyConstant/Basic.lean"
      ]
-    },
-    {
-     "date": "2026-11-10",
-     "title": "Instances for `Additive`/`Multiplicative`",
-     "scope": "{Topology,MeasureTheory}",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45174",
-     "ai": true,
-     "sha": "3ab576ffe071f344df3b4ad7e0196fd34b3dab3f",
-     "files": [
-      "Mathlib/MeasureTheory/Constructions/BorelSpace/Basic.lean",
-      "Mathlib/MeasureTheory/MeasurableSpace/Constructions.lean",
-      "Mathlib/MeasureTheory/MeasurableSpace/Embedding.lean",
-      "Mathlib/Topology/Bases.lean"
-     ]
     }
    ],
    "overview": "field-point_set_topology.json"
@@ -2967,9 +2981,53 @@
     "Mathlib/Algebra/Module"
    ],
    "files": 910,
-   "additions": 89,
+   "additions": 91,
    "ai_additions": 21,
    "recent": [
+    {
+     "date": "2026-11-16",
+     "title": "`E₄` and `E₆` are algebraically independent",
+     "scope": "NumberTheory/ModularForms",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/38813",
+     "ai": false,
+     "sha": "83bb7b9e3d8cd79484ef78712ad10b9d16523bf3",
+     "files": [
+      "Mathlib/NumberTheory/ModularForms/Basic.lean",
+      "Mathlib/NumberTheory/ModularForms/LevelOne/GradedRing.lean",
+      "Mathlib/RingTheory/MvPolynomial/Groebner.lean",
+      "Mathlib/RingTheory/MvPolynomial/WeightedHomogeneous.lean"
+     ]
+    },
+    {
+     "date": "2026-11-16",
+     "title": "Root existence for odd-degree polynomials",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44287",
+     "ai": false,
+     "sha": "ac824a7eca054ddf2d7fd44eab00aa81639b5e04",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Group/Finset/Lemmas.lean",
+      "Mathlib/Algebra/Polynomial/FieldDivision.lean",
+      "Mathlib/Algebra/Ring/Int/Parity.lean",
+      "Mathlib/Algebra/Ring/Parity.lean",
+      "Mathlib/Combinatorics/SimpleGraph/Coloring/Constructions.lean",
+      "Mathlib/RingTheory/Polynomial/UniqueFactorization.lean"
+     ]
+    },
+    {
+     "date": "2026-11-16",
+     "title": "Add `@[gcongr]` attributes",
+     "scope": "Cardinal/Order",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46054",
+     "ai": false,
+     "sha": "d3b6d8f438cd76e927d69583d94eedf857946523",
+     "files": [
+      "Mathlib/LinearAlgebra/Dimension/RankNullity.lean",
+      "Mathlib/RingTheory/Algebraic/Cardinality.lean",
+      "Mathlib/RingTheory/AlgebraicIndependent/RankAndCardinality.lean",
+      "Mathlib/SetTheory/Cardinal/Order.lean"
+     ]
+    },
     {
      "date": "2026-11-15",
      "title": "Improve lattice definition",
@@ -2996,45 +3054,6 @@
       "Mathlib/Algebra/Divisibility/Hom.lean",
       "Mathlib/Algebra/Ring/Divisibility/Basic.lean",
       "Mathlib/RingTheory/UniqueFactorizationDomain/NormalizedFactors.lean"
-     ]
-    },
-    {
-     "date": "2026-11-14",
-     "title": "Adic valuations are trivial on subfields",
-     "scope": "RingTheory/DedekindDomain/AdicValuation",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42771",
-     "ai": true,
-     "sha": "c699123b78bf586cc3934a4d163a8c50d78b403b",
-     "files": [
-      "Mathlib/RingTheory/Algebraic/Integral.lean",
-      "Mathlib/RingTheory/DedekindDomain/AdicValuation/Valuation.lean"
-     ]
-    },
-    {
-     "date": "2026-11-13",
-     "title": "Generalize basic lemmas to rectangular matrices",
-     "scope": "Data/Matrix,LinearAlgebra/Matrix",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45927",
-     "ai": true,
-     "sha": "189ce949552fd76f236c44ee52e9fc7154adb2a4",
-     "files": [
-      "Mathlib/Analysis/InnerProductSpace/PiL2.lean",
-      "Mathlib/Analysis/Normed/Lp/PiLp.lean",
-      "Mathlib/Analysis/Normed/Module/FiniteDimension.lean",
-      "Mathlib/Combinatorics/SimpleGraph/AdjMatrix.lean",
-      "Mathlib/Data/Matrix/Basis.lean",
-      "Mathlib/Data/Matrix/Block.lean"
-     ]
-    },
-    {
-     "date": "2026-11-13",
-     "title": "Order of a difference of products",
-     "scope": "MvPowerSeries/Order",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44996",
-     "ai": false,
-     "sha": "527b85abc1b6f08038d22339005d98d5233dc7e8",
-     "files": [
-      "Mathlib/RingTheory/MvPowerSeries/Order.lean"
      ]
     }
    ],
@@ -3229,9 +3248,23 @@
     "Mathlib/CategoryTheory"
    ],
    "files": 1140,
-   "additions": 37,
+   "additions": 38,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-11-15",
+     "title": "Start a well-order induction from a non-minimal element",
+     "scope": "CategoryTheory/SmallObject",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45095",
+     "ai": false,
+     "sha": "57f4cb76292a23e3df7fa83728bd5ebcae9fb25a",
+     "files": [
+      "Mathlib/CategoryTheory/Category/Preorder.lean",
+      "Mathlib/CategoryTheory/Limits/Final/Type.lean",
+      "Mathlib/CategoryTheory/SmallObject/WellOrderInductionData.lean",
+      "Mathlib/Logic/Equiv/Defs.lean"
+     ]
+    },
     {
      "date": "2026-11-14",
      "title": "Split `transfiniteIterate` into `sup` and `inf` versions",
@@ -3290,17 +3323,6 @@
       "Mathlib/CategoryTheory/Presentable/Basic.lean",
       "Mathlib/CategoryTheory/Presentable/CardinalDirectedPoset.lean",
       "Mathlib/CategoryTheory/Presentable/Comma.lean"
-     ]
-    },
-    {
-     "date": "2026-11-01",
-     "title": "Lemmas about κ-filtered colimits of types",
-     "scope": "CategoryTheory/Limits/Types",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45527",
-     "ai": false,
-     "sha": "bf20166d9391945becb69bd9e211b6a5383d9b78",
-     "files": [
-      "Mathlib/CategoryTheory/Limits/Types/CardinalFiltered.lean"
      ]
     }
    ],
@@ -3531,9 +3553,23 @@
     "Mathlib/RepresentationTheory"
    ],
    "files": 85,
-   "additions": 16,
+   "additions": 17,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-11-16",
+     "title": "`E₄` and `E₆` are algebraically independent",
+     "scope": "NumberTheory/ModularForms",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/38813",
+     "ai": false,
+     "sha": "83bb7b9e3d8cd79484ef78712ad10b9d16523bf3",
+     "files": [
+      "Mathlib/NumberTheory/ModularForms/Basic.lean",
+      "Mathlib/NumberTheory/ModularForms/LevelOne/GradedRing.lean",
+      "Mathlib/RingTheory/MvPolynomial/Groebner.lean",
+      "Mathlib/RingTheory/MvPolynomial/WeightedHomogeneous.lean"
+     ]
+    },
     {
      "date": "2026-11-08",
      "title": "Derivative of discriminant form",
@@ -3592,19 +3628,6 @@
       "Mathlib/LinearAlgebra/Complex/Module.lean",
       "Mathlib/LinearAlgebra/Matrix/PosDef.lean",
       "Mathlib/NumberTheory/Modular.lean"
-     ]
-    },
-    {
-     "date": "2026-10-29",
-     "title": "Define order at infinity",
-     "scope": "NumberTheory/ModularForms",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45011",
-     "ai": false,
-     "sha": "e1b16f5f6a696c975ec188a85ed08ba1cc98f3bc",
-     "files": [
-      "Mathlib/NumberTheory/ModularForms/OrderAtInfty.lean",
-      "Mathlib/NumberTheory/ModularForms/QExpansion.lean",
-      "Mathlib/NumberTheory/ModularForms/SlashActions.lean"
      ]
     }
    ],
@@ -3838,10 +3861,21 @@
     "Mathlib/RingTheory/DedekindDomain",
     "Mathlib/NumberTheory/Cyclotomic"
    ],
-   "files": 65,
-   "additions": 15,
+   "files": 66,
+   "additions": 16,
    "ai_additions": 6,
    "recent": [
+    {
+     "date": "2026-11-15",
+     "title": "Define Hecke L-Functions",
+     "scope": "NumberTheory/NumberField/HeckeLFunction",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/40736",
+     "ai": false,
+     "sha": "6e96f3e25b9b23468a6f155342b5a1e5e33ac8f9",
+     "files": [
+      "Mathlib/NumberTheory/NumberField/HeckeLFunction.lean"
+     ]
+    },
     {
      "date": "2026-11-14",
      "title": "Adic valuations are trivial on subfields",
@@ -3888,21 +3922,6 @@
       "Mathlib/Data/Nat/Totient.lean",
       "Mathlib/NumberTheory/NumberField/Cyclotomic/Basic.lean",
       "Mathlib/RingTheory/Polynomial/Cyclotomic/Expand.lean"
-     ]
-    },
-    {
-     "date": "2026-10-31",
-     "title": "(ZMod (2 ^ n))ˣ is generated by -1 and 5",
-     "scope": "RingTheory/ZMod/UnitsCyclic",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45509",
-     "ai": true,
-     "sha": "95153009917ea7c8a07d4cbfb0acce197433eff6",
-     "files": [
-      "Mathlib/Data/Nat/Totient.lean",
-      "Mathlib/GroupTheory/OrderOfElement.lean",
-      "Mathlib/NumberTheory/ArithmeticFunction/Carmichael.lean",
-      "Mathlib/NumberTheory/NumberField/Units/Basic.lean",
-      "Mathlib/RingTheory/ZMod/UnitsCyclic.lean"
      ]
     }
    ],
@@ -5897,9 +5916,25 @@
     "Mathlib/Data/Nat/Choose"
    ],
    "files": 203,
-   "additions": 33,
+   "additions": 34,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-11-16",
+     "title": "Root existence for odd-degree polynomials",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44287",
+     "ai": false,
+     "sha": "ac824a7eca054ddf2d7fd44eab00aa81639b5e04",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Group/Finset/Lemmas.lean",
+      "Mathlib/Algebra/Polynomial/FieldDivision.lean",
+      "Mathlib/Algebra/Ring/Int/Parity.lean",
+      "Mathlib/Algebra/Ring/Parity.lean",
+      "Mathlib/Combinatorics/SimpleGraph/Coloring/Constructions.lean",
+      "Mathlib/RingTheory/Polynomial/UniqueFactorization.lean"
+     ]
+    },
     {
      "date": "2026-11-13",
      "title": "Generalize basic lemmas to rectangular matrices",
@@ -5947,18 +5982,6 @@
      "sha": "ab19bac90981b27f5380941f4b36617e738358c9",
      "files": [
       "Mathlib/Combinatorics/SimpleGraph/Paths.lean"
-     ]
-    },
-    {
-     "date": "2026-11-11",
-     "title": "A walk is Eulerian iff it is a trail of length `G.edgeSet.encard`",
-     "scope": "SimpleGraph/Trails",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/41623",
-     "ai": false,
-     "sha": "e8af9c8dc066be8c87630e2f35c3ddd26c6375d3",
-     "files": [
-      "Mathlib/Combinatorics/SimpleGraph/Paths.lean",
-      "Mathlib/Combinatorics/SimpleGraph/Trails.lean"
      ]
     }
    ],
@@ -6382,6 +6405,131 @@
   }
  },
  "feed": [
+  {
+   "date": "2026-11-16",
+   "title": "`E₄` and `E₆` are algebraically independent",
+   "scope": "NumberTheory/ModularForms",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/38813",
+   "ai": false,
+   "sha": "83bb7b9e3d8cd79484ef78712ad10b9d16523bf3",
+   "files": [
+    "Mathlib/NumberTheory/ModularForms/Basic.lean",
+    "Mathlib/NumberTheory/ModularForms/LevelOne/GradedRing.lean",
+    "Mathlib/RingTheory/MvPolynomial/Groebner.lean",
+    "Mathlib/RingTheory/MvPolynomial/WeightedHomogeneous.lean"
+   ],
+   "fields": [
+    "abstract_algebra",
+    "langlands"
+   ]
+  },
+  {
+   "date": "2026-11-16",
+   "title": "Root existence for odd-degree polynomials",
+   "scope": null,
+   "url": "https://github.com/leanprover-community/mathlib4/pull/44287",
+   "ai": false,
+   "sha": "ac824a7eca054ddf2d7fd44eab00aa81639b5e04",
+   "files": [
+    "Mathlib/Algebra/BigOperators/Group/Finset/Lemmas.lean",
+    "Mathlib/Algebra/Polynomial/FieldDivision.lean",
+    "Mathlib/Algebra/Ring/Int/Parity.lean",
+    "Mathlib/Algebra/Ring/Parity.lean",
+    "Mathlib/Combinatorics/SimpleGraph/Coloring/Constructions.lean",
+    "Mathlib/RingTheory/Polynomial/UniqueFactorization.lean"
+   ],
+   "fields": [
+    "al_jabr",
+    "graph_theory",
+    "abstract_algebra",
+    "combinatorics"
+   ]
+  },
+  {
+   "date": "2026-11-16",
+   "title": "Basic center/centralizer properties",
+   "scope": "FreeGroup",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/42677",
+   "ai": false,
+   "sha": "78dd905f67f41639baceb4e30e799b5dc2b6e09d",
+   "files": [
+    "Mathlib/Algebra/Group/Equiv/Defs.lean",
+    "Mathlib/GroupTheory/FreeGroup/Basic.lean",
+    "Mathlib/GroupTheory/FreeGroup/Center.lean",
+    "Mathlib/GroupTheory/GroupAction/Basic.lean",
+    "Mathlib/GroupTheory/Subgroup/Centralizer.lean"
+   ],
+   "fields": [
+    "group_theory"
+   ]
+  },
+  {
+   "date": "2026-11-16",
+   "title": "Add `Unitization.continuous_iff`",
+   "scope": "Analysis/Normed/Algebra/Unitization",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/46038",
+   "ai": false,
+   "sha": "a8754b1890a7f7f1c859d48281cb84a1fce64139",
+   "files": [
+    "Mathlib/Analysis/Normed/Algebra/Unitization.lean",
+    "Mathlib/Topology/UniformSpace/Basic.lean",
+    "Mathlib/Topology/UniformSpace/Equiv.lean"
+   ],
+   "fields": [
+    "functional_analysis",
+    "point_set_topology"
+   ]
+  },
+  {
+   "date": "2026-11-16",
+   "title": "Add `@[gcongr]` attributes",
+   "scope": "Cardinal/Order",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/46054",
+   "ai": false,
+   "sha": "d3b6d8f438cd76e927d69583d94eedf857946523",
+   "files": [
+    "Mathlib/LinearAlgebra/Dimension/RankNullity.lean",
+    "Mathlib/RingTheory/Algebraic/Cardinality.lean",
+    "Mathlib/RingTheory/AlgebraicIndependent/RankAndCardinality.lean",
+    "Mathlib/SetTheory/Cardinal/Order.lean"
+   ],
+   "fields": [
+    "linear_algebra",
+    "set_theory",
+    "abstract_algebra"
+   ]
+  },
+  {
+   "date": "2026-11-15",
+   "title": "Define Hecke L-Functions",
+   "scope": "NumberTheory/NumberField/HeckeLFunction",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/40736",
+   "ai": false,
+   "sha": "6e96f3e25b9b23468a6f155342b5a1e5e33ac8f9",
+   "files": [
+    "Mathlib/NumberTheory/NumberField/HeckeLFunction.lean"
+   ],
+   "fields": [
+    "algebraic_number_theory"
+   ]
+  },
+  {
+   "date": "2026-11-15",
+   "title": "Start a well-order induction from a non-minimal element",
+   "scope": "CategoryTheory/SmallObject",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45095",
+   "ai": false,
+   "sha": "57f4cb76292a23e3df7fa83728bd5ebcae9fb25a",
+   "files": [
+    "Mathlib/CategoryTheory/Category/Preorder.lean",
+    "Mathlib/CategoryTheory/Limits/Final/Type.lean",
+    "Mathlib/CategoryTheory/SmallObject/WellOrderInductionData.lean",
+    "Mathlib/Logic/Equiv/Defs.lean"
+   ],
+   "fields": [
+    "category_theory"
+   ]
+  },
   {
    "date": "2026-11-15",
    "title": "Improve lattice definition",
@@ -7256,91 +7404,6 @@
    ]
   },
   {
-   "date": "2026-11-09",
-   "title": "Generalize `QuasiMeasurePreserving` to `AEMeasurable`",
-   "scope": "MeasureTheory",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/43191",
-   "ai": false,
-   "sha": "139105d28c7685a154cb3093f79edb2e16708099",
-   "files": [
-    "Mathlib/Dynamics/Ergodic/Action/OfMinimal.lean",
-    "Mathlib/Dynamics/Ergodic/Ergodic.lean",
-    "Mathlib/Dynamics/Ergodic/Extreme.lean",
-    "Mathlib/Dynamics/Ergodic/MeasurePreserving.lean",
-    "Mathlib/MeasureTheory/Constructions/Pi.lean",
-    "Mathlib/MeasureTheory/Function/AEEqFun.lean"
-   ],
-   "fields": [
-    "egyptian_geometry",
-    "dynamical_systems",
-    "measure_theory",
-    "axiomatic_probability",
-    "complex_dynamics",
-    "learning_theory",
-    "bayesian",
-    "markov_chains"
-   ]
-  },
-  {
-   "date": "2026-11-08",
-   "title": "Easy lemmas",
-   "scope": "FunctionsBoundedAtImInfty",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45663",
-   "ai": false,
-   "sha": "6ea219250edddc6df74165eb514e71cd6efe0db4",
-   "files": [
-    "Mathlib/Analysis/Complex/UpperHalfPlane/FunctionsBoundedAtInfty.lean",
-    "Mathlib/Order/Filter/ZeroAndBoundedAtFilter.lean",
-    "Mathlib/Topology/Separation/Basic.lean"
-   ],
-   "fields": [
-    "rigorous_analysis",
-    "complex_analysis",
-    "lobachevsky",
-    "bolyai",
-    "point_set_topology",
-    "complex_dynamics"
-   ]
-  },
-  {
-   "date": "2026-11-08",
-   "title": "Generalize `MultilinearMap` with common `RingHom`",
-   "scope": "LinearAlgebra/MultilinearMap",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/42534",
-   "ai": false,
-   "sha": "a8d0dfed4f2f657d517c034437ce238c46fef1a8",
-   "files": [
-    "Mathlib/Analysis/Analytic/Composition.lean",
-    "Mathlib/Analysis/Analytic/Inverse.lean",
-    "Mathlib/Analysis/Calculus/ContDiff/FaaDiBruno.lean",
-    "Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean",
-    "Mathlib/LinearAlgebra/Alternating/Basic.lean",
-    "Mathlib/LinearAlgebra/Multilinear/Basic.lean"
-   ],
-   "fields": [
-    "complex_analysis",
-    "linear_algebra",
-    "functional_analysis",
-    "point_set_topology",
-    "abstract_algebra"
-   ]
-  },
-  {
-   "date": "2026-11-08",
-   "title": "Derivative of discriminant form",
-   "scope": "ModularForms",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44029",
-   "ai": false,
-   "sha": "34603ccd1f9d2780659eb9749003e4027e76e250",
-   "files": [
-    "Mathlib/NumberTheory/ModularForms/DedekindEta.lean",
-    "Mathlib/NumberTheory/ModularForms/Discriminant.lean"
-   ],
-   "fields": [
-    "langlands"
-   ]
-  },
-  {
    "date": "2026-11-07",
    "title": "Add sum_range_mul_geometric_add",
    "scope": "Algebra/Ring",
@@ -7352,39 +7415,6 @@
    ],
    "fields": [
     "abstract_algebra"
-   ]
-  },
-  {
-   "date": "2026-11-07",
-   "title": "Add `Algebra.FormallyUnramified.extendScalars`",
-   "scope": "RingTheory/Unramified/Finite",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45630",
-   "ai": false,
-   "sha": "893812301fc246c4b8c73b2a34afb83bc9dd1269",
-   "files": [
-    "Mathlib/RingTheory/Unramified/Finite.lean"
-   ],
-   "fields": [
-    "abstract_algebra"
-   ]
-  },
-  {
-   "date": "2026-11-07",
-   "title": "Prerequisites for the representation theorem",
-   "scope": "CategoryTheory/Presentable",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45545",
-   "ai": false,
-   "sha": "ff24b11541a9cf01665ab182018f793e977e594e",
-   "files": [
-    "Mathlib/CategoryTheory/Comma/StructuredArrow/Basic.lean",
-    "Mathlib/CategoryTheory/Comma/StructuredArrow/CommaMap.lean",
-    "Mathlib/CategoryTheory/Comma/StructuredArrow/Functor.lean",
-    "Mathlib/CategoryTheory/Comma/StructuredArrow/Small.lean",
-    "Mathlib/CategoryTheory/Limits/Types/Limits.lean",
-    "Mathlib/CategoryTheory/Limits/Yoneda.lean"
-   ],
-   "fields": [
-    "category_theory"
    ]
   },
   {
@@ -8021,20 +8051,6 @@
    "fields": [
     "abstract_algebra"
    ]
-  },
-  {
-   "date": "2026-09-16",
-   "title": "A finite p-group is simple iff it has cardinality p",
-   "scope": "GroupTheory/PGroup",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/43836",
-   "ai": true,
-   "sha": "09a9e06e4e5ccd5b783f25e52ad3ebecfb1e2d68",
-   "files": [
-    "Mathlib/GroupTheory/PGroup.lean"
-   ],
-   "fields": [
-    "group_theory"
-   ]
   }
  ],
  "projects": [
@@ -8104,10 +8120,10 @@
    "kind": "benchmark",
    "description": "Google DeepMind's collection of open conjectures (Erdős problems and others) stated in Lean, used as targets for provers.",
    "url": "https://github.com/google-deepmind/formal-conjectures",
-   "updated": "2026-11-14",
+   "updated": "2026-11-16",
    "latest": {
-    "title": "feat(Wikipedia/RamseyNumbers): link the Palomar entry for the formal proof of R(5,5) ≥ 43 (#7998)",
-    "url": "https://github.com/google-deepmind/formal-conjectures/commit/e028240a61822d970c933f4656f51da025cf200b"
+    "title": "fix(Wikipedia): refine weighing and Butson–Hadamard conjectures (#8019)",
+    "url": "https://github.com/google-deepmind/formal-conjectures/commit/083f7d02c2eececd918155b2ba06981d2dd61b2f"
    },
    "overview": "google-deepmind__formal-conjectures.json",
    "lean_files": 400
