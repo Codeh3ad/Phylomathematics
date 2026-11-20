@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-19T15:42Z",
+ "generated": "2026-11-20T15:24Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "70cebc908bcbecd2c276fe4992b1772a296c6f77",
-  "date": "2026-11-19",
-  "files": 8728,
-  "changes": 1368,
-  "additions": 642,
+  "commit": "aae515f5bd5b03032b071c0e2484af5c688a1037",
+  "date": "2026-11-20",
+  "files": 8729,
+  "changes": 1365,
+  "additions": 636,
   "ai_additions": 70
  },
  "fields": {
@@ -181,7 +181,7 @@
     "Mathlib/Data/Int/GCD"
    ],
    "files": 56,
-   "additions": 21,
+   "additions": 20,
    "ai_additions": 2,
    "recent": [
     {
@@ -520,6 +520,17 @@
    "ai_additions": 1,
    "recent": [
     {
+     "date": "2026-11-20",
+     "title": "Add mul_add_mod_of_degree_lt and mul_add_div_of_degree_lt",
+     "scope": "Algebra/Polynomial/FieldDivision",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46275",
+     "ai": false,
+     "sha": "a5701f34166a0a5ae1b18e9018bd172c55d848d7",
+     "files": [
+      "Mathlib/Algebra/Polynomial/FieldDivision.lean"
+     ]
+    },
+    {
      "date": "2026-11-18",
      "title": "`s ≠ ∅` simplifies to `s.Nonempty` for `Set` and `Finset`",
      "scope": null,
@@ -577,22 +588,6 @@
      "files": [
       "Mathlib/Algebra/Polynomial/FieldDivision.lean",
       "Mathlib/FieldTheory/IsAlgClosed/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-10-29",
-     "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45466",
-     "ai": false,
-     "sha": "32a422c83a18ddd0f352908187e5f68aad829904",
-     "files": [
-      "Mathlib/Algebra/AffineMonoid/Basic.lean",
-      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
-      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
-      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
-      "Mathlib/Algebra/Algebra/Bilinear.lean",
-      "Mathlib/Algebra/Algebra/Field.lean"
      ]
     }
    ],
@@ -862,7 +857,7 @@
     "Mathlib/LinearAlgebra/AffineSpace"
    ],
    "files": 25,
-   "additions": 16,
+   "additions": 15,
    "ai_additions": 4,
    "recent": [
     {
@@ -1629,7 +1624,7 @@
     "Mathlib/Order/Filter"
    ],
    "files": 65,
-   "additions": 12,
+   "additions": 11,
    "ai_additions": 2,
    "recent": [
     {
@@ -1711,7 +1706,7 @@
     "Mathlib/Analysis/Analytic"
    ],
    "files": 92,
-   "additions": 26,
+   "additions": 24,
    "ai_additions": 4,
    "recent": [
     {
@@ -1797,7 +1792,7 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 15,
+   "additions": 14,
    "ai_additions": 1,
    "recent": [
     {
@@ -2187,10 +2182,23 @@
     "Mathlib/LinearAlgebra",
     "Mathlib/Data/Matrix"
    ],
-   "files": 408,
-   "additions": 79,
-   "ai_additions": 8,
+   "files": 409,
+   "additions": 78,
+   "ai_additions": 9,
    "recent": [
+    {
+     "date": "2026-11-19",
+     "title": "Exterior power commute with base change",
+     "scope": "LinearAlgebra",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/40948",
+     "ai": true,
+     "sha": "8022e4db60a0ecf6bdf1168e1dcb3d6e07497b2a",
+     "files": [
+      "Mathlib/LinearAlgebra/ExteriorAlgebra/BaseChange.lean",
+      "Mathlib/LinearAlgebra/ExteriorAlgebra/Grading.lean",
+      "Mathlib/LinearAlgebra/ExteriorPower/BaseChange.lean"
+     ]
+    },
     {
      "date": "2026-11-19",
      "title": "Add Varignon's theorem",
@@ -2238,17 +2246,6 @@
      "sha": "1137c51b2a96e0157f54cb39deddea6d6f982f29",
      "files": [
       "Mathlib/LinearAlgebra/PiTensorProduct/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-11-18",
-     "title": "Lemmas about `Function.extend`",
-     "scope": "Data/Matrix/Mul",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/46015",
-     "ai": false,
-     "sha": "f9a13953a5d704af81191a71c72f3f82d1a55d2e",
-     "files": [
-      "Mathlib/Data/Matrix/Mul.lean"
      ]
     }
    ],
@@ -2794,7 +2791,7 @@
     "Mathlib/MeasureTheory"
    ],
    "files": 342,
-   "additions": 45,
+   "additions": 44,
    "ai_additions": 3,
    "recent": [
     {
@@ -2876,9 +2873,20 @@
     "Mathlib/Analysis/InnerProductSpace"
    ],
    "files": 223,
-   "additions": 45,
+   "additions": 46,
    "ai_additions": 4,
    "recent": [
+    {
+     "date": "2026-11-20",
+     "title": "Continuity of `Unitization.toProd`",
+     "scope": "Analysis/Normed",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46267",
+     "ai": false,
+     "sha": "d9420445c5b5561293647127334e7c204aba99ca",
+     "files": [
+      "Mathlib/Analysis/Normed/Algebra/Unitization.lean"
+     ]
+    },
     {
      "date": "2026-11-19",
      "title": "Power-multiplicative implies `f 1 = 1`",
@@ -2926,22 +2934,6 @@
       "Mathlib/Analysis/Normed/Unbundled/GelfandRadiusNorm.lean",
       "Mathlib/RingTheory/IntegralClosure/IsIntegralClosure/Basic.lean"
      ]
-    },
-    {
-     "date": "2026-11-18",
-     "title": "`s ≠ ∅` simplifies to `s.Nonempty` for `Set` and `Finset`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45636",
-     "ai": false,
-     "sha": "4694f18024a16d41993787c8f5e0e905a729f904",
-     "files": [
-      "Mathlib/Algebra/BigOperators/Finprod.lean",
-      "Mathlib/Algebra/BigOperators/Group/Finset/Defs.lean",
-      "Mathlib/Algebra/MvPolynomial/Basic.lean",
-      "Mathlib/Algebra/MvPolynomial/Degrees.lean",
-      "Mathlib/Algebra/MvPolynomial/Equiv.lean",
-      "Mathlib/Algebra/Notation/Support.lean"
-     ]
     }
    ],
    "overview": "field-functional_analysis.json"
@@ -2951,7 +2943,7 @@
     "Mathlib/Topology"
    ],
    "files": 708,
-   "additions": 81,
+   "additions": 80,
    "ai_additions": 8,
    "recent": [
     {
@@ -3032,8 +3024,8 @@
     "Mathlib/Algebra/Module"
    ],
    "files": 910,
-   "additions": 99,
-   "ai_additions": 22,
+   "additions": 96,
+   "ai_additions": 21,
    "recent": [
     {
      "date": "2026-11-19",
@@ -3312,9 +3304,20 @@
     "Mathlib/CategoryTheory"
    ],
    "files": 1140,
-   "additions": 37,
+   "additions": 36,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-11-20",
+     "title": "Equivalence of categories of elements",
+     "scope": "CategoryTheory",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45873",
+     "ai": false,
+     "sha": "aae515f5bd5b03032b071c0e2484af5c688a1037",
+     "files": [
+      "Mathlib/CategoryTheory/Elements.lean"
+     ]
+    },
     {
      "date": "2026-11-15",
      "title": "Start a well-order induction from a non-minimal element",
@@ -3373,20 +3376,6 @@
       "Mathlib/Algebra/Homology/ShortComplex/HomologyCofork.lean",
       "Mathlib/Algebra/Homology/ShortComplex/LeftHomology.lean",
       "Mathlib/Algebra/Homology/ShortComplex/Linear.lean"
-     ]
-    },
-    {
-     "date": "2026-11-04",
-     "title": "Extra lemmas for κ-presentable objects",
-     "scope": "CategoryTheory/Presentable",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45538",
-     "ai": false,
-     "sha": "a1f757688f06e193dde6155dd240b893f2e4a8ca",
-     "files": [
-      "Mathlib/CategoryTheory/ObjectProperty/IsClosedUnderCardinalFilteredColimits.lean",
-      "Mathlib/CategoryTheory/Presentable/Basic.lean",
-      "Mathlib/CategoryTheory/Presentable/CardinalDirectedPoset.lean",
-      "Mathlib/CategoryTheory/Presentable/Comma.lean"
      ]
     }
    ],
@@ -4014,7 +4003,7 @@
     "Mathlib/NumberTheory/Padics"
    ],
    "files": 19,
-   "additions": 5,
+   "additions": 4,
    "ai_additions": 0,
    "recent": [
     {
@@ -4075,18 +4064,6 @@
       "Mathlib/RingTheory/LaurentSeries.lean",
       "Mathlib/RingTheory/Valuation/ValuativeRel/Basic.lean",
       "Mathlib/Topology/Algebra/ValuativeRel/ValuativeTopology.lean"
-     ]
-    },
-    {
-     "date": "2026-09-21",
-     "title": "Ring structure on nonarchimedean measures",
-     "scope": "NumberTheory/Padics",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/41961",
-     "ai": false,
-     "sha": "e48ca8fdb2ff8df9c4e76ae990986e29ad11ea9f",
-     "files": [
-      "Mathlib/NumberTheory/Padics/Measure/Basic.lean",
-      "Mathlib/NumberTheory/Padics/Measure/Monoid.lean"
      ]
     }
    ],
@@ -4358,7 +4335,7 @@
     "Mathlib/CategoryTheory/Abelian"
    ],
    "files": 219,
-   "additions": 16,
+   "additions": 15,
    "ai_additions": 1,
    "recent": [
     {
@@ -4434,7 +4411,7 @@
     "Mathlib/Geometry/Manifold/VectorBundle"
    ],
    "files": 39,
-   "additions": 8,
+   "additions": 7,
    "ai_additions": 0,
    "recent": [
     {
@@ -4643,7 +4620,7 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 15,
+   "additions": 14,
    "ai_additions": 1,
    "recent": [
     {
@@ -4838,7 +4815,7 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 15,
+   "additions": 14,
    "ai_additions": 1,
    "recent": [
     {
@@ -5004,7 +4981,7 @@
     "Mathlib/Analysis/Complex"
    ],
    "files": 110,
-   "additions": 26,
+   "additions": 25,
    "ai_additions": 4,
    "recent": [
     {
@@ -5155,7 +5132,7 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 15,
+   "additions": 14,
    "ai_additions": 1,
    "recent": [
     {
@@ -6582,6 +6559,64 @@
  },
  "feed": [
   {
+   "date": "2026-11-20",
+   "title": "Equivalence of categories of elements",
+   "scope": "CategoryTheory",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45873",
+   "ai": false,
+   "sha": "aae515f5bd5b03032b071c0e2484af5c688a1037",
+   "files": [
+    "Mathlib/CategoryTheory/Elements.lean"
+   ],
+   "fields": [
+    "category_theory"
+   ]
+  },
+  {
+   "date": "2026-11-20",
+   "title": "Add mul_add_mod_of_degree_lt and mul_add_div_of_degree_lt",
+   "scope": "Algebra/Polynomial/FieldDivision",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/46275",
+   "ai": false,
+   "sha": "a5701f34166a0a5ae1b18e9018bd172c55d848d7",
+   "files": [
+    "Mathlib/Algebra/Polynomial/FieldDivision.lean"
+   ],
+   "fields": [
+    "al_jabr"
+   ]
+  },
+  {
+   "date": "2026-11-20",
+   "title": "Continuity of `Unitization.toProd`",
+   "scope": "Analysis/Normed",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/46267",
+   "ai": false,
+   "sha": "d9420445c5b5561293647127334e7c204aba99ca",
+   "files": [
+    "Mathlib/Analysis/Normed/Algebra/Unitization.lean"
+   ],
+   "fields": [
+    "functional_analysis"
+   ]
+  },
+  {
+   "date": "2026-11-19",
+   "title": "Exterior power commute with base change",
+   "scope": "LinearAlgebra",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/40948",
+   "ai": true,
+   "sha": "8022e4db60a0ecf6bdf1168e1dcb3d6e07497b2a",
+   "files": [
+    "Mathlib/LinearAlgebra/ExteriorAlgebra/BaseChange.lean",
+    "Mathlib/LinearAlgebra/ExteriorAlgebra/Grading.lean",
+    "Mathlib/LinearAlgebra/ExteriorPower/BaseChange.lean"
+   ],
+   "fields": [
+    "linear_algebra"
+   ]
+  },
+  {
    "date": "2026-11-19",
    "title": "Add `Homeomorph.Set.iUnion`",
    "scope": "Topology",
@@ -7519,68 +7554,6 @@
    ]
   },
   {
-   "date": "2026-11-16",
-   "title": "Simplify computations in complex analysis by extracting frequently-used lemmas",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/43958",
-   "ai": false,
-   "sha": "b4b4aa1acb53e74b7c280c88ab1276a59f1ace8b",
-   "files": [
-    "Mathlib/Analysis/Complex/JensenFormula.lean",
-    "Mathlib/Analysis/Complex/Trigonometric.lean",
-    "Mathlib/Analysis/SpecialFunctions/Complex/Arg.lean",
-    "Mathlib/Analysis/SpecialFunctions/Complex/CircleMap.lean",
-    "Mathlib/Analysis/SpecialFunctions/Integrals/PosLog.lean"
-   ],
-   "fields": [
-    "complex_analysis",
-    "complex_dynamics"
-   ]
-  },
-  {
-   "date": "2026-11-16",
-   "title": "Add `Bornology.IsBounded.norm` and related lemmas",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45926",
-   "ai": false,
-   "sha": "9368ae360a523e6c6590d79c7b8f88fe721c5fd6",
-   "files": [
-    "Mathlib/Analysis/Normed/Group/Pointwise.lean"
-   ],
-   "fields": [
-    "functional_analysis"
-   ]
-  },
-  {
-   "date": "2026-11-16",
-   "title": "Projectivity is transitive along scalar towers",
-   "scope": "Algebra/Module/Projective",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45668",
-   "ai": false,
-   "sha": "3d02e360604d4fd7b13197e6cae45b6c87afac1e",
-   "files": [
-    "Mathlib/Algebra/Module/Projective.lean"
-   ],
-   "fields": [
-    "abstract_algebra"
-   ]
-  },
-  {
-   "date": "2026-11-16",
-   "title": "Quotienting by the trivial equivalence relation does nothing",
-   "scope": "Order",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45270",
-   "ai": false,
-   "sha": "851832f902cbf8f8d951105b6ef20312c1947a15",
-   "files": [
-    "Mathlib/Order/Setoid/Basic.lean",
-    "Mathlib/Topology/Homeomorph/Quotient.lean"
-   ],
-   "fields": [
-    "point_set_topology"
-   ]
-  },
-  {
    "date": "2026-11-14",
    "title": "Adic valuations are trivial on subfields",
    "scope": "RingTheory/DedekindDomain/AdicValuation",
@@ -8355,25 +8328,6 @@
    "fields": [
     "al_jabr"
    ]
-  },
-  {
-   "date": "2026-09-21",
-   "title": "Adjoining transcendental elements",
-   "scope": "Adjoin/Polynomial/Transcendental",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/37723",
-   "ai": true,
-   "sha": "6747d2913d65849513c7299517ffea33fe85ebe6",
-   "files": [
-    "Mathlib/FieldTheory/RatFunc/AsPolynomial.lean",
-    "Mathlib/RingTheory/Adjoin/Polynomial/Basic.lean",
-    "Mathlib/RingTheory/Adjoin/Polynomial/Bivariate.lean",
-    "Mathlib/RingTheory/Adjoin/Polynomial/Transcendental.lean",
-    "Mathlib/RingTheory/Algebraic/Basic.lean",
-    "Mathlib/RingTheory/Polynomial/Quotient.lean"
-   ],
-   "fields": [
-    "abstract_algebra"
-   ]
   }
  ],
  "projects": [
@@ -8445,8 +8399,8 @@
    "url": "https://github.com/google-deepmind/formal-conjectures",
    "updated": "2026-11-19",
    "latest": {
-    "title": "feat(Kourovka/20_51): add Problem 20.51 (#8033)",
-    "url": "https://github.com/google-deepmind/formal-conjectures/commit/d15c47a642bebdff9ff0ffced02d8726cb7b7213"
+    "title": "feat(ErdosProblems): 625 (#8016)",
+    "url": "https://github.com/google-deepmind/formal-conjectures/commit/d8d031d4998c78575159ccab9a7a9e95ce043883"
    },
    "overview": "google-deepmind__formal-conjectures.json",
    "lean_files": 400
@@ -8481,10 +8435,10 @@
    "kind": "automated",
    "description": "Crowdsourced map of implications between magma laws, settled with a mix of human proofs and automated provers, all checked in Lean.",
    "url": "https://github.com/teorth/equational_theories",
-   "updated": "2026-11-17",
+   "updated": "2026-11-19",
    "latest": {
-    "title": "Paper updates (#1528)",
-    "url": "https://github.com/teorth/equational_theories/commit/b4b3c42da2d21b858acb5dab7e90924c1396f73e"
+    "title": "update on 5093 Q",
+    "url": "https://github.com/teorth/equational_theories/commit/dbc9a2bf0c939e7c646841e679f0f7fb6cfe4e15"
    },
    "overview": "teorth__equational_theories.json",
    "lean_files": 398
