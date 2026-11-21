@@ -1,13 +1,13 @@
 {
- "generated": "2026-11-20T15:24Z",
+ "generated": "2026-11-21T14:37Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "aae515f5bd5b03032b071c0e2484af5c688a1037",
-  "date": "2026-11-20",
-  "files": 8729,
-  "changes": 1365,
-  "additions": 636,
-  "ai_additions": 70
+  "commit": "c47f9ad906c5ec32a953f99911b446cd26dcc123",
+  "date": "2026-11-21",
+  "files": 8730,
+  "changes": 1348,
+  "additions": 622,
+  "ai_additions": 68
  },
  "fields": {
   "babylonian": {
@@ -516,8 +516,8 @@
     "Mathlib/Algebra/Polynomial"
    ],
    "files": 65,
-   "additions": 14,
-   "ai_additions": 1,
+   "additions": 13,
+   "ai_additions": 0,
    "recent": [
     {
      "date": "2026-11-20",
@@ -765,7 +765,7 @@
     "Mathlib/Analysis/SpecialFunctions/Log"
    ],
    "files": 13,
-   "additions": 6,
+   "additions": 5,
    "ai_additions": 1,
    "recent": [
     {
@@ -1792,7 +1792,7 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 14,
+   "additions": 13,
    "ai_additions": 1,
    "recent": [
     {
@@ -2019,10 +2019,24 @@
     "Mathlib/FieldTheory/Galois",
     "Mathlib/FieldTheory/AbelRuffini"
    ],
-   "files": 183,
-   "additions": 45,
+   "files": 184,
+   "additions": 41,
    "ai_additions": 6,
    "recent": [
+    {
+     "date": "2026-11-20",
+     "title": "Add Units.ModPow and API",
+     "scope": "GroupTheory/QuotientGroup/UnitsModPow",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44614",
+     "ai": true,
+     "sha": "a1c366fa78621ef7a76fb0183de576200eec5dad",
+     "files": [
+      "Mathlib/Algebra/Group/Commute/Units.lean",
+      "Mathlib/Algebra/Group/Units/Equiv.lean",
+      "Mathlib/GroupTheory/QuotientGroup/UnitsModPow.lean",
+      "Mathlib/RingTheory/DedekindDomain/SelmerGroup.lean"
+     ]
+    },
     {
      "date": "2026-11-18",
      "title": "Simp-lemmas for when element of quotient equals one",
@@ -2077,17 +2091,6 @@
       "Mathlib/GroupTheory/GroupAction/Basic.lean",
       "Mathlib/GroupTheory/Subgroup/Centralizer.lean"
      ]
-    },
-    {
-     "date": "2026-11-13",
-     "title": "Equivalences between additive and multiplicative abelianizations",
-     "scope": "GroupTheory/Abelianization/Defs",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45970",
-     "ai": false,
-     "sha": "65d730f7150f21fdfa32f3e73a3f549c1f96a0e9",
-     "files": [
-      "Mathlib/GroupTheory/Abelianization/Defs.lean"
-     ]
     }
    ],
    "overview": "field-group_theory.json"
@@ -2100,7 +2103,7 @@
     "Mathlib/NumberTheory/Chebyshev"
    ],
    "files": 33,
-   "additions": 13,
+   "additions": 12,
    "ai_additions": 1,
    "recent": [
     {
@@ -2187,6 +2190,20 @@
    "ai_additions": 9,
    "recent": [
     {
+     "date": "2026-11-20",
+     "title": "Some API for `LinearMap.baseChange`",
+     "scope": "RingTheory",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45419",
+     "ai": false,
+     "sha": "6c6d782d91ae56dcde45c8cc2b774035e70c7a0e",
+     "files": [
+      "Mathlib/LinearAlgebra/TensorProduct/RightExactness.lean",
+      "Mathlib/RingTheory/Flat/Basic.lean",
+      "Mathlib/RingTheory/Flat/Equalizer.lean",
+      "Mathlib/RingTheory/Flat/FaithfullyFlat/Basic.lean"
+     ]
+    },
+    {
      "date": "2026-11-19",
      "title": "Exterior power commute with base change",
      "scope": "LinearAlgebra",
@@ -2235,17 +2252,6 @@
      "sha": "389393b2bfacbdf050928b82e859a5508c074542",
      "files": [
       "Mathlib/LinearAlgebra/Prod.lean"
-     ]
-    },
-    {
-     "date": "2026-11-18",
-     "title": "Lift multi-semilinear maps",
-     "scope": "LinearAlgebra/PiTensorProduct",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45819",
-     "ai": false,
-     "sha": "1137c51b2a96e0157f54cb39deddea6d6f982f29",
-     "files": [
-      "Mathlib/LinearAlgebra/PiTensorProduct/Basic.lean"
      ]
     }
    ],
@@ -2530,8 +2536,8 @@
     "Mathlib/RingTheory/Nullstellensatz"
    ],
    "files": 142,
-   "additions": 7,
-   "ai_additions": 1,
+   "additions": 6,
+   "ai_additions": 0,
    "recent": [
     {
      "date": "2026-11-04",
@@ -2878,6 +2884,19 @@
    "recent": [
     {
      "date": "2026-11-20",
+     "title": "Real scalars on a complete normed `ℚ`-algebra",
+     "scope": "Analysis/Normed/Module",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43908",
+     "ai": false,
+     "sha": "591aee7b22adf8af55e11dc93f9bda299d252cd0",
+     "files": [
+      "Mathlib/Analysis/Normed/Module/Basic.lean",
+      "Mathlib/Analysis/Normed/Module/Completion.lean",
+      "Mathlib/Topology/Algebra/UniformRing.lean"
+     ]
+    },
+    {
+     "date": "2026-11-20",
      "title": "Continuity of `Unitization.toProd`",
      "scope": "Analysis/Normed",
      "url": "https://github.com/leanprover-community/mathlib4/pull/46267",
@@ -2922,18 +2941,6 @@
      "files": [
       "Mathlib/Analysis/InnerProductSpace/l2Space.lean"
      ]
-    },
-    {
-     "date": "2026-11-18",
-     "title": "Generalize `gelfandRadiusNorm` to algebraic extensions",
-     "scope": "Analysis/Normed/Unbundled/GelfandRadiusNorm",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45935",
-     "ai": false,
-     "sha": "4e34ea5e18ddfad7aae4c0d98a2ae1acbe906e97",
-     "files": [
-      "Mathlib/Analysis/Normed/Unbundled/GelfandRadiusNorm.lean",
-      "Mathlib/RingTheory/IntegralClosure/IsIntegralClosure/Basic.lean"
-     ]
     }
    ],
    "overview": "field-functional_analysis.json"
@@ -2943,9 +2950,22 @@
     "Mathlib/Topology"
    ],
    "files": 708,
-   "additions": 80,
+   "additions": 81,
    "ai_additions": 8,
    "recent": [
+    {
+     "date": "2026-11-20",
+     "title": "Real scalars on a complete normed `ℚ`-algebra",
+     "scope": "Analysis/Normed/Module",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43908",
+     "ai": false,
+     "sha": "591aee7b22adf8af55e11dc93f9bda299d252cd0",
+     "files": [
+      "Mathlib/Analysis/Normed/Module/Basic.lean",
+      "Mathlib/Analysis/Normed/Module/Completion.lean",
+      "Mathlib/Topology/Algebra/UniformRing.lean"
+     ]
+    },
     {
      "date": "2026-11-19",
      "title": "Add `Homeomorph.Set.iUnion`",
@@ -2997,22 +3017,6 @@
       "Mathlib/Order/Directed.lean",
       "Mathlib/Topology/Order/ScottTopology.lean"
      ]
-    },
-    {
-     "date": "2026-11-16",
-     "title": "Lemmas to support F-space open mapping theorem",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/40983",
-     "ai": true,
-     "sha": "4b39df7a6e9d22530ad9b787919829826eb55824",
-     "files": [
-      "Mathlib/Analysis/LocallyConvex/AbsConvex.lean",
-      "Mathlib/Analysis/LocallyConvex/BalancedCoreHull.lean",
-      "Mathlib/Analysis/LocallyConvex/Basic.lean",
-      "Mathlib/Topology/Algebra/Group/Pointwise.lean",
-      "Mathlib/Topology/Baire/Absorbent.lean",
-      "Mathlib/Topology/Bornology/Absorbs.lean"
-     ]
     }
    ],
    "overview": "field-point_set_topology.json"
@@ -3024,9 +3028,37 @@
     "Mathlib/Algebra/Module"
    ],
    "files": 910,
-   "additions": 96,
-   "ai_additions": 21,
+   "additions": 98,
+   "ai_additions": 22,
    "recent": [
+    {
+     "date": "2026-11-20",
+     "title": "Some API for `LinearMap.baseChange`",
+     "scope": "RingTheory",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45419",
+     "ai": false,
+     "sha": "6c6d782d91ae56dcde45c8cc2b774035e70c7a0e",
+     "files": [
+      "Mathlib/LinearAlgebra/TensorProduct/RightExactness.lean",
+      "Mathlib/RingTheory/Flat/Basic.lean",
+      "Mathlib/RingTheory/Flat/Equalizer.lean",
+      "Mathlib/RingTheory/Flat/FaithfullyFlat/Basic.lean"
+     ]
+    },
+    {
+     "date": "2026-11-20",
+     "title": "Add Units.ModPow and API",
+     "scope": "GroupTheory/QuotientGroup/UnitsModPow",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44614",
+     "ai": true,
+     "sha": "a1c366fa78621ef7a76fb0183de576200eec5dad",
+     "files": [
+      "Mathlib/Algebra/Group/Commute/Units.lean",
+      "Mathlib/Algebra/Group/Units/Equiv.lean",
+      "Mathlib/GroupTheory/QuotientGroup/UnitsModPow.lean",
+      "Mathlib/RingTheory/DedekindDomain/SelmerGroup.lean"
+     ]
+    },
     {
      "date": "2026-11-19",
      "title": "Lint against numeric projections",
@@ -3067,33 +3099,6 @@
      "files": [
       "Mathlib/Analysis/Normed/Unbundled/GelfandRadiusNorm.lean",
       "Mathlib/RingTheory/IntegralClosure/IsIntegralClosure/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-11-18",
-     "title": "Criterion for `b ∈ (I.under A).map (algebraMap A B)`",
-     "scope": "RingTheory/Invariant/Basic",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/46138",
-     "ai": false,
-     "sha": "9252bdf2e2d1f439044caafbc5d344df60f83ddc",
-     "files": [
-      "Mathlib/RingTheory/Invariant/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-11-18",
-     "title": "`s ≠ ∅` simplifies to `s.Nonempty` for `Set` and `Finset`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45636",
-     "ai": false,
-     "sha": "4694f18024a16d41993787c8f5e0e905a729f904",
-     "files": [
-      "Mathlib/Algebra/BigOperators/Finprod.lean",
-      "Mathlib/Algebra/BigOperators/Group/Finset/Defs.lean",
-      "Mathlib/Algebra/MvPolynomial/Basic.lean",
-      "Mathlib/Algebra/MvPolynomial/Degrees.lean",
-      "Mathlib/Algebra/MvPolynomial/Equiv.lean",
-      "Mathlib/Algebra/Notation/Support.lean"
      ]
     }
    ],
@@ -3304,7 +3309,7 @@
     "Mathlib/CategoryTheory"
    ],
    "files": 1140,
-   "additions": 36,
+   "additions": 35,
    "ai_additions": 0,
    "recent": [
     {
@@ -3430,8 +3435,8 @@
     "Mathlib/AlgebraicGeometry"
    ],
    "files": 141,
-   "additions": 7,
-   "ai_additions": 1,
+   "additions": 6,
+   "ai_additions": 0,
    "recent": [
     {
      "date": "2026-11-04",
@@ -3518,8 +3523,8 @@
     "Mathlib/RingTheory/Invariant"
    ],
    "files": 145,
-   "additions": 8,
-   "ai_additions": 1,
+   "additions": 7,
+   "ai_additions": 0,
    "recent": [
     {
      "date": "2026-11-18",
@@ -3601,7 +3606,7 @@
     "Mathlib/RepresentationTheory"
    ],
    "files": 86,
-   "additions": 19,
+   "additions": 18,
    "ai_additions": 2,
    "recent": [
     {
@@ -3933,9 +3938,35 @@
     "Mathlib/NumberTheory/Cyclotomic"
    ],
    "files": 66,
-   "additions": 16,
-   "ai_additions": 6,
+   "additions": 18,
+   "ai_additions": 7,
    "recent": [
+    {
+     "date": "2026-11-20",
+     "title": "Also lint in conv mode",
+     "scope": "Linter/Multigoal",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45124",
+     "ai": false,
+     "sha": "a205649cf4e6ce1ae4ef6f0a3466f58a30fcdd22",
+     "files": [
+      "Mathlib/NumberTheory/NumberField/InfinitePlace/Basic.lean",
+      "Mathlib/Tactic/Linter/Multigoal.lean"
+     ]
+    },
+    {
+     "date": "2026-11-20",
+     "title": "Add Units.ModPow and API",
+     "scope": "GroupTheory/QuotientGroup/UnitsModPow",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44614",
+     "ai": true,
+     "sha": "a1c366fa78621ef7a76fb0183de576200eec5dad",
+     "files": [
+      "Mathlib/Algebra/Group/Commute/Units.lean",
+      "Mathlib/Algebra/Group/Units/Equiv.lean",
+      "Mathlib/GroupTheory/QuotientGroup/UnitsModPow.lean",
+      "Mathlib/RingTheory/DedekindDomain/SelmerGroup.lean"
+     ]
+    },
     {
      "date": "2026-11-15",
      "title": "Define Hecke L-Functions",
@@ -3968,31 +3999,6 @@
      "sha": "9a20b96f1f6f5891c39427a8f17be440388e1afb",
      "files": [
       "Mathlib/NumberTheory/Cyclotomic/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-11-04",
-     "title": "The ring of S-integers is a localization and a Dedekind Domain",
-     "scope": "RingTheory/DedekindDomain/SInteger",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/40848",
-     "ai": false,
-     "sha": "f1f7df02e2112b1f4e14de23a2c9dc757b999633",
-     "files": [
-      "Mathlib/RingTheory/DedekindDomain/SInteger.lean",
-      "Mathlib/RingTheory/Ideal/Prime.lean"
-     ]
-    },
-    {
-     "date": "2026-11-04",
-     "title": "Remove redundant hypothesis",
-     "scope": "Data/Nat/Totient",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45664",
-     "ai": false,
-     "sha": "c995178e4e646a896fa65d521b9c96e018db04b7",
-     "files": [
-      "Mathlib/Data/Nat/Totient.lean",
-      "Mathlib/NumberTheory/NumberField/Cyclotomic/Basic.lean",
-      "Mathlib/RingTheory/Polynomial/Cyclotomic/Expand.lean"
      ]
     }
    ],
@@ -4167,7 +4173,7 @@
     "Mathlib/Geometry/Manifold/Algebra"
    ],
    "files": 66,
-   "additions": 14,
+   "additions": 13,
    "ai_additions": 0,
    "recent": [
     {
@@ -4411,9 +4417,23 @@
     "Mathlib/Geometry/Manifold/VectorBundle"
    ],
    "files": 39,
-   "additions": 7,
+   "additions": 8,
    "ai_additions": 0,
    "recent": [
+    {
+     "date": "2026-11-20",
+     "title": "Some API for `LinearMap.baseChange`",
+     "scope": "RingTheory",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45419",
+     "ai": false,
+     "sha": "6c6d782d91ae56dcde45c8cc2b774035e70c7a0e",
+     "files": [
+      "Mathlib/LinearAlgebra/TensorProduct/RightExactness.lean",
+      "Mathlib/RingTheory/Flat/Basic.lean",
+      "Mathlib/RingTheory/Flat/Equalizer.lean",
+      "Mathlib/RingTheory/Flat/FaithfullyFlat/Basic.lean"
+     ]
+    },
     {
      "date": "2026-11-11",
      "title": "Small missing API lemmas",
@@ -4467,22 +4487,6 @@
      "sha": "37a7c30974a79c29ebbe8d6d0a2c40345f3c0714",
      "files": [
       "Mathlib/LinearAlgebra/TensorProduct/Tower.lean"
-     ]
-    },
-    {
-     "date": "2026-10-20",
-     "title": "Enable Verso if no syntax or doc-gen changes",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
-     "ai": false,
-     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
-     "files": [
-      "Mathlib/Algebra/AffineMonoid/Basic.lean",
-      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
-      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
-      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
-      "Mathlib/Algebra/Algebra/Bilinear.lean",
-      "Mathlib/Algebra/Algebra/Field.lean"
      ]
     }
    ],
@@ -4620,7 +4624,7 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 14,
+   "additions": 13,
    "ai_additions": 1,
    "recent": [
     {
@@ -4815,7 +4819,7 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 14,
+   "additions": 13,
    "ai_additions": 1,
    "recent": [
     {
@@ -5132,7 +5136,7 @@
     "Mathlib/Geometry/Manifold"
    ],
    "files": 80,
-   "additions": 14,
+   "additions": 13,
    "ai_additions": 1,
    "recent": [
     {
@@ -5494,7 +5498,7 @@
     "Mathlib/Algebra/Lie"
    ],
    "files": 76,
-   "additions": 16,
+   "additions": 15,
    "ai_additions": 0,
    "recent": [
     {
@@ -5577,7 +5581,7 @@
     "Mathlib/Probability"
    ],
    "files": 153,
-   "additions": 18,
+   "additions": 17,
    "ai_additions": 0,
    "recent": [
     {
@@ -6018,7 +6022,7 @@
     "Mathlib/Data/Nat/Choose"
    ],
    "files": 203,
-   "additions": 43,
+   "additions": 42,
    "ai_additions": 2,
    "recent": [
     {
@@ -6558,6 +6562,76 @@
   }
  },
  "feed": [
+  {
+   "date": "2026-11-20",
+   "title": "Some API for `LinearMap.baseChange`",
+   "scope": "RingTheory",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45419",
+   "ai": false,
+   "sha": "6c6d782d91ae56dcde45c8cc2b774035e70c7a0e",
+   "files": [
+    "Mathlib/LinearAlgebra/TensorProduct/RightExactness.lean",
+    "Mathlib/RingTheory/Flat/Basic.lean",
+    "Mathlib/RingTheory/Flat/Equalizer.lean",
+    "Mathlib/RingTheory/Flat/FaithfullyFlat/Basic.lean"
+   ],
+   "fields": [
+    "linear_algebra",
+    "abstract_algebra",
+    "tensor_calculus"
+   ]
+  },
+  {
+   "date": "2026-11-20",
+   "title": "Real scalars on a complete normed `ℚ`-algebra",
+   "scope": "Analysis/Normed/Module",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/43908",
+   "ai": false,
+   "sha": "591aee7b22adf8af55e11dc93f9bda299d252cd0",
+   "files": [
+    "Mathlib/Analysis/Normed/Module/Basic.lean",
+    "Mathlib/Analysis/Normed/Module/Completion.lean",
+    "Mathlib/Topology/Algebra/UniformRing.lean"
+   ],
+   "fields": [
+    "functional_analysis",
+    "point_set_topology"
+   ]
+  },
+  {
+   "date": "2026-11-20",
+   "title": "Also lint in conv mode",
+   "scope": "Linter/Multigoal",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45124",
+   "ai": false,
+   "sha": "a205649cf4e6ce1ae4ef6f0a3466f58a30fcdd22",
+   "files": [
+    "Mathlib/NumberTheory/NumberField/InfinitePlace/Basic.lean",
+    "Mathlib/Tactic/Linter/Multigoal.lean"
+   ],
+   "fields": [
+    "algebraic_number_theory"
+   ]
+  },
+  {
+   "date": "2026-11-20",
+   "title": "Add Units.ModPow and API",
+   "scope": "GroupTheory/QuotientGroup/UnitsModPow",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/44614",
+   "ai": true,
+   "sha": "a1c366fa78621ef7a76fb0183de576200eec5dad",
+   "files": [
+    "Mathlib/Algebra/Group/Commute/Units.lean",
+    "Mathlib/Algebra/Group/Units/Equiv.lean",
+    "Mathlib/GroupTheory/QuotientGroup/UnitsModPow.lean",
+    "Mathlib/RingTheory/DedekindDomain/SelmerGroup.lean"
+   ],
+   "fields": [
+    "group_theory",
+    "abstract_algebra",
+    "algebraic_number_theory"
+   ]
+  },
   {
    "date": "2026-11-20",
    "title": "Equivalence of categories of elements",
@@ -7487,40 +7561,6 @@
   },
   {
    "date": "2026-11-16",
-   "title": "Characterize IsCoatom submodules via IsCompl with singleton spans",
-   "scope": "LinearAlgebra/Span",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45075",
-   "ai": false,
-   "sha": "c51bb6bd7e06691e7b886a0e73fb14c26c0383f6",
-   "files": [
-    "Mathlib/LinearAlgebra/Span/Basic.lean"
-   ],
-   "fields": [
-    "linear_algebra"
-   ]
-  },
-  {
-   "date": "2026-11-16",
-   "title": "Strict Lie-Rinehart ideals and quotients by them",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/41206",
-   "ai": false,
-   "sha": "0bc832dfa228bafe8cac2f81ad11b79c210aad1f",
-   "files": [
-    "Mathlib/Algebra/Lie/Ideal.lean",
-    "Mathlib/Algebra/Lie/Subalgebra.lean",
-    "Mathlib/Algebra/LieRinehartAlgebra/Defs.lean",
-    "Mathlib/Algebra/LieRinehartAlgebra/Quotient.lean",
-    "Mathlib/Algebra/LieRinehartAlgebra/StrictIdeal.lean",
-    "Mathlib/Algebra/LieRinehartAlgebra/Subalgebra.lean"
-   ],
-   "fields": [
-    "lie_theory",
-    "gauge_theory"
-   ]
-  },
-  {
-   "date": "2026-11-16",
    "title": "Lemmas to support F-space open mapping theorem",
    "scope": null,
    "url": "https://github.com/leanprover-community/mathlib4/pull/40983",
@@ -8277,56 +8317,6 @@
    ],
    "fields": [
     "abstract_algebra"
-   ]
-  },
-  {
-   "date": "2026-09-22",
-   "title": "Maximal subgroups of nilpotent groups have prime index",
-   "scope": "GroupTheory/Nilpotent",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/41652",
-   "ai": true,
-   "sha": "21aeac93108f4e2add57823357b1023e613a0081",
-   "files": [
-    "Mathlib/GroupTheory/Index.lean",
-    "Mathlib/GroupTheory/IndexNormal.lean",
-    "Mathlib/GroupTheory/Nilpotent.lean",
-    "Mathlib/GroupTheory/QuotientGroup/Simple.lean",
-    "Mathlib/GroupTheory/SpecificGroups/Cyclic.lean",
-    "Mathlib/GroupTheory/Subgroup/Simple.lean"
-   ],
-   "fields": [
-    "group_theory"
-   ]
-  },
-  {
-   "date": "2026-09-22",
-   "title": "Add Jacobian blueprint via def_wanted/theorem_wanted",
-   "scope": "AlgebraicGeometry/Group",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/40616",
-   "ai": true,
-   "sha": "1cfb94c897980847d8f0c110fa6334f505f9796c",
-   "files": [
-    "Mathlib/AlgebraicGeometry/Morphisms/Smooth.lean"
-   ],
-   "fields": [
-    "algebraic_geometry",
-    "schemes",
-    "git"
-   ]
-  },
-  {
-   "date": "2026-09-22",
-   "title": "Sturm sequences",
-   "scope": "Algebra/Polynomial/Sturm",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/43954",
-   "ai": true,
-   "sha": "2615c5af8dfb56cb1f2011e32ef9bfc1085f31e5",
-   "files": [
-    "Mathlib/Algebra/Polynomial/FieldDivision.lean",
-    "Mathlib/Algebra/Polynomial/Sturm/Sequence.lean"
-   ],
-   "fields": [
-    "al_jabr"
    ]
   }
  ],
