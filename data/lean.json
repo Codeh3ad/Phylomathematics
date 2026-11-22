@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-21T14:37Z",
+ "generated": "2026-11-22T14:31Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "c47f9ad906c5ec32a953f99911b446cd26dcc123",
-  "date": "2026-11-21",
+  "commit": "6ebcce37335bcb6bca64596e5d57bb3035648030",
+  "date": "2026-11-22",
   "files": 8730,
-  "changes": 1348,
-  "additions": 622,
+  "changes": 1330,
+  "additions": 618,
   "ai_additions": 68
  },
  "fields": {
@@ -2801,6 +2801,22 @@
    "ai_additions": 3,
    "recent": [
     {
+     "date": "2026-11-21",
+     "title": "Add `Continuous.re` and similar",
+     "scope": "RCLike",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/34419",
+     "ai": false,
+     "sha": "a495318fed6482b3c90df686de5131b46a70fd5b",
+     "files": [
+      "Mathlib/Analysis/Normed/Group/Uniform.lean",
+      "Mathlib/Analysis/Normed/Lp/lpSpace.lean",
+      "Mathlib/Analysis/RCLike/Basic.lean",
+      "Mathlib/Analysis/RCLike/BoundedContinuous.lean",
+      "Mathlib/MeasureTheory/Measure/FiniteMeasure.lean",
+      "Mathlib/MeasureTheory/Measure/FiniteMeasureExt.lean"
+     ]
+    },
+    {
      "date": "2026-11-18",
      "title": "`s ≠ ∅` simplifies to `s.Nonempty` for `Set` and `Finset`",
      "scope": null,
@@ -2853,22 +2869,6 @@
       "Mathlib/Topology/Order/Cadlag.lean",
       "Mathlib/Topology/Order/LeftRightNhds.lean"
      ]
-    },
-    {
-     "date": "2026-11-11",
-     "title": "Drop finiteness from many theorems",
-     "scope": "LinearAlgebra/Matrix/PosDef",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45897",
-     "ai": true,
-     "sha": "b97762998b0ee14aea85f37006d06dfff25a6afa",
-     "files": [
-      "Mathlib/Analysis/InnerProductSpace/GramMatrix.lean",
-      "Mathlib/Analysis/Matrix/Order.lean",
-      "Mathlib/Data/Matrix/Block.lean",
-      "Mathlib/LinearAlgebra/Matrix/Hermitian.lean",
-      "Mathlib/LinearAlgebra/Matrix/PosDef.lean",
-      "Mathlib/MeasureTheory/Function/L2Space.lean"
-     ]
     }
    ],
    "overview": "field-measure_theory.json"
@@ -2879,9 +2879,25 @@
     "Mathlib/Analysis/InnerProductSpace"
    ],
    "files": 223,
-   "additions": 46,
+   "additions": 47,
    "ai_additions": 4,
    "recent": [
+    {
+     "date": "2026-11-21",
+     "title": "Add `Continuous.re` and similar",
+     "scope": "RCLike",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/34419",
+     "ai": false,
+     "sha": "a495318fed6482b3c90df686de5131b46a70fd5b",
+     "files": [
+      "Mathlib/Analysis/Normed/Group/Uniform.lean",
+      "Mathlib/Analysis/Normed/Lp/lpSpace.lean",
+      "Mathlib/Analysis/RCLike/Basic.lean",
+      "Mathlib/Analysis/RCLike/BoundedContinuous.lean",
+      "Mathlib/MeasureTheory/Measure/FiniteMeasure.lean",
+      "Mathlib/MeasureTheory/Measure/FiniteMeasureExt.lean"
+     ]
+    },
     {
      "date": "2026-11-20",
      "title": "Real scalars on a complete normed `ℚ`-algebra",
@@ -2927,17 +2943,6 @@
      "url": "https://github.com/leanprover-community/mathlib4/pull/45852",
      "ai": false,
      "sha": "83e85adc6e7e9d4e6eaf2abf1a7c81b2d3d67f81",
-     "files": [
-      "Mathlib/Analysis/InnerProductSpace/l2Space.lean"
-     ]
-    },
-    {
-     "date": "2026-11-18",
-     "title": "Add HilbertBasis.reindex",
-     "scope": "Analysis/InnerProductSpace",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/46019",
-     "ai": false,
-     "sha": "1ddfaa9548e05b343be9248ae08b73c3425b446e",
      "files": [
       "Mathlib/Analysis/InnerProductSpace/l2Space.lean"
      ]
@@ -5410,7 +5415,7 @@
     "Mathlib/LinearAlgebra/Matrix/DotProduct"
    ],
    "files": 68,
-   "additions": 12,
+   "additions": 11,
    "ai_additions": 0,
    "recent": [
     {
@@ -6563,6 +6568,26 @@
  },
  "feed": [
   {
+   "date": "2026-11-21",
+   "title": "Add `Continuous.re` and similar",
+   "scope": "RCLike",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/34419",
+   "ai": false,
+   "sha": "a495318fed6482b3c90df686de5131b46a70fd5b",
+   "files": [
+    "Mathlib/Analysis/Normed/Group/Uniform.lean",
+    "Mathlib/Analysis/Normed/Lp/lpSpace.lean",
+    "Mathlib/Analysis/RCLike/Basic.lean",
+    "Mathlib/Analysis/RCLike/BoundedContinuous.lean",
+    "Mathlib/MeasureTheory/Measure/FiniteMeasure.lean",
+    "Mathlib/MeasureTheory/Measure/FiniteMeasureExt.lean"
+   ],
+   "fields": [
+    "measure_theory",
+    "functional_analysis"
+   ]
+  },
+  {
    "date": "2026-11-20",
    "title": "Some API for `LinearMap.baseChange`",
    "scope": "RingTheory",
@@ -7544,22 +7569,6 @@
    ]
   },
   {
-   "date": "2026-11-17",
-   "title": "More values for the Bernoulli numbers",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/46042",
-   "ai": false,
-   "sha": "9fdc1827106ab80724902bd70bcb6a1e3abdc58f",
-   "files": [
-    "Mathlib/NumberTheory/Bernoulli.lean",
-    "Mathlib/NumberTheory/BernoulliPolynomials.lean",
-    "Mathlib/NumberTheory/LSeries/HurwitzZetaValues.lean"
-   ],
-   "fields": [
-    "analytic_number_theory"
-   ]
-  },
-  {
    "date": "2026-11-16",
    "title": "Lemmas to support F-space open mapping theorem",
    "scope": null,
@@ -8387,10 +8396,10 @@
    "kind": "benchmark",
    "description": "Google DeepMind's collection of open conjectures (Erdős problems and others) stated in Lean, used as targets for provers.",
    "url": "https://github.com/google-deepmind/formal-conjectures",
-   "updated": "2026-11-19",
+   "updated": "2026-11-21",
    "latest": {
-    "title": "feat(ErdosProblems): 625 (#8016)",
-    "url": "https://github.com/google-deepmind/formal-conjectures/commit/d8d031d4998c78575159ccab9a7a9e95ce043883"
+    "title": "feat(CONTRIBUTING): clarify solved statements are out of scope (#7916)",
+    "url": "https://github.com/google-deepmind/formal-conjectures/commit/2207c54d0dbe960de591d280f997b195bf3f6e28"
    },
    "overview": "google-deepmind__formal-conjectures.json",
    "lean_files": 400
@@ -8406,13 +8415,13 @@
    "kind": "human",
    "description": "Formalization of the Gowers–Green–Manners–Tao proof of the polynomial Freiman–Ruzsa conjecture.",
    "url": "https://github.com/teorth/pfr",
-   "updated": "2026-11-05",
+   "updated": "2026-11-22",
    "latest": {
-    "title": "Generalize independent blocks to arbitrary dependent coordinate types (#322)",
-    "url": "https://github.com/teorth/pfr/commit/1ef23c3c5a83db690fe3b3b5c2e8299fae17b81a"
+    "title": "Bump to v4.37.0-rc1",
+    "url": "https://github.com/teorth/pfr/commit/7595a42f6f9e04ad649ff663a43233ef6c86d775"
    },
    "overview": "teorth__pfr.json",
-   "lean_files": 74
+   "lean_files": 72
   },
   {
    "name": "Equational Theories",
@@ -8497,10 +8506,10 @@
    "kind": "human",
    "description": "Formalization of the Kelley–Meka bound on sets without three-term arithmetic progressions.",
    "url": "https://github.com/YaelDillies/LeanAPAP",
-   "updated": "2026-11-13",
+   "updated": "2026-11-22",
    "latest": {
-    "title": "chore: bump mathlib to 2d833a6, fix breaking changes (#29)",
-    "url": "https://github.com/YaelDillies/LeanAPAP/commit/fb5cb9c4f594cbeeb160c715618d13640984c521"
+    "title": "Bump to v4.37.0-rc1",
+    "url": "https://github.com/YaelDillies/LeanAPAP/commit/f35a9fd343f6e21451bc812bbc742f28bf660ec0"
    },
    "overview": "YaelDillies__LeanAPAP.json",
    "lean_files": 51
