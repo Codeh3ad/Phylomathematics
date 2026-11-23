@@ -1,13 +1,13 @@
 {
- "generated": "2026-11-22T14:31Z",
+ "generated": "2026-11-23T18:01Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "6ebcce37335bcb6bca64596e5d57bb3035648030",
-  "date": "2026-11-22",
-  "files": 8730,
-  "changes": 1330,
-  "additions": 618,
-  "ai_additions": 68
+  "commit": "9974623ff232d288c2db2dfa311b2febefaf5bd0",
+  "date": "2026-11-23",
+  "files": 8733,
+  "changes": 1332,
+  "additions": 614,
+  "ai_additions": 69
  },
  "fields": {
   "babylonian": {
@@ -2186,9 +2186,20 @@
     "Mathlib/Data/Matrix"
    ],
    "files": 409,
-   "additions": 78,
+   "additions": 79,
    "ai_additions": 9,
    "recent": [
+    {
+     "date": "2026-11-23",
+     "title": "Submatrix, conjTranspose, and op lemmas",
+     "scope": "LinearAlgebra/Matrix/Nondegenerate",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46179",
+     "ai": false,
+     "sha": "50364b76281b3a524b51b57fadbcaf009c7a8aaf",
+     "files": [
+      "Mathlib/LinearAlgebra/Matrix/Nondegenerate.lean"
+     ]
+    },
     {
      "date": "2026-11-20",
      "title": "Some API for `LinearMap.baseChange`",
@@ -2241,17 +2252,6 @@
       "Mathlib/Algebra/MvPolynomial/Degrees.lean",
       "Mathlib/Algebra/MvPolynomial/Equiv.lean",
       "Mathlib/Algebra/Notation/Support.lean"
-     ]
-    },
-    {
-     "date": "2026-11-18",
-     "title": "Add theorem isCompl_fst_snd",
-     "scope": "LinearAlgebra/Prod",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/46131",
-     "ai": false,
-     "sha": "389393b2bfacbdf050928b82e859a5508c074542",
-     "files": [
-      "Mathlib/LinearAlgebra/Prod.lean"
      ]
     }
    ],
@@ -2797,7 +2797,7 @@
     "Mathlib/MeasureTheory"
    ],
    "files": 342,
-   "additions": 44,
+   "additions": 43,
    "ai_additions": 3,
    "recent": [
     {
@@ -2955,7 +2955,7 @@
     "Mathlib/Topology"
    ],
    "files": 708,
-   "additions": 81,
+   "additions": 80,
    "ai_additions": 8,
    "recent": [
     {
@@ -3034,8 +3034,20 @@
    ],
    "files": 910,
    "additions": 98,
-   "ai_additions": 22,
+   "ai_additions": 23,
    "recent": [
+    {
+     "date": "2026-11-23",
+     "title": "`WfDvdMonoid.max_power_factor` for finsupp",
+     "scope": "UniqueFactorizationDomain/Multiplicity",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/37724",
+     "ai": true,
+     "sha": "81cb93dd9daa2d3d9cf275707da390fb66adadb0",
+     "files": [
+      "Mathlib/RingTheory/Multiplicity.lean",
+      "Mathlib/RingTheory/UniqueFactorizationDomain/Multiplicity.lean"
+     ]
+    },
     {
      "date": "2026-11-20",
      "title": "Some API for `LinearMap.baseChange`",
@@ -3092,18 +3104,6 @@
       "Mathlib/Algebra/MvPolynomial/Degrees.lean",
       "Mathlib/RingTheory/TensorProduct/Maps.lean",
       "Mathlib/RingTheory/Unramified/Finite.lean"
-     ]
-    },
-    {
-     "date": "2026-11-18",
-     "title": "Generalize `gelfandRadiusNorm` to algebraic extensions",
-     "scope": "Analysis/Normed/Unbundled/GelfandRadiusNorm",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45935",
-     "ai": false,
-     "sha": "4e34ea5e18ddfad7aae4c0d98a2ae1acbe906e97",
-     "files": [
-      "Mathlib/Analysis/Normed/Unbundled/GelfandRadiusNorm.lean",
-      "Mathlib/RingTheory/IntegralClosure/IsIntegralClosure/Basic.lean"
      ]
     }
    ],
@@ -3314,7 +3314,7 @@
     "Mathlib/CategoryTheory"
    ],
    "files": 1140,
-   "additions": 35,
+   "additions": 34,
    "ai_additions": 0,
    "recent": [
     {
@@ -3767,9 +3767,20 @@
     "Mathlib/Data/Int"
    ],
    "files": 126,
-   "additions": 32,
+   "additions": 33,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-11-23",
+     "title": "Submatrix, conjTranspose, and op lemmas",
+     "scope": "LinearAlgebra/Matrix/Nondegenerate",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46179",
+     "ai": false,
+     "sha": "50364b76281b3a524b51b57fadbcaf009c7a8aaf",
+     "files": [
+      "Mathlib/LinearAlgebra/Matrix/Nondegenerate.lean"
+     ]
+    },
     {
      "date": "2026-11-17",
      "title": "Add lemmas trace_fromBlocks and trace_comp",
@@ -3819,22 +3830,6 @@
      "sha": "af6dcfbf23867d9df7ee4835e28567fe509a2677",
      "files": [
       "Mathlib/LinearAlgebra/Matrix/Symmetrizable.lean"
-     ]
-    },
-    {
-     "date": "2026-11-11",
-     "title": "Drop finiteness from many theorems",
-     "scope": "LinearAlgebra/Matrix/PosDef",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45897",
-     "ai": true,
-     "sha": "b97762998b0ee14aea85f37006d06dfff25a6afa",
-     "files": [
-      "Mathlib/Analysis/InnerProductSpace/GramMatrix.lean",
-      "Mathlib/Analysis/Matrix/Order.lean",
-      "Mathlib/Data/Matrix/Block.lean",
-      "Mathlib/LinearAlgebra/Matrix/Hermitian.lean",
-      "Mathlib/LinearAlgebra/Matrix/PosDef.lean",
-      "Mathlib/MeasureTheory/Function/L2Space.lean"
      ]
     }
    ],
@@ -4345,8 +4340,8 @@
     "Mathlib/Algebra/Homology",
     "Mathlib/CategoryTheory/Abelian"
    ],
-   "files": 219,
-   "additions": 15,
+   "files": 221,
+   "additions": 14,
    "ai_additions": 1,
    "recent": [
     {
@@ -6568,6 +6563,36 @@
  },
  "feed": [
   {
+   "date": "2026-11-23",
+   "title": "Submatrix, conjTranspose, and op lemmas",
+   "scope": "LinearAlgebra/Matrix/Nondegenerate",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/46179",
+   "ai": false,
+   "sha": "50364b76281b3a524b51b57fadbcaf009c7a8aaf",
+   "files": [
+    "Mathlib/LinearAlgebra/Matrix/Nondegenerate.lean"
+   ],
+   "fields": [
+    "linear_algebra",
+    "nine_chapters"
+   ]
+  },
+  {
+   "date": "2026-11-23",
+   "title": "`WfDvdMonoid.max_power_factor` for finsupp",
+   "scope": "UniqueFactorizationDomain/Multiplicity",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/37724",
+   "ai": true,
+   "sha": "81cb93dd9daa2d3d9cf275707da390fb66adadb0",
+   "files": [
+    "Mathlib/RingTheory/Multiplicity.lean",
+    "Mathlib/RingTheory/UniqueFactorizationDomain/Multiplicity.lean"
+   ],
+   "fields": [
+    "abstract_algebra"
+   ]
+  },
+  {
    "date": "2026-11-21",
    "title": "Add `Continuous.re` and similar",
    "scope": "RCLike",
@@ -7537,38 +7562,6 @@
    ]
   },
   {
-   "date": "2026-11-17",
-   "title": "`mapToSubgraph` API",
-   "scope": "SimpleGraph/Connectivity/Subgraph",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/41722",
-   "ai": false,
-   "sha": "5b578aba874e19af79298de3518a8af3ead0f84e",
-   "files": [
-    "Mathlib/Combinatorics/SimpleGraph/Connectivity/Subgraph.lean"
-   ],
-   "fields": [
-    "graph_theory",
-    "combinatorics"
-   ]
-  },
-  {
-   "date": "2026-11-17",
-   "title": "Define generalized Cartan matrices and improve API for Cartan matrices of finite type",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45410",
-   "ai": false,
-   "sha": "817fc1dc370e965a626b85360dc7a3c74b2e54c7",
-   "files": [
-    "Mathlib/LinearAlgebra/Matrix/Cartan/Basic.lean",
-    "Mathlib/LinearAlgebra/Matrix/Symmetrizable.lean",
-    "Mathlib/LinearAlgebra/RootSystem/CartanMatrix.lean"
-   ],
-   "fields": [
-    "linear_algebra",
-    "nine_chapters"
-   ]
-  },
-  {
    "date": "2026-11-16",
    "title": "Lemmas to support F-space open mapping theorem",
    "scope": null,
@@ -8396,10 +8389,10 @@
    "kind": "benchmark",
    "description": "Google DeepMind's collection of open conjectures (Erdős problems and others) stated in Lean, used as targets for provers.",
    "url": "https://github.com/google-deepmind/formal-conjectures",
-   "updated": "2026-11-21",
+   "updated": "2026-11-23",
    "latest": {
-    "title": "feat(CONTRIBUTING): clarify solved statements are out of scope (#7916)",
-    "url": "https://github.com/google-deepmind/formal-conjectures/commit/2207c54d0dbe960de591d280f997b195bf3f6e28"
+    "title": "feat(OEIS/53175): link a formal proof of the Hankel determinant conjecture (#7986)",
+    "url": "https://github.com/google-deepmind/formal-conjectures/commit/5cbd509e2a2adf4c1ae47d2599e44ae26c36362b"
    },
    "overview": "google-deepmind__formal-conjectures.json",
    "lean_files": 400
@@ -8415,10 +8408,10 @@
    "kind": "human",
    "description": "Formalization of the Gowers–Green–Manners–Tao proof of the polynomial Freiman–Ruzsa conjecture.",
    "url": "https://github.com/teorth/pfr",
-   "updated": "2026-11-22",
+   "updated": "2026-11-23",
    "latest": {
-    "title": "Bump to v4.37.0-rc1",
-    "url": "https://github.com/teorth/pfr/commit/7595a42f6f9e04ad649ff663a43233ef6c86d775"
+    "title": "chore: bump mathlib to c47f9ad, fix breaking changes (#329)",
+    "url": "https://github.com/teorth/pfr/commit/1899ce8ed95fc310cce53d4c7ecfa2beb20ebec4"
    },
    "overview": "teorth__pfr.json",
    "lean_files": 72
@@ -8434,10 +8427,10 @@
    "kind": "automated",
    "description": "Crowdsourced map of implications between magma laws, settled with a mix of human proofs and automated provers, all checked in Lean.",
    "url": "https://github.com/teorth/equational_theories",
-   "updated": "2026-11-19",
+   "updated": "2026-11-22",
    "latest": {
-    "title": "update on 5093 Q",
-    "url": "https://github.com/teorth/equational_theories/commit/dbc9a2bf0c939e7c646841e679f0f7fb6cfe4e15"
+    "title": "Add a partial multiplication-table puzzle with law checks (#1524)",
+    "url": "https://github.com/teorth/equational_theories/commit/02b063b67143a897f070803482691c820770501d"
    },
    "overview": "teorth__equational_theories.json",
    "lean_files": 398
@@ -8506,10 +8499,10 @@
    "kind": "human",
    "description": "Formalization of the Kelley–Meka bound on sets without three-term arithmetic progressions.",
    "url": "https://github.com/YaelDillies/LeanAPAP",
-   "updated": "2026-11-22",
+   "updated": "2026-11-23",
    "latest": {
-    "title": "Bump to v4.37.0-rc1",
-    "url": "https://github.com/YaelDillies/LeanAPAP/commit/f35a9fd343f6e21451bc812bbc742f28bf660ec0"
+    "title": "chore: bump mathlib to c47f9ad, fix breaking changes (#30)",
+    "url": "https://github.com/YaelDillies/LeanAPAP/commit/b401f6e22417e6dbe6f87d6620571ea6c513aed3"
    },
    "overview": "YaelDillies__LeanAPAP.json",
    "lean_files": 51
