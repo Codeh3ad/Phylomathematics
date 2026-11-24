@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-23T18:01Z",
+ "generated": "2026-11-24T17:39Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "9974623ff232d288c2db2dfa311b2febefaf5bd0",
-  "date": "2026-11-23",
-  "files": 8733,
-  "changes": 1332,
-  "additions": 614,
+  "commit": "b2b2af4c4581fbdff371e7bf058d1e9f1279998b",
+  "date": "2026-11-24",
+  "files": 8734,
+  "changes": 1341,
+  "additions": 617,
   "ai_additions": 69
  },
  "fields": {
@@ -2536,7 +2536,7 @@
     "Mathlib/RingTheory/Nullstellensatz"
    ],
    "files": 142,
-   "additions": 6,
+   "additions": 5,
    "ai_additions": 0,
    "recent": [
     {
@@ -2959,6 +2959,30 @@
    "ai_additions": 8,
    "recent": [
     {
+     "date": "2026-11-24",
+     "title": "Tag lemmas with `@[nontriviality]`",
+     "scope": "Order/Monotone",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46377",
+     "ai": false,
+     "sha": "5d3d31c50c7b58ed18150f0b58034c12cf3c6afa",
+     "files": [
+      "Mathlib/Order/Monotone/Defs.lean",
+      "Mathlib/Topology/Order/IntermediateValue.lean"
+     ]
+    },
+    {
+     "date": "2026-11-23",
+     "title": "Add `Metric.ediam_closedBall_le`",
+     "scope": "Topology/MetricSpace/Bounded",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46218",
+     "ai": false,
+     "sha": "47cafe308e2b496ac4bcccadc09992026cbee26c",
+     "files": [
+      "Mathlib/Topology/MetricSpace/Bounded.lean",
+      "Mathlib/Topology/MetricSpace/Pseudo/Defs.lean"
+     ]
+    },
+    {
      "date": "2026-11-20",
      "title": "Real scalars on a complete normed `ℚ`-algebra",
      "scope": "Analysis/Normed/Module",
@@ -2994,34 +3018,6 @@
       "Mathlib/Topology/ContinuousMap/ContinuousMapZero.lean",
       "Mathlib/Topology/ContinuousMap/ContinuousMapZero/Unitization.lean"
      ]
-    },
-    {
-     "date": "2026-11-18",
-     "title": "`s ≠ ∅` simplifies to `s.Nonempty` for `Set` and `Finset`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45636",
-     "ai": false,
-     "sha": "4694f18024a16d41993787c8f5e0e905a729f904",
-     "files": [
-      "Mathlib/Algebra/BigOperators/Finprod.lean",
-      "Mathlib/Algebra/BigOperators/Group/Finset/Defs.lean",
-      "Mathlib/Algebra/MvPolynomial/Basic.lean",
-      "Mathlib/Algebra/MvPolynomial/Degrees.lean",
-      "Mathlib/Algebra/MvPolynomial/Equiv.lean",
-      "Mathlib/Algebra/Notation/Support.lean"
-     ]
-    },
-    {
-     "date": "2026-11-17",
-     "title": "Closure in Scott-Hausdorff topology",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45605",
-     "ai": false,
-     "sha": "ab848257255ee0ae96388b42c31bc36eb6adca14",
-     "files": [
-      "Mathlib/Order/Directed.lean",
-      "Mathlib/Topology/Order/ScottTopology.lean"
-     ]
     }
    ],
    "overview": "field-point_set_topology.json"
@@ -3032,10 +3028,47 @@
     "Mathlib/Algebra/Ring",
     "Mathlib/Algebra/Module"
    ],
-   "files": 910,
-   "additions": 98,
-   "ai_additions": 23,
+   "files": 911,
+   "additions": 99,
+   "ai_additions": 22,
    "recent": [
+    {
+     "date": "2026-11-24",
+     "title": "Lattices and spans",
+     "scope": "Algebra/Module/Lattice",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46241",
+     "ai": false,
+     "sha": "ec76f9d06ffaf259fd2e315792acc29061b56823",
+     "files": [
+      "Mathlib/Algebra/Module/Lattice/Basic.lean",
+      "Mathlib/Algebra/Module/Lattice/Full.lean"
+     ]
+    },
+    {
+     "date": "2026-11-24",
+     "title": "When the class group is torsion ideals have some power that is principal",
+     "scope": "RingTheory/ClassGroup",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45677",
+     "ai": false,
+     "sha": "e62b985f6c61653ebb17cb81d85565022fb1103d",
+     "files": [
+      "Mathlib/RingTheory/ClassGroup/Basic.lean",
+      "Mathlib/RingTheory/DedekindDomain/SInteger.lean"
+     ]
+    },
+    {
+     "date": "2026-11-23",
+     "title": "Add exponential module",
+     "scope": "RingTheory/PowerSeries/ExponentialModule",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/38622",
+     "ai": false,
+     "sha": "89054ceb8af8c256cc256494567a800d78a51c91",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finsupp/Fin.lean",
+      "Mathlib/Data/Nat/Choose/Sum.lean",
+      "Mathlib/RingTheory/PowerSeries/ExponentialModule.lean"
+     ]
+    },
     {
      "date": "2026-11-23",
      "title": "`WfDvdMonoid.max_power_factor` for finsupp",
@@ -3060,50 +3093,6 @@
       "Mathlib/RingTheory/Flat/Basic.lean",
       "Mathlib/RingTheory/Flat/Equalizer.lean",
       "Mathlib/RingTheory/Flat/FaithfullyFlat/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-11-20",
-     "title": "Add Units.ModPow and API",
-     "scope": "GroupTheory/QuotientGroup/UnitsModPow",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44614",
-     "ai": true,
-     "sha": "a1c366fa78621ef7a76fb0183de576200eec5dad",
-     "files": [
-      "Mathlib/Algebra/Group/Commute/Units.lean",
-      "Mathlib/Algebra/Group/Units/Equiv.lean",
-      "Mathlib/GroupTheory/QuotientGroup/UnitsModPow.lean",
-      "Mathlib/RingTheory/DedekindDomain/SelmerGroup.lean"
-     ]
-    },
-    {
-     "date": "2026-11-19",
-     "title": "Lint against numeric projections",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45341",
-     "ai": true,
-     "sha": "d33c49ca43873d3746194325da62640cc893c9d9",
-     "files": [
-      "Mathlib/Algebra/Quaternion.lean",
-      "Mathlib/Analysis/Complex/Harmonic/MeanValue.lean",
-      "Mathlib/Analysis/Complex/Harmonic/Poisson.lean",
-      "Mathlib/Basic/Complex/Basic.lean",
-      "Mathlib/Init.lean",
-      "Mathlib/RingTheory/Ideal/AssociatedPrime/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-11-18",
-     "title": "Relation between `inertiaIdempotent` and `extendScalars`",
-     "scope": "RingTheory/Unramified/Finite",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/46137",
-     "ai": false,
-     "sha": "9b72eb878d087e9ef7edd2001d9bfcf545510cab",
-     "files": [
-      "Mathlib/Algebra/Algebra/Bilinear.lean",
-      "Mathlib/Algebra/MvPolynomial/Degrees.lean",
-      "Mathlib/RingTheory/TensorProduct/Maps.lean",
-      "Mathlib/RingTheory/Unramified/Finite.lean"
      ]
     }
    ],
@@ -3314,7 +3303,7 @@
     "Mathlib/CategoryTheory"
    ],
    "files": 1140,
-   "additions": 34,
+   "additions": 33,
    "ai_additions": 0,
    "recent": [
     {
@@ -3440,7 +3429,7 @@
     "Mathlib/AlgebraicGeometry"
    ],
    "files": 141,
-   "additions": 6,
+   "additions": 5,
    "ai_additions": 0,
    "recent": [
     {
@@ -3528,7 +3517,7 @@
     "Mathlib/RingTheory/Invariant"
    ],
    "files": 145,
-   "additions": 7,
+   "additions": 6,
    "ai_additions": 0,
    "recent": [
     {
@@ -3841,9 +3830,22 @@
     "Mathlib/Data/Nat/Fib"
    ],
    "files": 13,
-   "additions": 4,
+   "additions": 5,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-11-23",
+     "title": "Add exponential module",
+     "scope": "RingTheory/PowerSeries/ExponentialModule",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/38622",
+     "ai": false,
+     "sha": "89054ceb8af8c256cc256494567a800d78a51c91",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finsupp/Fin.lean",
+      "Mathlib/Data/Nat/Choose/Sum.lean",
+      "Mathlib/RingTheory/PowerSeries/ExponentialModule.lean"
+     ]
+    },
     {
      "date": "2026-11-18",
      "title": "`s ≠ ∅` simplifies to `s.Nonempty` for `Set` and `Finset`",
@@ -3938,9 +3940,44 @@
     "Mathlib/NumberTheory/Cyclotomic"
    ],
    "files": 66,
-   "additions": 18,
-   "ai_additions": 7,
+   "additions": 21,
+   "ai_additions": 8,
    "recent": [
+    {
+     "date": "2026-11-24",
+     "title": "Generalize isTotallyReal_sup",
+     "scope": "NumberTheory/NumberField",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43924",
+     "ai": true,
+     "sha": "cebf88fd5d2d6c577ef34782c6b26a7dcd575719",
+     "files": [
+      "Mathlib/NumberTheory/NumberField/InfinitePlace/TotallyRealComplex.lean"
+     ]
+    },
+    {
+     "date": "2026-11-24",
+     "title": "When the class group is torsion ideals have some power that is principal",
+     "scope": "RingTheory/ClassGroup",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45677",
+     "ai": false,
+     "sha": "e62b985f6c61653ebb17cb81d85565022fb1103d",
+     "files": [
+      "Mathlib/RingTheory/ClassGroup/Basic.lean",
+      "Mathlib/RingTheory/DedekindDomain/SInteger.lean"
+     ]
+    },
+    {
+     "date": "2026-11-23",
+     "title": "Add IsCyclotomicExtension.Rat.seven_pid",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45215",
+     "ai": false,
+     "sha": "53dad9ed98be8416b6ca1111e55a03de4303231f",
+     "files": [
+      "Mathlib/NumberTheory/NumberField/ClassNumber.lean",
+      "Mathlib/NumberTheory/NumberField/Cyclotomic/PID.lean"
+     ]
+    },
     {
      "date": "2026-11-20",
      "title": "Also lint in conv mode",
@@ -3965,40 +4002,6 @@
       "Mathlib/Algebra/Group/Units/Equiv.lean",
       "Mathlib/GroupTheory/QuotientGroup/UnitsModPow.lean",
       "Mathlib/RingTheory/DedekindDomain/SelmerGroup.lean"
-     ]
-    },
-    {
-     "date": "2026-11-15",
-     "title": "Define Hecke L-Functions",
-     "scope": "NumberTheory/NumberField/HeckeLFunction",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/40736",
-     "ai": false,
-     "sha": "6e96f3e25b9b23468a6f155342b5a1e5e33ac8f9",
-     "files": [
-      "Mathlib/NumberTheory/NumberField/HeckeLFunction.lean"
-     ]
-    },
-    {
-     "date": "2026-11-14",
-     "title": "Adic valuations are trivial on subfields",
-     "scope": "RingTheory/DedekindDomain/AdicValuation",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/42771",
-     "ai": true,
-     "sha": "c699123b78bf586cc3934a4d163a8c50d78b403b",
-     "files": [
-      "Mathlib/RingTheory/Algebraic/Integral.lean",
-      "Mathlib/RingTheory/DedekindDomain/AdicValuation/Valuation.lean"
-     ]
-    },
-    {
-     "date": "2026-11-14",
-     "title": "Drop integrality assumption in `intermediateField_adjoin_isCyclotomicExtension`",
-     "scope": "NumberTheory/Cyclotomic/Basic",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45992",
-     "ai": true,
-     "sha": "9a20b96f1f6f5891c39427a8f17be440388e1afb",
-     "files": [
-      "Mathlib/NumberTheory/Cyclotomic/Basic.lean"
      ]
     }
    ],
@@ -6022,9 +6025,22 @@
     "Mathlib/Data/Nat/Choose"
    ],
    "files": 203,
-   "additions": 42,
+   "additions": 43,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-11-23",
+     "title": "Add exponential module",
+     "scope": "RingTheory/PowerSeries/ExponentialModule",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/38622",
+     "ai": false,
+     "sha": "89054ceb8af8c256cc256494567a800d78a51c91",
+     "files": [
+      "Mathlib/Algebra/BigOperators/Finsupp/Fin.lean",
+      "Mathlib/Data/Nat/Choose/Sum.lean",
+      "Mathlib/RingTheory/PowerSeries/ExponentialModule.lean"
+     ]
+    },
     {
      "date": "2026-11-18",
      "title": "An Eulerian walk is chordless",
@@ -6074,22 +6090,6 @@
      "sha": "1c66af4d268ca1f094326739c1c954126d889ff3",
      "files": [
       "Mathlib/Combinatorics/SimpleGraph/Walk/Chord.lean"
-     ]
-    },
-    {
-     "date": "2026-11-17",
-     "title": "A preconnected graph with finitely many edges has finitely many vertices",
-     "scope": "SimpleGraph/Connectivity/Connected",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/41481",
-     "ai": false,
-     "sha": "c417b829e83e7c2333edb66420e8b0821c9bc27c",
-     "files": [
-      "Mathlib/Combinatorics/SimpleGraph/Basic.lean",
-      "Mathlib/Combinatorics/SimpleGraph/Connectivity/Connected.lean",
-      "Mathlib/Combinatorics/SimpleGraph/Dart.lean",
-      "Mathlib/Combinatorics/SimpleGraph/Walk/Basic.lean",
-      "Mathlib/Data/Sym/Sym2.lean",
-      "Mathlib/Data/Sym/Sym2/Card.lean"
      ]
     }
    ],
@@ -6562,6 +6562,114 @@
   }
  },
  "feed": [
+  {
+   "date": "2026-11-24",
+   "title": "Lattices and spans",
+   "scope": "Algebra/Module/Lattice",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/46241",
+   "ai": false,
+   "sha": "ec76f9d06ffaf259fd2e315792acc29061b56823",
+   "files": [
+    "Mathlib/Algebra/Module/Lattice/Basic.lean",
+    "Mathlib/Algebra/Module/Lattice/Full.lean"
+   ],
+   "fields": [
+    "abstract_algebra"
+   ]
+  },
+  {
+   "date": "2026-11-24",
+   "title": "Tag lemmas with `@[nontriviality]`",
+   "scope": "Order/Monotone",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/46377",
+   "ai": false,
+   "sha": "5d3d31c50c7b58ed18150f0b58034c12cf3c6afa",
+   "files": [
+    "Mathlib/Order/Monotone/Defs.lean",
+    "Mathlib/Topology/Order/IntermediateValue.lean"
+   ],
+   "fields": [
+    "point_set_topology"
+   ]
+  },
+  {
+   "date": "2026-11-24",
+   "title": "Generalize isTotallyReal_sup",
+   "scope": "NumberTheory/NumberField",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/43924",
+   "ai": true,
+   "sha": "cebf88fd5d2d6c577ef34782c6b26a7dcd575719",
+   "files": [
+    "Mathlib/NumberTheory/NumberField/InfinitePlace/TotallyRealComplex.lean"
+   ],
+   "fields": [
+    "algebraic_number_theory"
+   ]
+  },
+  {
+   "date": "2026-11-24",
+   "title": "When the class group is torsion ideals have some power that is principal",
+   "scope": "RingTheory/ClassGroup",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45677",
+   "ai": false,
+   "sha": "e62b985f6c61653ebb17cb81d85565022fb1103d",
+   "files": [
+    "Mathlib/RingTheory/ClassGroup/Basic.lean",
+    "Mathlib/RingTheory/DedekindDomain/SInteger.lean"
+   ],
+   "fields": [
+    "abstract_algebra",
+    "algebraic_number_theory"
+   ]
+  },
+  {
+   "date": "2026-11-23",
+   "title": "Add IsCyclotomicExtension.Rat.seven_pid",
+   "scope": null,
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45215",
+   "ai": false,
+   "sha": "53dad9ed98be8416b6ca1111e55a03de4303231f",
+   "files": [
+    "Mathlib/NumberTheory/NumberField/ClassNumber.lean",
+    "Mathlib/NumberTheory/NumberField/Cyclotomic/PID.lean"
+   ],
+   "fields": [
+    "algebraic_number_theory"
+   ]
+  },
+  {
+   "date": "2026-11-23",
+   "title": "Add `Metric.ediam_closedBall_le`",
+   "scope": "Topology/MetricSpace/Bounded",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/46218",
+   "ai": false,
+   "sha": "47cafe308e2b496ac4bcccadc09992026cbee26c",
+   "files": [
+    "Mathlib/Topology/MetricSpace/Bounded.lean",
+    "Mathlib/Topology/MetricSpace/Pseudo/Defs.lean"
+   ],
+   "fields": [
+    "point_set_topology"
+   ]
+  },
+  {
+   "date": "2026-11-23",
+   "title": "Add exponential module",
+   "scope": "RingTheory/PowerSeries/ExponentialModule",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/38622",
+   "ai": false,
+   "sha": "89054ceb8af8c256cc256494567a800d78a51c91",
+   "files": [
+    "Mathlib/Algebra/BigOperators/Finsupp/Fin.lean",
+    "Mathlib/Data/Nat/Choose/Sum.lean",
+    "Mathlib/RingTheory/PowerSeries/ExponentialModule.lean"
+   ],
+   "fields": [
+    "abstract_algebra",
+    "indian_combinatorics",
+    "combinatorics"
+   ]
+  },
   {
    "date": "2026-11-23",
    "title": "Submatrix, conjTranspose, and op lemmas",
@@ -7449,119 +7557,6 @@
    ]
   },
   {
-   "date": "2026-11-17",
-   "title": "Chords of `Walk.map`",
-   "scope": "SimpleGraph/Walk/Chord",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/42956",
-   "ai": false,
-   "sha": "1c66af4d268ca1f094326739c1c954126d889ff3",
-   "files": [
-    "Mathlib/Combinatorics/SimpleGraph/Walk/Chord.lean"
-   ],
-   "fields": [
-    "graph_theory",
-    "combinatorics"
-   ]
-  },
-  {
-   "date": "2026-11-17",
-   "title": "A preconnected graph with finitely many edges has finitely many vertices",
-   "scope": "SimpleGraph/Connectivity/Connected",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/41481",
-   "ai": false,
-   "sha": "c417b829e83e7c2333edb66420e8b0821c9bc27c",
-   "files": [
-    "Mathlib/Combinatorics/SimpleGraph/Basic.lean",
-    "Mathlib/Combinatorics/SimpleGraph/Connectivity/Connected.lean",
-    "Mathlib/Combinatorics/SimpleGraph/Dart.lean",
-    "Mathlib/Combinatorics/SimpleGraph/Walk/Basic.lean",
-    "Mathlib/Data/Sym/Sym2.lean",
-    "Mathlib/Data/Sym/Sym2/Card.lean"
-   ],
-   "fields": [
-    "graph_theory",
-    "combinatorics"
-   ]
-  },
-  {
-   "date": "2026-11-17",
-   "title": "Some `CliqueFree`/`Free` lemmas",
-   "scope": "SimpleGraph",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/41373",
-   "ai": false,
-   "sha": "516ba91af6de8d58c0cde840776d475441664679",
-   "files": [
-    "Mathlib/Combinatorics/SimpleGraph/Clique.lean",
-    "Mathlib/Combinatorics/SimpleGraph/Copy.lean"
-   ],
-   "fields": [
-    "graph_theory",
-    "combinatorics"
-   ]
-  },
-  {
-   "date": "2026-11-17",
-   "title": "Add levelOne_qExpansionAlgHom_injective",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/42327",
-   "ai": false,
-   "sha": "4c9d33127061af6660fe08d7173b2c39de30138d",
-   "files": [
-    "Mathlib/NumberTheory/ModularForms/CongruenceSubgroups.lean",
-    "Mathlib/NumberTheory/ModularForms/Cusps.lean",
-    "Mathlib/NumberTheory/ModularForms/QExpansion.lean",
-    "Mathlib/NumberTheory/ModularForms/QExpansionInjective.lean"
-   ],
-   "fields": [
-    "langlands"
-   ]
-  },
-  {
-   "date": "2026-11-17",
-   "title": "Bounds for `extremalNumber` and `turanDensity`",
-   "scope": "Combinatorics/SimpleGraph",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/42137",
-   "ai": false,
-   "sha": "4aed2b702fe714de9a0db66725dc24d7fba29b6d",
-   "files": [
-    "Mathlib/Combinatorics/SimpleGraph/Extremal/Basic.lean",
-    "Mathlib/Combinatorics/SimpleGraph/Extremal/TuranDensity.lean"
-   ],
-   "fields": [
-    "graph_theory",
-    "combinatorics"
-   ]
-  },
-  {
-   "date": "2026-11-17",
-   "title": "Introduce `UnlabeledCopy` carrier subtype",
-   "scope": "Combinatorics/SimpleGraph/Copy",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/39307",
-   "ai": false,
-   "sha": "eb112e4c252c84c6a4fa9ef651f0d2d70521d1f9",
-   "files": [
-    "Mathlib/Combinatorics/SimpleGraph/Copy.lean"
-   ],
-   "fields": [
-    "graph_theory",
-    "combinatorics"
-   ]
-  },
-  {
-   "date": "2026-11-17",
-   "title": "There exist ordinals with arbitrarily large cofinality",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45764",
-   "ai": false,
-   "sha": "28961ff38b9d4db71c407f4273564d9abaa1ef1b",
-   "files": [
-    "Mathlib/SetTheory/Cardinal/Regular.lean"
-   ],
-   "fields": [
-    "set_theory"
-   ]
-  },
-  {
    "date": "2026-11-16",
    "title": "Lemmas to support F-space open mapping theorem",
    "scope": null,
@@ -8306,20 +8301,6 @@
     "abstract_algebra",
     "algebraic_number_theory"
    ]
-  },
-  {
-   "date": "2026-09-25",
-   "title": "Drop the `PerfectField` hypothesis of `absNorm_relNorm`",
-   "scope": "RingTheory/Ideal/Norm/RelNorm",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44069",
-   "ai": true,
-   "sha": "8ce7fa340a5eaf3ef206ea6f3e99d50340430b44",
-   "files": [
-    "Mathlib/RingTheory/Ideal/Norm/RelNorm.lean"
-   ],
-   "fields": [
-    "abstract_algebra"
-   ]
   }
  ],
  "projects": [
@@ -8368,10 +8349,10 @@
    "kind": "human",
    "description": "Kontorovich and Tao's collaborative project on the prime number theorem and related results.",
    "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",
-   "updated": "2026-11-14",
+   "updated": "2026-11-24",
    "latest": {
-    "title": "blueprint updates (#1813)",
-    "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd/commit/a4fb6989b07e9c76b511807ae93e33e25b820e9b"
+    "title": "Silence StrongPNT (#1817)",
+    "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd/commit/e9906138410f8f76ca66b9bc252d0993f3ee348c"
    },
    "overview": "AlexKontorovich__PrimeNumberTheoremAnd.json",
    "lean_files": 232
@@ -8389,10 +8370,10 @@
    "kind": "benchmark",
    "description": "Google DeepMind's collection of open conjectures (Erdős problems and others) stated in Lean, used as targets for provers.",
    "url": "https://github.com/google-deepmind/formal-conjectures",
-   "updated": "2026-11-23",
+   "updated": "2026-11-24",
    "latest": {
-    "title": "feat(OEIS/53175): link a formal proof of the Hankel determinant conjecture (#7986)",
-    "url": "https://github.com/google-deepmind/formal-conjectures/commit/5cbd509e2a2adf4c1ae47d2599e44ae26c36362b"
+    "title": "feat(ErdosProblems/123): prove d-completeness of the products of powers of 2 and 3 (#7420)",
+    "url": "https://github.com/google-deepmind/formal-conjectures/commit/9097e2f90e66d2f6244209cb1c07f7120d17ec53"
    },
    "overview": "google-deepmind__formal-conjectures.json",
    "lean_files": 400
