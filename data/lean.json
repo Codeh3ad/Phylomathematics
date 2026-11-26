@@ -1,13 +1,13 @@
 {
- "generated": "2026-11-25T17:10Z",
+ "generated": "2026-11-26T16:51Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "23327636db1943ed6df8cfc609477c12b62a8e76",
-  "date": "2026-11-25",
-  "files": 8736,
-  "changes": 1358,
-  "additions": 622,
-  "ai_additions": 68
+  "commit": "b108da25f50641d5449257791381d6d9fa8b67c2",
+  "date": "2026-11-26",
+  "files": 8737,
+  "changes": 1375,
+  "additions": 629,
+  "ai_additions": 70
  },
  "fields": {
   "babylonian": {
@@ -439,9 +439,22 @@
     "Mathlib/Algebra/GroupWithZero"
    ],
    "files": 59,
-   "additions": 11,
+   "additions": 12,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-11-26",
+     "title": "Ring is formally real iff it's reduced and sums of squares form a positive cone",
+     "scope": "Algebra/Ring",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44288",
+     "ai": false,
+     "sha": "74fd482a4ec9c452b68ada39f993d3bfcd5401aa",
+     "files": [
+      "Mathlib/Algebra/GroupWithZero/Basic.lean",
+      "Mathlib/Algebra/Ring/IsFormallyReal.lean",
+      "Mathlib/Algebra/Ring/SumsOfSquares.lean"
+     ]
+    },
     {
      "date": "2026-11-03",
      "title": "Add `inertiaIdempotent`",
@@ -494,17 +507,6 @@
       "Mathlib/Algebra/GroupWithZero/FunLike.lean",
       "Mathlib/Algebra/Ring/FunLike.lean",
       "Mathlib/Topology/Algebra/Module/ContinuousLinearMap/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-10-28",
-     "title": "Characterise divisibility in `WithZero`",
-     "scope": "Algebra",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45246",
-     "ai": false,
-     "sha": "568792a09180b811edf50925ab22b5255d7d756f",
-     "files": [
-      "Mathlib/Algebra/GroupWithZero/WithZero.lean"
      ]
     }
    ],
@@ -2175,9 +2177,58 @@
     "Mathlib/Data/Matrix"
    ],
    "files": 409,
-   "additions": 79,
-   "ai_additions": 10,
+   "additions": 83,
+   "ai_additions": 11,
    "recent": [
+    {
+     "date": "2026-11-26",
+     "title": "Add strict block triangular API",
+     "scope": "LinearAlgebra/Matrix",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45572",
+     "ai": false,
+     "sha": "b108da25f50641d5449257791381d6d9fa8b67c2",
+     "files": [
+      "Mathlib/LinearAlgebra/Matrix/Block.lean",
+      "Mathlib/LinearAlgebra/Matrix/Charpoly/Basic.lean"
+     ]
+    },
+    {
+     "date": "2026-11-25",
+     "title": "Generalize `Nondegenerate.mul_iff_*` to rectangular matrices",
+     "scope": "LinearAlgebra/Matrix/ToLinearEquiv",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46410",
+     "ai": true,
+     "sha": "6cf8de9807b5685fafc3171d59f05c34ad3e3827",
+     "files": [
+      "Mathlib/LinearAlgebra/Matrix/Nondegenerate.lean",
+      "Mathlib/LinearAlgebra/Matrix/ToLinearEquiv.lean"
+     ]
+    },
+    {
+     "date": "2026-11-25",
+     "title": "Generalize `smul_iff` and add `of_smul`/`smul` lemmas",
+     "scope": "LinearAlgebra/Matrix/Nondegenerate",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46409",
+     "ai": false,
+     "sha": "69e1852ff6e20cfdc5c3505b8c45777cde5230de",
+     "files": [
+      "Mathlib/LinearAlgebra/Matrix/Nondegenerate.lean",
+      "Mathlib/LinearAlgebra/Matrix/ToLinearEquiv.lean",
+      "Mathlib/LinearAlgebra/RootSystem/CartanMatrix.lean"
+     ]
+    },
+    {
+     "date": "2026-11-25",
+     "title": "Add API relating `toMatrix/toLin` and product modules",
+     "scope": "LinearAlgebra/Matrix/ToLin",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46390",
+     "ai": false,
+     "sha": "1ff2a37b8822962567b5d75ff5d36199751d8af4",
+     "files": [
+      "Mathlib/LinearAlgebra/Charpoly/ToMatrix.lean",
+      "Mathlib/LinearAlgebra/Matrix/ToLin.lean"
+     ]
+    },
     {
      "date": "2026-11-25",
      "title": "Assume `NeZero 2` in `centroid_pair`",
@@ -2187,55 +2238,6 @@
      "sha": "b5aed57ecb942ed630d5ce5413709e186126753d",
      "files": [
       "Mathlib/LinearAlgebra/AffineSpace/Centroid.lean"
-     ]
-    },
-    {
-     "date": "2026-11-23",
-     "title": "Submatrix, conjTranspose, and op lemmas",
-     "scope": "LinearAlgebra/Matrix/Nondegenerate",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/46179",
-     "ai": false,
-     "sha": "50364b76281b3a524b51b57fadbcaf009c7a8aaf",
-     "files": [
-      "Mathlib/LinearAlgebra/Matrix/Nondegenerate.lean"
-     ]
-    },
-    {
-     "date": "2026-11-20",
-     "title": "Some API for `LinearMap.baseChange`",
-     "scope": "RingTheory",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45419",
-     "ai": false,
-     "sha": "6c6d782d91ae56dcde45c8cc2b774035e70c7a0e",
-     "files": [
-      "Mathlib/LinearAlgebra/TensorProduct/RightExactness.lean",
-      "Mathlib/RingTheory/Flat/Basic.lean",
-      "Mathlib/RingTheory/Flat/Equalizer.lean",
-      "Mathlib/RingTheory/Flat/FaithfullyFlat/Basic.lean"
-     ]
-    },
-    {
-     "date": "2026-11-19",
-     "title": "Exterior power commute with base change",
-     "scope": "LinearAlgebra",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/40948",
-     "ai": true,
-     "sha": "8022e4db60a0ecf6bdf1168e1dcb3d6e07497b2a",
-     "files": [
-      "Mathlib/LinearAlgebra/ExteriorAlgebra/BaseChange.lean",
-      "Mathlib/LinearAlgebra/ExteriorAlgebra/Grading.lean",
-      "Mathlib/LinearAlgebra/ExteriorPower/BaseChange.lean"
-     ]
-    },
-    {
-     "date": "2026-11-19",
-     "title": "Add Varignon's theorem",
-     "scope": "LinearAlgebra/AffineSpace",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/43702",
-     "ai": true,
-     "sha": "11aadab8833159a4c795a46cfcc60c81cec31b49",
-     "files": [
-      "Mathlib/LinearAlgebra/AffineSpace/Midpoint.lean"
      ]
     }
    ],
@@ -2693,9 +2695,20 @@
     "Mathlib/Dynamics"
    ],
    "files": 37,
-   "additions": 9,
-   "ai_additions": 0,
+   "additions": 10,
+   "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-11-25",
+     "title": "Generalise `AddCircle.ae_empty_or_univ_of_forall_vadd_ae_eq_self`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45870",
+     "ai": true,
+     "sha": "348837d3aa976624060d7c35c183fff587c5a24a",
+     "files": [
+      "Mathlib/Dynamics/Ergodic/AddCircle.lean"
+     ]
+    },
     {
      "date": "2026-11-25",
      "title": "Periodic orbits must jump up and down",
@@ -2753,22 +2766,6 @@
       "Mathlib/Dynamics/BirkhoffSum/Integrable.lean",
       "Mathlib/Dynamics/BirkhoffSum/Maximal.lean",
       "Mathlib/MeasureTheory/Function/L1Space/Integrable.lean"
-     ]
-    },
-    {
-     "date": "2026-10-29",
-     "title": "Un-revert \"feat: enable Verso if no syntax or doc-gen changes (#45031)\" (#45094)",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45466",
-     "ai": false,
-     "sha": "32a422c83a18ddd0f352908187e5f68aad829904",
-     "files": [
-      "Mathlib/Algebra/AffineMonoid/Basic.lean",
-      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
-      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
-      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
-      "Mathlib/Algebra/Algebra/Bilinear.lean",
-      "Mathlib/Algebra/Algebra/Field.lean"
      ]
     }
    ],
@@ -2931,7 +2928,7 @@
    "prefixes": [
     "Mathlib/Topology"
    ],
-   "files": 708,
+   "files": 709,
    "additions": 81,
    "ai_additions": 8,
    "recent": [
@@ -3011,9 +3008,22 @@
     "Mathlib/Algebra/Module"
    ],
    "files": 911,
-   "additions": 97,
+   "additions": 98,
    "ai_additions": 20,
    "recent": [
+    {
+     "date": "2026-11-26",
+     "title": "Ring is formally real iff it's reduced and sums of squares form a positive cone",
+     "scope": "Algebra/Ring",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/44288",
+     "ai": false,
+     "sha": "74fd482a4ec9c452b68ada39f993d3bfcd5401aa",
+     "files": [
+      "Mathlib/Algebra/GroupWithZero/Basic.lean",
+      "Mathlib/Algebra/Ring/IsFormallyReal.lean",
+      "Mathlib/Algebra/Ring/SumsOfSquares.lean"
+     ]
+    },
     {
      "date": "2026-11-24",
      "title": "Lattices and spans",
@@ -3061,20 +3071,6 @@
      "files": [
       "Mathlib/RingTheory/Multiplicity.lean",
       "Mathlib/RingTheory/UniqueFactorizationDomain/Multiplicity.lean"
-     ]
-    },
-    {
-     "date": "2026-11-20",
-     "title": "Some API for `LinearMap.baseChange`",
-     "scope": "RingTheory",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45419",
-     "ai": false,
-     "sha": "6c6d782d91ae56dcde45c8cc2b774035e70c7a0e",
-     "files": [
-      "Mathlib/LinearAlgebra/TensorProduct/RightExactness.lean",
-      "Mathlib/RingTheory/Flat/Basic.lean",
-      "Mathlib/RingTheory/Flat/Equalizer.lean",
-      "Mathlib/RingTheory/Flat/FaithfullyFlat/Basic.lean"
      ]
     }
    ],
@@ -3736,9 +3732,58 @@
     "Mathlib/Data/Int"
    ],
    "files": 126,
-   "additions": 33,
-   "ai_additions": 2,
+   "additions": 37,
+   "ai_additions": 3,
    "recent": [
+    {
+     "date": "2026-11-26",
+     "title": "Add strict block triangular API",
+     "scope": "LinearAlgebra/Matrix",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45572",
+     "ai": false,
+     "sha": "b108da25f50641d5449257791381d6d9fa8b67c2",
+     "files": [
+      "Mathlib/LinearAlgebra/Matrix/Block.lean",
+      "Mathlib/LinearAlgebra/Matrix/Charpoly/Basic.lean"
+     ]
+    },
+    {
+     "date": "2026-11-25",
+     "title": "Generalize `Nondegenerate.mul_iff_*` to rectangular matrices",
+     "scope": "LinearAlgebra/Matrix/ToLinearEquiv",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46410",
+     "ai": true,
+     "sha": "6cf8de9807b5685fafc3171d59f05c34ad3e3827",
+     "files": [
+      "Mathlib/LinearAlgebra/Matrix/Nondegenerate.lean",
+      "Mathlib/LinearAlgebra/Matrix/ToLinearEquiv.lean"
+     ]
+    },
+    {
+     "date": "2026-11-25",
+     "title": "Generalize `smul_iff` and add `of_smul`/`smul` lemmas",
+     "scope": "LinearAlgebra/Matrix/Nondegenerate",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46409",
+     "ai": false,
+     "sha": "69e1852ff6e20cfdc5c3505b8c45777cde5230de",
+     "files": [
+      "Mathlib/LinearAlgebra/Matrix/Nondegenerate.lean",
+      "Mathlib/LinearAlgebra/Matrix/ToLinearEquiv.lean",
+      "Mathlib/LinearAlgebra/RootSystem/CartanMatrix.lean"
+     ]
+    },
+    {
+     "date": "2026-11-25",
+     "title": "Add API relating `toMatrix/toLin` and product modules",
+     "scope": "LinearAlgebra/Matrix/ToLin",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46390",
+     "ai": false,
+     "sha": "1ff2a37b8822962567b5d75ff5d36199751d8af4",
+     "files": [
+      "Mathlib/LinearAlgebra/Charpoly/ToMatrix.lean",
+      "Mathlib/LinearAlgebra/Matrix/ToLin.lean"
+     ]
+    },
     {
      "date": "2026-11-23",
      "title": "Submatrix, conjTranspose, and op lemmas",
@@ -3748,57 +3793,6 @@
      "sha": "50364b76281b3a524b51b57fadbcaf009c7a8aaf",
      "files": [
       "Mathlib/LinearAlgebra/Matrix/Nondegenerate.lean"
-     ]
-    },
-    {
-     "date": "2026-11-17",
-     "title": "Add lemmas trace_fromBlocks and trace_comp",
-     "scope": "LinearAlgebra/Matrix/Trace",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/46095",
-     "ai": false,
-     "sha": "14a797715b87125ccf73fcb8991aba7112bf5a88",
-     "files": [
-      "Mathlib/LinearAlgebra/Matrix/Trace.lean"
-     ]
-    },
-    {
-     "date": "2026-11-17",
-     "title": "Define generalized Cartan matrices and improve API for Cartan matrices of finite type",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45410",
-     "ai": false,
-     "sha": "817fc1dc370e965a626b85360dc7a3c74b2e54c7",
-     "files": [
-      "Mathlib/LinearAlgebra/Matrix/Cartan/Basic.lean",
-      "Mathlib/LinearAlgebra/Matrix/Symmetrizable.lean",
-      "Mathlib/LinearAlgebra/RootSystem/CartanMatrix.lean"
-     ]
-    },
-    {
-     "date": "2026-11-13",
-     "title": "Generalize basic lemmas to rectangular matrices",
-     "scope": "Data/Matrix,LinearAlgebra/Matrix",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45927",
-     "ai": true,
-     "sha": "189ce949552fd76f236c44ee52e9fc7154adb2a4",
-     "files": [
-      "Mathlib/Analysis/InnerProductSpace/PiL2.lean",
-      "Mathlib/Analysis/Normed/Lp/PiLp.lean",
-      "Mathlib/Analysis/Normed/Module/FiniteDimension.lean",
-      "Mathlib/Combinatorics/SimpleGraph/AdjMatrix.lean",
-      "Mathlib/Data/Matrix/Basis.lean",
-      "Mathlib/Data/Matrix/Block.lean"
-     ]
-    },
-    {
-     "date": "2026-11-12",
-     "title": "Symmetrizable matices",
-     "scope": "LinearAlgebra",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45801",
-     "ai": false,
-     "sha": "af6dcfbf23867d9df7ee4835e28567fe509a2677",
-     "files": [
-      "Mathlib/LinearAlgebra/Matrix/Symmetrizable.lean"
      ]
     }
    ],
@@ -4540,7 +4534,7 @@
     "Mathlib/CategoryTheory/Sites",
     "Mathlib/Topology/Sheaves"
    ],
-   "files": 149,
+   "files": 150,
    "additions": 5,
    "ai_additions": 0,
    "recent": [
@@ -4983,9 +4977,20 @@
     "Mathlib/Analysis/Complex"
    ],
    "files": 110,
-   "additions": 26,
-   "ai_additions": 4,
+   "additions": 27,
+   "ai_additions": 5,
    "recent": [
+    {
+     "date": "2026-11-25",
+     "title": "Generalise `AddCircle.ae_empty_or_univ_of_forall_vadd_ae_eq_self`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45870",
+     "ai": true,
+     "sha": "348837d3aa976624060d7c35c183fff587c5a24a",
+     "files": [
+      "Mathlib/Dynamics/Ergodic/AddCircle.lean"
+     ]
+    },
     {
      "date": "2026-11-25",
      "title": "Periodic orbits must jump up and down",
@@ -5044,22 +5049,6 @@
       "Mathlib/Algebra/MvPolynomial/Degrees.lean",
       "Mathlib/Algebra/MvPolynomial/Equiv.lean",
       "Mathlib/Algebra/Notation/Support.lean"
-     ]
-    },
-    {
-     "date": "2026-11-17",
-     "title": "`exp (x * n) = exp x ^ n`",
-     "scope": "Analysis",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45936",
-     "ai": false,
-     "sha": "57870a3ef03fd19e8bb00cd07e878f8b358c18f4",
-     "files": [
-      "Mathlib/Analysis/Complex/BranchLogRoot.lean",
-      "Mathlib/Analysis/Complex/Exponential.lean",
-      "Mathlib/Analysis/Complex/PhragmenLindelof.lean",
-      "Mathlib/Analysis/Complex/Trigonometric.lean",
-      "Mathlib/Analysis/SpecialFunctions/Complex/CircleMap.lean",
-      "Mathlib/Analysis/SpecialFunctions/Exp.lean"
      ]
     }
    ],
@@ -6547,6 +6536,103 @@
  },
  "feed": [
   {
+   "date": "2026-11-26",
+   "title": "Add strict block triangular API",
+   "scope": "LinearAlgebra/Matrix",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45572",
+   "ai": false,
+   "sha": "b108da25f50641d5449257791381d6d9fa8b67c2",
+   "files": [
+    "Mathlib/LinearAlgebra/Matrix/Block.lean",
+    "Mathlib/LinearAlgebra/Matrix/Charpoly/Basic.lean"
+   ],
+   "fields": [
+    "linear_algebra",
+    "nine_chapters"
+   ]
+  },
+  {
+   "date": "2026-11-26",
+   "title": "Ring is formally real iff it's reduced and sums of squares form a positive cone",
+   "scope": "Algebra/Ring",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/44288",
+   "ai": false,
+   "sha": "74fd482a4ec9c452b68ada39f993d3bfcd5401aa",
+   "files": [
+    "Mathlib/Algebra/GroupWithZero/Basic.lean",
+    "Mathlib/Algebra/Ring/IsFormallyReal.lean",
+    "Mathlib/Algebra/Ring/SumsOfSquares.lean"
+   ],
+   "fields": [
+    "zero",
+    "abstract_algebra"
+   ]
+  },
+  {
+   "date": "2026-11-25",
+   "title": "Generalise `AddCircle.ae_empty_or_univ_of_forall_vadd_ae_eq_self`",
+   "scope": null,
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45870",
+   "ai": true,
+   "sha": "348837d3aa976624060d7c35c183fff587c5a24a",
+   "files": [
+    "Mathlib/Dynamics/Ergodic/AddCircle.lean"
+   ],
+   "fields": [
+    "dynamical_systems",
+    "complex_dynamics"
+   ]
+  },
+  {
+   "date": "2026-11-25",
+   "title": "Generalize `Nondegenerate.mul_iff_*` to rectangular matrices",
+   "scope": "LinearAlgebra/Matrix/ToLinearEquiv",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/46410",
+   "ai": true,
+   "sha": "6cf8de9807b5685fafc3171d59f05c34ad3e3827",
+   "files": [
+    "Mathlib/LinearAlgebra/Matrix/Nondegenerate.lean",
+    "Mathlib/LinearAlgebra/Matrix/ToLinearEquiv.lean"
+   ],
+   "fields": [
+    "linear_algebra",
+    "nine_chapters"
+   ]
+  },
+  {
+   "date": "2026-11-25",
+   "title": "Generalize `smul_iff` and add `of_smul`/`smul` lemmas",
+   "scope": "LinearAlgebra/Matrix/Nondegenerate",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/46409",
+   "ai": false,
+   "sha": "69e1852ff6e20cfdc5c3505b8c45777cde5230de",
+   "files": [
+    "Mathlib/LinearAlgebra/Matrix/Nondegenerate.lean",
+    "Mathlib/LinearAlgebra/Matrix/ToLinearEquiv.lean",
+    "Mathlib/LinearAlgebra/RootSystem/CartanMatrix.lean"
+   ],
+   "fields": [
+    "linear_algebra",
+    "nine_chapters"
+   ]
+  },
+  {
+   "date": "2026-11-25",
+   "title": "Add API relating `toMatrix/toLin` and product modules",
+   "scope": "LinearAlgebra/Matrix/ToLin",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/46390",
+   "ai": false,
+   "sha": "1ff2a37b8822962567b5d75ff5d36199751d8af4",
+   "files": [
+    "Mathlib/LinearAlgebra/Charpoly/ToMatrix.lean",
+    "Mathlib/LinearAlgebra/Matrix/ToLin.lean"
+   ],
+   "fields": [
+    "linear_algebra",
+    "nine_chapters"
+   ]
+  },
+  {
    "date": "2026-11-25",
    "title": "Periodic orbits must jump up and down",
    "scope": "Dynamics",
@@ -7449,110 +7535,6 @@
    ]
   },
   {
-   "date": "2026-11-18",
-   "title": "Lemmas about `Function.extend`",
-   "scope": "Data/Matrix/Mul",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/46015",
-   "ai": false,
-   "sha": "f9a13953a5d704af81191a71c72f3f82d1a55d2e",
-   "files": [
-    "Mathlib/Data/Matrix/Mul.lean"
-   ],
-   "fields": [
-    "linear_algebra"
-   ]
-  },
-  {
-   "date": "2026-11-17",
-   "title": "`exp (x * n) = exp x ^ n`",
-   "scope": "Analysis",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45936",
-   "ai": false,
-   "sha": "57870a3ef03fd19e8bb00cd07e878f8b358c18f4",
-   "files": [
-    "Mathlib/Analysis/Complex/BranchLogRoot.lean",
-    "Mathlib/Analysis/Complex/Exponential.lean",
-    "Mathlib/Analysis/Complex/PhragmenLindelof.lean",
-    "Mathlib/Analysis/Complex/Trigonometric.lean",
-    "Mathlib/Analysis/SpecialFunctions/Complex/CircleMap.lean",
-    "Mathlib/Analysis/SpecialFunctions/Exp.lean"
-   ],
-   "fields": [
-    "trigonometry",
-    "statistics",
-    "complex_analysis",
-    "analytic_number_theory",
-    "abstract_algebra",
-    "axiomatic_probability",
-    "langlands",
-    "complex_dynamics",
-    "learning_theory"
-   ]
-  },
-  {
-   "date": "2026-11-17",
-   "title": "Define coth and prove basic properties",
-   "scope": "Trigonometric",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/43902",
-   "ai": false,
-   "sha": "c3f47a8ee91fd93bf436222bd4c3c73dc914e3fa",
-   "files": [
-    "Mathlib/Analysis/Complex/Trigonometric.lean"
-   ],
-   "fields": [
-    "complex_analysis",
-    "complex_dynamics"
-   ]
-  },
-  {
-   "date": "2026-11-17",
-   "title": "Add API for HodgeStar",
-   "scope": "LinearAlgebra/ExteriorPower",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44598",
-   "ai": false,
-   "sha": "12ad59a55e66e0c63c82ea35fc651528e4fec7b8",
-   "files": [
-    "Mathlib/LinearAlgebra/ExteriorPower/HodgeStar.lean",
-    "Mathlib/LinearAlgebra/ExteriorPower/Orientation.lean",
-    "Mathlib/LinearAlgebra/Orientation.lean"
-   ],
-   "fields": [
-    "linear_algebra"
-   ]
-  },
-  {
-   "date": "2026-11-17",
-   "title": "Add `groupIdempotent`",
-   "scope": "RingTheory/Unramified/Finite",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45781",
-   "ai": false,
-   "sha": "d70d25270997b9a8903dd89442e6a5afc640b28d",
-   "files": [
-    "Mathlib/RingTheory/Ideal/Defs.lean",
-    "Mathlib/RingTheory/Unramified/Finite.lean"
-   ],
-   "fields": [
-    "abstract_algebra"
-   ]
-  },
-  {
-   "date": "2026-11-17",
-   "title": "Add `FreeCommGroup`",
-   "scope": "GroupTheory/FreeAbelianGroup",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/46109",
-   "ai": false,
-   "sha": "25c283c121b9107cfa8b04407ab4942a932d8db5",
-   "files": [
-    "Mathlib/GroupTheory/FreeAbelianGroup.lean",
-    "Mathlib/GroupTheory/FreeGroup/GeneratorEquiv.lean",
-    "Mathlib/SetTheory/Cardinal/Free.lean"
-   ],
-   "fields": [
-    "group_theory",
-    "set_theory"
-   ]
-  },
-  {
    "date": "2026-11-17",
    "title": "Add Euler's quadrilateral theorem",
    "scope": "Geometry/Euclidean",
@@ -8327,10 +8309,10 @@
    "kind": "human",
    "description": "Kontorovich and Tao's collaborative project on the prime number theorem and related results.",
    "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",
-   "updated": "2026-11-24",
+   "updated": "2026-11-26",
    "latest": {
-    "title": "Silence StrongPNT (#1817)",
-    "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd/commit/e9906138410f8f76ca66b9bc252d0993f3ee348c"
+    "title": "feat: finish adopting the module system (#1808)",
+    "url": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd/commit/471f10c8164d59ed782680c5cd5d884e632e43c9"
    },
    "overview": "AlexKontorovich__PrimeNumberTheoremAnd.json",
    "lean_files": 232
@@ -8348,10 +8330,10 @@
    "kind": "benchmark",
    "description": "Google DeepMind's collection of open conjectures (Erdős problems and others) stated in Lean, used as targets for provers.",
    "url": "https://github.com/google-deepmind/formal-conjectures",
-   "updated": "2026-11-24",
+   "updated": "2026-11-26",
    "latest": {
-    "title": "feat(ErdosProblems/123): prove d-completeness of the products of powers of 2 and 3 (#7420)",
-    "url": "https://github.com/google-deepmind/formal-conjectures/commit/9097e2f90e66d2f6244209cb1c07f7120d17ec53"
+    "title": "feat(Arxiv): Primes of the form F_n + L_{n+1} (#8156)",
+    "url": "https://github.com/google-deepmind/formal-conjectures/commit/ea8e3e198ded6fc73efb7f5653b74b28ac4ae1a8"
    },
    "overview": "google-deepmind__formal-conjectures.json",
    "lean_files": 400
