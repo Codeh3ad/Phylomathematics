@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-27T16:37Z",
+ "generated": "2026-11-28T15:29Z",
  "window_days": 60,
  "mathlib": {
-  "commit": "872764eb0f200304d9d343c8f8368e762fd782e9",
-  "date": "2026-11-27",
-  "files": 8739,
-  "changes": 1398,
-  "additions": 642,
+  "commit": "c3e54abe1031ad2c00d9423afce9afacd1d77263",
+  "date": "2026-11-28",
+  "files": 8741,
+  "changes": 1385,
+  "additions": 640,
   "ai_additions": 74
  },
  "fields": {
@@ -439,9 +439,20 @@
     "Mathlib/Algebra/GroupWithZero"
    ],
    "files": 59,
-   "additions": 12,
+   "additions": 13,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-11-28",
+     "title": "Characterise associatedness in `WithZero`",
+     "scope": "Algebra",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45422",
+     "ai": false,
+     "sha": "c3e54abe1031ad2c00d9423afce9afacd1d77263",
+     "files": [
+      "Mathlib/Algebra/GroupWithZero/WithZero.lean"
+     ]
+    },
     {
      "date": "2026-11-26",
      "title": "Ring is formally real iff it's reduced and sums of squares form a positive cone",
@@ -493,20 +504,6 @@
       "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
       "Mathlib/Algebra/Algebra/Bilinear.lean",
       "Mathlib/Algebra/Algebra/Field.lean"
-     ]
-    },
-    {
-     "date": "2026-10-28",
-     "title": "New typeclass `IsNPowApplyEqIterate`",
-     "scope": "Algebra/Group/IsApply",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45218",
-     "ai": false,
-     "sha": "caa0dcb1e65f04b16c420c56a69bb6d32a4fca1d",
-     "files": [
-      "Mathlib/Algebra/Group/IsApply.lean",
-      "Mathlib/Algebra/GroupWithZero/FunLike.lean",
-      "Mathlib/Algebra/Ring/FunLike.lean",
-      "Mathlib/Topology/Algebra/Module/ContinuousLinearMap/Basic.lean"
      ]
     }
    ],
@@ -1785,8 +1782,22 @@
    ],
    "files": 80,
    "additions": 13,
-   "ai_additions": 1,
+   "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-11-27",
+     "title": "Lint against overlong proofs",
+     "scope": "Tactic/Linter",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45388",
+     "ai": true,
+     "sha": "b31f27e807d6208eb72ee4d8f654e7ea8349b758",
+     "files": [
+      "Mathlib/Geometry/Manifold/Notation.lean",
+      "Mathlib/Init.lean",
+      "Mathlib/Tactic.lean",
+      "Mathlib/Tactic/Linter/LongDeclaration.lean"
+     ]
+    },
     {
      "date": "2026-11-11",
      "title": "Small missing API lemmas",
@@ -1833,22 +1844,6 @@
      "url": "https://github.com/leanprover-community/mathlib4/pull/45466",
      "ai": false,
      "sha": "32a422c83a18ddd0f352908187e5f68aad829904",
-     "files": [
-      "Mathlib/Algebra/AffineMonoid/Basic.lean",
-      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
-      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
-      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
-      "Mathlib/Algebra/Algebra/Bilinear.lean",
-      "Mathlib/Algebra/Algebra/Field.lean"
-     ]
-    },
-    {
-     "date": "2026-10-20",
-     "title": "Enable Verso if no syntax or doc-gen changes",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
-     "ai": false,
-     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
      "files": [
       "Mathlib/Algebra/AffineMonoid/Basic.lean",
       "Mathlib/Algebra/AffineMonoid/Embedding.lean",
@@ -2174,9 +2169,22 @@
     "Mathlib/Data/Matrix"
    ],
    "files": 409,
-   "additions": 84,
+   "additions": 85,
    "ai_additions": 12,
    "recent": [
+    {
+     "date": "2026-11-28",
+     "title": "Add iff lemma for when `AdjointRoot f` si reduced",
+     "scope": "RingTheory/AdjointRoot",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46322",
+     "ai": false,
+     "sha": "2e28b0fae98fcf4d2eefa18bddfc7462e7981f0b",
+     "files": [
+      "Mathlib/LinearAlgebra/Semisimple.lean",
+      "Mathlib/RingTheory/AdjoinRoot.lean",
+      "Mathlib/RingTheory/IsAdjoinRoot.lean"
+     ]
+    },
     {
      "date": "2026-11-27",
      "title": "`forallImpEq`, the dual simproc to `existsAndEq`",
@@ -2228,18 +2236,6 @@
       "Mathlib/LinearAlgebra/Matrix/Nondegenerate.lean",
       "Mathlib/LinearAlgebra/Matrix/ToLinearEquiv.lean",
       "Mathlib/LinearAlgebra/RootSystem/CartanMatrix.lean"
-     ]
-    },
-    {
-     "date": "2026-11-25",
-     "title": "Add API relating `toMatrix/toLin` and product modules",
-     "scope": "LinearAlgebra/Matrix/ToLin",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/46390",
-     "ai": false,
-     "sha": "1ff2a37b8822962567b5d75ff5d36199751d8af4",
-     "files": [
-      "Mathlib/LinearAlgebra/Charpoly/ToMatrix.lean",
-      "Mathlib/LinearAlgebra/Matrix/ToLin.lean"
      ]
     }
    ],
@@ -2778,7 +2774,7 @@
     "Mathlib/MeasureTheory"
    ],
    "files": 343,
-   "additions": 46,
+   "additions": 45,
    "ai_additions": 4,
    "recent": [
     {
@@ -2865,7 +2861,7 @@
     "Mathlib/Analysis/InnerProductSpace"
    ],
    "files": 223,
-   "additions": 48,
+   "additions": 47,
    "ai_additions": 5,
    "recent": [
     {
@@ -2946,9 +2942,31 @@
     "Mathlib/Topology"
    ],
    "files": 709,
-   "additions": 82,
-   "ai_additions": 9,
+   "additions": 81,
+   "ai_additions": 10,
    "recent": [
+    {
+     "date": "2026-11-28",
+     "title": "Add `toSpanSingleton_neg`",
+     "scope": "ContinuousLinearMap",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46674",
+     "ai": false,
+     "sha": "74e9aa622de8cb7e8a976d450d5f1f667335b096",
+     "files": [
+      "Mathlib/Topology/Algebra/Module/ContinuousLinearMap/Basic.lean"
+     ]
+    },
+    {
+     "date": "2026-11-28",
+     "title": "Add Matrix.hasSum_iff, Matrix.summable_iff and Matrix.tsum_apply",
+     "scope": "Topology/Instances/Matrix",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46524",
+     "ai": true,
+     "sha": "f9388e8dd988e8a6727407b07c27e72b76b44de1",
+     "files": [
+      "Mathlib/Topology/Instances/Matrix.lean"
+     ]
+    },
     {
      "date": "2026-11-27",
      "title": "`forallImpEq`, the dual simproc to `existsAndEq`",
@@ -2993,30 +3011,6 @@
       "Mathlib/CategoryTheory/Limits/Indization/ParallelPair.lean",
       "Mathlib/Tactic/Translate/ToDual.lean"
      ]
-    },
-    {
-     "date": "2026-11-24",
-     "title": "Tag lemmas with `@[nontriviality]`",
-     "scope": "Order/Monotone",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/46377",
-     "ai": false,
-     "sha": "5d3d31c50c7b58ed18150f0b58034c12cf3c6afa",
-     "files": [
-      "Mathlib/Order/Monotone/Defs.lean",
-      "Mathlib/Topology/Order/IntermediateValue.lean"
-     ]
-    },
-    {
-     "date": "2026-11-23",
-     "title": "Add `Metric.ediam_closedBall_le`",
-     "scope": "Topology/MetricSpace/Bounded",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/46218",
-     "ai": false,
-     "sha": "47cafe308e2b496ac4bcccadc09992026cbee26c",
-     "files": [
-      "Mathlib/Topology/MetricSpace/Bounded.lean",
-      "Mathlib/Topology/MetricSpace/Pseudo/Defs.lean"
-     ]
     }
    ],
    "overview": "field-point_set_topology.json"
@@ -3029,8 +3023,36 @@
    ],
    "files": 911,
    "additions": 100,
-   "ai_additions": 22,
+   "ai_additions": 20,
    "recent": [
+    {
+     "date": "2026-11-28",
+     "title": "Add iff lemma for when `AdjointRoot f` si reduced",
+     "scope": "RingTheory/AdjointRoot",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46322",
+     "ai": false,
+     "sha": "2e28b0fae98fcf4d2eefa18bddfc7462e7981f0b",
+     "files": [
+      "Mathlib/LinearAlgebra/Semisimple.lean",
+      "Mathlib/RingTheory/AdjoinRoot.lean",
+      "Mathlib/RingTheory/IsAdjoinRoot.lean"
+     ]
+    },
+    {
+     "date": "2026-11-27",
+     "title": "Add IsCyclotomicExtension.Rat.eleven_pid",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46422",
+     "ai": false,
+     "sha": "351fc61b8034110e0d661cedb8418a46728456ce",
+     "files": [
+      "Mathlib/NumberTheory/NumberField/Cyclotomic/Basic.lean",
+      "Mathlib/NumberTheory/NumberField/Cyclotomic/Ideal.lean",
+      "Mathlib/NumberTheory/NumberField/Cyclotomic/PID.lean",
+      "Mathlib/NumberTheory/NumberField/Ideal/KummerDedekind.lean",
+      "Mathlib/RingTheory/Polynomial/Ideal.lean"
+     ]
+    },
     {
      "date": "2026-11-27",
      "title": "`forallImpEq`, the dual simproc to `existsAndEq`",
@@ -3069,30 +3091,6 @@
       "Mathlib/Algebra/GroupWithZero/Basic.lean",
       "Mathlib/Algebra/Ring/IsFormallyReal.lean",
       "Mathlib/Algebra/Ring/SumsOfSquares.lean"
-     ]
-    },
-    {
-     "date": "2026-11-24",
-     "title": "Lattices and spans",
-     "scope": "Algebra/Module/Lattice",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/46241",
-     "ai": false,
-     "sha": "ec76f9d06ffaf259fd2e315792acc29061b56823",
-     "files": [
-      "Mathlib/Algebra/Module/Lattice/Basic.lean",
-      "Mathlib/Algebra/Module/Lattice/Full.lean"
-     ]
-    },
-    {
-     "date": "2026-11-24",
-     "title": "When the class group is torsion ideals have some power that is principal",
-     "scope": "RingTheory/ClassGroup",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45677",
-     "ai": false,
-     "sha": "e62b985f6c61653ebb17cb81d85565022fb1103d",
-     "files": [
-      "Mathlib/RingTheory/ClassGroup/Basic.lean",
-      "Mathlib/RingTheory/DedekindDomain/SInteger.lean"
      ]
     }
    ],
@@ -3308,7 +3306,7 @@
     "Mathlib/CategoryTheory"
    ],
    "files": 1142,
-   "additions": 39,
+   "additions": 38,
    "ai_additions": 0,
    "recent": [
     {
@@ -3602,9 +3600,20 @@
     "Mathlib/RepresentationTheory"
    ],
    "files": 86,
-   "additions": 18,
+   "additions": 19,
    "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-11-27",
+     "title": "Add Burnside's theorem for matrix algebras",
+     "scope": "RepresentationTheory",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43894",
+     "ai": false,
+     "sha": "9388acb514cda5043f81dd672849be5e53cd5409",
+     "files": [
+      "Mathlib/RepresentationTheory/AlgebraRepresentation/Basic.lean"
+     ]
+    },
     {
      "date": "2026-11-17",
      "title": "`exp (x * n) = exp x ^ n`",
@@ -3658,18 +3667,6 @@
       "Mathlib/NumberTheory/ModularForms/LevelOne/GradedRing.lean",
       "Mathlib/RingTheory/MvPolynomial/Groebner.lean",
       "Mathlib/RingTheory/MvPolynomial/WeightedHomogeneous.lean"
-     ]
-    },
-    {
-     "date": "2026-11-08",
-     "title": "Derivative of discriminant form",
-     "scope": "ModularForms",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44029",
-     "ai": false,
-     "sha": "34603ccd1f9d2780659eb9749003e4027e76e250",
-     "files": [
-      "Mathlib/NumberTheory/ModularForms/DedekindEta.lean",
-      "Mathlib/NumberTheory/ModularForms/Discriminant.lean"
      ]
     }
    ],
@@ -3945,9 +3942,24 @@
     "Mathlib/NumberTheory/Cyclotomic"
    ],
    "files": 66,
-   "additions": 20,
+   "additions": 21,
    "ai_additions": 7,
    "recent": [
+    {
+     "date": "2026-11-27",
+     "title": "Add IsCyclotomicExtension.Rat.eleven_pid",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46422",
+     "ai": false,
+     "sha": "351fc61b8034110e0d661cedb8418a46728456ce",
+     "files": [
+      "Mathlib/NumberTheory/NumberField/Cyclotomic/Basic.lean",
+      "Mathlib/NumberTheory/NumberField/Cyclotomic/Ideal.lean",
+      "Mathlib/NumberTheory/NumberField/Cyclotomic/PID.lean",
+      "Mathlib/NumberTheory/NumberField/Ideal/KummerDedekind.lean",
+      "Mathlib/RingTheory/Polynomial/Ideal.lean"
+     ]
+    },
     {
      "date": "2026-11-24",
      "title": "Generalize isTotallyReal_sup",
@@ -3993,20 +4005,6 @@
      "files": [
       "Mathlib/NumberTheory/NumberField/InfinitePlace/Basic.lean",
       "Mathlib/Tactic/Linter/Multigoal.lean"
-     ]
-    },
-    {
-     "date": "2026-11-20",
-     "title": "Add Units.ModPow and API",
-     "scope": "GroupTheory/QuotientGroup/UnitsModPow",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/44614",
-     "ai": true,
-     "sha": "a1c366fa78621ef7a76fb0183de576200eec5dad",
-     "files": [
-      "Mathlib/Algebra/Group/Commute/Units.lean",
-      "Mathlib/Algebra/Group/Units/Equiv.lean",
-      "Mathlib/GroupTheory/QuotientGroup/UnitsModPow.lean",
-      "Mathlib/RingTheory/DedekindDomain/SelmerGroup.lean"
      ]
     }
    ],
@@ -4262,9 +4260,20 @@
     "Mathlib/RepresentationTheory"
    ],
    "files": 45,
-   "additions": 8,
+   "additions": 9,
    "ai_additions": 1,
    "recent": [
+    {
+     "date": "2026-11-27",
+     "title": "Add Burnside's theorem for matrix algebras",
+     "scope": "RepresentationTheory",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/43894",
+     "ai": false,
+     "sha": "9388acb514cda5043f81dd672849be5e53cd5409",
+     "files": [
+      "Mathlib/RepresentationTheory/AlgebraRepresentation/Basic.lean"
+     ]
+    },
     {
      "date": "2026-11-16",
      "title": "Coinduction API for continuous representations",
@@ -4322,22 +4331,6 @@
       "Mathlib/Algebra/Lie/Derivation/Basic.lean",
       "Mathlib/Algebra/Lie/EngelSubalgebra.lean",
       "Mathlib/Algebra/Lie/LieTheorem.lean"
-     ]
-    },
-    {
-     "date": "2026-10-20",
-     "title": "Enable Verso if no syntax or doc-gen changes",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
-     "ai": false,
-     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
-     "files": [
-      "Mathlib/Algebra/AffineMonoid/Basic.lean",
-      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
-      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
-      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
-      "Mathlib/Algebra/Algebra/Bilinear.lean",
-      "Mathlib/Algebra/Algebra/Field.lean"
      ]
     }
    ],
@@ -4645,8 +4638,22 @@
    ],
    "files": 80,
    "additions": 13,
-   "ai_additions": 1,
+   "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-11-27",
+     "title": "Lint against overlong proofs",
+     "scope": "Tactic/Linter",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45388",
+     "ai": true,
+     "sha": "b31f27e807d6208eb72ee4d8f654e7ea8349b758",
+     "files": [
+      "Mathlib/Geometry/Manifold/Notation.lean",
+      "Mathlib/Init.lean",
+      "Mathlib/Tactic.lean",
+      "Mathlib/Tactic/Linter/LongDeclaration.lean"
+     ]
+    },
     {
      "date": "2026-11-11",
      "title": "Small missing API lemmas",
@@ -4693,22 +4700,6 @@
      "url": "https://github.com/leanprover-community/mathlib4/pull/45466",
      "ai": false,
      "sha": "32a422c83a18ddd0f352908187e5f68aad829904",
-     "files": [
-      "Mathlib/Algebra/AffineMonoid/Basic.lean",
-      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
-      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
-      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
-      "Mathlib/Algebra/Algebra/Bilinear.lean",
-      "Mathlib/Algebra/Algebra/Field.lean"
-     ]
-    },
-    {
-     "date": "2026-10-20",
-     "title": "Enable Verso if no syntax or doc-gen changes",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
-     "ai": false,
-     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
      "files": [
       "Mathlib/Algebra/AffineMonoid/Basic.lean",
       "Mathlib/Algebra/AffineMonoid/Embedding.lean",
@@ -4840,8 +4831,22 @@
    ],
    "files": 80,
    "additions": 13,
-   "ai_additions": 1,
+   "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-11-27",
+     "title": "Lint against overlong proofs",
+     "scope": "Tactic/Linter",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45388",
+     "ai": true,
+     "sha": "b31f27e807d6208eb72ee4d8f654e7ea8349b758",
+     "files": [
+      "Mathlib/Geometry/Manifold/Notation.lean",
+      "Mathlib/Init.lean",
+      "Mathlib/Tactic.lean",
+      "Mathlib/Tactic/Linter/LongDeclaration.lean"
+     ]
+    },
     {
      "date": "2026-11-11",
      "title": "Small missing API lemmas",
@@ -4888,22 +4893,6 @@
      "url": "https://github.com/leanprover-community/mathlib4/pull/45466",
      "ai": false,
      "sha": "32a422c83a18ddd0f352908187e5f68aad829904",
-     "files": [
-      "Mathlib/Algebra/AffineMonoid/Basic.lean",
-      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
-      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
-      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
-      "Mathlib/Algebra/Algebra/Bilinear.lean",
-      "Mathlib/Algebra/Algebra/Field.lean"
-     ]
-    },
-    {
-     "date": "2026-10-20",
-     "title": "Enable Verso if no syntax or doc-gen changes",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
-     "ai": false,
-     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
      "files": [
       "Mathlib/Algebra/AffineMonoid/Basic.lean",
       "Mathlib/Algebra/AffineMonoid/Embedding.lean",
@@ -5153,8 +5142,22 @@
    ],
    "files": 80,
    "additions": 13,
-   "ai_additions": 1,
+   "ai_additions": 2,
    "recent": [
+    {
+     "date": "2026-11-27",
+     "title": "Lint against overlong proofs",
+     "scope": "Tactic/Linter",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45388",
+     "ai": true,
+     "sha": "b31f27e807d6208eb72ee4d8f654e7ea8349b758",
+     "files": [
+      "Mathlib/Geometry/Manifold/Notation.lean",
+      "Mathlib/Init.lean",
+      "Mathlib/Tactic.lean",
+      "Mathlib/Tactic/Linter/LongDeclaration.lean"
+     ]
+    },
     {
      "date": "2026-11-11",
      "title": "Small missing API lemmas",
@@ -5209,22 +5212,6 @@
       "Mathlib/Algebra/Algebra/Bilinear.lean",
       "Mathlib/Algebra/Algebra/Field.lean"
      ]
-    },
-    {
-     "date": "2026-10-20",
-     "title": "Enable Verso if no syntax or doc-gen changes",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45031",
-     "ai": false,
-     "sha": "bbe3db288201b39ef92689278906d3bf6d45c291",
-     "files": [
-      "Mathlib/Algebra/AffineMonoid/Basic.lean",
-      "Mathlib/Algebra/AffineMonoid/Embedding.lean",
-      "Mathlib/Algebra/AffineMonoid/Irreducible.lean",
-      "Mathlib/Algebra/AffineMonoid/UniqueSums.lean",
-      "Mathlib/Algebra/Algebra/Bilinear.lean",
-      "Mathlib/Algebra/Algebra/Field.lean"
-     ]
     }
    ],
    "overview": "field-general_relativity.json"
@@ -5235,9 +5222,20 @@
     "Mathlib/Analysis/CStarAlgebra"
    ],
    "files": 103,
-   "additions": 29,
+   "additions": 30,
    "ai_additions": 4,
    "recent": [
+    {
+     "date": "2026-11-28",
+     "title": "`ContinuousFunctionalCalculus` instance for `Unitization 𝕜 A`",
+     "scope": null,
+     "url": "https://github.com/leanprover-community/mathlib4/pull/46041",
+     "ai": false,
+     "sha": "dcf401b61fd48e93959103f2e618bdb5c4238631",
+     "files": [
+      "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Instances.lean"
+     ]
+    },
     {
      "date": "2026-11-27",
      "title": "`NonnegSpectrumClass ℝ A` from a star order and a continuous functional calculus",
@@ -5290,17 +5288,6 @@
      "url": "https://github.com/leanprover-community/mathlib4/pull/45852",
      "ai": false,
      "sha": "83e85adc6e7e9d4e6eaf2abf1a7c81b2d3d67f81",
-     "files": [
-      "Mathlib/Analysis/InnerProductSpace/l2Space.lean"
-     ]
-    },
-    {
-     "date": "2026-11-18",
-     "title": "Add HilbertBasis.reindex",
-     "scope": "Analysis/InnerProductSpace",
-     "url": "https://github.com/leanprover-community/mathlib4/pull/46019",
-     "ai": false,
-     "sha": "1ddfaa9548e05b343be9248ae08b73c3425b446e",
      "files": [
       "Mathlib/Analysis/InnerProductSpace/l2Space.lean"
      ]
@@ -6233,9 +6220,20 @@
     "Mathlib/GroupTheory/OrderOfElement"
    ],
    "files": 7,
-   "additions": 6,
+   "additions": 7,
    "ai_additions": 3,
    "recent": [
+    {
+     "date": "2026-11-28",
+     "title": "Add Rabin's polynomial irreducibility test",
+     "scope": "FieldTheory/Finite",
+     "url": "https://github.com/leanprover-community/mathlib4/pull/45947",
+     "ai": false,
+     "sha": "f07a235514788863b2dea382d64343cd18686615",
+     "files": [
+      "Mathlib/FieldTheory/Finite/Extension.lean"
+     ]
+    },
     {
      "date": "2026-11-27",
      "title": "`forallImpEq`, the dual simproc to `existsAndEq`",
@@ -6288,22 +6286,6 @@
      "sha": "f3ffa60952236813341b08cef230356ec5103c43",
      "files": [
       "Mathlib/FieldTheory/Finite/Extension.lean"
-     ]
-    },
-    {
-     "date": "2026-10-28",
-     "title": "Use `IsApply` for `Module.End`",
-     "scope": null,
-     "url": "https://github.com/leanprover-community/mathlib4/pull/45347",
-     "ai": false,
-     "sha": "97bcf245a4285886363c8c50df393a4ac54ad9dc",
-     "files": [
-      "Mathlib/Algebra/Central/End.lean",
-      "Mathlib/Algebra/Group/ForwardDiff.lean",
-      "Mathlib/Algebra/Lie/CartanExists.lean",
-      "Mathlib/Algebra/Lie/Derivation/Basic.lean",
-      "Mathlib/Algebra/Lie/EngelSubalgebra.lean",
-      "Mathlib/Algebra/Lie/LieTheorem.lean"
      ]
     }
    ],
@@ -6603,6 +6585,147 @@
   }
  },
  "feed": [
+  {
+   "date": "2026-11-28",
+   "title": "Characterise associatedness in `WithZero`",
+   "scope": "Algebra",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45422",
+   "ai": false,
+   "sha": "c3e54abe1031ad2c00d9423afce9afacd1d77263",
+   "files": [
+    "Mathlib/Algebra/GroupWithZero/WithZero.lean"
+   ],
+   "fields": [
+    "zero"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "title": "Add Rabin's polynomial irreducibility test",
+   "scope": "FieldTheory/Finite",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45947",
+   "ai": false,
+   "sha": "f07a235514788863b2dea382d64343cd18686615",
+   "files": [
+    "Mathlib/FieldTheory/Finite/Extension.lean"
+   ],
+   "fields": [
+    "cryptography"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "title": "`ContinuousFunctionalCalculus` instance for `Unitization 𝕜 A`",
+   "scope": null,
+   "url": "https://github.com/leanprover-community/mathlib4/pull/46041",
+   "ai": false,
+   "sha": "dcf401b61fd48e93959103f2e618bdb5c4238631",
+   "files": [
+    "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Instances.lean"
+   ],
+   "fields": [
+    "quantum_mechanics"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "title": "Add iff lemma for when `AdjointRoot f` si reduced",
+   "scope": "RingTheory/AdjointRoot",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/46322",
+   "ai": false,
+   "sha": "2e28b0fae98fcf4d2eefa18bddfc7462e7981f0b",
+   "files": [
+    "Mathlib/LinearAlgebra/Semisimple.lean",
+    "Mathlib/RingTheory/AdjoinRoot.lean",
+    "Mathlib/RingTheory/IsAdjoinRoot.lean"
+   ],
+   "fields": [
+    "linear_algebra",
+    "abstract_algebra"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "title": "Add `toSpanSingleton_neg`",
+   "scope": "ContinuousLinearMap",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/46674",
+   "ai": false,
+   "sha": "74e9aa622de8cb7e8a976d450d5f1f667335b096",
+   "files": [
+    "Mathlib/Topology/Algebra/Module/ContinuousLinearMap/Basic.lean"
+   ],
+   "fields": [
+    "point_set_topology"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "title": "Add Matrix.hasSum_iff, Matrix.summable_iff and Matrix.tsum_apply",
+   "scope": "Topology/Instances/Matrix",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/46524",
+   "ai": true,
+   "sha": "f9388e8dd988e8a6727407b07c27e72b76b44de1",
+   "files": [
+    "Mathlib/Topology/Instances/Matrix.lean"
+   ],
+   "fields": [
+    "point_set_topology"
+   ]
+  },
+  {
+   "date": "2026-11-27",
+   "title": "Add Burnside's theorem for matrix algebras",
+   "scope": "RepresentationTheory",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/43894",
+   "ai": false,
+   "sha": "9388acb514cda5043f81dd672849be5e53cd5409",
+   "files": [
+    "Mathlib/RepresentationTheory/AlgebraRepresentation/Basic.lean"
+   ],
+   "fields": [
+    "langlands",
+    "representation_theory"
+   ]
+  },
+  {
+   "date": "2026-11-27",
+   "title": "Add IsCyclotomicExtension.Rat.eleven_pid",
+   "scope": null,
+   "url": "https://github.com/leanprover-community/mathlib4/pull/46422",
+   "ai": false,
+   "sha": "351fc61b8034110e0d661cedb8418a46728456ce",
+   "files": [
+    "Mathlib/NumberTheory/NumberField/Cyclotomic/Basic.lean",
+    "Mathlib/NumberTheory/NumberField/Cyclotomic/Ideal.lean",
+    "Mathlib/NumberTheory/NumberField/Cyclotomic/PID.lean",
+    "Mathlib/NumberTheory/NumberField/Ideal/KummerDedekind.lean",
+    "Mathlib/RingTheory/Polynomial/Ideal.lean"
+   ],
+   "fields": [
+    "abstract_algebra",
+    "algebraic_number_theory"
+   ]
+  },
+  {
+   "date": "2026-11-27",
+   "title": "Lint against overlong proofs",
+   "scope": "Tactic/Linter",
+   "url": "https://github.com/leanprover-community/mathlib4/pull/45388",
+   "ai": true,
+   "sha": "b31f27e807d6208eb72ee4d8f654e7ea8349b758",
+   "files": [
+    "Mathlib/Geometry/Manifold/Notation.lean",
+    "Mathlib/Init.lean",
+    "Mathlib/Tactic.lean",
+    "Mathlib/Tactic/Linter/LongDeclaration.lean"
+   ],
+   "fields": [
+    "differential_geometry",
+    "differential_topology",
+    "poincare_proof",
+    "general_relativity"
+   ]
+  },
   {
    "date": "2026-11-27",
    "title": "Pushout diagrams in the filtration of `Δ[p] ⊗ Δ[1]`",
@@ -7460,149 +7583,6 @@
    ]
   },
   {
-   "date": "2026-11-18",
-   "title": "Add Parseval's identity",
-   "scope": "Analysis/InnerProductSpace/l2space",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45852",
-   "ai": false,
-   "sha": "83e85adc6e7e9d4e6eaf2abf1a7c81b2d3d67f81",
-   "files": [
-    "Mathlib/Analysis/InnerProductSpace/l2Space.lean"
-   ],
-   "fields": [
-    "functional_analysis",
-    "quantum_mechanics"
-   ]
-  },
-  {
-   "date": "2026-11-18",
-   "title": "Add HilbertBasis.reindex",
-   "scope": "Analysis/InnerProductSpace",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/46019",
-   "ai": false,
-   "sha": "1ddfaa9548e05b343be9248ae08b73c3425b446e",
-   "files": [
-    "Mathlib/Analysis/InnerProductSpace/l2Space.lean"
-   ],
-   "fields": [
-    "functional_analysis",
-    "quantum_mechanics"
-   ]
-  },
-  {
-   "date": "2026-11-18",
-   "title": "Relation between `inertiaIdempotent` and `extendScalars`",
-   "scope": "RingTheory/Unramified/Finite",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/46137",
-   "ai": false,
-   "sha": "9b72eb878d087e9ef7edd2001d9bfcf545510cab",
-   "files": [
-    "Mathlib/Algebra/Algebra/Bilinear.lean",
-    "Mathlib/Algebra/MvPolynomial/Degrees.lean",
-    "Mathlib/RingTheory/TensorProduct/Maps.lean",
-    "Mathlib/RingTheory/Unramified/Finite.lean"
-   ],
-   "fields": [
-    "symbolic_algebra",
-    "abstract_algebra"
-   ]
-  },
-  {
-   "date": "2026-11-18",
-   "title": "`Unitization R C(X, R)₀ ≃⋆ₐ[R] C(X, R)`",
-   "scope": "Topology/ContinuousMap/ContinuousMapZero/Unitization",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/46039",
-   "ai": false,
-   "sha": "fd289ff704b6db953b45133c5354647828dae265",
-   "files": [
-    "Mathlib/Algebra/Algebra/Unitization.lean",
-    "Mathlib/Topology/ContinuousMap/ContinuousMapZero.lean",
-    "Mathlib/Topology/ContinuousMap/ContinuousMapZero/Unitization.lean"
-   ],
-   "fields": [
-    "point_set_topology"
-   ]
-  },
-  {
-   "date": "2026-11-18",
-   "title": "Add a generic star-ordered ring instance for `Unitization`",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/46010",
-   "ai": false,
-   "sha": "eeb93aa516ae66febe0c6df0c96282ca6e327f94",
-   "files": [
-    "Mathlib/Algebra/Algebra/Unitization.lean",
-    "Mathlib/Algebra/Order/Group/Cone.lean",
-    "Mathlib/Algebra/Order/Ring/Cone.lean",
-    "Mathlib/Algebra/Order/Star/Unitization.lean",
-    "Mathlib/Analysis/CStarAlgebra/ApproximateUnit.lean",
-    "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Order.lean"
-   ],
-   "fields": [
-    "quantum_mechanics"
-   ]
-  },
-  {
-   "date": "2026-11-18",
-   "title": "Generalize `gelfandRadiusNorm` to algebraic extensions",
-   "scope": "Analysis/Normed/Unbundled/GelfandRadiusNorm",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/45935",
-   "ai": false,
-   "sha": "4e34ea5e18ddfad7aae4c0d98a2ae1acbe906e97",
-   "files": [
-    "Mathlib/Analysis/Normed/Unbundled/GelfandRadiusNorm.lean",
-    "Mathlib/RingTheory/IntegralClosure/IsIntegralClosure/Basic.lean"
-   ],
-   "fields": [
-    "functional_analysis",
-    "abstract_algebra"
-   ]
-  },
-  {
-   "date": "2026-11-18",
-   "title": "Criterion for `b ∈ (I.under A).map (algebraMap A B)`",
-   "scope": "RingTheory/Invariant/Basic",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/46138",
-   "ai": false,
-   "sha": "9252bdf2e2d1f439044caafbc5d344df60f83ddc",
-   "files": [
-    "Mathlib/RingTheory/Invariant/Basic.lean"
-   ],
-   "fields": [
-    "invariant_theory",
-    "abstract_algebra",
-    "git"
-   ]
-  },
-  {
-   "date": "2026-11-18",
-   "title": "Simp-lemmas for when element of quotient equals one",
-   "scope": "GroupTheory/Coset/Defs",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/46136",
-   "ai": false,
-   "sha": "aeea9df4229585306bc0fc5a4717bb99a18aabe8",
-   "files": [
-    "Mathlib/GroupTheory/Coset/Defs.lean"
-   ],
-   "fields": [
-    "group_theory"
-   ]
-  },
-  {
-   "date": "2026-11-18",
-   "title": "Quaternion operations with respect to coordinates",
-   "scope": null,
-   "url": "https://github.com/leanprover-community/mathlib4/pull/43307",
-   "ai": false,
-   "sha": "dec2e36fd302e61ba190e745b9c60aa126dc20a0",
-   "files": [
-    "Mathlib/Algebra/Quaternion.lean"
-   ],
-   "fields": [
-    "quaternions"
-   ]
-  },
-  {
    "date": "2026-11-17",
    "title": "Add Euler's quadrilateral theorem",
    "scope": "Geometry/Euclidean",
@@ -8299,36 +8279,6 @@
     "trigonometry",
     "kerala"
    ]
-  },
-  {
-   "date": "2026-09-29",
-   "title": "Ramification index and inertia degree of the zero ideal",
-   "scope": "RingTheory/RamificationInertia",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/44281",
-   "ai": true,
-   "sha": "1cf8efbf580fbeed2d989c0d96ee21267e85252e",
-   "files": [
-    "Mathlib/RingTheory/RamificationInertia/Inertia.lean",
-    "Mathlib/RingTheory/RamificationInertia/Ramification.lean"
-   ],
-   "fields": [
-    "abstract_algebra"
-   ]
-  },
-  {
-   "date": "2026-09-29",
-   "title": "Add ClassGroup.map and define mulEquiv via it",
-   "scope": "RingTheory/ClassGroup",
-   "url": "https://github.com/leanprover-community/mathlib4/pull/41732",
-   "ai": true,
-   "sha": "bf620d19e9426227ad155d1a2624ef3ba161cd14",
-   "files": [
-    "Mathlib/RingTheory/ClassGroup/Basic.lean",
-    "Mathlib/RingTheory/ClassGroup/ExtendedHom.lean"
-   ],
-   "fields": [
-    "abstract_algebra"
-   ]
   }
  ],
  "projects": [
@@ -8417,10 +8367,10 @@
    "kind": "human",
    "description": "Formalization of the Gowers–Green–Manners–Tao proof of the polynomial Freiman–Ruzsa conjecture.",
    "url": "https://github.com/teorth/pfr",
-   "updated": "2026-11-23",
+   "updated": "2026-11-28",
    "latest": {
-    "title": "chore: bump mathlib to c47f9ad, fix breaking changes (#329)",
-    "url": "https://github.com/teorth/pfr/commit/1899ce8ed95fc310cce53d4c7ecfa2beb20ebec4"
+    "title": "chore: bump mathlib to 903b0b6, fix breaking changes (#330)",
+    "url": "https://github.com/teorth/pfr/commit/e41b48166c47ec1bbd9af95cb500a8f69b7bd7a8"
    },
    "overview": "teorth__pfr.json",
    "lean_files": 72
